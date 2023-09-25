@@ -6,6 +6,8 @@ function openMenu() {
 		child.style.backgroundColor = 'white';
 	}
 	burger.onclick = closeMenu;
+	burger.style.border = '0px solid rgba(255,255,255,0)';
+	burger.style.backgroundColor = '#FFFFFF00';
 	burger.children[0].style.transform = 'translateY(0) rotate(45deg)';
 	burger.children[1].style.transform = 'rotate(45deg)';
 	burger.children[2].style.transform = 'translateY(0) rotate(-45deg)';
@@ -22,6 +24,8 @@ function closeMenu() {
 		child.style.backgroundColor = '#42C1EE';
 	}
 	burger.onclick = openMenu;
+	burger.style.border = '2px solid rgba(66, 193, 238, 1)';
+	burger.style.backgroundColor = '#EEF1F899';
 	burger.children[0].style.transform = 'translateY(-10px) rotate(0)';
 	burger.children[1].style.transform = 'rotate(0)';
 	burger.children[2].style.transform = 'translateY(10px) rotate(0)';
