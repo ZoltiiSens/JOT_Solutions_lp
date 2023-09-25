@@ -63,7 +63,8 @@
 	<body class="font-baseFont text-secondaryColor bg-backgroundColor">
 		<!-- Laptop Navigation  bar BLOCK -->
 		<nav
-			class="w-screen h-[64px] md:flex hidden flex-row items-center shadow-md fixed top-0 px-4 rounded-b-[20px] bg-backgroundColor z-[9997]"
+			class="w-screen h-[64px] md:flex hidden flex-row items-center shadow-md fixed top-0 px-4 rounded-b-[20px] bg-[#EEF1F8CC] z-[9997]"
+			style="backdrop-filter: saturate(100%) blur(5px)"
 		>
 			<a href="#" class="font-black-100">
 				<img src="images/logo_text.svg" alt="logo" class="h-[40px]" />
@@ -98,7 +99,7 @@
 		</nav>
 		<!-- Hamburger menu -->
 		<div
-			class="flex items-center justify-center burger-menu fixed top-6 right-6 h-[40px] w-[50px] cursor-pointer z-50 transition duration-500"
+			class="md:hidden flex items-center justify-center burger-menu fixed top-6 right-6 h-[40px] w-[50px] cursor-pointer z-50 transition duration-500"
 			onclick="openMenu()"
 		>
 			<span
@@ -207,7 +208,7 @@
 				>
 			</article>
 			<!-- BENEFITS BLOCK -->
-			<article class="py-5 md:mx-2 mx-4 relative">
+			<article class="py-5 lg:mx-2 sm:mx-22 mx-4 mx-none relative">
 				<h2
 					class="text-primaryColor text-4xl font-semibold text-center uppercase md:mb-12 mb-4"
 				>
@@ -217,7 +218,7 @@
 					class="slider group flex lg:flex-row flex-col gap-4 lg:gap-none items-center w-full relative min-h-[215px]"
 				>
 					<div
-						class="transition duration-200 ease-in-out card sm:w-[480px] w-[90%] sm:h-[215px] h-auto px-8 py-2 shadow-buttonShadow rounded-2xl text-2xl z-0 hover:z-50 lg:absolute lg:left-0 bg-backgroundColor lg:scale-[0.7] lg:hover:scale-95"
+						class="transition duration-200 ease-in-out card lg:w-[480px] w-full sm:h-[215px] h-auto px-8 py-2 shadow-buttonShadow rounded-2xl text-2xl z-0 hover:z-50 lg:absolute lg:left-0 bg-backgroundColor lg:scale-[0.7] lg:hover:scale-95"
 					>
 						<h3 class="text-primaryColor text-2xl font-semibold">
 							Increased Productivity:
@@ -228,7 +229,7 @@
 						</p>
 					</div>
 					<div
-						class="transition duration-200 ease-in-out card sm:w-[480px] w-[90%] sm:h-[215px] h-auto px-8 py-2 shadow-buttonShadow rounded-2xl text-2xl z-10 lg:hover:z-50 lg:absolute lg:left-1/3 lg:-translate-x-1/2 bg-backgroundColor lg:scale-[0.8] lg:hover:scale-95"
+						class="transition duration-200 ease-in-out card lg:w-[480px] w-full sm:h-[215px] h-auto px-8 py-2 shadow-buttonShadow rounded-2xl text-2xl z-10 lg:hover:z-50 lg:absolute lg:left-1/3 lg:-translate-x-1/2 bg-backgroundColor lg:scale-[0.8] lg:hover:scale-95"
 					>
 						<h3 class="text-primaryColor text-2xl font-semibold">
 							Deadline and Budget Adherence:
@@ -239,7 +240,7 @@
 						</p>
 					</div>
 					<div
-						class="transition duration-200 ease-in-out card sm:w-[480px] w-[90%] sm:h-[215px] h-auto px-8 py-2 shadow-buttonShadow rounded-2xl text-2xl z-20 lg:hover:z-50 lg:absolute lg:left-1/2 lg:-translate-x-1/2 bg-backgroundColor lg:scale-90 lg:hover:scale-95"
+						class="transition duration-200 ease-in-out card lg:w-[480px] w-full sm:h-[215px] h-auto px-8 py-2 shadow-buttonShadow rounded-2xl text-2xl z-20 lg:hover:z-50 lg:absolute lg:left-1/2 lg:-translate-x-1/2 bg-backgroundColor lg:scale-90 lg:hover:scale-95"
 					>
 						<h3 class="text-primaryColor text-2xl font-semibold">
 							Enhanced Quality Results:
@@ -250,7 +251,7 @@
 						</p>
 					</div>
 					<div
-						class="transition duration-200 ease-in-out card sm:w-[480px] w-[90%] sm:h-[215px] h-auto px-8 py-2 shadow-buttonShadow rounded-2xl text-2xl z-10 lg:hover:z-50 lg:absolute lg:right-1/3 lg:translate-x-1/2 bg-backgroundColor lg:scale-[0.8] lg:hover:scale-95"
+						class="transition duration-200 ease-in-out card lg:w-[480px] w-full sm:h-[215px] h-auto px-8 py-2 shadow-buttonShadow rounded-2xl text-2xl z-10 lg:hover:z-50 lg:absolute lg:right-1/3 lg:translate-x-1/2 bg-backgroundColor lg:scale-[0.8] lg:hover:scale-95"
 					>
 						<h3 class="text-primaryColor text-2xl font-semibold">
 							Improved Communication:
@@ -262,7 +263,7 @@
 						</p>
 					</div>
 					<div
-						class="transition duration-200 ease-in-out card sm:w-[480px] w-[90%] sm:h-[215px] h-auto px-8 py-2 shadow-buttonShadow rounded-2xl text-2xl z-0 lg:hover:z-50 lg:absolute lg:right-0 bg-backgroundColor lg:scale-[0.7] lg:hover:scale-95"
+						class="transition duration-200 ease-in-out card lg:w-[480px] w-full sm:h-[215px] h-auto px-8 py-2 shadow-buttonShadow rounded-2xl text-2xl z-0 lg:hover:z-50 lg:absolute lg:right-0 bg-backgroundColor lg:scale-[0.7] lg:hover:scale-95"
 					>
 						<h3 class="text-primaryColor text-2xl font-semibold">
 							Flexibility and Scalability:
@@ -282,10 +283,10 @@
 			</article>
 			<!-- Info cards BLOCK -->
 			<article
-				class="py-5 sm:mx-22 mx-12 flex flex-row gap-5 flex-wrap items-center justify-center"
+				class="py-5 sm:mx-22 mx-4 flex flex-row gap-5 flex-wrap items-center justify-center"
 			>
 				<div
-					class="relative des:max-w-[600px] des:h-[320px] sm:h-[270px] h-auto lg:max-w-[500px] w-auto max-w-auto rounded-xl shadow-buttonShadow hover:shadow-logoShadow transition duration-200 p-8"
+					class="relative des:h-[320px] sm:h-[270px] h-auto des:max-w-[600px] lg:max-w-[500px] max-w-auto w-full rounded-xl shadow-buttonShadow hover:shadow-logoShadow transition duration-200 p-8"
 				>
 					<h3
 						class="text-primaryColor des:text-4xl text-3xl font-semibold des:mt-2"
@@ -609,8 +610,8 @@
 					</div>
 				</div>
 
-				<!-- Small devices + mobal slider -->
-				<div class="swiper mySwiper mb-10 lg:hidden">
+				<!-- Small devices slider -->
+				<div class="swiper mySwiper mb-10 lg:hidden mx-4">
 					<div class="swiper-wrapper">
 						<div
 							class="swiper-slide p-5 h-[490px] w-[435px] shadow-logoShadow bg-backgroundColor h-auto"
@@ -836,12 +837,12 @@
 
 				<a
 					href=""
-					class="block py-2 bg-gradient-to-b hover:bg-secondaryColor from-gradColorStart to-gradColorEnd font-bold text-center text-white w-[250px] text-lg mx-auto transition duration-300 shadow-buttonShadow hover:shadow-none"
+					class="block py-2 bg-gradient-to-b hover:bg-secondaryColor from-gradColorStart to-gradColorEnd font-bold text-center text-white rounded-2xl w-[250px] text-lg mx-auto transition duration-300 shadow-buttonShadow hover:shadow-none"
 					>Scheduling demo</a
 				>
 			</article>
 			<!-- Our customers BLOCK -->
-			<article class="py-5 mx-22">
+			<article class="py-5 xs:mx-22 mx-4 mx-none">
 				<h2 class="text-primaryColor text-4xl font-bold text-center mb-12">
 					Our customers
 				</h2>
@@ -849,64 +850,64 @@
 					class="flex flex-row flex-wrap sm:gap-10 gap-4 items-center justify-center"
 				>
 					<div
-						class="w-[160px] h-[160px] flex items-center justify-center shadow-logoShadow rounded-2xl"
+						class="xs:w-[160px] xs:h-[160px] w-[80vw] h-[80vw] flex items-center justify-center shadow-logoShadow rounded-2xl"
 					>
 						<img
 							src="images/JOT 1.png"
 							alt="logo"
-							class="h-[95px] bg-white rounded-2xl"
+							class="w-[70%] bg-white rounded-2xl"
 						/>
 					</div>
 					<div
-						class="w-[160px] h-[160px] flex items-center justify-center shadow-logoShadow rounded-2xl"
+						class="xs:w-[160px] xs:h-[160px] w-[80vw] h-[80vw] flex items-center justify-center shadow-logoShadow rounded-2xl"
 					>
 						<img
 							src="images/JOT 1.png"
 							alt="logo"
-							class="h-[95px] bg-white rounded-2xl"
+							class="w-[70%] bg-white rounded-2xl"
 						/>
 					</div>
 					<div
-						class="w-[160px] h-[160px] flex items-center justify-center shadow-logoShadow rounded-2xl"
+						class="xs:w-[160px] xs:h-[160px] w-[80vw] h-[80vw] flex items-center justify-center shadow-logoShadow rounded-2xl"
 					>
 						<img
 							src="images/JOT 1.png"
 							alt="logo"
-							class="h-[95px] bg-white rounded-2xl"
+							class="w-[70%] bg-white rounded-2xl"
 						/>
 					</div>
 					<div
-						class="w-[160px] h-[160px] flex items-center justify-center shadow-logoShadow rounded-2xl"
+						class="xs:w-[160px] xs:h-[160px] w-[80vw] h-[80vw] flex items-center justify-center shadow-logoShadow rounded-2xl"
 					>
 						<img
 							src="images/JOT 1.png"
 							alt="logo"
-							class="h-[95px] bg-white rounded-2xl"
+							class="w-[70%] bg-white rounded-2xl"
 						/>
 					</div>
 					<div
-						class="w-[160px] h-[160px] flex items-center justify-center shadow-logoShadow rounded-2xl"
+						class="xs:w-[160px] xs:h-[160px] w-[80vw] h-[80vw] flex items-center justify-center shadow-logoShadow rounded-2xl"
 					>
 						<img
 							src="images/JOT 1.png"
 							alt="logo"
-							class="h-[95px] bg-white rounded-2xl"
+							class="w-[70%] bg-white rounded-2xl"
 						/>
 					</div>
 					<div
-						class="w-[160px] h-[160px] flex items-center justify-center shadow-logoShadow rounded-2xl"
+						class="xs:w-[160px] xs:h-[160px] w-[80vw] h-[80vw] flex items-center justify-center shadow-logoShadow rounded-2xl"
 					>
 						<img
 							src="images/JOT 1.png"
 							alt="logo"
-							class="h-[95px] bg-white rounded-2xl"
+							class="w-[70%] bg-white rounded-2xl"
 						/>
 					</div>
 				</div>
 			</article>
 			<!-- Footer BLOCK -->
 			<footer
-				class="xs:h-[120px] h-auto w-[99%] mx-auto mt-4 flex xs:flex-row flex-col justify-between items-center p-4 shadow-logoShadow"
+				class="xs:h-[120px] h-auto w-[99%] mx-auto mt-4 flex xs:flex-row flex-col justify-between items-center p-4 shadow-logoShadow rounded-3xl mb-3"
 			>
 				<div
 					class="info xs:h-full font-medium xs:block flex flex-col items-center xs:mb-none mb-4"
