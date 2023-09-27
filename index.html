@@ -52,7 +52,7 @@
 						},
 						screens: {
 							des: '1480px',
-							mdlg: '796px',
+							mdlg: '840px',
 							xs: '544px',
 						},
 					},
@@ -69,34 +69,518 @@
 			<a href="#" class="font-black-100">
 				<img src="images/logo_text.svg" alt="logo" class="h-[40px]" />
 			</a>
-			<ul class="flex flex-row gap-10 ml-20">
-				<li class="text-s hover:text-primaryColor transition duration-200">
-					<a href="#">About us</a>
+			<ul
+				class="flex flex-row xl:gap-10 gap-4 lg:ml-20 mdlg:ml-8 ml-4 xl:text-xl lg:text-[1.1em] text-[.9em] h-full"
+			>
+				<li class="flex items-center transition duration-200">
+					<a href="#" class="hover:text-primaryColor">About us</a>
 				</li>
-				<li class="text-s hover:text-primaryColor transition duration-200">
-					<a href="#">Support</a>
+				<li
+					class="relative flex items-center group text-s transition duration-200"
+				>
+					<span
+						href="#"
+						class="flex group justify-center items-center cursor-pointer hover:text-primaryColor transition duration-200 subMenuOpener"
+						onmouseover="mouseOverSubMenuOpener(0)"
+						onmouseleave="mouseOutSubMenu(0)"
+					>
+						<span
+							>Solutions<i
+								class="fa-solid fa-chevron-down ml-1 transition duration-200"
+							></i
+						></span>
+						<div
+							class="hidden-line fixed top-[65px] left-0 w-screen bg-red-300 h-[10px] hidden cursor-default opacity-0"
+						></div>
+						<div
+							class="hidden-block absolute top-0 left-0 w-full bg-red-500 h-[66px] hidden cursor-pointer opacity-0"
+						></div>
+						<div
+							class="des:w-[65%] xl:w-[75%] w-[90%] fixed left-[50%] -translate-x-1/2 top-[75px] h-auto bg-[#EEF1F8FA] z-[9996] rounded-xl shadow-2xl p-10 transition duration-500 subMenu text-secondaryColor cursor-default"
+							style="
+								/* backdrop-filter: saturate(100%) blur(5px);
+								transform: translateX(-50%) translateY(-100px);
+								opacity: 0;
+								pointer-events: none; */
+							"
+						>
+							<h3 class="text-primaryColor text-3xl font-bold mb-4">
+								Solutions
+							</h3>
+							<div
+								class="grid grid-cols-2 xl:gap-y-10 gap-y-4 lg: gap-x-none gap-x-4"
+							>
+								<div class="flex gap-3 lg:w-[80%] w-[100%]">
+									<div class="w-[40px]">
+										<i
+											class="fa-solid fa-people-arrows text-[30px]"
+										></i>
+									</div>
+									<div class="text">
+										<h4
+											class="text-primaryColor text-xl leading-[30px]"
+										>
+											Solution 1
+										</h4>
+										<p class="leading-[130%] text-sm font-light">
+											Lorem ipsum dolor sit amet consectetur,
+											adipisicing elit. Porro tenetur facere saepe
+											sint nam omnis illo, deserunt praesentium eius
+											non id, reprehenderit debitis, excepturi nemo!
+										</p>
+									</div>
+								</div>
+								<div class="flex gap-3 lg:w-[80%] w-[100%]">
+									<div class="w-[40px]">
+										<i
+											class="fa-solid fa-people-arrows text-[30px]"
+										></i>
+									</div>
+									<div class="text">
+										<h4
+											class="text-primaryColor text-xl leading-[30px]"
+										>
+											Solution 2
+										</h4>
+										<p class="leading-[130%] text-sm font-light">
+											Lorem ipsum dolor sit amet consectetur,
+											adipisicing elit. Porro tenetur facere saepe
+											sint nam omnis illo, deserunt praesentium eius
+											non id, reprehenderit debitis, excepturi nemo!
+										</p>
+									</div>
+								</div>
+								<div class="flex gap-3 lg:w-[80%] w-[100%]">
+									<div class="w-[40px]">
+										<i
+											class="fa-solid fa-people-arrows text-[30px]"
+										></i>
+									</div>
+									<div class="text">
+										<h4
+											class="text-primaryColor text-xl leading-[30px]"
+										>
+											Solution 3
+										</h4>
+										<p class="leading-[130%] text-sm font-light">
+											Lorem ipsum dolor sit amet consectetur,
+											adipisicing elit. Porro tenetur facere saepe
+											sint nam omnis illo, deserunt praesentium eius
+											non id, reprehenderit debitis, excepturi nemo!
+										</p>
+									</div>
+								</div>
+								<div class="flex gap-3 lg:w-[80%] w-[100%]">
+									<div class="w-[40px]">
+										<i
+											class="fa-solid fa-people-arrows text-[30px]"
+										></i>
+									</div>
+									<div class="text">
+										<h4
+											class="text-primaryColor text-xl leading-[30px]"
+										>
+											Solution 4
+										</h4>
+										<p class="leading-[130%] text-sm font-light">
+											Lorem ipsum dolor sit amet consectetur,
+											adipisicing elit. Porro tenetur facere saepe
+											sint nam omnis illo, deserunt praesentium eius
+											non id, reprehenderit debitis, excepturi nemo!
+										</p>
+									</div>
+								</div>
+								<div class="flex gap-3 lg:w-[80%] w-[100%]">
+									<div class="w-[40px]">
+										<i
+											class="fa-solid fa-people-arrows text-[30px]"
+										></i>
+									</div>
+									<div class="text">
+										<h4
+											class="text-primaryColor text-xl leading-[30px]"
+										>
+											Solution 5
+										</h4>
+										<p class="leading-[130%] text-sm font-light">
+											Lorem ipsum dolor sit amet consectetur,
+											adipisicing elit. Porro tenetur facere saepe
+											sint nam omnis illo, deserunt praesentium eius
+											non id, reprehenderit debitis, excepturi nemo!
+										</p>
+									</div>
+								</div>
+								<div class="flex gap-3 lg:w-[80%] w-[100%]">
+									<div class="w-[40px]">
+										<i
+											class="fa-solid fa-people-arrows text-[30px]"
+										></i>
+									</div>
+									<div class="text">
+										<h4
+											class="text-primaryColor text-xl leading-[30px]"
+										>
+											Solution 6
+										</h4>
+										<p class="leading-[130%] text-sm font-light">
+											Lorem ipsum dolor sit amet consectetur,
+											adipisicing elit. Porro tenetur facere saepe
+											sint nam omnis illo, deserunt praesentium eius
+											non id, reprehenderit debitis, excepturi nemo!
+										</p>
+									</div>
+								</div>
+								<div class="flex gap-3 lg:w-[80%] w-[100%]">
+									<div class="w-[40px]">
+										<i
+											class="fa-solid fa-people-arrows text-[30px]"
+										></i>
+									</div>
+									<div class="text">
+										<h4
+											class="text-primaryColor text-xl leading-[30px]"
+										>
+											Solution 7
+										</h4>
+										<p class="leading-[130%] text-sm font-light">
+											Lorem ipsum dolor sit amet consectetur,
+											adipisicing elit. Porro tenetur facere saepe
+											sint nam omnis illo, deserunt praesentium eius
+											non id, reprehenderit debitis, excepturi nemo!
+										</p>
+									</div>
+								</div>
+							</div>
+						</div>
+					</span>
 				</li>
-				<li class="text-s hover:text-primaryColor transition duration-200">
-					<a href="#">Contacts</a>
+				<li
+					class="relative flex items-center group text-s transition duration-200"
+				>
+					<span
+						href="#"
+						class="flex group justify-center items-center cursor-pointer hover:text-primaryColor transition duration-200 subMenuOpener"
+						onmouseover="mouseOverSubMenuOpener(1)"
+						onmouseleave="mouseOutSubMenu(1)"
+					>
+						<span
+							>Cases<i
+								class="fa-solid fa-chevron-down ml-1 transition duration-200"
+							></i
+						></span>
+						<div
+							class="hidden-line fixed top-[65px] left-0 w-screen bg-red-300 h-[10px] hidden cursor-default opacity-0"
+						></div>
+						<div
+							class="hidden-block absolute top-0 left-0 w-full bg-red-500 h-[66px] hidden cursor-pointer opacity-0"
+						></div>
+						<div
+							class="des:w-[65%] xl:w-[75%] w-[85%] fixed left-[50%] -translate-x-1/2 top-[75px] h-auto bg-[#EEF1F8FA] z-[9996] rounded-xl shadow-2xl p-10 transition duration-500 subMenu text-secondaryColor cursor-default"
+							style="
+								backdrop-filter: saturate(100%) blur(5px);
+								transform: translateX(-50%) translateY(-100px);
+								opacity: 0;
+								pointer-events: none;
+							"
+						>
+							<h3 class="text-primaryColor text-3xl font-bold mb-4">
+								Cases
+							</h3>
+							<div class="grid grid-cols-2 gap-y-10">
+								<div class="flex gap-3 w-[80%]">
+									<div class="w-[40px]">
+										<i
+											class="fa-solid fa-people-arrows text-[30px]"
+										></i>
+									</div>
+									<div class="text">
+										<h4
+											class="text-primaryColor text-xl leading-[30px]"
+										>
+											Case 1
+										</h4>
+										<p class="leading-[130%] text-sm font-light">
+											Lorem ipsum dolor sit amet consectetur,
+											adipisicing elit. Porro tenetur facere saepe
+											sint nam omnis illo, deserunt praesentium eius
+											non id, reprehenderit debitis, excepturi nemo!
+										</p>
+									</div>
+								</div>
+								<div class="flex gap-3 w-[80%]">
+									<div class="w-[40px]">
+										<i
+											class="fa-solid fa-people-arrows text-[30px]"
+										></i>
+									</div>
+									<div class="text">
+										<h4
+											class="text-primaryColor text-xl leading-[30px]"
+										>
+											Case 2
+										</h4>
+										<p class="leading-[130%] text-sm font-light">
+											Lorem ipsum dolor sit amet consectetur,
+											adipisicing elit. Porro tenetur facere saepe
+											sint nam omnis illo, deserunt praesentium eius
+											non id, reprehenderit debitis, excepturi nemo!
+										</p>
+									</div>
+								</div>
+								<div class="flex gap-3 w-[80%]">
+									<div class="w-[40px]">
+										<i
+											class="fa-solid fa-people-arrows text-[30px]"
+										></i>
+									</div>
+									<div class="text">
+										<h4
+											class="text-primaryColor text-xl leading-[30px]"
+										>
+											Case 3
+										</h4>
+										<p class="leading-[130%] text-sm font-light">
+											Lorem ipsum dolor sit amet consectetur,
+											adipisicing elit. Porro tenetur facere saepe
+											sint nam omnis illo, deserunt praesentium eius
+											non id, reprehenderit debitis, excepturi nemo!
+										</p>
+									</div>
+								</div>
+								<div class="flex gap-3 w-[80%]">
+									<div class="w-[40px]">
+										<i
+											class="fa-solid fa-people-arrows text-[30px]"
+										></i>
+									</div>
+									<div class="text">
+										<h4
+											class="text-primaryColor text-xl leading-[30px]"
+										>
+											Case 4
+										</h4>
+										<p class="leading-[130%] text-sm font-light">
+											Lorem ipsum dolor sit amet consectetur,
+											adipisicing elit. Porro tenetur facere saepe
+											sint nam omnis illo, deserunt praesentium eius
+											non id, reprehenderit debitis, excepturi nemo!
+										</p>
+									</div>
+								</div>
+								<div class="flex gap-3 w-[80%]">
+									<div class="w-[40px]">
+										<i
+											class="fa-solid fa-people-arrows text-[30px]"
+										></i>
+									</div>
+									<div class="text">
+										<h4
+											class="text-primaryColor text-xl leading-[30px]"
+										>
+											Case 5
+										</h4>
+										<p class="leading-[130%] text-sm font-light">
+											Lorem ipsum dolor sit amet consectetur,
+											adipisicing elit. Porro tenetur facere saepe
+											sint nam omnis illo, deserunt praesentium eius
+											non id, reprehenderit debitis, excepturi nemo!
+										</p>
+									</div>
+								</div>
+							</div>
+						</div>
+					</span>
+				</li>
+				<li
+					class="relative flex items-center group text-s transition duration-200"
+				>
+					<span
+						href="#"
+						class="flex group justify-center items-center cursor-pointer hover:text-primaryColor transition duration-300 subMenuOpener"
+						onmouseover="mouseOverSubMenuOpener(2)"
+						onmouseleave="mouseOutSubMenu(2)"
+					>
+						<span
+							>Sfieres<i
+								class="fa-solid fa-chevron-down ml-1 transition duration-200"
+							></i
+						></span>
+						<div
+							class="hidden-line fixed top-[65px] left-0 w-screen bg-red-300 h-[10px] hidden cursor-default opacity-0"
+						></div>
+						<div
+							class="hidden-block absolute top-0 left-0 w-full bg-red-500 h-[66px] hidden cursor-pointer opacity-0"
+						></div>
+						<div
+							class="des:w-[65%] xl:w-[75%] w-[85%] fixed left-[50%] -translate-x-1/2 top-[75px] h-auto bg-[#EEF1F8FA] z-[9996] rounded-xl shadow-2xl p-10 transition duration-500 subMenu text-secondaryColor cursor-default"
+							style="
+								backdrop-filter: saturate(100%) blur(5px);
+								transform: translateX(-50%) translateY(-100px);
+								opacity: 0;
+								pointer-events: none;
+							"
+						>
+							<h3 class="text-primaryColor text-3xl font-bold mb-4">
+								Sfieres
+							</h3>
+							<div class="grid grid-cols-2 gap-y-10">
+								<div class="flex gap-3 w-[80%]">
+									<div class="w-[40px]">
+										<i
+											class="fa-solid fa-people-arrows text-[30px]"
+										></i>
+									</div>
+									<div class="text">
+										<h4
+											class="text-primaryColor text-xl leading-[30px]"
+										>
+											Sfiere 1
+										</h4>
+										<p class="leading-[130%] text-sm font-light">
+											Lorem ipsum dolor sit amet consectetur,
+											adipisicing elit. Porro tenetur facere saepe
+											sint nam omnis illo, deserunt praesentium eius
+											non id, reprehenderit debitis, excepturi nemo!
+										</p>
+									</div>
+								</div>
+								<div class="flex gap-3 w-[80%]">
+									<div class="w-[40px]">
+										<i
+											class="fa-solid fa-people-arrows text-[30px]"
+										></i>
+									</div>
+									<div class="text">
+										<h4
+											class="text-primaryColor text-xl leading-[30px]"
+										>
+											Sfiere 2
+										</h4>
+										<p class="leading-[130%] text-sm font-light">
+											Lorem ipsum dolor sit amet consectetur,
+											adipisicing elit. Porro tenetur facere saepe
+											sint nam omnis illo, deserunt praesentium eius
+											non id, reprehenderit debitis, excepturi nemo!
+										</p>
+									</div>
+								</div>
+								<div class="flex gap-3 w-[80%]">
+									<div class="w-[40px]">
+										<i
+											class="fa-solid fa-people-arrows text-[30px]"
+										></i>
+									</div>
+									<div class="text">
+										<h4
+											class="text-primaryColor text-xl leading-[30px]"
+										>
+											Sfiere 3
+										</h4>
+										<p class="leading-[130%] text-sm font-light">
+											Lorem ipsum dolor sit amet consectetur,
+											adipisicing elit. Porro tenetur facere saepe
+											sint nam omnis illo, deserunt praesentium eius
+											non id, reprehenderit debitis, excepturi nemo!
+										</p>
+									</div>
+								</div>
+								<div class="flex gap-3 w-[80%]">
+									<div class="w-[40px]">
+										<i
+											class="fa-solid fa-people-arrows text-[30px]"
+										></i>
+									</div>
+									<div class="text">
+										<h4
+											class="text-primaryColor text-xl leading-[30px]"
+										>
+											Sfiere 4
+										</h4>
+										<p class="leading-[130%] text-sm font-light">
+											Lorem ipsum dolor sit amet consectetur,
+											adipisicing elit. Porro tenetur facere saepe
+											sint nam omnis illo, deserunt praesentium eius
+											non id, reprehenderit debitis, excepturi nemo!
+										</p>
+									</div>
+								</div>
+								<div class="flex gap-3 w-[80%]">
+									<div class="w-[40px]">
+										<i
+											class="fa-solid fa-people-arrows text-[30px]"
+										></i>
+									</div>
+									<div class="text">
+										<h4
+											class="text-primaryColor text-xl leading-[30px]"
+										>
+											Sfiere 5
+										</h4>
+										<p class="leading-[130%] text-sm font-light">
+											Lorem ipsum dolor sit amet consectetur,
+											adipisicing elit. Porro tenetur facere saepe
+											sint nam omnis illo, deserunt praesentium eius
+											non id, reprehenderit debitis, excepturi nemo!
+										</p>
+									</div>
+								</div>
+								<div class="flex gap-3 w-[80%]">
+									<div class="w-[40px]">
+										<i
+											class="fa-solid fa-people-arrows text-[30px]"
+										></i>
+									</div>
+									<div class="text">
+										<h4
+											class="text-primaryColor text-xl leading-[30px]"
+										>
+											Sfiere 6
+										</h4>
+										<p class="leading-[130%] text-sm font-light">
+											Lorem ipsum dolor sit amet consectetur,
+											adipisicing elit. Porro tenetur facere saepe
+											sint nam omnis illo, deserunt praesentium eius
+											non id, reprehenderit debitis, excepturi nemo!
+										</p>
+									</div>
+								</div>
+							</div>
+						</div>
+					</span>
+				</li>
+				<li class="flex items-center text-s transition duration-200">
+					<a
+						href="#"
+						class="hover:text-primaryColor transition duration-300"
+						>Support</a
+					>
+				</li>
+				<li class="flex items-center text-s transition duration-200">
+					<a
+						href="#"
+						class="hover:text-primaryColor transition duration-300"
+						>Contacts</a
+					>
 				</li>
 			</ul>
 			<div
-				class="auth-group flex flex-row items-end justify-end gap-3 relative flex-1 lg:mr-10 mr-4"
+				class="auth-group flex flex-row items-end justify-end mdlg:gap-4 gap-2 relative flex-1 des:mr-10 mr-2 xl:text-xl lg:text-[1.1em] text-[.9em]"
 			>
 				<a
 					href="#"
-					class="text-primaryColor text-s rounded-full shadow-buttonSmallShadow px-8 py-1 hover:bg-primaryColor hover:text-backgroundColor hover:shadow-none transition duration-300"
+					class="text-primaryColor rounded-full shadow-buttonSmallShadow xl:px-8 mdlg:px-6 px-3 py-1 hover:bg-primaryColor hover:text-backgroundColor hover:shadow-none transition duration-300"
 				>
 					Log in
 				</a>
 				<a
 					href="#"
-					class="text-primaryColor text-s rounded-full shadow-buttonSmallShadow px-8 py-1 hover:bg-primaryColor hover:text-backgroundColor hover:shadow-none transition duration-300"
+					class="text-primaryColor rounded-full shadow-buttonSmallShadow xl:px-8 mdlg:px-6 px-3 py-1 hover:bg-primaryColor hover:text-backgroundColor hover:shadow-none transition duration-300"
 				>
 					Sign up
 				</a>
 			</div>
 		</nav>
+
 		<!-- Hamburger menu -->
 		<div
 			class="md:hidden flex items-center justify-center burger-menu fixed top-6 right-6 h-[70px] w-[70px] cursor-pointer z-50 transition duration-500 rounded-[12px] border-[2px] bg-[#EEF1F899] border-primaryColor bg-[]"
@@ -926,6 +1410,11 @@
 		</div>
 		<!-- Swiper JS connection -->
 		<script src="js/swiper-bundle.min.js"></script>
+		<!-- Font awasome -->
+		<script
+			src="https://kit.fontawesome.com/7e4f58e3c2.js"
+			crossorigin="anonymous"
+		></script>
 		<!-- JS Script -->
 		<script src="js/script.js"></script>
 	</body>

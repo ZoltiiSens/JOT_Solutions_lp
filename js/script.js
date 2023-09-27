@@ -1,4 +1,28 @@
 'use strict';
+
+// Function opens sub menu when mouse is on opener text
+function mouseOverSubMenuOpener(index) {
+	const opener = document.querySelectorAll('.subMenuOpener')[index];
+	opener.querySelector('i').style.transform = 'rotate(180deg)';
+	opener.querySelector('.hidden-line').classList.remove('hidden');
+	opener.querySelector('.hidden-block').classList.remove('hidden');
+	const subMenu = document.querySelectorAll('.subMenu')[index];
+	subMenu.style.transform = 'translateX(-50%) translateY(0)';
+	subMenu.style.opacity = 1;
+	subMenu.style.pointerEvents = 'all';
+}
+// Function closes sub menu when mouse is out of opener text
+function mouseOutSubMenu(index) {
+	const opener = document.querySelectorAll('.subMenuOpener')[index];
+	opener.querySelector('i').style.transform = 'rotate(0deg)';
+	opener.querySelector('.hidden-line').classList.add('hidden');
+	opener.querySelector('.hidden-block').classList.add('hidden');
+	const subMenu = document.querySelectorAll('.subMenu')[index];
+	subMenu.style.transform = 'translateX(-50%) translateY(-100px)';
+	subMenu.style.opacity = 0;
+	subMenu.style.pointerEvents = 'none';
+}
+
 // Function opens navbar menu on small screens
 function openMenu() {
 	const burger = document.querySelector('.burger-menu');
