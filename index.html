@@ -93,7 +93,7 @@
 							class="hidden-line fixed top-[65px] left-0 w-screen bg-red-300 h-[10px] hidden cursor-default opacity-0"
 						></div>
 						<div
-							class="hidden-block absolute top-0 left-0 w-full bg-red-500 h-[66px] hidden cursor-pointer opacity-0"
+							class="hidden-block absolute top-0 left-0 w-full bg-red-500 h-[66px] hidden cursor-pointer opacity-0 duration-0"
 						></div>
 						<div
 							class="des:w-[65%] xl:w-[75%] w-[90%] fixed left-[50%] -translate-x-1/2 top-[75px] h-auto bg-[#EEF1F8FA] z-[9996] rounded-xl shadow-2xl p-10 transition duration-500 subMenu text-secondaryColor cursor-default"
@@ -580,23 +580,30 @@
 				</a>
 			</div>
 		</nav>
-
 		<!-- Hamburger menu -->
 		<div
 			class="md:hidden flex items-center justify-center burger-menu fixed top-6 right-6 h-[70px] w-[70px] cursor-pointer z-50 transition duration-500 rounded-[12px] border-[2px] bg-[#EEF1F899] border-primaryColor bg-[]"
 			onclick="openMenu()"
 		>
 			<span
-				class="block absolute w-[40px] h-[4px] rounded-full transition duration-500"
-				style="transform: translateY(-10px); background-color: #42c1ee"
+				class="block absolute w-[40px] h-[4px] rounded-full"
+				style="
+					transform: translateY(-10px);
+					background-color: #42c1ee;
+					transition: 0.5s;
+				"
 			></span>
 			<span
-				class="block absolute w-[40px] h-[4px] bg-primaryColor rounded-full transition duration-500"
-				style="background-color: #42c1ee"
+				class="block absolute w-[40px] h-[4px] bg-primaryColor rounded-full"
+				style="background-color: #42c1ee; transition: 0.5s"
 			></span>
 			<span
-				class="block absolute w-[40px] h-[4px] bg-primaryColor rounded-full transition duration-500"
-				style="transform: translateY(10px); background-color: #42c1ee"
+				class="block absolute w-[40px] h-[4px] bg-primaryColor rounded-full"
+				style="
+					transform: translateY(10px);
+					background-color: #42c1ee;
+					transition: 0.5s;
+				"
 			></span>
 		</div>
 		<!-- Mobile navigation bar BLOCK -->
@@ -604,18 +611,284 @@
 			class="mobileMenu fixed bg-gradient-to-b from-[#20D1ED] to-[#0881E9] top-0 left-0 right-0 bottom-0 z-40 opacity-100 transition duration-500"
 			style="opacity: 0; pointer-events: none"
 		>
-			<ul class="flex flex-col gap-20 m-20 text-white">
-				<li class="text-4xl transition duration-200">
+			<ul
+				class="flex flex-col gap-10 xs:m-20 m-16 mb-10 text-white xs:text-4xl text-3xl"
+			>
+				<li class="transition duration-200">
 					<a href="#">About us</a>
 				</li>
-				<li class="text-4xl transition duration-200">
+				<li class="transition duration-200">
+					<a href="#" onclick="openMobileSubMenu(0)">
+						Solutions
+						<i
+							class="fa-solid fa-chevron-down transition duration-200 text-3xl"
+							style="transform: rotate(-90deg)"
+						></i>
+					</a>
+				</li>
+				<li class="transition duration-200">
+					<a href="#" onclick="openMobileSubMenu(1)">
+						Cases
+						<i
+							class="fa-solid fa-chevron-down transition duration-200 text-3xl"
+							style="transform: rotate(-90deg)"
+						></i>
+					</a>
+				</li>
+				<li class="transition duration-200">
+					<a href="#" onclick="openMobileSubMenu(2)">
+						Sfieres
+						<i
+							class="fa-solid fa-chevron-down transition duration-200 text-3xl"
+							style="transform: rotate(-90deg)"
+						></i>
+					</a>
+				</li>
+				<li class="transition duration-200">
 					<a href="#">Support</a>
 				</li>
-				<li class="text-4xl transition duration-200">
+				<li class="transition duration-200">
 					<a href="#">Contacts</a>
 				</li>
 			</ul>
 			<img src="images/JOT 1.png" alt="logo" class="ml-20 w-[150px]" />
+			<!-- Solutions subMenu -->
+			<div
+				class="mobile-subMenu--0 mobile-subMenu absolute bg-gradient-to-b from-[#20D1ED] to-[#0881E9] top-0 z-42 opacity-100 transition duration-500 w-full h-full xs:p-20 p-16 text-4xl text-white font-semibold"
+				style="right: -100%; overflow-y: scroll; transition: 0.5s"
+			>
+				<h2 class="mb-10">Solutions</h2>
+				<div class="mb-5">
+					<h4 class="text-2xl mb-2 text-secondaryColor">
+						<i class="fa-solid fa-people-arrows text-[30px]"></i>
+						Solution 1
+					</h4>
+					<p class="text-sm font-light">
+						Lorem ipsum dolor sit amet consectetur, adipisicing elit.
+						Porro tenetur facere saepe sint nam omnis illo, deserunt
+						praesentium eius non id, reprehenderit debitis, excepturi
+						nemo!
+					</p>
+				</div>
+				<div class="mb-5">
+					<h4 class="text-2xl mb-2 text-secondaryColor">
+						<i class="fa-solid fa-people-arrows text-[30px]"></i>
+						Solution 2
+					</h4>
+					<p class="text-sm font-light">
+						Lorem ipsum dolor sit amet consectetur, adipisicing elit.
+						Porro tenetur facere saepe sint nam omnis illo, deserunt
+						praesentium eius non id, reprehenderit debitis, excepturi
+						nemo!
+					</p>
+				</div>
+				<div class="mb-5">
+					<h4 class="text-2xl mb-2 text-secondaryColor">
+						<i class="fa-solid fa-people-arrows text-[30px]"></i>
+						Solution 3
+					</h4>
+					<p class="text-sm font-light">
+						Lorem ipsum dolor sit amet consectetur, adipisicing elit.
+						Porro tenetur facere saepe sint nam omnis illo, deserunt
+						praesentium eius non id, reprehenderit debitis, excepturi
+						nemo!
+					</p>
+				</div>
+				<div class="mb-5">
+					<h4 class="text-2xl mb-2 text-secondaryColor">
+						<i class="fa-solid fa-people-arrows text-[30px]"></i>
+						Solution 4
+					</h4>
+					<p class="text-sm font-light">
+						Lorem ipsum dolor sit amet consectetur, adipisicing elit.
+						Porro tenetur facere saepe sint nam omnis illo, deserunt
+						praesentium eius non id, reprehenderit debitis, excepturi
+						nemo!
+					</p>
+				</div>
+				<div class="mb-5">
+					<h4 class="text-2xl mb-2 text-secondaryColor">
+						<i class="fa-solid fa-people-arrows text-[30px]"></i>
+						Solution 5
+					</h4>
+					<p class="text-sm font-light">
+						Lorem ipsum dolor sit amet consectetur, adipisicing elit.
+						Porro tenetur facere saepe sint nam omnis illo, deserunt
+						praesentium eius non id, reprehenderit debitis, excepturi
+						nemo!
+					</p>
+				</div>
+				<div class="mb-5">
+					<h4 class="text-2xl mb-2 text-secondaryColor">
+						<i class="fa-solid fa-people-arrows text-[30px]"></i>
+						Solution 6
+					</h4>
+					<p class="text-sm font-light">
+						Lorem ipsum dolor sit amet consectetur, adipisicing elit.
+						Porro tenetur facere saepe sint nam omnis illo, deserunt
+						praesentium eius non id, reprehenderit debitis, excepturi
+						nemo!
+					</p>
+				</div>
+				<div class="mb-5">
+					<h4 class="text-2xl mb-2 text-secondaryColor">
+						<i class="fa-solid fa-people-arrows text-[30px]"></i>
+						Solution 7
+					</h4>
+					<p class="text-sm font-light">
+						Lorem ipsum dolor sit amet consectetur, adipisicing elit.
+						Porro tenetur facere saepe sint nam omnis illo, deserunt
+						praesentium eius non id, reprehenderit debitis, excepturi
+						nemo!
+					</p>
+				</div>
+			</div>
+			<!-- Cases subMenu -->
+			<div
+				class="mobile-subMenu--1 mobile-subMenu absolute bg-gradient-to-b from-[#20D1ED] to-[#0881E9] top-0 z-42 opacity-100 transition duration-500 w-full h-full xs:p-20 p-16 text-4xl text-white font-semibold"
+				style="right: -100%; overflow-y: scroll; transition: 0.5s"
+			>
+				<h2 class="mb-10">Cases</h2>
+				<div class="mb-5">
+					<h4 class="text-2xl mb-2 text-secondaryColor">
+						<i class="fa-solid fa-people-arrows text-[30px]"></i>
+						Case 1
+					</h4>
+					<p class="text-sm font-light">
+						Lorem ipsum dolor sit amet consectetur, adipisicing elit.
+						Porro tenetur facere saepe sint nam omnis illo, deserunt
+						praesentium eius non id, reprehenderit debitis, excepturi
+						nemo!
+					</p>
+				</div>
+				<div class="mb-5">
+					<h4 class="text-2xl mb-2 text-secondaryColor">
+						<i class="fa-solid fa-people-arrows text-[30px]"></i>
+						Case 2
+					</h4>
+					<p class="text-sm font-light">
+						Lorem ipsum dolor sit amet consectetur, adipisicing elit.
+						Porro tenetur facere saepe sint nam omnis illo, deserunt
+						praesentium eius non id, reprehenderit debitis, excepturi
+						nemo!
+					</p>
+				</div>
+				<div class="mb-5">
+					<h4 class="text-2xl mb-2 text-secondaryColor">
+						<i class="fa-solid fa-people-arrows text-[30px]"></i>
+						Case 3
+					</h4>
+					<p class="text-sm font-light">
+						Lorem ipsum dolor sit amet consectetur, adipisicing elit.
+						Porro tenetur facere saepe sint nam omnis illo, deserunt
+						praesentium eius non id, reprehenderit debitis, excepturi
+						nemo!
+					</p>
+				</div>
+				<div class="mb-5">
+					<h4 class="text-2xl mb-2 text-secondaryColor">
+						<i class="fa-solid fa-people-arrows text-[30px]"></i>
+						Case 4
+					</h4>
+					<p class="text-sm font-light">
+						Lorem ipsum dolor sit amet consectetur, adipisicing elit.
+						Porro tenetur facere saepe sint nam omnis illo, deserunt
+						praesentium eius non id, reprehenderit debitis, excepturi
+						nemo!
+					</p>
+				</div>
+				<div class="mb-5">
+					<h4 class="text-2xl mb-2 text-secondaryColor">
+						<i class="fa-solid fa-people-arrows text-[30px]"></i>
+						Case 5
+					</h4>
+					<p class="text-sm font-light">
+						Lorem ipsum dolor sit amet consectetur, adipisicing elit.
+						Porro tenetur facere saepe sint nam omnis illo, deserunt
+						praesentium eius non id, reprehenderit debitis, excepturi
+						nemo!
+					</p>
+				</div>
+				<div class="mb-5">
+					<h4 class="text-2xl mb-2 text-secondaryColor">
+						<i class="fa-solid fa-people-arrows text-[30px]"></i>
+						Case 6
+					</h4>
+					<p class="text-sm font-light">
+						Lorem ipsum dolor sit amet consectetur, adipisicing elit.
+						Porro tenetur facere saepe sint nam omnis illo, deserunt
+						praesentium eius non id, reprehenderit debitis, excepturi
+						nemo!
+					</p>
+				</div>
+			</div>
+			<!-- Sfieres subMenu -->
+			<div
+				class="mobile-subMenu--2 mobile-subMenu absolute bg-gradient-to-b from-[#20D1ED] to-[#0881E9] top-0 z-42 opacity-100 transition duration-500 w-full h-full xs:p-20 p-16 text-4xl text-white font-semibold"
+				style="right: -100%; overflow-y: scroll; transition: 0.5s"
+			>
+				<h2 class="mb-10">Sfieres</h2>
+				<div class="mb-5">
+					<h4 class="text-2xl mb-2 text-secondaryColor">
+						<i class="fa-solid fa-people-arrows text-[30px]"></i>
+						Sfiere 1
+					</h4>
+					<p class="text-sm font-light">
+						Lorem ipsum dolor sit amet consectetur, adipisicing elit.
+						Porro tenetur facere saepe sint nam omnis illo, deserunt
+						praesentium eius non id, reprehenderit debitis, excepturi
+						nemo!
+					</p>
+				</div>
+				<div class="mb-5">
+					<h4 class="text-2xl mb-2 text-secondaryColor">
+						<i class="fa-solid fa-people-arrows text-[30px]"></i>
+						Sfiere 2
+					</h4>
+					<p class="text-sm font-light">
+						Lorem ipsum dolor sit amet consectetur, adipisicing elit.
+						Porro tenetur facere saepe sint nam omnis illo, deserunt
+						praesentium eius non id, reprehenderit debitis, excepturi
+						nemo!
+					</p>
+				</div>
+				<div class="mb-5">
+					<h4 class="text-2xl mb-2 text-secondaryColor">
+						<i class="fa-solid fa-people-arrows text-[30px]"></i>
+						Sfiere 3
+					</h4>
+					<p class="text-sm font-light">
+						Lorem ipsum dolor sit amet consectetur, adipisicing elit.
+						Porro tenetur facere saepe sint nam omnis illo, deserunt
+						praesentium eius non id, reprehenderit debitis, excepturi
+						nemo!
+					</p>
+				</div>
+				<div class="mb-5">
+					<h4 class="text-2xl mb-2 text-secondaryColor">
+						<i class="fa-solid fa-people-arrows text-[30px]"></i>
+						Sfiere 4
+					</h4>
+					<p class="text-sm font-light">
+						Lorem ipsum dolor sit amet consectetur, adipisicing elit.
+						Porro tenetur facere saepe sint nam omnis illo, deserunt
+						praesentium eius non id, reprehenderit debitis, excepturi
+						nemo!
+					</p>
+				</div>
+				<div class="mb-5">
+					<h4 class="text-2xl mb-2 text-secondaryColor">
+						<i class="fa-solid fa-people-arrows text-[30px]"></i>
+						Sfiere 5
+					</h4>
+					<p class="text-sm font-light">
+						Lorem ipsum dolor sit amet consectetur, adipisicing elit.
+						Porro tenetur facere saepe sint nam omnis illo, deserunt
+						praesentium eius non id, reprehenderit debitis, excepturi
+						nemo!
+					</p>
+				</div>
+			</div>
 		</div>
 		<!-- MAIN CONTENT -->
 		<div

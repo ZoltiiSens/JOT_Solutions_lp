@@ -1,4 +1,39 @@
 'use strict';
+// Function opens sub menu on small screen devices
+function openMobileSubMenu(index) {
+	const burger = document.querySelector('.burger-menu');
+	burger.onclick = closeMobileSubMenu;
+	burger.children[0].style.transformOrigin = 'left';
+	burger.children[0].style.transform =
+		'rotate(45deg) translateX(-7.5px) translateY(7px)';
+	burger.children[0].style.width = '20px';
+	burger.children[1].style.transform = '';
+	burger.children[2].style.transformOrigin = 'left';
+	burger.children[2].style.transform =
+		'rotate(-45deg) translateX(-7.5px) translateY(-7px)';
+	burger.children[2].style.width = '20px';
+	const subMenu = document.querySelector(`.mobile-subMenu--${index}`);
+	subMenu.style.right = '0%';
+	subMenu.style.opacity = '1';
+}
+function closeMobileSubMenu() {
+	const burger = document.querySelector('.burger-menu');
+	burger.onclick = closeMenu;
+	burger.children[0].style.transformOrigin = 'center';
+	burger.children[0].style.transform =
+		'translateY(0) translateX(0) rotate(45deg)';
+	burger.children[0].style.width = '40px';
+	burger.children[1].style.transform = 'rotate(45deg) rotate(0deg)';
+	burger.children[2].style.transformOrigin = 'center';
+	burger.children[2].style.transform =
+		'translateY(0) translateX(0) rotate(-45deg)';
+	burger.children[2].style.width = '40px';
+	const subMenus = document.querySelectorAll('.mobile-subMenu');
+	for (const subMenu of subMenus) {
+		subMenu.style.right = '-100%';
+		subMenu.style.opacity = '0';
+	}
+}
 
 // Function opens sub menu when mouse is on opener text
 function mouseOverSubMenuOpener(index) {
