@@ -120,6 +120,7 @@ var swiper = new Swiper('.mySwiper', {
 	},
 });
 
+// class for special Swipers
 class myOwnSwiper {
 	constructor(maxNumOfCards, previousActiveIndex, sliderId) {
 		this.MAX_NUM_OF_CARDS = maxNumOfCards;
@@ -295,6 +296,7 @@ class myOwnSwiper {
 }
 
 const swiper1 = new myOwnSwiper(4, 2, 'slider123123');
+const swiperTemp = new myOwnSwiper(4, 2, 'sliderTemp');
 const swiper2 = new myOwnSwiper(8, 2, 'sliderJotApp');
 function changeActive(index) {
 	swiper2.changeActive(index);
@@ -302,106 +304,6 @@ function changeActive(index) {
 function swiper1_change(index) {
 	swiper1.changeActive(index);
 }
-
-// // Custom function for large screen swiper work
-// function changeActive(index) {
-// 	const previousActive = document.querySelector(
-// 		`.slider-card--${previousActiveIndex}`
-// 	);
-// 	const currentActive = document.querySelector(`.slider-card--${index}`);
-// 	previousActive.style.transform = 'scale(1)';
-// 	currentActive.style.transform = 'scale(1.5) translate(-35.71%)';
-// 	currentActive.style.left = '50%';
-// 	currentActive.style.zIndex = 4;
-
-// 	switch (index) {
-// 		case 0:
-// 			changePosition(1, null, '10%', 'scale(1.2)', 3);
-// 			changePosition(2, null, '0', 'scale(1)', 2);
-// 			for (let i = 3; i < MAX_NUM_OF_CARDS; i++) {
-// 				changePosition(i, null, '0', 'scale(1)', 1);
-// 			}
-// 			break;
-// 		case 1:
-// 			changePosition(0, '10%', null, 'scale(1.2)', 3);
-// 			changePosition(2, null, '10%', 'scale(1.2)', 3);
-// 			changePosition(3, null, '0', 'scale(1)', 2);
-// 			for (let i = 4; i < MAX_NUM_OF_CARDS; i++) {
-// 				changePosition(i, null, '0', 'scale(1)', 1);
-// 			}
-// 			break;
-// 		case 2:
-// 			changePosition(0, '0', null, 'scale(1)', 2);
-// 			changePosition(1, '10%', null, 'scale(1.2)', 3);
-// 			changePosition(3, null, '10%', 'scale(1.2)', 3);
-// 			changePosition(4, null, '0', 'scale(1)', 2);
-// 			for (let i = 5; i < MAX_NUM_OF_CARDS; i++) {
-// 				changePosition(i, null, '0', 'scale(1)', 1);
-// 			}
-// 			break;
-// 		case MAX_NUM_OF_CARDS - 2:
-// 			changePosition(MAX_NUM_OF_CARDS - 4, '0', null, 'scale(1)', 2);
-// 			changePosition(MAX_NUM_OF_CARDS - 3, '10%', null, 'scale(1.2)', 3);
-// 			changePosition(MAX_NUM_OF_CARDS - 1, null, '10%', 'scale(1.2)', 3);
-// 			changePosition(MAX_NUM_OF_CARDS, null, '0', 'scale(1)', 2);
-// 			for (let i = 0; i < MAX_NUM_OF_CARDS - 5; i++) {
-// 				changePosition(i, '0', null, 'scale(1)', 1);
-// 			}
-// 			break;
-// 		case MAX_NUM_OF_CARDS - 1:
-// 			changePosition(MAX_NUM_OF_CARDS - 3, '0', null, 'scale(1)', 2);
-// 			changePosition(MAX_NUM_OF_CARDS - 2, '10%', null, 'scale(1.2)', 3);
-// 			changePosition(MAX_NUM_OF_CARDS, null, '10%', 'scale(1.2)', 3);
-// 			for (let i = 0; i < MAX_NUM_OF_CARDS - 4; i++) {
-// 				changePosition(i, '0', null, 'scale(1)', 1);
-// 			}
-// 			break;
-// 		case MAX_NUM_OF_CARDS:
-// 			changePosition(MAX_NUM_OF_CARDS - 2, '0', null, 'scale(1)', 2);
-// 			changePosition(MAX_NUM_OF_CARDS - 1, '10%', null, 'scale(1.2)', 3);
-// 			changePosition(MAX_NUM_OF_CARDS - 1, '10%', null, 'scale(1.2)', 3);
-// 			for (let i = 0; i < MAX_NUM_OF_CARDS - 4; i++) {
-// 				changePosition(i, '0', null, 'scale(1)', 1);
-// 			}
-// 			break;
-// 		default:
-// 			if (index - 3 >= 0) {
-// 				for (let i = 0; i < index - 2; i++) {
-// 					changePosition(i, '0', null, 'scale(1)', 1);
-// 				}
-// 			}
-// 			changePosition(index - 2, '0', null, 'scale(1)', 2);
-// 			changePosition(index - 1, '10%', null, 'scale(1.2)', 3);
-// 			changePosition(index + 1, null, '10%', 'scale(1.2)', 3);
-// 			changePosition(index + 2, null, '0', 'scale(1)', 2);
-// 			if (index + 3 <= MAX_NUM_OF_CARDS) {
-// 				for (let i = index + 3; i <= MAX_NUM_OF_CARDS; i++) {
-// 					changePosition(i, null, '0', 'scale(1)', 1);
-// 				}
-// 			}
-// 			break;
-// 	}
-// 	previousActiveIndex = index;
-// }
-
-// // Additional function for changing the card position in swiper
-// function changePosition(index, left, right, transform, zIndex) {
-// 	cardsList[index].style.left = left;
-// 	cardsList[index].style.right = right;
-// 	cardsList[index].style.transform = transform;
-// 	cardsList[index].style.zIndex = zIndex;
-// }
-
-// // Custom swiper configuration
-// const MAX_NUM_OF_CARDS = 8;
-// let previousActiveIndex = 2;
-// let cardsList = document.querySelectorAll('.slider-card');
-// let i = 0;
-// changePosition(0, '0', null, 'scale(1)', 2);
-// changePosition(1, '10%', null, 'scale(1.2)', 3);
-// changePosition(2, '50%', null, 'scale(1.5) translateX(-35.71%)', 4);
-// changePosition(3, null, '10%', 'scale(1.2)', 3);
-// changePosition(4, null, '0', 'scale(1)', 2);
-// for (let i = 5; i <= MAX_NUM_OF_CARDS; i++) {
-// 	changePosition(i, null, '0', 'scale(1)', 1);
-// }
+function swiperTempChange(index) {
+	swiperTemp.changeActive(index);
+}
