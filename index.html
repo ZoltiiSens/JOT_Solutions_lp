@@ -66,24 +66,24 @@
 	<body class="font-baseFont text-secondaryColor bg-backgroundColor">
 		<!-- Laptop Navigation  bar BLOCK -->
 		<nav
-			class="w-screen h-[64px] md:flex hidden flex-row items-center shadow-md fixed top-0 px-4 rounded-b-[20px] bg-[#EEF1F8CC] z-[9997]"
+			class="fixed top-0 z-[9997] px-4 w-screen h-[64px] md:flex hidden flex-row items-center shadow-md rounded-b-[20px] bg-[#EEF1F8CC]"
 			style="backdrop-filter: saturate(100%) blur(5px)"
 		>
-			<a href="#" class="font-black-100">
+			<a href="#">
 				<img src="images/logo_text.svg" alt="logo" class="h-[40px]" />
 			</a>
 			<ul
-				class="flex flex-row xl:gap-10 gap-4 lg:ml-20 mdlg:ml-8 ml-4 xl:text-xl lg:text-[1.1em] text-[.9em] h-full"
+				class="lg:ml-20 mdlg:ml-8 ml-4 h-full flex flex-row xl:gap-10 gap-4 xl:text-xl lg:text-[1.1em] text-[.9em]"
 			>
 				<li class="flex items-center transition duration-200">
 					<a href="#" class="hover:text-primaryColor">About us</a>
 				</li>
 				<li
-					class="relative flex items-center group text-s transition duration-200"
+					class="relative flex items-center text-s transition duration-200 group"
 				>
 					<span
 						href="#"
-						class="flex group justify-center items-center cursor-pointer hover:text-primaryColor transition duration-200 subMenuOpener"
+						class="subMenuOpener flex justify-center items-center cursor-pointer hover:text-primaryColor transition duration-200 group"
 						onmouseover="mouseOverSubMenuOpener(0)"
 						onmouseleave="mouseOutSubMenu(0)"
 					>
@@ -93,13 +93,13 @@
 							></i
 						></span>
 						<div
-							class="hidden-line fixed top-[65px] left-0 w-screen bg-red-300 h-[10px] hidden cursor-default opacity-0"
+							class="hidden-line fixed top-[65px] left-0 w-screen h-[10px] hidden cursor-default opacity-0"
 						></div>
 						<div
-							class="hidden-block absolute top-0 left-0 w-full bg-red-500 h-[66px] hidden cursor-pointer opacity-0 duration-0"
+							class="hidden-block absolute top-0 left-0 w-full h-[66px] hidden cursor-pointer opacity-0 duration-0"
 						></div>
 						<div
-							class="des:w-[65%] xl:w-[75%] w-[90%] fixed left-[50%] -translate-x-1/2 top-[75px] h-auto bg-[#EEF1F8FA] z-[9996] rounded-xl shadow-2xl p-10 transition duration-500 subMenu text-secondaryColor cursor-default"
+							class="subMenu fixed left-[50%] -translate-x-1/2 top-[75px] z-[9996] p-10 des:w-[65%] xl:w-[75%] w-[90%] h-auto text-secondaryColor bg-[#EEF1F8FA] rounded-xl shadow-2xl cursor-default transition duration-500"
 							style="
 								backdrop-filter: saturate(100%) blur(5px);
 								transform: translateX(-50%) translateY(-100px);
@@ -107,14 +107,14 @@
 								pointer-events: none;
 							"
 						>
-							<h3 class="text-primaryColor text-3xl font-bold mb-4">
+							<h3 class="mb-4 text-primaryColor text-3xl font-bold">
 								Solutions
 							</h3>
 							<div
-								class="grid grid-cols-2 xl:gap-y-6 gap-y-2 lg: gap-x-none gap-x-2"
+								class="grid grid-cols-2 xl:gap-y-6 gap-y-2 lg:gap-x-none gap-x-2"
 							>
 								<div
-									class="flex gap-3 lg:w-[90%] w-[100%] rounded-[10px] hover:bg-[#DDE0E755] lg:p-6 mdlg:p-4 p-2 transition duration-200"
+									class="flex gap-3 lg:p-6 mdlg:p-4 p-2 lg:w-[90%] w-[100%] rounded-[10px] hover:bg-[#DDE0E755] transition duration-200"
 								>
 									<div class="w-[40px]">
 										<i
@@ -127,7 +127,7 @@
 										>
 											Solution 1
 										</h4>
-										<p class="leading-[130%] text-sm font-light">
+										<p class="text-sm font-light leading-[130%]">
 											Lorem ipsum dolor sit amet consectetur,
 											adipisicing elit. Porro tenetur facere saepe
 											sint nam omnis illo, deserunt praesentium eius
@@ -136,7 +136,7 @@
 									</div>
 								</div>
 								<div
-									class="flex gap-3 lg:w-[90%] w-[100%] rounded-[10px] hover:bg-[#DDE0E755] lg:p-6 mdlg:p-4 p-2 transition duration-200"
+									class="flex gap-3 lg:p-6 mdlg:p-4 p-2 lg:w-[90%] w-[100%] rounded-[10px] hover:bg-[#DDE0E755] transition duration-200"
 								>
 									<div class="w-[40px]">
 										<i
@@ -149,7 +149,7 @@
 										>
 											Solution 2
 										</h4>
-										<p class="leading-[130%] text-sm font-light">
+										<p class="text-sm font-light leading-[130%]">
 											Lorem ipsum dolor sit amet consectetur,
 											adipisicing elit. Porro tenetur facere saepe
 											sint nam omnis illo, deserunt praesentium eius
@@ -158,7 +158,7 @@
 									</div>
 								</div>
 								<div
-									class="flex gap-3 lg:w-[90%] w-[100%] rounded-[10px] hover:bg-[#DDE0E755] lg:p-6 mdlg:p-4 p-2 transition duration-200"
+									class="flex gap-3 lg:p-6 mdlg:p-4 p-2 lg:w-[90%] w-[100%] rounded-[10px] hover:bg-[#DDE0E755] transition duration-200"
 								>
 									<div class="w-[40px]">
 										<i
@@ -171,7 +171,7 @@
 										>
 											Solution 3
 										</h4>
-										<p class="leading-[130%] text-sm font-light">
+										<p class="text-sm font-light leading-[130%]">
 											Lorem ipsum dolor sit amet consectetur,
 											adipisicing elit. Porro tenetur facere saepe
 											sint nam omnis illo, deserunt praesentium eius
@@ -180,7 +180,7 @@
 									</div>
 								</div>
 								<div
-									class="flex gap-3 lg:w-[90%] w-[100%] rounded-[10px] hover:bg-[#DDE0E755] lg:p-6 mdlg:p-4 p-2 transition duration-200"
+									class="flex gap-3 lg:p-6 mdlg:p-4 p-2 lg:w-[90%] w-[100%] rounded-[10px] hover:bg-[#DDE0E755] transition duration-200"
 								>
 									<div class="w-[40px]">
 										<i
@@ -193,7 +193,7 @@
 										>
 											Solution 4
 										</h4>
-										<p class="leading-[130%] text-sm font-light">
+										<p class="text-sm font-light leading-[130%]">
 											Lorem ipsum dolor sit amet consectetur,
 											adipisicing elit. Porro tenetur facere saepe
 											sint nam omnis illo, deserunt praesentium eius
@@ -202,7 +202,7 @@
 									</div>
 								</div>
 								<div
-									class="flex gap-3 lg:w-[90%] w-[100%] rounded-[10px] hover:bg-[#DDE0E755] lg:p-6 mdlg:p-4 p-2 transition duration-200"
+									class="flex gap-3 lg:p-6 mdlg:p-4 p-2 lg:w-[90%] w-[100%] rounded-[10px] hover:bg-[#DDE0E755] transition duration-200"
 								>
 									<div class="w-[40px]">
 										<i
@@ -215,7 +215,7 @@
 										>
 											Solution 5
 										</h4>
-										<p class="leading-[130%] text-sm font-light">
+										<p class="text-sm font-light leading-[130%]">
 											Lorem ipsum dolor sit amet consectetur,
 											adipisicing elit. Porro tenetur facere saepe
 											sint nam omnis illo, deserunt praesentium eius
@@ -224,7 +224,7 @@
 									</div>
 								</div>
 								<div
-									class="flex gap-3 lg:w-[90%] w-[100%] rounded-[10px] hover:bg-[#DDE0E755] lg:p-6 mdlg:p-4 p-2 transition duration-200"
+									class="flex gap-3 lg:p-6 mdlg:p-4 p-2 lg:w-[90%] w-[100%] rounded-[10px] hover:bg-[#DDE0E755] transition duration-200"
 								>
 									<div class="w-[40px]">
 										<i
@@ -237,7 +237,7 @@
 										>
 											Solution 6
 										</h4>
-										<p class="leading-[130%] text-sm font-light">
+										<p class="text-sm font-light leading-[130%]">
 											Lorem ipsum dolor sit amet consectetur,
 											adipisicing elit. Porro tenetur facere saepe
 											sint nam omnis illo, deserunt praesentium eius
@@ -246,7 +246,7 @@
 									</div>
 								</div>
 								<div
-									class="flex gap-3 lg:w-[90%] w-[100%] rounded-[10px] hover:bg-[#DDE0E755] lg:p-6 mdlg:p-4 p-2 transition duration-200"
+									class="flex gap-3 lg:p-6 mdlg:p-4 p-2 lg:w-[90%] w-[100%] rounded-[10px] hover:bg-[#DDE0E755] transition duration-200"
 								>
 									<div class="w-[40px]">
 										<i
@@ -259,7 +259,7 @@
 										>
 											Solution 7
 										</h4>
-										<p class="leading-[130%] text-sm font-light">
+										<p class="text-sm font-light leading-[130%]">
 											Lorem ipsum dolor sit amet consectetur,
 											adipisicing elit. Porro tenetur facere saepe
 											sint nam omnis illo, deserunt praesentium eius
@@ -272,11 +272,11 @@
 					</span>
 				</li>
 				<li
-					class="relative flex items-center group text-s transition duration-200"
+					class="relative flex items-center text-s transition duration-200 group"
 				>
 					<span
 						href="#"
-						class="flex group justify-center items-center cursor-pointer hover:text-primaryColor transition duration-200 subMenuOpener"
+						class="subMenuOpener flex justify-center items-center cursor-pointer hover:text-primaryColor transition duration-200 group"
 						onmouseover="mouseOverSubMenuOpener(1)"
 						onmouseleave="mouseOutSubMenu(1)"
 					>
@@ -286,13 +286,13 @@
 							></i
 						></span>
 						<div
-							class="hidden-line fixed top-[65px] left-0 w-screen bg-red-300 h-[10px] hidden cursor-default opacity-0"
+							class="hidden-line fixed top-[65px] left-0 hidden w-screen h-[10px] cursor-default opacity-0"
 						></div>
 						<div
-							class="hidden-block absolute top-0 left-0 w-full bg-red-500 h-[66px] hidden cursor-pointer opacity-0"
+							class="hidden-block absolute top-0 left-0 hidden w-full h-[66px] cursor-pointer opacity-0"
 						></div>
 						<div
-							class="des:w-[65%] xl:w-[75%] w-[85%] fixed left-[50%] -translate-x-1/2 top-[75px] h-auto bg-[#EEF1F8FA] z-[9996] rounded-xl shadow-2xl p-10 transition duration-500 subMenu text-secondaryColor cursor-default"
+							class="subMenu fixed left-[50%] -translate-x-1/2 top-[75px] z-[9996] p-10 des:w-[65%] xl:w-[75%] w-[85%] h-auto bg-[#EEF1F8FA] rounded-xl shadow-2xl text-secondaryColor transition duration-500 cursor-default"
 							style="
 								backdrop-filter: saturate(100%) blur(5px);
 								transform: translateX(-50%) translateY(-100px);
@@ -300,14 +300,14 @@
 								pointer-events: none;
 							"
 						>
-							<h3 class="text-primaryColor text-3xl font-bold mb-4">
+							<h3 class="mb-4 text-primaryColor text-3xl font-bold">
 								Cases
 							</h3>
 							<div
-								class="grid grid-cols-2 xl:gap-y-6 gap-y-2 lg: gap-x-none gap-x-2"
+								class="grid grid-cols-2 xl:gap-y-6 gap-y-2 lg:gap-x-none gap-x-2"
 							>
 								<div
-									class="flex gap-3 lg:w-[90%] w-[100%] rounded-[10px] hover:bg-[#DDE0E755] lg:p-6 mdlg:p-4 p-2 transition duration-200"
+									class="flex gap-3 lg:p-6 mdlg:p-4 p-2 lg:w-[90%] w-[100%] rounded-[10px] hover:bg-[#DDE0E755] transition duration-200"
 								>
 									<div class="w-[40px]">
 										<i
@@ -320,7 +320,7 @@
 										>
 											Case 1
 										</h4>
-										<p class="leading-[130%] text-sm font-light">
+										<p class="text-sm font-light leading-[130%]">
 											Lorem ipsum dolor sit amet consectetur,
 											adipisicing elit. Porro tenetur facere saepe
 											sint nam omnis illo, deserunt praesentium eius
@@ -329,7 +329,7 @@
 									</div>
 								</div>
 								<div
-									class="flex gap-3 lg:w-[90%] w-[100%] rounded-[10px] hover:bg-[#DDE0E755] lg:p-6 mdlg:p-4 p-2 transition duration-200"
+									class="flex gap-3 lg:p-6 mdlg:p-4 p-2 lg:w-[90%] w-[100%] rounded-[10px] hover:bg-[#DDE0E755] transition duration-200"
 								>
 									<div class="w-[40px]">
 										<i
@@ -342,7 +342,7 @@
 										>
 											Case 2
 										</h4>
-										<p class="leading-[130%] text-sm font-light">
+										<p class="text-sm font-light leading-[130%]">
 											Lorem ipsum dolor sit amet consectetur,
 											adipisicing elit. Porro tenetur facere saepe
 											sint nam omnis illo, deserunt praesentium eius
@@ -351,7 +351,7 @@
 									</div>
 								</div>
 								<div
-									class="flex gap-3 lg:w-[90%] w-[100%] rounded-[10px] hover:bg-[#DDE0E755] lg:p-6 mdlg:p-4 p-2 transition duration-200"
+									class="flex gap-3 lg:p-6 mdlg:p-4 p-2 lg:w-[90%] w-[100%] rounded-[10px] hover:bg-[#DDE0E755] transition duration-200"
 								>
 									<div class="w-[40px]">
 										<i
@@ -364,7 +364,7 @@
 										>
 											Case 3
 										</h4>
-										<p class="leading-[130%] text-sm font-light">
+										<p class="text-sm font-light leading-[130%]">
 											Lorem ipsum dolor sit amet consectetur,
 											adipisicing elit. Porro tenetur facere saepe
 											sint nam omnis illo, deserunt praesentium eius
@@ -373,7 +373,7 @@
 									</div>
 								</div>
 								<div
-									class="flex gap-3 lg:w-[90%] w-[100%] rounded-[10px] hover:bg-[#DDE0E755] lg:p-6 mdlg:p-4 p-2 transition duration-200"
+									class="flex gap-3 lg:p-6 mdlg:p-4 p-2 lg:w-[90%] w-[100%] rounded-[10px] hover:bg-[#DDE0E755] transition duration-200"
 								>
 									<div class="w-[40px]">
 										<i
@@ -386,7 +386,7 @@
 										>
 											Case 4
 										</h4>
-										<p class="leading-[130%] text-sm font-light">
+										<p class="text-sm font-light leading-[130%]">
 											Lorem ipsum dolor sit amet consectetur,
 											adipisicing elit. Porro tenetur facere saepe
 											sint nam omnis illo, deserunt praesentium eius
@@ -395,7 +395,7 @@
 									</div>
 								</div>
 								<div
-									class="flex gap-3 lg:w-[90%] w-[100%] rounded-[10px] hover:bg-[#DDE0E755] lg:p-6 mdlg:p-4 p-2 transition duration-200"
+									class="flex gap-3 lg:p-6 mdlg:p-4 p-2 lg:w-[90%] w-[100%] rounded-[10px] hover:bg-[#DDE0E755 transition duration-200"
 								>
 									<div class="w-[40px]">
 										<i
@@ -408,7 +408,7 @@
 										>
 											Case 5
 										</h4>
-										<p class="leading-[130%] text-sm font-light">
+										<p class="text-sm font-light leading-[130%]">
 											Lorem ipsum dolor sit amet consectetur,
 											adipisicing elit. Porro tenetur facere saepe
 											sint nam omnis illo, deserunt praesentium eius
@@ -417,7 +417,7 @@
 									</div>
 								</div>
 								<div
-									class="flex gap-3 lg:w-[90%] w-[100%] rounded-[10px] hover:bg-[#DDE0E755] lg:p-6 mdlg:p-4 p-2 transition duration-200"
+									class="flex gap-3 lg:p-6 mdlg:p-4 p-2 lg:w-[90%] w-[100%] rounded-[10px] hover:bg-[#DDE0E755] transition duration-200"
 								>
 									<div class="w-[40px]">
 										<i
@@ -430,7 +430,7 @@
 										>
 											Case 6
 										</h4>
-										<p class="leading-[130%] text-sm font-light">
+										<p class="text-sm font-light leading-[130%]">
 											Lorem ipsum dolor sit amet consectetur,
 											adipisicing elit. Porro tenetur facere saepe
 											sint nam omnis illo, deserunt praesentium eius
@@ -443,11 +443,11 @@
 					</span>
 				</li>
 				<li
-					class="relative flex items-center group text-s transition duration-200"
+					class="relative flex items-center text-s transition duration-200 group"
 				>
 					<span
 						href="#"
-						class="flex group justify-center items-center cursor-pointer hover:text-primaryColor transition duration-300 subMenuOpener"
+						class="subMenuOpener flex justify-center items-center cursor-pointer hover:text-primaryColor transition duration-300 group"
 						onmouseover="mouseOverSubMenuOpener(2)"
 						onmouseleave="mouseOutSubMenu(2)"
 					>
@@ -457,13 +457,13 @@
 							></i
 						></span>
 						<div
-							class="hidden-line fixed top-[65px] left-0 w-screen bg-red-300 h-[10px] hidden cursor-default opacity-0"
+							class="hidden-line fixed top-[65px] left-0 hidden w-screen h-[10px] cursor-default opacity-0"
 						></div>
 						<div
-							class="hidden-block absolute top-0 left-0 w-full bg-red-500 h-[66px] hidden cursor-pointer opacity-0"
+							class="hidden-block absolute top-0 left-0 hidden w-full h-[66px] cursor-pointer opacity-0"
 						></div>
 						<div
-							class="des:w-[65%] xl:w-[75%] w-[85%] fixed left-[50%] -translate-x-1/2 top-[75px] h-auto bg-[#EEF1F8FA] z-[9996] rounded-xl shadow-2xl p-10 transition duration-500 subMenu text-secondaryColor cursor-default"
+							class="subMenu fixed left-[50%] -translate-x-1/2 top-[75px] z-[9996] p-10 des:w-[65%] xl:w-[75%] w-[85%] h-auto bg-[#EEF1F8FA] rounded-xl shadow-2xl text-secondaryColor cursor-default transition duration-500"
 							style="
 								backdrop-filter: saturate(100%) blur(5px);
 								transform: translateX(-50%) translateY(-100px);
@@ -471,14 +471,14 @@
 								pointer-events: none;
 							"
 						>
-							<h3 class="text-primaryColor text-3xl font-bold mb-4">
+							<h3 class="mb-4 text-primaryColor text-3xl font-bold">
 								Sfieres
 							</h3>
 							<div
-								class="grid grid-cols-2 xl:gap-y-6 gap-y-2 lg: gap-x-none gap-x-2"
+								class="grid grid-cols-2 xl:gap-y-6 gap-y-2 lg:gap-x-none gap-x-2"
 							>
 								<div
-									class="flex gap-3 lg:w-[90%] w-[100%] rounded-[10px] hover:bg-[#DDE0E755] lg:p-6 mdlg:p-4 p-2 transition duration-200"
+									class="flex gap-3 lg:p-6 mdlg:p-4 p-2 lg:w-[90%] w-[100%] rounded-[10px] hover:bg-[#DDE0E755] transition duration-200"
 								>
 									<div class="w-[40px]">
 										<i
@@ -491,7 +491,7 @@
 										>
 											Sfiere 1
 										</h4>
-										<p class="leading-[130%] text-sm font-light">
+										<p class="text-sm font-light leading-[130%]">
 											Lorem ipsum dolor sit amet consectetur,
 											adipisicing elit. Porro tenetur facere saepe
 											sint nam omnis illo, deserunt praesentium eius
@@ -500,7 +500,7 @@
 									</div>
 								</div>
 								<div
-									class="flex gap-3 lg:w-[90%] w-[100%] rounded-[10px] hover:bg-[#DDE0E755] lg:p-6 mdlg:p-4 p-2 transition duration-200"
+									class="flex gap-3 lg:p-6 mdlg:p-4 p-2 lg:w-[90%] w-[100%] rounded-[10px] hover:bg-[#DDE0E755] transition duration-200"
 								>
 									<div class="w-[40px]">
 										<i
@@ -513,7 +513,7 @@
 										>
 											Sfiere 2
 										</h4>
-										<p class="leading-[130%] text-sm font-light">
+										<p class="text-sm font-light leading-[130%]">
 											Lorem ipsum dolor sit amet consectetur,
 											adipisicing elit. Porro tenetur facere saepe
 											sint nam omnis illo, deserunt praesentium eius
@@ -522,7 +522,7 @@
 									</div>
 								</div>
 								<div
-									class="flex gap-3 lg:w-[90%] w-[100%] rounded-[10px] hover:bg-[#DDE0E755] lg:p-6 mdlg:p-4 p-2 transition duration-200"
+									class="flex gap-3 lg:p-6 mdlg:p-4 p-2 lg:w-[90%] w-[100%] rounded-[10px] hover:bg-[#DDE0E755] transition duration-200"
 								>
 									<div class="w-[40px]">
 										<i
@@ -535,7 +535,7 @@
 										>
 											Sfiere 3
 										</h4>
-										<p class="leading-[130%] text-sm font-light">
+										<p class="text-sm font-light leading-[130%]">
 											Lorem ipsum dolor sit amet consectetur,
 											adipisicing elit. Porro tenetur facere saepe
 											sint nam omnis illo, deserunt praesentium eius
@@ -544,7 +544,7 @@
 									</div>
 								</div>
 								<div
-									class="flex gap-3 lg:w-[90%] w-[100%] rounded-[10px] hover:bg-[#DDE0E755] lg:p-6 mdlg:p-4 p-2 transition duration-200"
+									class="flex gap-3 lg:p-6 mdlg:p-4 p-2 lg:w-[90%] w-[100%] rounded-[10px] hover:bg-[#DDE0E755] transition duration-200"
 								>
 									<div class="w-[40px]">
 										<i
@@ -557,7 +557,7 @@
 										>
 											Sfiere 4
 										</h4>
-										<p class="leading-[130%] text-sm font-light">
+										<p class="text-sm font-light leading-[130%]">
 											Lorem ipsum dolor sit amet consectetur,
 											adipisicing elit. Porro tenetur facere saepe
 											sint nam omnis illo, deserunt praesentium eius
@@ -566,7 +566,7 @@
 									</div>
 								</div>
 								<div
-									class="flex gap-3 lg:w-[90%] w-[100%] rounded-[10px] hover:bg-[#DDE0E755] lg:p-6 mdlg:p-4 p-2 transition duration-200"
+									class="flex gap-3 lg:p-6 mdlg:p-4 p-2 lg:w-[90%] w-[100%] rounded-[10px] hover:bg-[#DDE0E755] transition duration-200"
 								>
 									<div class="w-[40px]">
 										<i
@@ -579,7 +579,7 @@
 										>
 											Sfiere 5
 										</h4>
-										<p class="leading-[130%] text-sm font-light">
+										<p class="text-sm font-light leading-[130%]">
 											Lorem ipsum dolor sit amet consectetur,
 											adipisicing elit. Porro tenetur facere saepe
 											sint nam omnis illo, deserunt praesentium eius
@@ -607,17 +607,17 @@
 				</li>
 			</ul>
 			<div
-				class="auth-group flex flex-row items-end justify-end mdlg:gap-4 gap-2 relative flex-1 des:mr-10 mr-2 xl:text-xl lg:text-[1.1em] text-[.9em]"
+				class="auth-group relative flex flex-row items-end justify-end mdlg:gap-4 gap-2 flex-1 des:mr-10 mr-2 xl:text-xl lg:text-[1.1em] text-[.9em]"
 			>
 				<a
 					href="#"
-					class="text-primaryColor rounded-full shadow-buttonSmallShadow xl:px-8 mdlg:px-6 px-3 py-1 hover:bg-primaryColor hover:text-backgroundColor hover:shadow-none transition duration-300"
+					class="xl:px-8 mdlg:px-6 px-3 py-1 text-primaryColor rounded-full shadow-buttonSmallShadow hover:bg-primaryColor hover:text-backgroundColor hover:shadow-none transition duration-300"
 				>
 					Log in
 				</a>
 				<a
 					href="#"
-					class="text-primaryColor rounded-full shadow-buttonSmallShadow xl:px-8 mdlg:px-6 px-3 py-1 hover:bg-primaryColor hover:text-backgroundColor hover:shadow-none transition duration-300"
+					class="xl:px-8 mdlg:px-6 px-3 py-1 text-primaryColor rounded-full shadow-buttonSmallShadow hover:bg-primaryColor hover:text-backgroundColor hover:shadow-none transition duration-300"
 				>
 					Sign up
 				</a>
@@ -625,11 +625,11 @@
 		</nav>
 		<!-- Hamburger menu -->
 		<div
-			class="md:hidden flex items-center justify-center burger-menu fixed top-6 right-6 h-[70px] w-[70px] cursor-pointer z-50 transition duration-500 rounded-[12px] border-[2px] bg-[#EEF1F899] border-primaryColor bg-[]"
+			class="burger-menu fixed top-6 right-6 z-50 md:hidden flex items-center justify-center h-[70px] w-[70px] cursor-pointer transition duration-500 rounded-[12px] border-[2px] bg-[#EEF1F899] border-primaryColor"
 			onclick="openMenu()"
 		>
 			<span
-				class="block absolute w-[40px] h-[4px] rounded-full"
+				class="absolute block w-[40px] h-[4px] rounded-full"
 				style="
 					transform: translateY(-10px);
 					background-color: #42c1ee;
@@ -637,11 +637,11 @@
 				"
 			></span>
 			<span
-				class="block absolute w-[40px] h-[4px] bg-primaryColor rounded-full"
+				class="absolute block w-[40px] h-[4px] bg-primaryColor rounded-full"
 				style="background-color: #42c1ee; transition: 0.5s"
 			></span>
 			<span
-				class="block absolute w-[40px] h-[4px] bg-primaryColor rounded-full"
+				class="absolute block w-[40px] h-[4px] bg-primaryColor rounded-full"
 				style="
 					transform: translateY(10px);
 					background-color: #42c1ee;
@@ -651,7 +651,7 @@
 		</div>
 		<!-- Mobile navigation bar BLOCK -->
 		<div
-			class="mobileMenu fixed bg-gradient-to-b from-[#20D1ED] to-[#0881E9] top-0 left-0 right-0 bottom-0 z-40 opacity-100 transition duration-500"
+			class="mobileMenu fixed top-0 left-0 right-0 bottom-0 z-40 bg-gradient-to-b from-[#20D1ED] to-[#0881E9] opacity-100 transition duration-500"
 			style="opacity: 0; pointer-events: none"
 		>
 			<ul
@@ -664,7 +664,7 @@
 					<a href="#" onclick="openMobileSubMenu(0)">
 						Solutions
 						<i
-							class="fa-solid fa-chevron-down transition duration-200 text-3xl"
+							class="fa-solid fa-chevron-down text-3xl transition duration-200"
 							style="transform: rotate(-90deg)"
 						></i>
 					</a>
@@ -673,7 +673,7 @@
 					<a href="#" onclick="openMobileSubMenu(1)">
 						Cases
 						<i
-							class="fa-solid fa-chevron-down transition duration-200 text-3xl"
+							class="fa-solid fa-chevron-down text-3xl transition duration-200"
 							style="transform: rotate(-90deg)"
 						></i>
 					</a>
@@ -682,7 +682,7 @@
 					<a href="#" onclick="openMobileSubMenu(2)">
 						Sfieres
 						<i
-							class="fa-solid fa-chevron-down transition duration-200 text-3xl"
+							class="fa-solid fa-chevron-down text-3xl transition duration-200"
 							style="transform: rotate(-90deg)"
 						></i>
 					</a>
@@ -697,12 +697,12 @@
 			<img src="images/JOT 1.png" alt="logo" class="ml-20 w-[150px]" />
 			<!-- Solutions subMenu -->
 			<div
-				class="mobile-subMenu--0 mobile-subMenu absolute bg-gradient-to-b from-[#20D1ED] to-[#0881E9] top-0 z-42 opacity-100 transition duration-500 w-full h-full xs:p-20 p-16 text-4xl text-white font-semibold"
+				class="mobile-subMenu mobile-subMenu--0 absolute top-0 z-42 xs:p-20 p-16 w-full h-full bg-gradient-to-b from-[#20D1ED] to-[#0881E9] opacity-100 text-white text-4xl font-semibold transition duration-500"
 				style="right: -100%; overflow-y: scroll; transition: 0.5s"
 			>
 				<h2 class="mb-10">Solutions</h2>
 				<div class="mb-5">
-					<h4 class="text-2xl mb-2 text-secondaryColor">
+					<h4 class="mb-2 text-2xl text-secondaryColor">
 						<i class="fa-solid fa-people-arrows text-[30px]"></i>
 						Solution 1
 					</h4>
@@ -714,7 +714,7 @@
 					</p>
 				</div>
 				<div class="mb-5">
-					<h4 class="text-2xl mb-2 text-secondaryColor">
+					<h4 class="mb-2 text-2xl text-secondaryColor">
 						<i class="fa-solid fa-people-arrows text-[30px]"></i>
 						Solution 2
 					</h4>
@@ -726,7 +726,7 @@
 					</p>
 				</div>
 				<div class="mb-5">
-					<h4 class="text-2xl mb-2 text-secondaryColor">
+					<h4 class="mb-2 text-2xl text-secondaryColor">
 						<i class="fa-solid fa-people-arrows text-[30px]"></i>
 						Solution 3
 					</h4>
@@ -738,7 +738,7 @@
 					</p>
 				</div>
 				<div class="mb-5">
-					<h4 class="text-2xl mb-2 text-secondaryColor">
+					<h4 class="mb-2 text-2xl text-secondaryColor">
 						<i class="fa-solid fa-people-arrows text-[30px]"></i>
 						Solution 4
 					</h4>
@@ -750,7 +750,7 @@
 					</p>
 				</div>
 				<div class="mb-5">
-					<h4 class="text-2xl mb-2 text-secondaryColor">
+					<h4 class="mb-2 text-2xl text-secondaryColor">
 						<i class="fa-solid fa-people-arrows text-[30px]"></i>
 						Solution 5
 					</h4>
@@ -762,7 +762,7 @@
 					</p>
 				</div>
 				<div class="mb-5">
-					<h4 class="text-2xl mb-2 text-secondaryColor">
+					<h4 class="mb-2 text-2xl text-secondaryColor">
 						<i class="fa-solid fa-people-arrows text-[30px]"></i>
 						Solution 6
 					</h4>
@@ -774,7 +774,7 @@
 					</p>
 				</div>
 				<div class="mb-5">
-					<h4 class="text-2xl mb-2 text-secondaryColor">
+					<h4 class="mb-2 text-2xl text-secondaryColor">
 						<i class="fa-solid fa-people-arrows text-[30px]"></i>
 						Solution 7
 					</h4>
@@ -788,12 +788,12 @@
 			</div>
 			<!-- Cases subMenu -->
 			<div
-				class="mobile-subMenu--1 mobile-subMenu absolute bg-gradient-to-b from-[#20D1ED] to-[#0881E9] top-0 z-42 opacity-100 transition duration-500 w-full h-full xs:p-20 p-16 text-4xl text-white font-semibold"
+				class="mobile-subMenu mobile-subMenu--1 absolute top-0 z-42 xs:p-20 p-16 w-full h-full bg-gradient-to-b from-[#20D1ED] to-[#0881E9] opacity-100 text-white text-4xl font-semibold transition duration-500"
 				style="right: -100%; overflow-y: scroll; transition: 0.5s"
 			>
 				<h2 class="mb-10">Cases</h2>
 				<div class="mb-5">
-					<h4 class="text-2xl mb-2 text-secondaryColor">
+					<h4 class="mb-2 text-2xl text-secondaryColor">
 						<i class="fa-solid fa-people-arrows text-[30px]"></i>
 						Case 1
 					</h4>
@@ -805,7 +805,7 @@
 					</p>
 				</div>
 				<div class="mb-5">
-					<h4 class="text-2xl mb-2 text-secondaryColor">
+					<h4 class="mb-2 text-2xl text-secondaryColor">
 						<i class="fa-solid fa-people-arrows text-[30px]"></i>
 						Case 2
 					</h4>
@@ -817,7 +817,7 @@
 					</p>
 				</div>
 				<div class="mb-5">
-					<h4 class="text-2xl mb-2 text-secondaryColor">
+					<h4 class="mb-2 text-2xl text-secondaryColor">
 						<i class="fa-solid fa-people-arrows text-[30px]"></i>
 						Case 3
 					</h4>
@@ -829,7 +829,7 @@
 					</p>
 				</div>
 				<div class="mb-5">
-					<h4 class="text-2xl mb-2 text-secondaryColor">
+					<h4 class="mb-2 text-2xl text-secondaryColor">
 						<i class="fa-solid fa-people-arrows text-[30px]"></i>
 						Case 4
 					</h4>
@@ -841,7 +841,7 @@
 					</p>
 				</div>
 				<div class="mb-5">
-					<h4 class="text-2xl mb-2 text-secondaryColor">
+					<h4 class="mb-2 text-2xl text-secondaryColor">
 						<i class="fa-solid fa-people-arrows text-[30px]"></i>
 						Case 5
 					</h4>
@@ -853,7 +853,7 @@
 					</p>
 				</div>
 				<div class="mb-5">
-					<h4 class="text-2xl mb-2 text-secondaryColor">
+					<h4 class="mb-2 text-2xl text-secondaryColor">
 						<i class="fa-solid fa-people-arrows text-[30px]"></i>
 						Case 6
 					</h4>
@@ -867,12 +867,12 @@
 			</div>
 			<!-- Sfieres subMenu -->
 			<div
-				class="mobile-subMenu--2 mobile-subMenu absolute bg-gradient-to-b from-[#20D1ED] to-[#0881E9] top-0 z-42 opacity-100 transition duration-500 w-full h-full xs:p-20 p-16 text-4xl text-white font-semibold"
+				class="mobile-subMenu mobile-subMenu--2 absolute top-0 z-42 xs:p-20 p-16 w-full h-full bg-gradient-to-b from-[#20D1ED] to-[#0881E9] opacity-100 text-white text-4xl font-semibold transition duration-500"
 				style="right: -100%; overflow-y: scroll; transition: 0.5s"
 			>
 				<h2 class="mb-10">Sfieres</h2>
 				<div class="mb-5">
-					<h4 class="text-2xl mb-2 text-secondaryColor">
+					<h4 class="mb-2 text-2xl text-secondaryColor">
 						<i class="fa-solid fa-people-arrows text-[30px]"></i>
 						Sfiere 1
 					</h4>
@@ -884,7 +884,7 @@
 					</p>
 				</div>
 				<div class="mb-5">
-					<h4 class="text-2xl mb-2 text-secondaryColor">
+					<h4 class="mb-2 text-2xl text-secondaryColor">
 						<i class="fa-solid fa-people-arrows text-[30px]"></i>
 						Sfiere 2
 					</h4>
@@ -896,7 +896,7 @@
 					</p>
 				</div>
 				<div class="mb-5">
-					<h4 class="text-2xl mb-2 text-secondaryColor">
+					<h4 class="mb-2 text-2xl text-secondaryColor">
 						<i class="fa-solid fa-people-arrows text-[30px]"></i>
 						Sfiere 3
 					</h4>
@@ -908,7 +908,7 @@
 					</p>
 				</div>
 				<div class="mb-5">
-					<h4 class="text-2xl mb-2 text-secondaryColor">
+					<h4 class="mb-2 text-2xl text-secondaryColor">
 						<i class="fa-solid fa-people-arrows text-[30px]"></i>
 						Sfiere 4
 					</h4>
@@ -920,7 +920,7 @@
 					</p>
 				</div>
 				<div class="mb-5">
-					<h4 class="text-2xl mb-2 text-secondaryColor">
+					<h4 class="mb-2 text-2xl text-secondaryColor">
 						<i class="fa-solid fa-people-arrows text-[30px]"></i>
 						Sfiere 5
 					</h4>
@@ -935,7 +935,7 @@
 		</div>
 		<!-- MAIN CONTENT -->
 		<div
-			class="min-h-screen mx-auto md:mt-[64px] bg-backgroundColor w-full des:w-max des:max-w-none xl:max-w-[1400px] lg:max-w-[1200px]"
+			class="mx-auto md:mt-[64px] min-h-screen des:w-max des:max-w-none xl:max-w-[1400px] lg:max-w-[1200px] w-full bg-backgroundColor"
 		>
 			<!-- Header BLOCK-->
 			<header class="md:mx-22 mx-4 py-5 flex flex-row items-center">
