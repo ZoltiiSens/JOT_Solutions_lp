@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" class="dark">
 	<head>
 		<!-- Meta -->
 		<meta charset="UTF-8" />
@@ -19,14 +19,16 @@
 		<link rel="stylesheet" href="css/swiper-bundle.min.css" />
 
 		<!-- Tailwind css -->
-		<link rel="stylesheet" href="css/style.css" />
+		<!-- <link rel="stylesheet" href="css/style.css" /> -->
 
 		<!-- Tailwind TEMP -->
 		<!-- Tailwind connection -->
-		<!-- <script src="https://cdn.tailwindcss.com"></script> -->
+		<script src="https://cdn.tailwindcss.com"></script>
 		<!-- Tailvind configuration -->
-		<!-- <script>
+		<script>
 			tailwind.config = {
+				content: ['./*.html'],
+				darkMode: 'class',
 				theme: {
 					fontFamily: {
 						baseFont: ['Chakra Petch', 'sans-serif'],
@@ -34,10 +36,18 @@
 					extend: {
 						colors: {
 							primaryColor: '#42C1EE',
+							darkPrimaryColor: '#D37101',
+							darkPrimaryColor2: '#FF8A00',
 							secondaryColor: '#3F5477',
+							darkSecondaryColor: '#F9F9F9',
 							backgroundColor: '#EEF1F8',
+							darkBackgroundColor: '#1E1E1E',
+							darkBackgroundColor2: '#2C2F33',
+							darkBackgroundColor2Opacity: '#2C2F33FA',
 							gradColorStart: 'rgba(32, 209, 237, 0.8)',
 							gradColorEnd: 'rgba(8, 129, 233, 0.8)',
+							darkGradColorStart: 'rgba(211, 113, 1, 1)',
+							darkGradColorEnd: 'rgba(191, 93, 1, 1)',
 						},
 						width: {
 							max: '1440px',
@@ -49,6 +59,12 @@
 								'0 1px 3px 0 rgb(0 0 0 / 0.1), 5px 5px 2px -1px rgb(0 0 0 / 0.1), -3px -3px 2px -1px rgb(255 255 255)',
 							logoShadow:
 								'0 1px 3px 0 rgb(0 0 0 / 0.1), 6px 6px 4px -1px rgb(0 0 0 / 0.1), -5px -5px 4px -1px rgb(255 255 255)',
+							darkShadow:
+								'5px 5px 10px rgba(13, 13, 15, 0.75), -2px -2px 4px #5E6569, -3px -3px 6px #262E32',
+							darkBiggerShadow:
+								'7px 7px 10px rgba(13, 13, 15, 0.75), -4px -4px 4px #5E6569, -5px -5px 6px #262E32',
+							darkPrimaryShadow:
+								'-3px -3px 3px rgba(231, 133, 21, 1), 3px 3px 6px #000000',
 						},
 						spacing: {
 							22: '90px',
@@ -60,34 +76,45 @@
 						},
 					},
 				},
+				plugins: [],
 			};
-		</script> -->
+		</script>
 	</head>
-	<body class="font-baseFont text-secondaryColor bg-backgroundColor">
+	<body
+		class="font-baseFont text-secondaryColor dark:text-darkSecondaryColor dark:bg-darkBackgroundColor bg-backgroundColor"
+	>
 		<!-- Laptop Navigation  bar BLOCK -->
 		<nav
-			class="fixed top-0 z-[9997] px-4 w-screen h-[64px] md:flex hidden flex-row items-center shadow-md rounded-b-[20px] bg-[#EEF1F8CC]"
+			class="fixed top-0 z-[9997] px-4 w-screen h-[64px] md:flex hidden flex-row items-center shadow-md rounded-b-[20px] bg-[#EEF1F8CC] dark:bg-darkBackgroundColor2"
 			style="backdrop-filter: saturate(100%) blur(5px)"
 		>
 			<a href="#">
-				<img src="images/logo_text.svg" alt="logo" class="h-[40px]" />
+				<img
+					src="images/logo_text.svg"
+					alt="logo"
+					class="dark:p-2 h-[40px] dark:h-[45px] dark:rounded-md dark:bg-darkSecondaryColor"
+				/>
 			</a>
 			<ul
-				class="lg:ml-20 mdlg:ml-8 ml-4 h-full flex flex-row xl:gap-10 gap-4 xl:text-xl lg:text-[1.1em] text-[.9em]"
+				class="lg:ml-20 mdlg:ml-8 ml-4 h-full flex flex-row xl:gap-10 gap-4 xl:text-xl lg:text-[1.1em] text-[.9em] dark:text-darkSecondaryColor"
 			>
 				<li class="flex items-center transition duration-200">
-					<a href="#" class="hover:text-primaryColor">About us</a>
+					<a
+						href="#"
+						class="hover:text-primaryColor dark:hover:text-darkPrimaryColor transition"
+						>About us</a
+					>
 				</li>
 				<li
 					class="relative flex items-center text-s transition duration-200 group"
 				>
 					<span
 						href="#"
-						class="subMenuOpener flex justify-center items-center cursor-pointer hover:text-primaryColor transition duration-200 group"
+						class="subMenuOpener flex justify-center items-center cursor-pointer hover:text-primaryColor dark:hover:text-darkPrimaryColor transition duration-200 group"
 						onmouseover="mouseOverSubMenuOpener(0)"
 						onmouseleave="mouseOutSubMenu(0)"
 					>
-						<span
+						<span class="transition"
 							>Solutions<i
 								class="fa-solid fa-chevron-down ml-1 transition duration-200"
 							></i
@@ -99,7 +126,7 @@
 							class="hidden-block absolute top-0 left-0 w-full h-[66px] hidden cursor-pointer opacity-0 duration-0"
 						></div>
 						<div
-							class="subMenu fixed left-[50%] -translate-x-1/2 top-[75px] z-[9996] p-10 des:w-[65%] xl:w-[75%] w-[90%] h-auto text-secondaryColor bg-[#EEF1F8FA] rounded-xl shadow-2xl cursor-default transition duration-500"
+							class="subMenu fixed left-[50%] -translate-x-1/2 top-[75px] z-[9996] p-10 des:w-[65%] xl:w-[75%] w-[90%] h-auto text-secondaryColor dark:text-darkSecondaryColor bg-[#EEF1F8FA] dark:bg-darkBackgroundColor2Opacity rounded-xl shadow-2xl cursor-default transition duration-500"
 							style="
 								backdrop-filter: saturate(100%) blur(5px);
 								transform: translateX(-50%) translateY(-100px);
@@ -107,7 +134,9 @@
 								pointer-events: none;
 							"
 						>
-							<h3 class="mb-4 text-primaryColor text-3xl font-bold">
+							<h3
+								class="mb-4 text-primaryColor dark:text-darkPrimaryColor dark:font-bold text-3xl font-bold"
+							>
 								Solutions
 							</h3>
 							<div
@@ -123,7 +152,7 @@
 									</div>
 									<div class="text">
 										<h4
-											class="text-primaryColor text-xl leading-[30px]"
+											class="text-primaryColor dark:text-darkPrimaryColor dark:font-bold text-xl leading-[30px]"
 										>
 											Solution 1
 										</h4>
@@ -145,7 +174,7 @@
 									</div>
 									<div class="text">
 										<h4
-											class="text-primaryColor text-xl leading-[30px]"
+											class="text-primaryColor dark:text-darkPrimaryColor dark:font-bold text-xl leading-[30px]"
 										>
 											Solution 2
 										</h4>
@@ -167,7 +196,7 @@
 									</div>
 									<div class="text">
 										<h4
-											class="text-primaryColor text-xl leading-[30px]"
+											class="text-primaryColor dark:text-darkPrimaryColor dark:font-bold text-xl leading-[30px]"
 										>
 											Solution 3
 										</h4>
@@ -189,7 +218,7 @@
 									</div>
 									<div class="text">
 										<h4
-											class="text-primaryColor text-xl leading-[30px]"
+											class="text-primaryColor dark:text-darkPrimaryColor dark:font-bold text-xl leading-[30px]"
 										>
 											Solution 4
 										</h4>
@@ -211,7 +240,7 @@
 									</div>
 									<div class="text">
 										<h4
-											class="text-primaryColor text-xl leading-[30px]"
+											class="text-primaryColor dark:text-darkPrimaryColor dark:font-bold text-xl leading-[30px]"
 										>
 											Solution 5
 										</h4>
@@ -233,7 +262,7 @@
 									</div>
 									<div class="text">
 										<h4
-											class="text-primaryColor text-xl leading-[30px]"
+											class="text-primaryColor dark:text-darkPrimaryColor dark:font-bold text-xl leading-[30px]"
 										>
 											Solution 6
 										</h4>
@@ -255,7 +284,7 @@
 									</div>
 									<div class="text">
 										<h4
-											class="text-primaryColor text-xl leading-[30px]"
+											class="text-primaryColor dark:text-darkPrimaryColor dark:font-bold text-xl leading-[30px]"
 										>
 											Solution 7
 										</h4>
@@ -276,11 +305,11 @@
 				>
 					<span
 						href="#"
-						class="subMenuOpener flex justify-center items-center cursor-pointer hover:text-primaryColor transition duration-200 group"
+						class="subMenuOpener flex justify-center items-center cursor-pointer hover:text-primaryColor dark:hover:text-darkPrimaryColor transition duration-200 group"
 						onmouseover="mouseOverSubMenuOpener(1)"
 						onmouseleave="mouseOutSubMenu(1)"
 					>
-						<span
+						<span class="transition"
 							>Cases<i
 								class="fa-solid fa-chevron-down ml-1 transition duration-200"
 							></i
@@ -292,7 +321,7 @@
 							class="hidden-block absolute top-0 left-0 hidden w-full h-[66px] cursor-pointer opacity-0"
 						></div>
 						<div
-							class="subMenu fixed left-[50%] -translate-x-1/2 top-[75px] z-[9996] p-10 des:w-[65%] xl:w-[75%] w-[85%] h-auto bg-[#EEF1F8FA] rounded-xl shadow-2xl text-secondaryColor transition duration-500 cursor-default"
+							class="subMenu fixed left-[50%] -translate-x-1/2 top-[75px] z-[9996] p-10 des:w-[65%] xl:w-[75%] w-[85%] h-auto text-secondaryColor dark:text-darkSecondaryColor bg-[#EEF1F8FA] dark:bg-darkBackgroundColor2Opacity rounded-xl shadow-2xl cursor-default transition duration-500"
 							style="
 								backdrop-filter: saturate(100%) blur(5px);
 								transform: translateX(-50%) translateY(-100px);
@@ -300,7 +329,9 @@
 								pointer-events: none;
 							"
 						>
-							<h3 class="mb-4 text-primaryColor text-3xl font-bold">
+							<h3
+								class="mb-4 text-primaryColor dark:text-darkPrimaryColor text-3xl font-bold"
+							>
 								Cases
 							</h3>
 							<div
@@ -316,7 +347,7 @@
 									</div>
 									<div class="text">
 										<h4
-											class="text-primaryColor text-xl leading-[30px]"
+											class="text-primaryColor dark:text-darkPrimaryColor dark:font-bold text-xl leading-[30px]"
 										>
 											Case 1
 										</h4>
@@ -338,7 +369,7 @@
 									</div>
 									<div class="text">
 										<h4
-											class="text-primaryColor text-xl leading-[30px]"
+											class="text-primaryColor dark:text-darkPrimaryColor dark:font-bold text-xl leading-[30px]"
 										>
 											Case 2
 										</h4>
@@ -360,7 +391,7 @@
 									</div>
 									<div class="text">
 										<h4
-											class="text-primaryColor text-xl leading-[30px]"
+											class="text-primaryColor dark:text-darkPrimaryColor dark:font-bold text-xl leading-[30px]"
 										>
 											Case 3
 										</h4>
@@ -382,7 +413,7 @@
 									</div>
 									<div class="text">
 										<h4
-											class="text-primaryColor text-xl leading-[30px]"
+											class="text-primaryColor dark:text-darkPrimaryColor dark:font-bold text-xl leading-[30px]"
 										>
 											Case 4
 										</h4>
@@ -404,7 +435,7 @@
 									</div>
 									<div class="text">
 										<h4
-											class="text-primaryColor text-xl leading-[30px]"
+											class="text-primaryColor dark:text-darkPrimaryColor dark:font-bold text-xl leading-[30px]"
 										>
 											Case 5
 										</h4>
@@ -426,7 +457,7 @@
 									</div>
 									<div class="text">
 										<h4
-											class="text-primaryColor text-xl leading-[30px]"
+											class="text-primaryColor dark:text-darkPrimaryColor dark:font-bold text-xl leading-[30px]"
 										>
 											Case 6
 										</h4>
@@ -447,11 +478,11 @@
 				>
 					<span
 						href="#"
-						class="subMenuOpener flex justify-center items-center cursor-pointer hover:text-primaryColor transition duration-300 group"
+						class="subMenuOpener flex justify-center items-center cursor-pointer hover:text-primaryColor dark:hover:text-darkPrimaryColor transition duration-300 group"
 						onmouseover="mouseOverSubMenuOpener(2)"
 						onmouseleave="mouseOutSubMenu(2)"
 					>
-						<span
+						<span class="transition"
 							>Sfieres<i
 								class="fa-solid fa-chevron-down ml-1 transition duration-200"
 							></i
@@ -463,7 +494,7 @@
 							class="hidden-block absolute top-0 left-0 hidden w-full h-[66px] cursor-pointer opacity-0"
 						></div>
 						<div
-							class="subMenu fixed left-[50%] -translate-x-1/2 top-[75px] z-[9996] p-10 des:w-[65%] xl:w-[75%] w-[85%] h-auto bg-[#EEF1F8FA] rounded-xl shadow-2xl text-secondaryColor cursor-default transition duration-500"
+							class="subMenu fixed left-[50%] -translate-x-1/2 top-[75px] z-[9996] p-10 des:w-[65%] xl:w-[75%] w-[85%] h-auto text-secondaryColor dark:text-darkSecondaryColor bg-[#EEF1F8FA] dark:bg-darkBackgroundColor2Opacity rounded-xl shadow-2xl cursor-default transition duration-500"
 							style="
 								backdrop-filter: saturate(100%) blur(5px);
 								transform: translateX(-50%) translateY(-100px);
@@ -471,7 +502,9 @@
 								pointer-events: none;
 							"
 						>
-							<h3 class="mb-4 text-primaryColor text-3xl font-bold">
+							<h3
+								class="mb-4 text-primaryColor dark:text-darkPrimaryColor text-3xl font-bold"
+							>
 								Sfieres
 							</h3>
 							<div
@@ -487,7 +520,7 @@
 									</div>
 									<div class="text">
 										<h4
-											class="text-primaryColor text-xl leading-[30px]"
+											class="text-primaryColor dark:text-darkPrimaryColor dark:font-bold text-xl leading-[30px]"
 										>
 											Sfiere 1
 										</h4>
@@ -509,7 +542,7 @@
 									</div>
 									<div class="text">
 										<h4
-											class="text-primaryColor text-xl leading-[30px]"
+											class="text-primaryColor dark:text-darkPrimaryColor dark:font-bold text-xl leading-[30px]"
 										>
 											Sfiere 2
 										</h4>
@@ -531,7 +564,7 @@
 									</div>
 									<div class="text">
 										<h4
-											class="text-primaryColor text-xl leading-[30px]"
+											class="text-primaryColor dark:text-darkPrimaryColor dark:font-bold text-xl leading-[30px]"
 										>
 											Sfiere 3
 										</h4>
@@ -553,7 +586,7 @@
 									</div>
 									<div class="text">
 										<h4
-											class="text-primaryColor text-xl leading-[30px]"
+											class="text-primaryColor dark:text-darkPrimaryColor dark:font-bold text-xl leading-[30px]"
 										>
 											Sfiere 4
 										</h4>
@@ -575,7 +608,7 @@
 									</div>
 									<div class="text">
 										<h4
-											class="text-primaryColor text-xl leading-[30px]"
+											class="text-primaryColor dark:text-darkPrimaryColor dark:font-bold text-xl leading-[30px]"
 										>
 											Sfiere 5
 										</h4>
@@ -594,14 +627,14 @@
 				<li class="flex items-center text-s transition duration-200">
 					<a
 						href="#"
-						class="hover:text-primaryColor transition duration-300"
+						class="hover:text-primaryColor dark:hover:text-darkPrimaryColor transition duration-300"
 						>Support</a
 					>
 				</li>
 				<li class="flex items-center text-s transition duration-200">
 					<a
 						href="#"
-						class="hover:text-primaryColor transition duration-300"
+						class="hover:text-primaryColor dark:hover:text-darkPrimaryColor transition duration-300"
 						>Contacts</a
 					>
 				</li>
@@ -611,13 +644,13 @@
 			>
 				<a
 					href="#"
-					class="xl:px-8 mdlg:px-6 px-3 py-1 text-primaryColor rounded-full shadow-buttonSmallShadow hover:bg-primaryColor hover:text-backgroundColor hover:shadow-none transition duration-300"
+					class="xl:px-8 mdlg:px-6 px-3 py-1 text-primaryColor dark:text-darkPrimaryColor rounded-full shadow-buttonSmallShadow dark:shadow-darkShadow hover:bg-primaryColor dark:hover:bg-darkPrimaryColor hover:text-backgroundColor dark:hover:text-darkBackgroundColor2 hover:shadow-none dark:hover:shadow-none transition duration-300"
 				>
 					Log in
 				</a>
 				<a
 					href="#"
-					class="xl:px-8 mdlg:px-6 px-3 py-1 text-primaryColor rounded-full shadow-buttonSmallShadow hover:bg-primaryColor hover:text-backgroundColor hover:shadow-none transition duration-300"
+					class="xl:px-8 mdlg:px-6 px-3 py-1 text-primaryColor dark:text-darkPrimaryColor rounded-full shadow-buttonSmallShadow dark:shadow-darkShadow hover:bg-primaryColor dark:hover:bg-darkPrimaryColor hover:text-backgroundColor dark:hover:text-darkBackgroundColor2 hover:shadow-none dark:hover:shadow-none transition duration-300"
 				>
 					Sign up
 				</a>
@@ -625,7 +658,7 @@
 		</nav>
 		<!-- Hamburger menu -->
 		<div
-			class="burger-menu fixed top-6 right-6 z-50 md:hidden flex items-center justify-center h-[70px] w-[70px] cursor-pointer transition duration-500 rounded-[12px] border-[2px] bg-[#EEF1F899] border-primaryColor"
+			class="burger-menu fixed top-6 right-6 z-50 md:hidden flex items-center justify-center h-[70px] w-[70px] cursor-pointer transition duration-500 rounded-[12px] border-[2px] bg-[#EEF1F899] border-primaryColor dark:border-darkPrimaryColor"
 			onclick="openMenu()"
 		>
 			<span
@@ -637,11 +670,11 @@
 				"
 			></span>
 			<span
-				class="absolute block w-[40px] h-[4px] bg-primaryColor rounded-full"
+				class="absolute block w-[40px] h-[4px] bg-primaryColor dark:bg-darkPrimaryColor rounded-full"
 				style="background-color: #42c1ee; transition: 0.5s"
 			></span>
 			<span
-				class="absolute block w-[40px] h-[4px] bg-primaryColor rounded-full"
+				class="absolute block w-[40px] h-[4px] bg-primaryColor dark:bg-darkPrimaryColor rounded-full"
 				style="
 					transform: translateY(10px);
 					background-color: #42c1ee;
@@ -935,30 +968,33 @@
 		</div>
 		<!-- MAIN CONTENT -->
 		<div
-			class="mx-auto md:mt-[64px] min-h-screen des:w-max des:max-w-none xl:max-w-[1400px] lg:max-w-[1200px] w-full bg-backgroundColor"
+			class="mx-auto md:mt-[64px] min-h-screen des:w-max des:max-w-none xl:max-w-[1400px] lg:max-w-[1200px] w-full bg-backgroundColor dark:bg-darkBackgroundColor"
 		>
 			<!-- Header BLOCK-->
 			<header class="md:mx-22 mx-4 py-5 flex flex-row items-center">
 				<div
-					class="logo_circle mdlg:w-[167px] xs:w-[140px] w-[100px] mdlg:h-[167px] xs:h-[140px] h-[100px] flex items-center justify-center rounded-full shadow-logoShadow bg-[#EEF1F8]"
+					class="logo_circle mdlg:w-[167px] xs:w-[140px] w-[100px] mdlg:h-[167px] xs:h-[140px] h-[100px] flex items-center justify-center rounded-full shadow-logoShadow dark:shadow-darkShadow bg-backgroundColor"
 				>
 					<img src="images/logo.svg" alt="logo" class="w-3/4" />
 				</div>
 				<h2
-					class="md:ml-10 ml-4 mdlg:text-6xl xs:text-5xl text-4xl font-semibold text-black"
+					class="md:ml-10 ml-4 mdlg:text-6xl xs:text-5xl text-4xl font-semibold text-black dark:text-darkSecondaryColor"
 				>
-					<span class="text-primaryColor">J.O.T</span> Solutions
+					<span class="text-primaryColor dark:text-darkPrimaryColor"
+						>J.O.T</span
+					>
+					Solutions
 				</h2>
 			</header>
 			<!-- Corporate Strategy Management BLOCK -->
 			<article class="py-5 md:mx-22 mx-4">
 				<h2
-					class="text-primaryColor md:text-4xl xs:text-3xl text-2xl font-medium"
+					class="text-primaryColor dark:text-darkPrimaryColor md:text-4xl xs:text-3xl text-2xl font-medium"
 				>
 					Corporate Strategy Management
 				</h2>
 				<p
-					class="mt-6 md:mb-8 mb-2 md:text-3xl text-1xl text-secondaryColor font-medium"
+					class="mt-6 md:mb-8 mb-2 md:text-3xl text-1xl text-secondaryColor dark:text-darkSecondaryColor font-medium"
 				>
 					JOT (Just On Time) is a boutique firm for strategy and project
 					management that combines various management solutions for
@@ -969,13 +1005,13 @@
 				>
 					<a
 						href="#"
-						class="py-2 min-w-[250px] text-primaryColor rounded-full shadow-buttonShadow text-center hover:bg-primaryColor hover:text-backgroundColor hover:shadow-none font-semibold text-lg transition duration-300"
+						class="py-2 min-w-[250px] text-primaryColor dark:text-darkPrimaryColor rounded-full shadow-buttonShadow dark:shadow-darkShadow text-center hover:bg-primaryColor dark:hover:bg-darkPrimaryColor hover:text-backgroundColor dark:hover:text-darkBackgroundColor hover:shadow-none dark:hover:shadow-none font-semibold text-lg transition duration-300"
 					>
 						Log in
 					</a>
 					<a
 						href="#"
-						class="py-2 min-w-[250px] text-primaryColor rounded-full shadow-buttonShadow text-center hover:bg-primaryColor hover:text-backgroundColor hover:shadow-none font-semibold text-lg transition duration-300"
+						class="py-2 min-w-[250px] text-primaryColor dark:text-darkPrimaryColor rounded-full shadow-buttonShadow dark:shadow-darkShadow text-center hover:bg-primaryColor dark:hover:bg-darkPrimaryColor hover:text-backgroundColor dark:hover:text-darkBackgroundColor hover:shadow-none dark:hover:shadow-none font-semibold text-lg transition duration-300"
 					>
 						Sign up
 					</a>
@@ -983,17 +1019,19 @@
 			</article>
 			<!-- JOT APP info BLOCK -->
 			<article class="relative py-5 md:mx-22 mx-4 md:mb-16 mb-none">
-				<h2 class="text-primaryColor md:text-4xl text-2xl font-medium">
+				<h2
+					class="text-primaryColor dark:text-darkPrimaryColor md:text-4xl text-2xl font-medium"
+				>
 					JOT APP
 				</h2>
 				<p
-					class="mt-5 text-secondaryColor md:text-2xl text-1xl font-medium"
+					class="mt-5 text-secondaryColor dark:text-darkSecondaryColor md:text-2xl text-1xl font-medium"
 				>
 					JOT is a project management platform that allows you to focus on
 					your real purpose and work, saving you time and energy.
 				</p>
 				<p
-					class="my-5 text-secondaryColor md:text-2xl text-1xl font-medium"
+					class="my-5 text-secondaryColor dark:text-darkSecondaryColor md:text-2xl text-1xl font-medium"
 				>
 					Whether you are experienced in team management or not, the JOT
 					kit supports our methodology, contributes to the correct and
@@ -1003,14 +1041,14 @@
 				</p>
 				<a
 					href=""
-					class="md:absolute md:right-0 mx-auto py-2 w-[250px] block bg-gradient-to-b hover:bg-secondaryColor from-gradColorStart to-gradColorEnd font-bold text-center text-white rounded-2xl text-lg shadow-buttonShadow hover:shadow-none transition duration-300"
+					class="md:absolute md:right-0 mx-auto py-2 w-[250px] block bg-gradient-to-b hover:bg-secondaryColor dark:hover:bg-darkSecondaryColor from-gradColorStart dark:from-darkGradColorStart to-gradColorEnd dark:to-darkGradColorEnd font-bold text-center text-white dark:hover:text-darkBackgroundColor2 rounded-2xl text-lg shadow-buttonShadow dark:shadow-darkPrimaryShadow hover:shadow-none dark:hover:shadow-none transition duration-300"
 					>Scheduling demo</a
 				>
 			</article>
 			<!-- BENEFITS BLOCK -->
 			<article class="relative py-5 lg:mx-2 sm:mx-22 mx-4 mx-none">
 				<h2
-					class="md:mb-12 mb-4 text-primaryColor text-4xl font-semibold text-center uppercase"
+					class="md:mb-12 mb-4 text-primaryColor dark:text-darkPrimaryColor text-4xl font-semibold text-center uppercase"
 				>
 					Benefits of using our program:
 				</h2>
@@ -1020,11 +1058,13 @@
 					id="slider-benefits"
 				>
 					<div
-						class="slider-card slider-card--0 card lg:absolute lg:left-0 px-8 py-2 w-[350px] h-[150px] shadow-buttonShadow rounded-2xl text-2xl bg-backgroundColor cursor-pointer transition duration-1000 ease-in-out"
+						class="slider-card slider-card--0 card lg:absolute lg:left-0 px-8 py-2 w-[350px] h-[150px] shadow-buttonShadow dark:shadow-darkShadow rounded-2xl text-2xl bg-backgroundColor dark:bg-darkBackgroundColor2 cursor-pointer transition duration-1000 ease-in-out"
 						onmouseover="swiper1_change(0)"
 						style="transition: 1s"
 					>
-						<h3 class="text-primaryColor text-lg font-semibold">
+						<h3
+							class="text-primaryColor dark:text-darkPrimaryColor text-lg font-semibold"
+						>
 							Increased Productivity:
 						</h3>
 						<p class="mt-1 text-lg leading-[1.2em]">
@@ -1033,11 +1073,13 @@
 						</p>
 					</div>
 					<div
-						class="slider-card slider-card--1 card lg:absolute px-8 py-2 w-[350px] h-[150px] shadow-buttonShadow rounded-2xl text-2xl bg-backgroundColor cursor-pointer transition duration-1000 ease-in-out"
+						class="slider-card slider-card--1 card lg:absolute px-8 py-2 w-[350px] h-[150px] shadow-buttonShadow dark:shadow-darkShadow rounded-2xl text-2xl bg-backgroundColor dark:bg-darkBackgroundColor2 cursor-pointer transition duration-1000 ease-in-out"
 						onmouseover="swiper1_change(1)"
 						style="transition: 1s"
 					>
-						<h3 class="text-primaryColor text-lg font-semibold">
+						<h3
+							class="text-primaryColor dark:text-darkPrimaryColor text-lg font-semibold"
+						>
 							Deadline and Budget Adherence:
 						</h3>
 						<p class="mt-1 text-lg leading-[1.2em]">
@@ -1046,11 +1088,13 @@
 						</p>
 					</div>
 					<div
-						class="slider-card slider-card--2 card lg:absolute px-8 py-2 w-[350px] h-[150px] shadow-buttonShadow rounded-2xl text-2xl bg-backgroundColor cursor-pointer transition duration-1000 ease-in-out"
+						class="slider-card slider-card--2 card lg:absolute px-8 py-2 w-[350px] h-[150px] shadow-buttonShadow dark:shadow-darkShadow rounded-2xl text-2xl bg-backgroundColor dark:bg-darkBackgroundColor2 cursor-pointer transition duration-1000 ease-in-out"
 						onmouseover="swiper1_change(2)"
 						style="transition: 1s"
 					>
-						<h3 class="text-primaryColor text-lg font-semibold">
+						<h3
+							class="text-primaryColor dark:text-darkPrimaryColor text-lg font-semibold"
+						>
 							Enhanced Quality Results:
 						</h3>
 						<p class="mt-1 text-lg leading-[1.2em]">
@@ -1059,11 +1103,13 @@
 						</p>
 					</div>
 					<div
-						class="slider-card slider-card--3 card lg:absolute px-8 py-2 w-[350px] h-[150px] shadow-buttonShadow rounded-2xl text-2xl bg-backgroundColor cursor-pointer transition duration-1000 ease-in-out"
+						class="slider-card slider-card--3 card lg:absolute px-8 py-2 w-[350px] h-[150px] shadow-buttonShadow dark:shadow-darkShadow rounded-2xl text-2xl bg-backgroundColor dark:bg-darkBackgroundColor2 cursor-pointer transition duration-1000 ease-in-out"
 						onmouseover="swiper1_change(3)"
 						style="transition: 1s"
 					>
-						<h3 class="text-primaryColor text-lg font-semibold">
+						<h3
+							class="text-primaryColor dark:text-darkPrimaryColor text-lg font-semibold"
+						>
 							Improved Communication:
 						</h3>
 						<p class="mt-1 text-lg leading-[1.2em]">
@@ -1073,11 +1119,13 @@
 						</p>
 					</div>
 					<div
-						class="slider-card slider-card--4 card lg:absolute px-8 py-2 w-[350px] h-[150px] shadow-buttonShadow rounded-2xl text-2xl bg-backgroundColor cursor-pointer transition duration-1000 ease-in-out"
+						class="slider-card slider-card--4 card lg:absolute px-8 py-2 w-[350px] h-[150px] shadow-buttonShadow dark:shadow-darkShadow rounded-2xl text-2xl bg-backgroundColor dark:bg-darkBackgroundColor2 cursor-pointer transition duration-1000 ease-in-out"
 						onmouseover="swiper1_change(4)"
 						style="transition: 1s"
 					>
-						<h3 class="text-primaryColor text-lg font-semibold">
+						<h3
+							class="text-primaryColor dark:text-darkPrimaryColor text-lg font-semibold"
+						>
 							Flexibility and Scalability:
 						</h3>
 						<p class="mt-1 text-lg leading-[1.2em]">
@@ -1149,7 +1197,7 @@
 				</div>
 				<a
 					href="#"
-					class="mt-10 mb-14 mx-auto py-2 max-w-[250px] block text-lg font-semibold shadow-buttonShadow text-center rounded-2xl hover:shadow-none hover:bg-primaryColor hover:text-white transition duration-300"
+					class="mt-10 mb-14 mx-auto py-2 max-w-[250px] block text-lg font-semibold shadow-buttonShadow dark:shadow-darkShadow text-center rounded-2xl hover:shadow-none dark:hover:shadow-none hover:bg-primaryColor dark:hover:bg-darkPrimaryColor hover:text-dark dark:hover:text-darkBackgroundColor2 transition duration-300"
 				>
 					See more
 				</a>
@@ -1157,7 +1205,7 @@
 			<!-- BENEFITS BLOCK second version -->
 			<article class="relative py-5 lg:mx-2 sm:mx-22 mx-4 mx-none">
 				<h2
-					class="md:mb-12 mb-4 text-primaryColor text-4xl font-semibold text-center uppercase"
+					class="md:mb-12 mb-4 text-primaryColor dark:text-darkPrimaryColor text-4xl font-semibold text-center uppercase"
 				>
 					Benefits of using our program:
 				</h2>
@@ -1166,11 +1214,13 @@
 					id="sliderTemp"
 				>
 					<div
-						class="slider-card slider-card--0 card lg:absolute lg:left-0 px-8 py-2 w-[350px] h-[150px] shadow-buttonShadow rounded-2xl text-2xl bg-backgroundColor cursor-pointer hover:bg-[#DDE0E755] transition duration-200 ease-in-out"
+						class="slider-card slider-card--0 card lg:absolute lg:left-0 px-8 py-2 w-[350px] h-[150px] shadow-buttonShadow dark:shadow-darkShadow rounded-2xl text-2xl bg-backgroundColor dark:bg-darkBackgroundColor2 cursor-pointer hover:bg-bac transition duration-200 ease-in-out"
 						onclick="swiperTempChange(0)"
 						style="transition: 1s"
 					>
-						<h3 class="text-primaryColor text-lg font-semibold">
+						<h3
+							class="text-primaryColor dark:text-darkPrimaryColor text-lg font-semibold"
+						>
 							Increased Productivity:
 						</h3>
 						<p class="mt-1 text-lg leading-[1.2em]">
@@ -1179,11 +1229,13 @@
 						</p>
 					</div>
 					<div
-						class="slider-card slider-card--1 card lg:absolute px-8 py-2 w-[350px] h-[150px] shadow-buttonShadow rounded-2xl text-2xl bg-backgroundColor cursor-pointer hover:bg-[#DDE0E755] transition duration-200 ease-in-out"
+						class="slider-card slider-card--1 card lg:absolute px-8 py-2 w-[350px] h-[150px] shadow-buttonShadow dark:shadow-darkShadow rounded-2xl text-2xl bg-backgroundColor dark:bg-darkBackgroundColor2 cursor-pointer hover:bg-red-500 transition duration-200 ease-in-out"
 						onclick="swiperTempChange(1)"
 						style="transition: 1s"
 					>
-						<h3 class="text-primaryColor text-lg font-semibold">
+						<h3
+							class="text-primaryColor dark:text-darkPrimaryColor text-lg font-semibold"
+						>
 							Deadline and Budget Adherence:
 						</h3>
 						<p class="mt-1 text-lg leading-[1.2em]">
@@ -1192,11 +1244,13 @@
 						</p>
 					</div>
 					<div
-						class="slider-card slider-card--2 card lg:absolute px-8 py-2 w-[350px] h-[150px] shadow-buttonShadow rounded-2xl text-2xl bg-backgroundColor cursor-pointer hover:bg-[#DDE0E755] transition duration-200 ease-in-out"
+						class="slider-card slider-card--2 card lg:absolute px-8 py-2 w-[350px] h-[150px] shadow-buttonShadow dark:shadow-darkShadow rounded-2xl text-2xl bg-backgroundColor dark:bg-darkBackgroundColor2 cursor-pointer hover:bg-[#DDE0E755] transition duration-200 ease-in-out"
 						onclick="swiperTempChange(2)"
 						style="transition: 1s"
 					>
-						<h3 class="text-primaryColor text-lg font-semibold">
+						<h3
+							class="text-primaryColor dark:text-darkPrimaryColor text-lg font-semibold"
+						>
 							Enhanced Quality Results:
 						</h3>
 						<p class="mt-1 text-lg leading-[1.2em]">
@@ -1205,11 +1259,13 @@
 						</p>
 					</div>
 					<div
-						class="slider-card slider-card--3 card lg:absolute px-8 py-2 w-[350px] h-[150px] shadow-buttonShadow rounded-2xl text-2xl bg-backgroundColor cursor-pointer hover:bg-[#DDE0E755] transition duration-200 ease-in-out"
+						class="slider-card slider-card--3 card lg:absolute px-8 py-2 w-[350px] h-[150px] shadow-buttonShadow dark:shadow-darkShadow rounded-2xl text-2xl bg-backgroundColor dark:bg-darkBackgroundColor2 cursor-pointer hover:bg-[#DDE0E755] transition duration-200 ease-in-out"
 						onclick="swiperTempChange(3)"
 						style="transition: 1s"
 					>
-						<h3 class="text-primaryColor text-lg font-semibold">
+						<h3
+							class="text-primaryColor dark:text-darkPrimaryColor text-lg font-semibold"
+						>
 							Improved Communication:
 						</h3>
 						<p class="mt-1 text-lg leading-[1.2em]">
@@ -1219,11 +1275,13 @@
 						</p>
 					</div>
 					<div
-						class="slider-card slider-card--4 card lg:absolute px-8 py-2 w-[350px] h-[150px] shadow-buttonShadow rounded-2xl text-2xl bg-backgroundColor cursor-pointer hover:bg-[#DDE0E755] transition duration-200 ease-in-out"
+						class="slider-card slider-card--4 card lg:absolute px-8 py-2 w-[350px] h-[150px] shadow-buttonShadow dark:shadow-darkShadow rounded-2xl text-2xl bg-backgroundColor dark:bg-darkBackgroundColor2 cursor-pointer hover:bg-[#DDE0E755] transition duration-200 ease-in-out"
 						onclick="swiperTempChange(4)"
 						style="transition: 1s"
 					>
-						<h3 class="text-primaryColor text-lg font-semibold">
+						<h3
+							class="text-primaryColor dark:text-darkPrimaryColor text-lg font-semibold"
+						>
 							Flexibility and Scalability:
 						</h3>
 						<p class="mt-1 text-lg leading-[1.2em]">
@@ -1236,9 +1294,11 @@
 					class="relative w-full min-h-[215px] lg:hidden flex flex-col items-center gap-4 lg:gap-none group"
 				>
 					<div
-						class="card lg:absolute lg:left-0 z-0 hover:z-50 px-8 py-2 lg:w-[480px] w-full sm:h-[215px] h-auto shadow-buttonShadow rounded-2xl text-2xl bg-backgroundColor lg:scale-[0.7] lg:hover:scale-95 transition duration-200 ease-in-out"
+						class="card lg:absolute lg:left-0 z-0 hover:z-50 px-8 py-2 lg:w-[480px] w-full sm:h-[215px] h-auto shadow-buttonShadow rounded-2xl text-2xl bg-backgroundColor dark:bg-darkBackgroundColor2 lg:scale-[0.7] lg:hover:scale-95 transition duration-200 ease-in-out"
 					>
-						<h3 class="text-primaryColor text-2xl font-semibold">
+						<h3
+							class="text-primaryColor dark:text-darkPrimaryColor text-2xl font-semibold"
+						>
 							Increased Productivity:
 						</h3>
 						<p class="mt-2 xs:text-2xl text-xl">
@@ -1247,9 +1307,11 @@
 						</p>
 					</div>
 					<div
-						class="card lg:absolute lg:left-1/3 lg:-translate-x-1/2 z-10 lg:hover:z-50 px-8 py-2 lg:w-[480px] w-full sm:h-[215px] h-auto shadow-buttonShadow rounded-2xl text-2xl bg-backgroundColor lg:scale-[0.8] lg:hover:scale-95 transition duration-200 ease-in-out"
+						class="card lg:absolute lg:left-1/3 lg:-translate-x-1/2 z-10 lg:hover:z-50 px-8 py-2 lg:w-[480px] w-full sm:h-[215px] h-auto shadow-buttonShadow rounded-2xl text-2xl bg-backgroundColor dark:bg-darkBackgroundColor2 lg:scale-[0.8] lg:hover:scale-95 transition duration-200 ease-in-out"
 					>
-						<h3 class="text-primaryColor text-2xl font-semibold">
+						<h3
+							class="text-primaryColor dark:text-darkPrimaryColor text-2xl font-semibold"
+						>
 							Deadline and Budget Adherence:
 						</h3>
 						<p class="mt-2 xs:text-2xl text-xl">
@@ -1258,9 +1320,11 @@
 						</p>
 					</div>
 					<div
-						class="card lg:absolute lg:left-1/2 lg:-translate-x-1/2 z-20 lg:hover:z-50 px-8 py-2 lg:w-[480px] w-full sm:h-[215px] h-auto shadow-buttonShadow rounded-2xl text-2xl bg-backgroundColor lg:scale-90 lg:hover:scale-95 transition duration-200 ease-in-out"
+						class="card lg:absolute lg:left-1/2 lg:-translate-x-1/2 z-20 lg:hover:z-50 px-8 py-2 lg:w-[480px] w-full sm:h-[215px] h-auto shadow-buttonShadow rounded-2xl text-2xl bg-backgroundColor dark:bg-darkBackgroundColor2 lg:scale-90 lg:hover:scale-95 transition duration-200 ease-in-out"
 					>
-						<h3 class="text-primaryColor text-2xl font-semibold">
+						<h3
+							class="text-primaryColor dark:text-darkPrimaryColor text-2xl font-semibold"
+						>
 							Enhanced Quality Results:
 						</h3>
 						<p class="mt-2 xs:text-2xl text-xl">
@@ -1269,9 +1333,11 @@
 						</p>
 					</div>
 					<div
-						class="card lg:absolute lg:right-1/3 lg:translate-x-1/2 z-10 lg:hover:z-50 px-8 py-2 lg:w-[480px] w-full sm:h-[215px] h-auto shadow-buttonShadow rounded-2xl text-2xl bg-backgroundColor lg:scale-[0.8] lg:hover:scale-95 transition duration-200 ease-in-out"
+						class="card lg:absolute lg:right-1/3 lg:translate-x-1/2 z-10 lg:hover:z-50 px-8 py-2 lg:w-[480px] w-full sm:h-[215px] h-auto shadow-buttonShadow rounded-2xl text-2xl bg-backgroundColor dark:bg-darkBackgroundColor2 lg:scale-[0.8] lg:hover:scale-95 transition duration-200 ease-in-out"
 					>
-						<h3 class="text-primaryColor text-2xl font-semibold">
+						<h3
+							class="text-primaryColor dark:text-darkPrimaryColor text-2xl font-semibold"
+						>
 							Improved Communication:
 						</h3>
 						<p class="mt-2 xs:text-2xl text-xl">
@@ -1281,9 +1347,11 @@
 						</p>
 					</div>
 					<div
-						class="card lg:absolute lg:right-0 z-0 lg:hover:z-50 px-8 py-2 lg:w-[480px] w-full sm:h-[215px] h-auto shadow-buttonShadow rounded-2xl text-2xl bg-backgroundColor lg:scale-[0.7] lg:hover:scale-95 transition duration-200 ease-in-out"
+						class="card lg:absolute lg:right-0 z-0 lg:hover:z-50 px-8 py-2 lg:w-[480px] w-full sm:h-[215px] h-auto shadow-buttonShadow rounded-2xl text-2xl bg-backgroundColor dark:bg-darkBackgroundColor2 lg:scale-[0.7] lg:hover:scale-95 transition duration-200 ease-in-out"
 					>
-						<h3 class="text-primaryColor text-2xl font-semibold">
+						<h3
+							class="text-primaryColor dark:text-darkPrimaryColor text-2xl font-semibold"
+						>
 							Flexibility and Scalability:
 						</h3>
 						<p class="mt-2 xs:text-2xl text-xl">
@@ -1294,26 +1362,24 @@
 				</div>
 				<a
 					href="#"
-					class="mt-10 mb-14 mx-auto py-2 max-w-[250px] block text-lg font-semibold shadow-buttonShadow text-center rounded-2xl hover:shadow-none hover:bg-primaryColor hover:text-white transition duration-300"
+					class="mt-10 mb-14 mx-auto py-2 max-w-[250px] block text-lg font-semibold shadow-buttonShadow dark:shadow-darkShadow text-center rounded-2xl hover:shadow-none dark:hover:shadow-none hover:bg-primaryColor dark:hover:bg-darkPrimaryColor hover:text-dark dark:hover:text-darkBackgroundColor2 transition duration-300"
 				>
 					See more
 				</a>
 			</article>
 			<!-- Info cards BLOCK -->
 			<article
-				class="py-5 sm:mx-22 mx-4 flex flex-row gap-5 flex-wrap items-center justify-center"
+				class="py-5 sm:mx-22 mx-4 flex flex-row gap-5 flex-wrap items-center justify-center text-secondaryColor dark:text-darkSecondaryColor"
 			>
 				<div
-					class="relative des:h-[320px] sm:h-[270px] h-auto des:max-w-[600px] lg:max-w-[500px] max-w-auto w-full rounded-xl shadow-buttonShadow hover:shadow-logoShadow transition duration-200 p-8"
+					class="relative des:h-[320px] sm:h-[270px] h-auto des:max-w-[600px] lg:max-w-[500px] max-w-auto w-full rounded-xl dark:bg-darkBackgroundColor2 shadow-buttonShadow dark:shadow-darkShadow hover:shadow-logoShadow dark:hover:shadow-darkBiggerShadow transition duration-200 p-8"
 				>
 					<h3
-						class="text-primaryColor des:text-4xl text-3xl font-semibold des:mt-2"
+						class="text-primaryColor dark:text-darkPrimaryColor des:text-4xl text-3xl font-semibold des:mt-2"
 					>
 						Project Management:
 					</h3>
-					<p
-						class="text-secondaryColor des:text-xl text-lg mt-4 des:mb-8 font-medium"
-					>
+					<p class="des:text-xl text-lg mt-4 des:mb-8 font-medium">
 						Project Management: The platform allows you to create
 						projects, tasks, plans, schedules and budgets, as well as
 						tracking the implementation of projects and analyze data
@@ -1321,80 +1387,74 @@
 					</p>
 					<a
 						href="#"
-						class="block sm:absolute sm:bottom-5 sm:right-5 mx-auto w-[250px] text-secondaryColor ml-auto des:mt-10 mt-2 py-2 text-lg font-semibold shadow-buttonShadow text-center rounded-2xl hover:shadow-none transition duration-300 hover:bg-primaryColor hover:text-white"
+						class="block sm:absolute sm:bottom-5 sm:right-5 mx-auto w-[250px] text-secondaryColor dark:text-darkSecondaryColor ml-auto des:mt-10 mt-2 py-2 text-lg font-semibold shadow-buttonShadow dark:shadow-darkShadow text-center rounded-2xl hover:shadow-none dark:hover:shadow-none transition duration-300 hover:bg-primaryColor dark:hover:bg-darkPrimaryColor hover:text-white dark:hover:text-darkBackgroundColor2"
 					>
 						See more
 					</a>
 				</div>
 				<div
-					class="relative des:max-w-[600px] des:h-[320px] sm:h-[270px] h-auto lg:max-w-[500px] w-auto rounded-xl shadow-buttonShadow hover:shadow-logoShadow transition duration-200 p-8"
+					class="relative des:max-w-[600px] des:h-[320px] sm:h-[270px] h-auto lg:max-w-[500px] w-auto rounded-xl dark:bg-darkBackgroundColor2 shadow-buttonShadow dark:shadow-darkShadow hover:shadow-logoShadow dark:hover:shadow-darkBiggerShadow transition duration-200 p-8"
 				>
 					<h3
-						class="text-primaryColor des:text-4xl text-3xl font-semibold des:mt-2"
+						class="text-primaryColor dark:text-darkPrimaryColor des:text-4xl text-3xl font-semibold des:mt-2"
 					>
 						Task and outsourcing Management:
 					</h3>
-					<p
-						class="text-secondaryColor des:text-xl text-lg mt-4 des:mb-8 font-medium"
-					>
+					<p class="des:text-xl text-lg mt-4 des:mb-8 font-medium">
 						The platform allows to optimize your own resources, assign
 						tasks, and monitors task completion.
 					</p>
 					<a
 						href="#"
-						class="block sm:absolute sm:bottom-5 sm:right-5 mx-auto text-secondaryColor ml-auto des:mt-10 mt-2 w-[250px] py-2 text-lg font-semibold shadow-buttonShadow text-center rounded-2xl hover:shadow-none transition duration-300 hover:bg-primaryColor hover:text-white"
+						class="block sm:absolute sm:bottom-5 sm:right-5 mx-auto text-secondaryColor dark:text-darkSecondaryColor ml-auto des:mt-10 mt-2 w-[250px] py-2 text-lg font-semibold shadow-buttonShadow dark:shadow-darkShadow text-center rounded-2xl hover:shadow-none dark:hover:shadow-none transition duration-300 hover:bg-primaryColor dark:hover:bg-darkPrimaryColor hover:text-white dark:hover:text-darkBackgroundColor2"
 					>
 						See more
 					</a>
 				</div>
 				<div
-					class="relative des:max-w-[600px] des:h-[320px] sm:h-[270px] h-auto lg:max-w-[500px] w-auto rounded-xl shadow-buttonShadow hover:shadow-logoShadow transition duration-200 p-8"
+					class="relative des:max-w-[600px] des:h-[320px] sm:h-[270px] h-auto lg:max-w-[500px] w-auto rounded-xl dark:bg-darkBackgroundColor2 shadow-buttonShadow dark:shadow-darkShadow hover:shadow-logoShadow dark:hover:shadow-darkBiggerShadow transition duration-200 p-8"
 				>
 					<h3
-						class="text-primaryColor des:text-4xl text-3xl font-semibold des:mt-2"
+						class="text-primaryColor dark:text-darkPrimaryColor des:text-4xl text-3xl font-semibold des:mt-2"
 					>
 						Analytics and Reporting:
 					</h3>
-					<p
-						class="text-secondaryColor des:text-xl text-lg mt-4 des:mb-8 font-medium"
-					>
+					<p class="des:text-xl text-lg mt-4 des:mb-8 font-medium">
 						The platform provides project analysis and reporting
 						capabilities, including data on cost, performance, quality,
 						and more.
 					</p>
 					<a
 						href="#"
-						class="block sm:absolute sm:bottom-5 sm:right-5 mx-auto w-[250px] text-secondaryColor ml-auto des:mt-10 mt-2 max-w-[250px] py-2 text-lg font-semibold shadow-buttonShadow text-center rounded-2xl hover:shadow-none transition duration-300 hover:bg-primaryColor hover:text-white"
+						class="block sm:absolute sm:bottom-5 sm:right-5 mx-auto w-[250px] text-secondaryColor dark:text-darkSecondaryColor ml-auto des:mt-10 mt-2 max-w-[250px] py-2 text-lg font-semibold shadow-buttonShadow dark:shadow-darkShadow text-center rounded-2xl hover:shadow-none dark:hover:shadow-none transition duration-300 hover:bg-primaryColor dark:hover:bg-darkPrimaryColor hover:text-white dark:hover:text-darkBackgroundColor2"
 					>
 						See more
 					</a>
 				</div>
 				<div
-					class="relative des:max-w-[600px] des:h-[320px] sm:h-[270px] h-auto lg:max-w-[500px] w-auto rounded-xl shadow-buttonShadow p-8 hover:shadow-logoShadow transition duration-200"
+					class="relative des:max-w-[600px] des:h-[320px] sm:h-[270px] h-auto lg:max-w-[500px] w-auto rounded-xl dark:bg-darkBackgroundColor2 shadow-buttonShadow dark:shadow-darkShadow p-8 hover:shadow-logoShadow dark:hover:shadow-darkBiggerShadow transition duration-200"
 				>
 					<h3
-						class="text-primaryColor des:text-4xl text-3xl font-semibold des:mt-2"
+						class="text-primaryColor dark:text-darkPrimaryColor des:text-4xl text-3xl font-semibold des:mt-2"
 					>
 						READY TO GET STARTED?
 					</h3>
-					<p
-						class="text-secondaryColor des:text-xl text-lg mt-4 mb-8 font-medium"
-					>
+					<p class="des:text-xl text-lg mt-4 mb-8 font-medium">
 						Manage your projects:works, labor, resources and financials -
 						all in one cloud-based solution for developers and builders.
 					</p>
 					<a
 						href=""
-						class="block sm:absolute sm:bottom-5 sm:right-5 mx-auto w-[250px] py-2 mt-10 ml-auto bg-gradient-to-b hover:bg-secondaryColor from-gradColorStart to-gradColorEnd font-bold text-center text-white rounded-2xl w-[250px] text-lg transition duration-300 shadow-buttonShadow hover:shadow-none"
+						class="block sm:absolute sm:bottom-5 sm:right-5 mx-auto py-2 mt-10 ml-auto bg-gradient-to-b hover:bg-secondaryColor dark:hover:bg-darkSecondaryColor from-gradColorStart dark:from-darkGradColorStart to-gradColorEnd dark:to-darkGradColorEnd font-bold text-center text-white dark:text-white dark:hover:text-darkBackgroundColor2 rounded-2xl w-[250px] text-lg transition duration-300 shadow-buttonShadow dark:shadow-darkPrimaryShadow hover:shadow-none dark:hover:shadow-none"
 					>
 						Contact us
 					</a>
 				</div>
 			</article>
 			<!-- JOT APP slider BLOCK -->
-			<article class="mt-10 py-5">
+			<article class="mt-10 py-5 dark:text-darkSecondaryColor">
 				<h2
-					class="text-primaryColor text-4xl font-bold text-center uppercase lg:mb-44 mb-6"
+					class="text-primaryColor dark:text-darkPrimaryColor text-4xl font-bold text-center uppercase lg:mb-44 mb-6"
 				>
 					Jot app
 				</h2>
@@ -1405,15 +1465,15 @@
 					id="sliderJotApp"
 				>
 					<div
-						class="slider-card absolute slider-card--0 p-5 h-[490px] w-[435px] shadow-logoShadow rounded-2xl bg-backgroundColor cursor-pointer"
+						class="slider-card absolute slider-card--0 p-5 h-[490px] w-[435px] shadow-logoShadow dark:shadow-darkBiggerShadow rounded-2xl bg-backgroundColor dark:bg-darkBackgroundColor2 cursor-pointer"
 						style="left: 0; transition: 1s"
 						onclick="changeActive(0)"
 					>
 						<h3
-							class="flex items-center text-primaryColor text-2xl font-medium mb-2"
+							class="flex items-center text-primaryColor dark:text-darkPrimaryColor text-2xl font-medium mb-2"
 						>
 							<span
-								class="block w-[20px] h-[20px] rounded-full bg-primaryColor mr-2"
+								class="block w-[20px] h-[20px] rounded-full bg-primaryColor dark:bg-darkPrimaryColor mr-2"
 							></span>
 							Kanban
 						</h3>
@@ -1433,15 +1493,15 @@
 						</p>
 					</div>
 					<div
-						class="slider-card absolute slider-card--1 p-5 h-[490px] w-[435px] shadow-logoShadow rounded-2xl bg-backgroundColor cursor-pointer"
+						class="slider-card absolute slider-card--1 p-5 h-[490px] w-[435px] shadow-logoShadow dark:shadow-darkBiggerShadow rounded-2xl bg-backgroundColor dark:bg-darkBackgroundColor2 cursor-pointer"
 						style="left: 0; transition: 1s"
 						onclick="changeActive(1)"
 					>
 						<h3
-							class="flex items-center text-primaryColor text-2xl font-medium mb-2"
+							class="flex items-center text-primaryColor dark:text-darkPrimaryColor text-2xl font-medium mb-2"
 						>
 							<span
-								class="block w-[20px] h-[20px] rounded-full bg-primaryColor mr-2"
+								class="block w-[20px] h-[20px] rounded-full bg-primaryColor dark:bg-darkPrimaryColor mr-2"
 							></span>
 							WBS
 						</h3>
@@ -1463,15 +1523,15 @@
 						</p>
 					</div>
 					<div
-						class="slider-card absolute slider-card--2 p-5 h-[490px] w-[435px] shadow-logoShadow rounded-2xl bg-backgroundColor cursor-pointer"
+						class="slider-card absolute slider-card--2 p-5 h-[490px] w-[435px] shadow-logoShadow dark:shadow-darkBiggerShadow rounded-2xl bg-backgroundColor dark:bg-darkBackgroundColor2 cursor-pointer"
 						style="left: 0; transition: 1s"
 						onclick="changeActive(2)"
 					>
 						<h3
-							class="flex items-center text-primaryColor text-2xl font-medium mb-2"
+							class="flex items-center text-primaryColor dark:text-darkPrimaryColor text-2xl font-medium mb-2"
 						>
 							<span
-								class="block w-[20px] h-[20px] rounded-full bg-primaryColor mr-2"
+								class="block w-[20px] h-[20px] rounded-full bg-primaryColor dark:bg-darkPrimaryColor mr-2"
 							></span>
 							Sprint
 						</h3>
@@ -1493,15 +1553,15 @@
 						</p>
 					</div>
 					<div
-						class="slider-card absolute slider-card--3 p-5 h-[490px] w-[435px] shadow-logoShadow rounded-2xl bg-backgroundColor cursor-pointer"
+						class="slider-card absolute slider-card--3 p-5 h-[490px] w-[435px] shadow-logoShadow dark:shadow-darkBiggerShadow rounded-2xl bg-backgroundColor dark:bg-darkBackgroundColor2 cursor-pointer"
 						style="left: 0; transition: 1s"
 						onclick="changeActive(3)"
 					>
 						<h3
-							class="flex items-center text-primaryColor text-2xl font-medium mb-2"
+							class="flex items-center text-primaryColor dark:text-darkPrimaryColor text-2xl font-medium mb-2"
 						>
 							<span
-								class="block w-[20px] h-[20px] rounded-full bg-primaryColor mr-2"
+								class="block w-[20px] h-[20px] rounded-full bg-primaryColor dark:bg-darkPrimaryColor mr-2"
 							></span>
 							Gantt
 						</h3>
@@ -1523,15 +1583,15 @@
 						</p>
 					</div>
 					<div
-						class="slider-card absolute slider-card--4 p-5 h-[490px] w-[435px] shadow-logoShadow rounded-2xl bg-backgroundColor cursor-pointer"
+						class="slider-card absolute slider-card--4 p-5 h-[490px] w-[435px] shadow-logoShadow dark:shadow-darkBiggerShadow rounded-2xl bg-backgroundColor dark:bg-darkBackgroundColor2 cursor-pointer"
 						style="left: 0; transition: 1s"
 						onclick="changeActive(4)"
 					>
 						<h3
-							class="flex items-center text-primaryColor text-2xl font-medium mb-2"
+							class="flex items-center text-primaryColor dark:text-darkPrimaryColor text-2xl font-medium mb-2"
 						>
 							<span
-								class="block w-[20px] h-[20px] rounded-full bg-primaryColor mr-2"
+								class="block w-[20px] h-[20px] rounded-full bg-primaryColor dark:bg-darkPrimaryColor mr-2"
 							></span>
 							Daily reports
 						</h3>
@@ -1552,15 +1612,15 @@
 						</p>
 					</div>
 					<div
-						class="slider-card absolute slider-card--5 p-5 h-[490px] w-[435px] shadow-logoShadow rounded-2xl bg-backgroundColor cursor-pointer"
+						class="slider-card absolute slider-card--5 p-5 h-[490px] w-[435px] shadow-logoShadow dark:shadow-darkBiggerShadow rounded-2xl bg-backgroundColor dark:bg-darkBackgroundColor2 cursor-pointer"
 						style="left: 0; transition: 1s"
 						onclick="changeActive(5)"
 					>
 						<h3
-							class="flex items-center text-primaryColor text-2xl font-medium mb-2"
+							class="flex items-center text-primaryColor dark:text-darkPrimaryColor text-2xl font-medium mb-2"
 						>
 							<span
-								class="block w-[20px] h-[20px] rounded-full bg-primaryColor mr-2"
+								class="block w-[20px] h-[20px] rounded-full bg-primaryColor dark:bg-darkPrimaryColor mr-2"
 							></span>
 							Decision summary
 						</h3>
@@ -1581,15 +1641,15 @@
 						</p>
 					</div>
 					<div
-						class="slider-card absolute slider-card--6 p-5 h-[490px] w-[435px] shadow-logoShadow rounded-2xl bg-backgroundColor cursor-pointer"
+						class="slider-card absolute slider-card--6 p-5 h-[490px] w-[435px] shadow-logoShadow dark:shadow-darkBiggerShadow rounded-2xl bg-backgroundColor dark:bg-darkBackgroundColor2 cursor-pointer"
 						style="left: 0; transition: 1s"
 						onclick="changeActive(6)"
 					>
 						<h3
-							class="flex items-center text-primaryColor text-2xl font-medium mb-2"
+							class="flex items-center text-primaryColor dark:text-darkPrimaryColor text-2xl font-medium mb-2"
 						>
 							<span
-								class="block w-[20px] h-[20px] rounded-full bg-primaryColor mr-2"
+								class="block w-[20px] h-[20px] rounded-full bg-primaryColor dark:bg-darkPrimaryColor mr-2"
 							></span>
 							Team managment
 						</h3>
@@ -1609,15 +1669,15 @@
 						</p>
 					</div>
 					<div
-						class="slider-card absolute slider-card--7 p-5 h-[490px] w-[435px] shadow-logoShadow rounded-2xl bg-backgroundColor cursor-pointer"
+						class="slider-card absolute slider-card--7 p-5 h-[490px] w-[435px] shadow-logoShadow dark:shadow-darkBiggerShadow rounded-2xl bg-backgroundColor dark:bg-darkBackgroundColor2 cursor-pointer"
 						style="left: 0; transition: 1s"
 						onclick="changeActive(7)"
 					>
 						<h3
-							class="flex items-center text-primaryColor text-2xl font-medium mb-2"
+							class="flex items-center text-primaryColor dark:text-darkPrimaryColor text-2xl font-medium mb-2"
 						>
 							<span
-								class="block w-[20px] h-[20px] rounded-full bg-primaryColor mr-2"
+								class="block w-[20px] h-[20px] rounded-full bg-primaryColor dark:bg-darkPrimaryColor mr-2"
 							></span>
 							Project managment
 						</h3>
@@ -1636,15 +1696,15 @@
 						</p>
 					</div>
 					<div
-						class="slider-card absolute slider-card--8 p-5 h-[490px] w-[435px] shadow-logoShadow rounded-2xl bg-backgroundColor cursor-pointer"
+						class="slider-card absolute slider-card--8 p-5 h-[490px] w-[435px] shadow-logoShadow dark:shadow-darkBiggerShadow rounded-2xl bg-backgroundColor dark:bg-darkBackgroundColor2 cursor-pointer"
 						style="left: 0; transition: 1s"
 						onclick="changeActive(8)"
 					>
 						<h3
-							class="flex items-center text-primaryColor text-2xl font-medium mb-2"
+							class="flex items-center text-primaryColor dark:text-darkPrimaryColor text-2xl font-medium mb-2"
 						>
 							<span
-								class="block w-[20px] h-[20px] rounded-full bg-primaryColor mr-2"
+								class="block w-[20px] h-[20px] rounded-full bg-primaryColor dark:bg-darkPrimaryColor mr-2"
 							></span>
 							Dashboard
 						</h3>
@@ -1928,20 +1988,22 @@
 
 				<a
 					href=""
-					class="block py-2 bg-gradient-to-b hover:bg-secondaryColor from-gradColorStart to-gradColorEnd font-bold text-center text-white rounded-2xl w-[250px] text-lg mx-auto transition duration-300 shadow-buttonShadow hover:shadow-none"
+					class="block py-2 bg-gradient-to-b hover:bg-secondaryColor dark:hover:bg-darkSecondaryColor from-gradColorStart dark:from-darkGradColorStart to-gradColorEnd dark:to-darkGradColorEnd font-bold text-center text-white dark:hover:text-darkBackgroundColor2 rounded-2xl w-[250px] text-lg mx-auto transition duration-300 shadow-buttonShadow dark:shadow-darkPrimaryShadow hover:shadow-none dark:hover:shadow-none"
 					>Scheduling demo</a
 				>
 			</article>
 			<!-- Our customers BLOCK -->
 			<article class="py-5 xs:mx-22 mx-4 mx-none">
-				<h2 class="text-primaryColor text-4xl font-bold text-center mb-12">
+				<h2
+					class="text-primaryColor dark:text-darkPrimaryColor text-4xl font-bold text-center mb-12"
+				>
 					Our customers
 				</h2>
 				<div
 					class="flex flex-row flex-wrap sm:gap-10 gap-4 items-center justify-center"
 				>
 					<div
-						class="xs:w-[160px] xs:h-[160px] w-[80vw] h-[80vw] flex items-center justify-center shadow-logoShadow rounded-2xl"
+						class="xs:w-[160px] xs:h-[160px] w-[80vw] h-[80vw] flex items-center justify-center dark:bg-darkBackgroundColor2 shadow-logoShadow dark:shadow-darkBiggerShadow rounded-2xl"
 					>
 						<img
 							src="images/JOT 1.png"
@@ -1950,7 +2012,7 @@
 						/>
 					</div>
 					<div
-						class="xs:w-[160px] xs:h-[160px] w-[80vw] h-[80vw] flex items-center justify-center shadow-logoShadow rounded-2xl"
+						class="xs:w-[160px] xs:h-[160px] w-[80vw] h-[80vw] flex items-center justify-center dark:bg-darkBackgroundColor2 shadow-logoShadow dark:shadow-darkBiggerShadow rounded-2xl"
 					>
 						<img
 							src="images/JOT 1.png"
@@ -1959,7 +2021,7 @@
 						/>
 					</div>
 					<div
-						class="xs:w-[160px] xs:h-[160px] w-[80vw] h-[80vw] flex items-center justify-center shadow-logoShadow rounded-2xl"
+						class="xs:w-[160px] xs:h-[160px] w-[80vw] h-[80vw] flex items-center justify-center dark:bg-darkBackgroundColor2 shadow-logoShadow dark:shadow-darkBiggerShadow rounded-2xl"
 					>
 						<img
 							src="images/JOT 1.png"
@@ -1968,7 +2030,7 @@
 						/>
 					</div>
 					<div
-						class="xs:w-[160px] xs:h-[160px] w-[80vw] h-[80vw] flex items-center justify-center shadow-logoShadow rounded-2xl"
+						class="xs:w-[160px] xs:h-[160px] w-[80vw] h-[80vw] flex items-center justify-center dark:bg-darkBackgroundColor2 shadow-logoShadow dark:shadow-darkBiggerShadow rounded-2xl"
 					>
 						<img
 							src="images/JOT 1.png"
@@ -1977,7 +2039,7 @@
 						/>
 					</div>
 					<div
-						class="xs:w-[160px] xs:h-[160px] w-[80vw] h-[80vw] flex items-center justify-center shadow-logoShadow rounded-2xl"
+						class="xs:w-[160px] xs:h-[160px] w-[80vw] h-[80vw] flex items-center justify-center dark:bg-darkBackgroundColor2 shadow-logoShadow dark:shadow-darkBiggerShadow rounded-2xl"
 					>
 						<img
 							src="images/JOT 1.png"
@@ -1986,7 +2048,7 @@
 						/>
 					</div>
 					<div
-						class="xs:w-[160px] xs:h-[160px] w-[80vw] h-[80vw] flex items-center justify-center shadow-logoShadow rounded-2xl"
+						class="xs:w-[160px] xs:h-[160px] w-[80vw] h-[80vw] flex items-center justify-center dark:bg-darkBackgroundColor2 shadow-logoShadow dark:shadow-darkBiggerShadow rounded-2xl"
 					>
 						<img
 							src="images/JOT 1.png"
@@ -1998,7 +2060,7 @@
 			</article>
 			<!-- Footer BLOCK -->
 			<footer
-				class="xs:h-[120px] h-auto w-[99%] mx-auto mt-4 flex xs:flex-row flex-col justify-between items-center p-4 shadow-logoShadow rounded-3xl mb-3"
+				class="xs:h-[120px] h-auto w-[99%] mx-auto mt-4 flex xs:flex-row flex-col justify-between items-center dark:bg-darkBackgroundColor2 p-4 shadow-logoShadow dark:shadow-darkBiggerShadow rounded-3xl mb-3"
 			>
 				<div
 					class="info xs:h-full font-medium xs:block flex flex-col items-center xs:mb-none mb-4"
@@ -2011,7 +2073,7 @@
 				<img
 					src="/images/logo_text.svg"
 					alt="logo"
-					class="lg:h-[80%] xs:h-[60%] h-16 xs:mr-4"
+					class="xs:mr-4 dark:p-2 lg:h-[80%] dark:lg:h-[85%] xs:h-[60%] dark:xs:h-[65%] h-16 dark:h-[18] dark:bg-darkSecondaryColor dark:rounded-xl"
 				/>
 			</footer>
 		</div>
