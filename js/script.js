@@ -24,11 +24,14 @@ function closeMenu() {
 		child.style.backgroundColor = '#42C1EE';
 	}
 	burger.onclick = openMenu;
-	burger.style.border = '2px solid rgba(66, 193, 238, 1)';
+	burger.style.border = `2px solid ${primaryColor}`;
 	burger.style.backgroundColor = '#EEF1F899';
 	burger.children[0].style.transform = 'translateY(-10px) rotate(0)';
+	burger.children[0].style.backgroundColor = `${primaryColor}`;
 	burger.children[1].style.transform = 'rotate(0)';
+	burger.children[1].style.backgroundColor = `${primaryColor}`;
 	burger.children[2].style.transform = 'translateY(10px) rotate(0)';
+	burger.children[2].style.backgroundColor = `${primaryColor}`;
 	const mobileMenu = document.querySelector('.mobileMenu');
 	mobileMenu.style.opacity = 0;
 	mobileMenu.style.transform = 'translateY(-100px)';
@@ -129,10 +132,6 @@ class myOwnSwiper {
 		this.cardsList = document
 			.getElementById(sliderId)
 			.querySelectorAll('.slider-card');
-		console.log(document.getElementById(sliderId));
-		console.log(
-			document.getElementById(sliderId).querySelectorAll('.slider-card')
-		);
 		this.changePosition(0, '0', null, 'scale(1)', 2);
 		this.changePosition(1, '10%', null, 'scale(1.2)', 3);
 		this.changePosition(2, '50%', null, 'scale(1.5) translateX(-35.71%)', 4);
@@ -295,6 +294,8 @@ class myOwnSwiper {
 	}
 }
 
+let primaryColor, secondaryColor;
+
 const swiper1 = new myOwnSwiper(4, 2, 'slider-benefits');
 const swiperTemp = new myOwnSwiper(4, 2, 'sliderTemp');
 const swiper2 = new myOwnSwiper(8, 2, 'sliderJotApp');
@@ -308,12 +309,30 @@ function swiperTempChange(index) {
 	swiperTemp.changeActive(index);
 }
 
-// if (
-// 	localStorage.getItem('color-theme') === 'dark' ||
-// 	(!('color-theme' in localStorage) &&
-// 		window.matchMedia('(prefers-color-scheme: dark)').matches)
-// ) {
-// 	document.documentElement.classList.add('dark');
-// } else {
-// 	document.documentElement.classList.remove('dark');
-// }
+function switchTheme() {
+	if (document.documentElement.classList.contains('dark')) {
+		document.documentElement.classList.remove('dark');
+		console.log('switched to light');
+		secondaryColor = '#3F5477';
+		primaryColor = '#42C1EE';
+	} else {
+		console.log('switched to dark');
+		document.documentElement.classList.add('dark');
+		primaryColor = '#D37101';
+		secondaryColor = '#F9F9F9';
+	}
+}
+
+if (
+	localStorage.getItem('color-theme') === 'dark' ||
+	(!('color-theme' in localStorage) &&
+		window.matchMedia('(prefers-color-scheme: dark)').matches)
+) {
+	document.documentElement.classList.add('dark');
+	primaryColor = '#D37101';
+	secondaryColor = '#F9F9F9';
+} else {
+	document.documentElement.classList.remove('dark');
+	secondaryColor = '#3F5477';
+	primaryColor = '#42C1EE';
+}
