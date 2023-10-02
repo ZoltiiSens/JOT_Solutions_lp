@@ -295,7 +295,7 @@ class myOwnSwiper {
 	}
 }
 
-const swiper1 = new myOwnSwiper(4, 2, 'slider123123');
+const swiper1 = new myOwnSwiper(4, 2, 'slider-benefits');
 const swiperTemp = new myOwnSwiper(4, 2, 'sliderTemp');
 const swiper2 = new myOwnSwiper(8, 2, 'sliderJotApp');
 function changeActive(index) {

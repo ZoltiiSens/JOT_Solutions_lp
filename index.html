@@ -940,7 +940,7 @@
 			<!-- Header BLOCK-->
 			<header class="md:mx-22 mx-4 py-5 flex flex-row items-center">
 				<div
-					class="logo_circle mdlg:w-[167px] mdlg:h-[167px] xs:w-[140px] xs:h-[140px] w-[100px] h-[100px] rounded-full shadow-logoShadow bg-[#EEF1F8] flex items-center justify-center"
+					class="logo_circle mdlg:w-[167px] xs:w-[140px] w-[100px] mdlg:h-[167px] xs:h-[140px] h-[100px] flex items-center justify-center rounded-full shadow-logoShadow bg-[#EEF1F8]"
 				>
 					<img src="images/logo.svg" alt="logo" class="w-3/4" />
 				</div>
@@ -958,42 +958,42 @@
 					Corporate Strategy Management
 				</h2>
 				<p
-					class="md:text-3xl text-1xl text-secondaryColor mt-6 md:mb-8 mb-2 font-medium"
+					class="mt-6 md:mb-8 mb-2 md:text-3xl text-1xl text-secondaryColor font-medium"
 				>
 					JOT (Just On Time) is a boutique firm for strategy and project
 					management that combines various management solutions for
 					companies under one roof.
 				</p>
 				<div
-					class="auth-group flex flex-col items-end lg:justify-end md:gap-5 gap-3 relative flex-1 text-base md:flex-row items-center justify-center"
+					class="auth-group flex md:flex-row flex-col lg:justify-end justify-center items-center flex-1 md:gap-5 gap-3 text-base"
 				>
 					<a
 						href="#"
-						class="text-primaryColor text-base rounded-full shadow-buttonShadow text-center py-2 hover:bg-primaryColor hover:text-backgroundColor hover:shadow-none transition duration-300 font-semibold text-lg min-w-[250px]"
+						class="py-2 min-w-[250px] text-primaryColor rounded-full shadow-buttonShadow text-center hover:bg-primaryColor hover:text-backgroundColor hover:shadow-none font-semibold text-lg transition duration-300"
 					>
 						Log in
 					</a>
 					<a
 						href="#"
-						class="text-primaryColor text-base rounded-full shadow-buttonShadow text-center py-2 hover:bg-primaryColor hover:text-backgroundColor hover:shadow-none transition duration-300 font-semibold text-lg min-w-[250px]"
+						class="py-2 min-w-[250px] text-primaryColor rounded-full shadow-buttonShadow text-center hover:bg-primaryColor hover:text-backgroundColor hover:shadow-none font-semibold text-lg transition duration-300"
 					>
 						Sign up
 					</a>
 				</div>
 			</article>
 			<!-- JOT APP info BLOCK -->
-			<article class="py-5 md:mx-22 mx-4 md:mb-16 mb-none relative">
+			<article class="relative py-5 md:mx-22 mx-4 md:mb-16 mb-none">
 				<h2 class="text-primaryColor md:text-4xl text-2xl font-medium">
 					JOT APP
 				</h2>
 				<p
-					class="text-secondaryColor mt-5 md:text-2xl text-1xl font-medium"
+					class="mt-5 text-secondaryColor md:text-2xl text-1xl font-medium"
 				>
 					JOT is a project management platform that allows you to focus on
 					your real purpose and work, saving you time and energy.
 				</p>
 				<p
-					class="text-secondaryColor my-5 md:text-2xl text-1xl font-medium"
+					class="my-5 text-secondaryColor md:text-2xl text-1xl font-medium"
 				>
 					Whether you are experienced in team management or not, the JOT
 					kit supports our methodology, contributes to the correct and
@@ -1003,23 +1003,24 @@
 				</p>
 				<a
 					href=""
-					class="block py-2 bg-gradient-to-b hover:bg-secondaryColor from-gradColorStart to-gradColorEnd font-bold text-center text-white rounded-2xl w-[250px] text-lg md:absolute md:right-0 mx-auto transition duration-300 shadow-buttonShadow hover:shadow-none"
+					class="md:absolute md:right-0 mx-auto py-2 w-[250px] block bg-gradient-to-b hover:bg-secondaryColor from-gradColorStart to-gradColorEnd font-bold text-center text-white rounded-2xl text-lg shadow-buttonShadow hover:shadow-none transition duration-300"
 					>Scheduling demo</a
 				>
 			</article>
 			<!-- BENEFITS BLOCK -->
-			<article class="py-5 lg:mx-2 sm:mx-22 mx-4 mx-none relative">
+			<article class="relative py-5 lg:mx-2 sm:mx-22 mx-4 mx-none">
 				<h2
-					class="text-primaryColor text-4xl font-semibold text-center uppercase md:mb-12 mb-4"
+					class="md:mb-12 mb-4 text-primaryColor text-4xl font-semibold text-center uppercase"
 				>
 					Benefits of using our program:
 				</h2>
+				<!-- On hover slider -->
 				<div
-					class="slider group lg:flex hidden gap-4 lg:gap-none items-center w-full relative min-h-[250px]"
-					id="slider123123"
+					class="slider relative min-h-[250px] w-full lg:flex hidden lg:gap-none gap-4 items-center group"
+					id="slider-benefits"
 				>
 					<div
-						class="slider-card slider-card--0 transition duration-1000 ease-in-out card w-[350px] h-[150px] px-8 py-2 shadow-buttonShadow rounded-2xl text-2xl lg:absolute lg:left-0 bg-backgroundColor cursor-pointer"
+						class="slider-card slider-card--0 card lg:absolute lg:left-0 px-8 py-2 w-[350px] h-[150px] shadow-buttonShadow rounded-2xl text-2xl bg-backgroundColor cursor-pointer transition duration-1000 ease-in-out"
 						onmouseover="swiper1_change(0)"
 						style="transition: 1s"
 					>
@@ -1032,7 +1033,7 @@
 						</p>
 					</div>
 					<div
-						class="slider-card slider-card--1 transition duration-1000 ease-in-out card w-[350px] h-[150px] px-8 py-2 shadow-buttonShadow rounded-2xl text-2xl lg:absolute bg-backgroundColor cursor-pointer"
+						class="slider-card slider-card--1 card lg:absolute px-8 py-2 w-[350px] h-[150px] shadow-buttonShadow rounded-2xl text-2xl bg-backgroundColor cursor-pointer transition duration-1000 ease-in-out"
 						onmouseover="swiper1_change(1)"
 						style="transition: 1s"
 					>
@@ -1045,7 +1046,7 @@
 						</p>
 					</div>
 					<div
-						class="slider-card slider-card--2 transition duration-1000 ease-in-out card w-[350px] h-[150px] px-8 py-2 shadow-buttonShadow rounded-2xl text-2xl lg:absolute bg-backgroundColor cursor-pointer"
+						class="slider-card slider-card--2 card lg:absolute px-8 py-2 w-[350px] h-[150px] shadow-buttonShadow rounded-2xl text-2xl bg-backgroundColor cursor-pointer transition duration-1000 ease-in-out"
 						onmouseover="swiper1_change(2)"
 						style="transition: 1s"
 					>
@@ -1058,7 +1059,7 @@
 						</p>
 					</div>
 					<div
-						class="slider-card slider-card--3 transition duration-1000 ease-in-out card w-[350px] h-[150px] px-8 py-2 shadow-buttonShadow rounded-2xl text-2xl lg:absolute bg-backgroundColor cursor-pointer"
+						class="slider-card slider-card--3 card lg:absolute px-8 py-2 w-[350px] h-[150px] shadow-buttonShadow rounded-2xl text-2xl bg-backgroundColor cursor-pointer transition duration-1000 ease-in-out"
 						onmouseover="swiper1_change(3)"
 						style="transition: 1s"
 					>
@@ -1072,7 +1073,7 @@
 						</p>
 					</div>
 					<div
-						class="slider-card slider-card--4 transition duration-1000 ease-in-out card w-[350px] h-[150px] px-8 py-2 shadow-buttonShadow rounded-2xl text-2xl lg:absolute bg-backgroundColor cursor-pointer"
+						class="slider-card slider-card--4 card lg:absolute px-8 py-2 w-[350px] h-[150px] shadow-buttonShadow rounded-2xl text-2xl bg-backgroundColor cursor-pointer transition duration-1000 ease-in-out"
 						onmouseover="swiper1_change(4)"
 						style="transition: 1s"
 					>
@@ -1085,11 +1086,12 @@
 						</p>
 					</div>
 				</div>
+				<!-- Mobile version slider -->
 				<div
-					class="group lg:hidden flex flex-col gap-4 lg:gap-none items-center w-full relative min-h-[215px]"
+					class="relative w-full min-h-[215px] lg:hidden flex flex-col items-center gap-4 lg:gap-none group"
 				>
 					<div
-						class="transition duration-200 ease-in-out card lg:w-[480px] w-full sm:h-[215px] h-auto px-8 py-2 shadow-buttonShadow rounded-2xl text-2xl z-0 hover:z-50 lg:absolute lg:left-0 bg-backgroundColor lg:scale-[0.7] lg:hover:scale-95"
+						class="card lg:absolute lg:left-0 z-0 hover:z-50 px-8 py-2 lg:w-[480px] w-full sm:h-[215px] h-auto shadow-buttonShadow rounded-2xl text-2xl bg-backgroundColor lg:scale-[0.7] lg:hover:scale-95 transition duration-200 ease-in-out"
 					>
 						<h3 class="text-primaryColor text-2xl font-semibold">
 							Increased Productivity:
@@ -1100,7 +1102,7 @@
 						</p>
 					</div>
 					<div
-						class="transition duration-200 ease-in-out card lg:w-[480px] w-full sm:h-[215px] h-auto px-8 py-2 shadow-buttonShadow rounded-2xl text-2xl z-10 lg:hover:z-50 lg:absolute lg:left-1/3 lg:-translate-x-1/2 bg-backgroundColor lg:scale-[0.8] lg:hover:scale-95"
+						class="card lg:absolute lg:left-1/3 lg:-translate-x-1/2 z-10 lg:hover:z-50 px-8 py-2 lg:w-[480px] w-full sm:h-[215px] h-auto shadow-buttonShadow rounded-2xl text-2xl bg-backgroundColor lg:scale-[0.8] lg:hover:scale-95 transition duration-200 ease-in-out"
 					>
 						<h3 class="text-primaryColor text-2xl font-semibold">
 							Deadline and Budget Adherence:
@@ -1111,7 +1113,7 @@
 						</p>
 					</div>
 					<div
-						class="transition duration-200 ease-in-out card lg:w-[480px] w-full sm:h-[215px] h-auto px-8 py-2 shadow-buttonShadow rounded-2xl text-2xl z-20 lg:hover:z-50 lg:absolute lg:left-1/2 lg:-translate-x-1/2 bg-backgroundColor lg:scale-90 lg:hover:scale-95"
+						class="card lg:absolute lg:left-1/2 lg:-translate-x-1/2 z-20 lg:hover:z-50 px-8 py-2 lg:w-[480px] w-full sm:h-[215px] h-auto shadow-buttonShadow rounded-2xl text-2xl bg-backgroundColor lg:scale-90 lg:hover:scale-95 transition duration-200 ease-in-out"
 					>
 						<h3 class="text-primaryColor text-2xl font-semibold">
 							Enhanced Quality Results:
@@ -1122,7 +1124,7 @@
 						</p>
 					</div>
 					<div
-						class="transition duration-200 ease-in-out card lg:w-[480px] w-full sm:h-[215px] h-auto px-8 py-2 shadow-buttonShadow rounded-2xl text-2xl z-10 lg:hover:z-50 lg:absolute lg:right-1/3 lg:translate-x-1/2 bg-backgroundColor lg:scale-[0.8] lg:hover:scale-95"
+						class="card lg:absolute lg:right-1/3 lg:translate-x-1/2 z-10 lg:hover:z-50 px-8 py-2 lg:w-[480px] w-full sm:h-[215px] h-auto shadow-buttonShadow rounded-2xl text-2xl bg-backgroundColor lg:scale-[0.8] lg:hover:scale-95 transition duration-200 ease-in-out"
 					>
 						<h3 class="text-primaryColor text-2xl font-semibold">
 							Improved Communication:
@@ -1134,7 +1136,7 @@
 						</p>
 					</div>
 					<div
-						class="transition duration-200 ease-in-out card lg:w-[480px] w-full sm:h-[215px] h-auto px-8 py-2 shadow-buttonShadow rounded-2xl text-2xl z-0 lg:hover:z-50 lg:absolute lg:right-0 bg-backgroundColor lg:scale-[0.7] lg:hover:scale-95"
+						class="card lg:absolute lg:right-0 z-0 lg:hover:z-50 px-8 py-2 lg:w-[480px] w-full sm:h-[215px] h-auto shadow-buttonShadow rounded-2xl text-2xl bg-backgroundColor lg:scale-[0.7] lg:hover:scale-95 transition duration-200 ease-in-out"
 					>
 						<h3 class="text-primaryColor text-2xl font-semibold">
 							Flexibility and Scalability:
@@ -1147,15 +1149,15 @@
 				</div>
 				<a
 					href="#"
-					class="block mt-10 mb-14 max-w-[250px] py-2 text-lg font-semibold shadow-buttonShadow text-center rounded-2xl m-auto hover:shadow-none transition duration-300 hover:bg-primaryColor hover:text-white"
+					class="mt-10 mb-14 mx-auto py-2 max-w-[250px] block text-lg font-semibold shadow-buttonShadow text-center rounded-2xl hover:shadow-none hover:bg-primaryColor hover:text-white transition duration-300"
 				>
 					See more
 				</a>
 			</article>
 			<!-- BENEFITS BLOCK second version -->
-			<article class="py-5 lg:mx-2 sm:mx-22 mx-4 mx-none relative">
+			<article class="relative py-5 lg:mx-2 sm:mx-22 mx-4 mx-none">
 				<h2
-					class="text-primaryColor text-4xl font-semibold text-center uppercase md:mb-12 mb-4"
+					class="md:mb-12 mb-4 text-primaryColor text-4xl font-semibold text-center uppercase"
 				>
 					Benefits of using our program:
 				</h2>
@@ -1164,7 +1166,7 @@
 					id="sliderTemp"
 				>
 					<div
-						class="slider-card slider-card--0 transition duration-1000 ease-in-out card w-[350px] h-[150px] px-8 py-2 shadow-buttonShadow rounded-2xl text-2xl lg:absolute lg:left-0 bg-backgroundColor cursor-pointer hover:bg-[#DDE0E755] transition duration-200"
+						class="slider-card slider-card--0 card lg:absolute lg:left-0 px-8 py-2 w-[350px] h-[150px] shadow-buttonShadow rounded-2xl text-2xl bg-backgroundColor cursor-pointer hover:bg-[#DDE0E755] transition duration-200 ease-in-out"
 						onclick="swiperTempChange(0)"
 						style="transition: 1s"
 					>
@@ -1177,7 +1179,7 @@
 						</p>
 					</div>
 					<div
-						class="slider-card slider-card--1 transition duration-1000 ease-in-out card w-[350px] h-[150px] px-8 py-2 shadow-buttonShadow rounded-2xl text-2xl lg:absolute bg-backgroundColor cursor-pointer hover:bg-[#DDE0E755] transition duration-200"
+						class="slider-card slider-card--1 card lg:absolute px-8 py-2 w-[350px] h-[150px] shadow-buttonShadow rounded-2xl text-2xl bg-backgroundColor cursor-pointer hover:bg-[#DDE0E755] transition duration-200 ease-in-out"
 						onclick="swiperTempChange(1)"
 						style="transition: 1s"
 					>
@@ -1190,7 +1192,7 @@
 						</p>
 					</div>
 					<div
-						class="slider-card slider-card--2 transition duration-1000 ease-in-out card w-[350px] h-[150px] px-8 py-2 shadow-buttonShadow rounded-2xl text-2xl lg:absolute bg-backgroundColor cursor-pointer hover:bg-[#DDE0E755] transition duration-200"
+						class="slider-card slider-card--2 card lg:absolute px-8 py-2 w-[350px] h-[150px] shadow-buttonShadow rounded-2xl text-2xl bg-backgroundColor cursor-pointer hover:bg-[#DDE0E755] transition duration-200 ease-in-out"
 						onclick="swiperTempChange(2)"
 						style="transition: 1s"
 					>
@@ -1203,7 +1205,7 @@
 						</p>
 					</div>
 					<div
-						class="slider-card slider-card--3 transition duration-1000 ease-in-out card w-[350px] h-[150px] px-8 py-2 shadow-buttonShadow rounded-2xl text-2xl lg:absolute bg-backgroundColor cursor-pointer hover:bg-[#DDE0E755] transition duration-200"
+						class="slider-card slider-card--3 card lg:absolute px-8 py-2 w-[350px] h-[150px] shadow-buttonShadow rounded-2xl text-2xl bg-backgroundColor cursor-pointer hover:bg-[#DDE0E755] transition duration-200 ease-in-out"
 						onclick="swiperTempChange(3)"
 						style="transition: 1s"
 					>
@@ -1217,7 +1219,7 @@
 						</p>
 					</div>
 					<div
-						class="slider-card slider-card--4 transition duration-1000 ease-in-out card w-[350px] h-[150px] px-8 py-2 shadow-buttonShadow rounded-2xl text-2xl lg:absolute bg-backgroundColor cursor-pointer hover:bg- transition duration-200"
+						class="slider-card slider-card--4 card lg:absolute px-8 py-2 w-[350px] h-[150px] shadow-buttonShadow rounded-2xl text-2xl bg-backgroundColor cursor-pointer hover:bg-[#DDE0E755] transition duration-200 ease-in-out"
 						onclick="swiperTempChange(4)"
 						style="transition: 1s"
 					>
@@ -1231,10 +1233,10 @@
 					</div>
 				</div>
 				<div
-					class="group lg:hidden flex flex-col gap-4 lg:gap-none items-center w-full relative min-h-[215px]"
+					class="relative w-full min-h-[215px] lg:hidden flex flex-col items-center gap-4 lg:gap-none group"
 				>
 					<div
-						class="transition duration-200 ease-in-out card lg:w-[480px] w-full sm:h-[215px] h-auto px-8 py-2 shadow-buttonShadow rounded-2xl text-2xl z-0 hover:z-50 lg:absolute lg:left-0 bg-backgroundColor lg:scale-[0.7] lg:hover:scale-95"
+						class="card lg:absolute lg:left-0 z-0 hover:z-50 px-8 py-2 lg:w-[480px] w-full sm:h-[215px] h-auto shadow-buttonShadow rounded-2xl text-2xl bg-backgroundColor lg:scale-[0.7] lg:hover:scale-95 transition duration-200 ease-in-out"
 					>
 						<h3 class="text-primaryColor text-2xl font-semibold">
 							Increased Productivity:
@@ -1245,7 +1247,7 @@
 						</p>
 					</div>
 					<div
-						class="transition duration-200 ease-in-out card lg:w-[480px] w-full sm:h-[215px] h-auto px-8 py-2 shadow-buttonShadow rounded-2xl text-2xl z-10 lg:hover:z-50 lg:absolute lg:left-1/3 lg:-translate-x-1/2 bg-backgroundColor lg:scale-[0.8] lg:hover:scale-95"
+						class="card lg:absolute lg:left-1/3 lg:-translate-x-1/2 z-10 lg:hover:z-50 px-8 py-2 lg:w-[480px] w-full sm:h-[215px] h-auto shadow-buttonShadow rounded-2xl text-2xl bg-backgroundColor lg:scale-[0.8] lg:hover:scale-95 transition duration-200 ease-in-out"
 					>
 						<h3 class="text-primaryColor text-2xl font-semibold">
 							Deadline and Budget Adherence:
@@ -1256,7 +1258,7 @@
 						</p>
 					</div>
 					<div
-						class="transition duration-200 ease-in-out card lg:w-[480px] w-full sm:h-[215px] h-auto px-8 py-2 shadow-buttonShadow rounded-2xl text-2xl z-20 lg:hover:z-50 lg:absolute lg:left-1/2 lg:-translate-x-1/2 bg-backgroundColor lg:scale-90 lg:hover:scale-95"
+						class="card lg:absolute lg:left-1/2 lg:-translate-x-1/2 z-20 lg:hover:z-50 px-8 py-2 lg:w-[480px] w-full sm:h-[215px] h-auto shadow-buttonShadow rounded-2xl text-2xl bg-backgroundColor lg:scale-90 lg:hover:scale-95 transition duration-200 ease-in-out"
 					>
 						<h3 class="text-primaryColor text-2xl font-semibold">
 							Enhanced Quality Results:
@@ -1267,7 +1269,7 @@
 						</p>
 					</div>
 					<div
-						class="transition duration-200 ease-in-out card lg:w-[480px] w-full sm:h-[215px] h-auto px-8 py-2 shadow-buttonShadow rounded-2xl text-2xl z-10 lg:hover:z-50 lg:absolute lg:right-1/3 lg:translate-x-1/2 bg-backgroundColor lg:scale-[0.8] lg:hover:scale-95"
+						class="card lg:absolute lg:right-1/3 lg:translate-x-1/2 z-10 lg:hover:z-50 px-8 py-2 lg:w-[480px] w-full sm:h-[215px] h-auto shadow-buttonShadow rounded-2xl text-2xl bg-backgroundColor lg:scale-[0.8] lg:hover:scale-95 transition duration-200 ease-in-out"
 					>
 						<h3 class="text-primaryColor text-2xl font-semibold">
 							Improved Communication:
@@ -1279,7 +1281,7 @@
 						</p>
 					</div>
 					<div
-						class="transition duration-200 ease-in-out card lg:w-[480px] w-full sm:h-[215px] h-auto px-8 py-2 shadow-buttonShadow rounded-2xl text-2xl z-0 lg:hover:z-50 lg:absolute lg:right-0 bg-backgroundColor lg:scale-[0.7] lg:hover:scale-95"
+						class="card lg:absolute lg:right-0 z-0 lg:hover:z-50 px-8 py-2 lg:w-[480px] w-full sm:h-[215px] h-auto shadow-buttonShadow rounded-2xl text-2xl bg-backgroundColor lg:scale-[0.7] lg:hover:scale-95 transition duration-200 ease-in-out"
 					>
 						<h3 class="text-primaryColor text-2xl font-semibold">
 							Flexibility and Scalability:
@@ -1292,7 +1294,7 @@
 				</div>
 				<a
 					href="#"
-					class="block mt-10 mb-14 max-w-[250px] py-2 text-lg font-semibold shadow-buttonShadow text-center rounded-2xl m-auto hover:shadow-none transition duration-300 hover:bg-primaryColor hover:text-white"
+					class="mt-10 mb-14 mx-auto py-2 max-w-[250px] block text-lg font-semibold shadow-buttonShadow text-center rounded-2xl hover:shadow-none hover:bg-primaryColor hover:text-white transition duration-300"
 				>
 					See more
 				</a>
