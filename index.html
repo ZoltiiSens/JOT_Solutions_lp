@@ -82,6 +82,8 @@
 								'-3px -3px 3px rgba(231, 133, 21, 1), 3px 3px 6px #000000',
 							newButtonShadow:
 								'4px 4px 8px 0px #C3C3C3, -4px -4px 8px 0px #FFFFFF',
+							newButtonShadowSmaller:
+								'3px 3px 6px 0px #C3C3C3, -3px -3px 6px 0px #FFFFFF',
 						},
 						spacing: {
 							22: '90px',
@@ -661,21 +663,21 @@
 				class="auth-group relative flex flex-row items-center justify-end lg:gap-4 mdlg:gap-3 gap-2 flex-1 des:mr-10 mr-2 xl:text-xl lg:text-[1.05em] text-[.9em]"
 			>
 				<span
-					class="hidden block p-1 px-3 shadow-buttonShadow dark:shadow-darkShadow lg:text-xl text-lg rounded-full text-secondaryColor dark:text-darkSecondaryColor font-bold cursor-pointer"
+					class="hidden block p-1 px-3 shadow-newButtonShadow dark:shadow-darkShadow lg:text-xl text-lg rounded-full text-secondaryColor dark:text-darkSecondaryColor font-bold cursor-pointer"
 					onclick="switchTheme()"
 				>
 					<i class="fa-solid fa-moon"></i>
 				</span>
 				<a
 					href="#"
-					class="w-[151px] h-[43px] flex justify-center items-center font-semibold text-white text-[18px] text-primaryColor dark:text-darkPrimaryColor rounded-[15px] shadow-newButtonShadow dark:shadow-darkShadow hover:bg-primaryColor dark:hover:bg-darkPrimaryColor hover:text-backgroundColor dark:hover:text-darkBackgroundColor2 hover:shadow-none dark:hover:shadow-none transition duration-300"
+					class="w-[151px] h-[43px] flex justify-center items-center font-semibold text-white text-[18px] text-primaryColor dark:text-darkPrimaryColor rounded-[15px] shadow-newButtonShadow dark:shadow-darkShadow hover:bg-primaryColor dark:hover:bg-darkPrimaryColor hover:text-backgroundColor dark:hover:text-darkBackgroundColor2 hover:shadow-none dark:hover:shadow-none transition duration-300 font-baseFont"
 					style="background: linear-gradient(180deg, #20D1ED 28.98%, #0881E9 100%);"
 				>
 					Log in
 				</a>
 				<a
 					href="#"
-					class="w-[151px] h-[43px] flex justify-center items-center font-semibold  text-primaryColor dark:text-darkPrimaryColor rounded-[15px] shadow-newButtonShadow dark:shadow-darkShadow hover:bg-primaryColor dark:hover:bg-darkPrimaryColor hover:text-backgroundColor dark:hover:text-darkBackgroundColor2 hover:shadow-none dark:hover:shadow-none transition duration-300"
+					class="w-[151px] h-[43px] flex justify-center items-center font-semibold text-[18px] text-primaryColor dark:text-darkPrimaryColor rounded-[15px] shadow-newButtonShadow dark:shadow-darkShadow hover:bg-primaryColor dark:hover:bg-darkPrimaryColor hover:text-backgroundColor dark:hover:text-darkBackgroundColor2 hover:shadow-none dark:hover:shadow-none transition duration-300 font-baseFont"
 				>
 					Sign up
 				</a>
@@ -1039,12 +1041,12 @@
 		</div>
 		<!-- MAIN CONTENT -->
 		<div
-			class="mx-auto min-h-screen des:w-max des:max-w-none xl:max-w-[1400px] lg:max-w-[1200px] w-full bg-backgroundColor dark:bg-darkBackgroundColor"
+			class="mx-auto min-h-screen des:w-max des:max-w-none xl:max-w-[1440px] lg:max-w-[1200px] w-full bg-backgroundColor dark:bg-darkBackgroundColor"
 		>
 			<!-- Header BLOCK-->
-			<article class="pt-[64px] mx-[-30px] px-[30px]" 
+			<article class="pt-[64px] mx-[-30px] px-[30px] pb-[20px]" 
 				style="
-					background-image: url(/images/background-logo.svg);
+					background-image: url(/images/back-logo.svg);
 					background-repeat: no-repeat;
 					background-position: right top;
 					background-size: auto 105%;
@@ -1056,9 +1058,9 @@
 						<img src="images/logo.svg" alt="logo" class="w-3/4" />
 					</div> -->
 					<h2
-						class="md: mt-[70px] mdlg:text-6xl xs:text-5xl text-4xl font-medium text-black dark:text-darkSecondaryColor"
+						class="md: mt-[70px] mdlg:text-[64px] xs:text-5xl text-4xl font-normal text-black dark:text-darkSecondaryColor"
 					>
-						<span class="text-goldenColor dark:text-darkPrimaryColor"
+						<span class="text-goldenColor dark:text-darkPrimaryColor font-semibold "
 							>J.O.T</span
 						>
 						Solutions
@@ -1071,7 +1073,7 @@
 						Corporate Strategy Management
 					</h2>
 					<p
-						class="mt-[50px] md:mb-8 mb-2 md:text-3xl text-1xl text-secondaryColor dark:text-darkSecondaryColor font-medium"
+						class="mt-[50px] md:mb-8 mb-2 md:text-[28px] text-1xl text-secondaryColor dark:text-darkSecondaryColor font-medium text-justify"
 					>
 						JOT (Just On Time) is a boutique firm for strategy and project
 						management that combines various management solutions for
@@ -1082,14 +1084,14 @@
 					>
 						<a
 							href="#"
-							class="py-2 min-w-[250px] h-[49px] flex justify-center items-center text-white dark:text-darkPrimaryColor rounded-[15px] shadow-buttonShadow dark:shadow-darkShadow text-center hover:bg-primaryColor dark:hover:bg-darkPrimaryColor hover:text-backgroundColor dark:hover:text-darkBackgroundColor hover:shadow-none dark:hover:shadow-none font-bold text-lg transition duration-300"
+							class="py-2 min-w-[250px] h-[49px] flex justify-center items-center text-white dark:text-darkPrimaryColor rounded-[15px] shadow-newButtonShadow dark:shadow-darkShadow text-center hover:bg-primaryColor dark:hover:bg-darkPrimaryColor hover:text-backgroundColor dark:hover:text-darkBackgroundColor hover:shadow-none dark:hover:shadow-none font-bold text-[22px] transition duration-300 font-baseFont"
 							style="background: linear-gradient(180deg, #20D1ED 28.98%, #0881E9 100%);"
 						>
 							Log in
 						</a>
 						<a
 							href="#"
-							class="py-2 min-w-[250px] h-[49px] flex justify-center items-center text-primaryColor dark:text-darkPrimaryColor rounded-[15px] shadow-buttonShadow dark:shadow-darkShadow text-center hover:bg-primaryColor dark:hover:bg-darkPrimaryColor hover:text-backgroundColor dark:hover:text-darkBackgroundColor hover:shadow-none dark:hover:shadow-none font-semibold text-lg transition duration-300"
+							class="py-2 min-w-[250px] h-[49px] flex justify-center items-center text-primaryColor dark:text-darkPrimaryColor rounded-[15px] shadow-newButtonShadow dark:shadow-darkShadow text-center hover:bg-primaryColor dark:hover:bg-darkPrimaryColor hover:text-backgroundColor dark:hover:text-darkBackgroundColor hover:shadow-none dark:hover:shadow-none font-semibold text-[22px] transition duration-300 font-baseFont"
 						>
 							Sign up
 						</a>
@@ -1109,18 +1111,18 @@
 					<img src="images/about_jot_app.png" alt="teams" class="rounded-[15px]">
 				</div>
 				<h2
-					class="mt-[40px] text-primaryColor dark:text-darkPrimaryColor md:text-[40px] xs:text-3xl text-2xl font-bold font-baseFont"
+					class="mb-[50px] text-primaryColor dark:text-darkPrimaryColor md:text-[40px] xs:text-3xl text-2xl font-bold font-baseFont"
 				>
 					ABOUT JOT APP
 				</h2>
 				<p
-					class="mt-5 text-secondaryColor dark:text-darkSecondaryColor md:text-2xl text-1xl font-medium"
+					class="mt-5 text-secondaryColor dark:text-darkSecondaryColor md:text-2xl text-1xl font-medium text-justify"
 				>
 					JOT is a project management platform that allows you to focus on
 					your real purpose and work, saving you time and energy.
 				</p>
 				<p
-					class="my-5 text-secondaryColor dark:text-darkSecondaryColor md:text-2xl text-1xl font-medium"
+					class="my-5 text-secondaryColor dark:text-darkSecondaryColor md:text-2xl text-1xl font-medium text-justify"
 				>
 					Whether you are experienced in team management or not, the JOT
 					kit supports our methodology, contributes to the correct and
@@ -1130,7 +1132,7 @@
 				</p>
 				<a
 					href="#"
-					class="mx-auto py-2 w-[250px] block bg-gradient-to-b hover:bg-secondaryColor dark:hover:bg-darkSecondaryColor from-gradColorStart dark:from-darkGradColorStart to-gradColorEnd dark:to-darkGradColorEnd font-bold text-center text-white dark:hover:text-darkBackgroundColor2 rounded-2xl text-lg shadow-buttonShadow dark:shadow-darkPrimaryShadow hover:shadow-none dark:hover:shadow-none transition duration-300"
+					class="font-baseFont py-2 w-[250px] block bg-gradient-to-b hover:bg-secondaryColor dark:hover:bg-darkSecondaryColor from-gradColorStart dark:from-darkGradColorStart to-gradColorEnd dark:to-darkGradColorEnd font-bold text-center text-white dark:hover:text-darkBackgroundColor2 rounded-2xl text-lg shadow-newButtonShadow dark:shadow-darkPrimaryShadow hover:shadow-none dark:hover:shadow-none transition duration-300"
 					>Scheduling demo</a
 				>
 			</article>
@@ -1150,7 +1152,7 @@
 						onclick="swiperTempChange(0)"
 						style="transition: 1s"
 					>
-						<img src="images/benefits-swiper-images/Vector1.svg" alt="flexibility" class="vector h-[75px] mt-[25px] mb-[45px]">
+						<img src="images/benefits-swiper-images/Vector1.svg" alt="flexibility" class="vector h-[75px] mt-[25px] mb-[28px]">
 						<h3
 							class="text-primaryColor dark:text-darkPrimaryColor text-[24px] text-center font-semibold px-[17px]"
 						>
@@ -1165,7 +1167,7 @@
 						onclick="swiperTempChange(1)"
 						style="transition: 1s"
 					>
-						<img src="images/benefits-swiper-images/Vector2.svg" alt="flexibility" class="vector h-[75px] mt-[25px] mb-[45px]">
+						<img src="images/benefits-swiper-images/Vector2.svg" alt="flexibility" class="vector h-[75px] mt-[25px] mb-[28px]">
 						<h3
 							class="text-primaryColor dark:text-darkPrimaryColor text-[24px] text-center font-semibold px-[17px]"
 						>
@@ -1195,7 +1197,7 @@
 						onclick="swiperTempChange(3)"
 						style="transition: 1s"
 					>
-						<img src="images/benefits-swiper-images/Vector4.svg" alt="flexibility" class="vector h-[75px] mt-[25px] mb-[45px]">
+						<img src="images/benefits-swiper-images/Vector4.svg" alt="flexibility" class="vector h-[75px] mt-[25px] mb-[28px]">
 						<h3
 							class="text-primaryColor dark:text-darkPrimaryColor text-[24px] text-center font-semibold px-[17px]"
 						>
@@ -1210,7 +1212,7 @@
 						onclick="swiperTempChange(4)"
 						style="transition: 1s"
 					>
-						<img src="images/benefits-swiper-images/Vector5.svg" alt="flexibility" class="vector h-[75px] mt-[25px] mb-[45px]">
+						<img src="images/benefits-swiper-images/Vector5.svg" alt="flexibility" class="vector h-[75px] mt-[25px] mb-[28px]">
 						<h3
 							class="text-primaryColor dark:text-darkPrimaryColor text-[24px] text-center font-semibold px-[17px]"
 						>
@@ -1304,698 +1306,172 @@
 			</article>
 			<!-- Info cards BLOCK -->
 			<article
-				class="py-5 sm:mx-[60px] mx-4 grid grid-cols-2 gap-[14px] flex-wrap items-center justify-center text-secondaryColor dark:text-darkSecondaryColor"
+				class="py-5 sm:mx-[60px] mx-4 grid grid-cols-2 gap-[24px] flex-wrap items-center justify-center text-secondaryColor dark:text-darkSecondaryColor"
 			>
 				<div
-					class="relative des:h-[320px] sm:h-[270px] h-auto w-full rounded-xl dark:bg-darkBackgroundColor2 shadow-buttonShadow dark:shadow-darkShadow hover:shadow-logoShadow dark:hover:shadow-darkBiggerShadow transition duration-200 p-8"
+					class="relative des:h-[370px] sm:h-[270px] h-auto w-full rounded-xl dark:bg-darkBackgroundColor2 shadow-newButtonShadow dark:shadow-darkShadow hover:shadow-newButtonShadowSmaller dark:hover:shadow-darkBiggerShadow transition duration-200 p-[45px]"
 				>
 					<h3
-						class="text-primaryColor dark:text-darkPrimaryColor des:text-4xl text-3xl font-semibold des:mt-2"
+						class="text-primaryColor dark:text-darkPrimaryColor des:text-[40px] text-3xl font-bold des:mt-2 font-baseFont"
 					>
-						Project Management:
+						Project Management
 					</h3>
-					<p class="des:text-xl text-lg mt-4 des:mb-8 font-medium">
+					<p class="des:text-[22px] text-lg mt-[50px] des:mb-8 font-medium">
 						Project Management: The platform allows you to create
 						projects, tasks, plans, schedules and budgets, as well as
 						tracking the implementation of projects and analyze data
 						obtained from them .
 					</p>
-					<a
+					<!-- <a
 						href="#"
 						class="block sm:absolute sm:bottom-5 sm:right-5 mx-auto w-[250px] text-secondaryColor dark:text-darkSecondaryColor ml-auto des:mt-10 mt-2 py-2 text-lg font-semibold shadow-buttonShadow dark:shadow-darkShadow text-center rounded-2xl hover:shadow-none dark:hover:shadow-none transition duration-300 hover:bg-primaryColor dark:hover:bg-darkPrimaryColor hover:text-white dark:hover:text-darkBackgroundColor2"
 					>
 						See more
+					</a> -->
+					<a href="#" class="flex gap-[10px] justify-end absolute bottom-[50px] right-[45px] cursor-pointer font-semibold hover:font-bold">
+						<span class="font-baseFont text-[22px]">See more</span>
+						<img src="images/arrow-up-right.svg" alt="">
 					</a>
 				</div>
 				<div
-					class="relative des:h-[320px] sm:h-[270px] h-auto w-auto rounded-xl dark:bg-darkBackgroundColor2 shadow-buttonShadow dark:shadow-darkShadow hover:shadow-logoShadow dark:hover:shadow-darkBiggerShadow transition duration-200 p-8"
+					class="relative des:h-[370px] sm:h-[270px] h-auto w-auto rounded-xl dark:bg-darkBackgroundColor2 shadow-newButtonShadow dark:shadow-darkShadow hover:shadow-newButtonShadowSmaller dark:hover:shadow-darkBiggerShadow transition duration-200 p-[45px]"
 				>
 					<h3
-						class="text-primaryColor dark:text-darkPrimaryColor des:text-4xl text-3xl font-semibold des:mt-2"
+						class="text-primaryColor dark:text-darkPrimaryColor des:text-[40px] text-3xl font-bold des:mt-2 font-baseFont leading-[52px]"
 					>
-						Task and outsourcing Management:
+						Task and outsourcing Management
 					</h3>
-					<p class="des:text-xl text-lg mt-4 des:mb-8 font-medium">
+					<p class="des:text-[22px] text-lg mt-[40px] des:mb-8 font-medium">
 						The platform allows to optimize your own resources, assign
 						tasks, and monitors task completion.
 					</p>
-					<a
+					<!-- <a
 						href="#"
 						class="block sm:absolute sm:bottom-5 sm:right-5 mx-auto text-secondaryColor dark:text-darkSecondaryColor ml-auto des:mt-10 mt-2 w-[250px] py-2 text-lg font-semibold shadow-buttonShadow dark:shadow-darkShadow text-center rounded-2xl hover:shadow-none dark:hover:shadow-none transition duration-300 hover:bg-primaryColor dark:hover:bg-darkPrimaryColor hover:text-white dark:hover:text-darkBackgroundColor2"
 					>
 						See more
+					</a> -->
+					<a href="#" class="flex gap-[10px] justify-end absolute bottom-[50px] right-[45px] cursor-pointer font-semibold hover:font-bold">
+						<span class="font-baseFont text-[22px]">See more</span>
+						<img src="images/arrow-up-right.svg" alt="">
 					</a>
 				</div>
 				<div
-					class="relative des:h-[320px] sm:h-[270px] h-auto w-auto rounded-xl dark:bg-darkBackgroundColor2 shadow-buttonShadow dark:shadow-darkShadow hover:shadow-logoShadow dark:hover:shadow-darkBiggerShadow transition duration-200 p-8"
+					class="relative des:h-[370px] sm:h-[270px] h-auto w-auto rounded-xl dark:bg-darkBackgroundColor2 shadow-newButtonShadow dark:shadow-darkShadow hover:shadow-newButtonShadowSmaller dark:hover:shadow-darkBiggerShadow transition duration-200 p-[45px]"
 				>
 					<h3
-						class="text-primaryColor dark:text-darkPrimaryColor des:text-4xl text-3xl font-semibold des:mt-2"
+						class="text-primaryColor dark:text-darkPrimaryColor des:text-[40px] text-3xl font-bold des:mt-2 font-baseFont"
 					>
-						Analytics and Reporting:
+						Analytics and Reporting
 					</h3>
-					<p class="des:text-xl text-lg mt-4 des:mb-8 font-medium">
+					<p class="des:text-[22px] text-lg mt-[40px] des:mb-8 font-medium">
 						The platform provides project analysis and reporting
 						capabilities, including data on cost, performance, quality,
 						and more.
 					</p>
-					<a
+					<!-- <a
 						href="#"
 						class="block sm:absolute sm:bottom-5 sm:right-5 mx-auto w-[250px] text-secondaryColor dark:text-darkSecondaryColor ml-auto des:mt-10 mt-2 max-w-[250px] py-2 text-lg font-semibold shadow-buttonShadow dark:shadow-darkShadow text-center rounded-2xl hover:shadow-none dark:hover:shadow-none transition duration-300 hover:bg-primaryColor dark:hover:bg-darkPrimaryColor hover:text-white dark:hover:text-darkBackgroundColor2"
 					>
 						See more
+					</a> -->
+					<a href="#" class="flex gap-[10px] justify-end absolute bottom-[50px] right-[45px] cursor-pointer font-semibold hover:font-bold">
+						<span class="font-baseFont text-[22px]">See more</span>
+						<img src="images/arrow-up-right.svg" alt="">
 					</a>
 				</div>
 				<div
-					class="relative des:h-[320px] sm:h-[270px] h-auto w-auto rounded-xl dark:bg-darkBackgroundColor2 shadow-buttonShadow dark:shadow-darkShadow p-8 hover:shadow-logoShadow dark:hover:shadow-darkBiggerShadow transition duration-200"
+					class="relative des:h-[370px] sm:h-[270px] h-auto w-auto rounded-xl dark:bg-darkBackgroundColor2 shadow-newButtonShadow dark:shadow-darkShadow p-[45px] hover:newButtonShadowSmaller-logoShadow dark:hover:shadow-darkBiggerShadow transition duration-200"
 				>
 					<h3
-						class="text-primaryColor dark:text-darkPrimaryColor des:text-4xl text-3xl font-semibold des:mt-2"
+						class="text-primaryColor dark:text-darkPrimaryColor des:text-[40px] text-3xl font-bold des:mt-2 font-baseFont"
 					>
 						READY TO GET STARTED?
 					</h3>
-					<p class="des:text-xl text-lg mt-4 mb-8 font-medium">
+					<p class="des:text-[22px] text-lg mt-[40px] mb-8 font-medium">
 						Manage your projects:works, labor, resources and financials -
 						all in one cloud-based solution for developers and builders.
 					</p>
 					<a
 						href=""
-						class="block sm:absolute sm:bottom-5 sm:right-5 mx-auto py-2 mt-10 ml-auto bg-gradient-to-b hover:bg-secondaryColor dark:hover:bg-darkSecondaryColor from-gradColorStart dark:from-darkGradColorStart to-gradColorEnd dark:to-darkGradColorEnd font-bold text-center text-white dark:text-white dark:hover:text-darkBackgroundColor2 rounded-2xl w-[250px] text-lg transition duration-300 shadow-buttonShadow dark:shadow-darkPrimaryShadow hover:shadow-none dark:hover:shadow-none"
+						class="block sm:absolute sm:bottom-[50px] sm:right-[45px] mx-auto py-2 mt-10 ml-auto bg-gradient-to-b hover:bg-secondaryColor dark:hover:bg-darkSecondaryColor from-gradColorStart dark:from-darkGradColorStart to-gradColorEnd dark:to-darkGradColorEnd font-bold text-center text-white dark:text-white dark:hover:text-darkBackgroundColor2 rounded-2xl w-[250px] text-[22px] transition duration-300 shadow-newButtonShadow dark:shadow-darkPrimaryShadow hover:shadow-none dark:hover:shadow-none"
 					>
 						Contact us
 					</a>
 				</div>
 			</article>
 			<!-- JOT APP slider BLOCK -->
-			<article class="mt-10 py-5 dark:text-darkSecondaryColor">
+			<article class="py-5 sm:mx-[60px] mx-4 text-secondaryColor dark:text-darkSecondaryColor">
 				<h2
-					class="text-primaryColor dark:text-darkPrimaryColor text-4xl font-bold text-center uppercase lg:mb-44 mb-6"
+					class="text-primaryColor dark:text-darkPrimaryColor text-4xl font-bold text-center uppercase lg:mb-[50px] mb-6"
 				>
 					Jot app
 				</h2>
-				<!-- Large screen slider -->
-				<div
-					class="jot-app-slider h-[700px] lg:flex hidden relative mx-4"
-					style="transition: 1s"
-					id="sliderJotApp"
+				
+				<div class="jot-app-wrapper p-[10px] m-[-10px] transition-all duration-300"
+					style="
+							height: 900px; 
+							overflow: hidden;
+					"
+					onclick="() => {document.querySelector('.jot-app-wrapper').style.height = auto}"
 				>
-					<div
-						class="slider-card absolute slider-card--0 p-5 h-[490px] w-[435px] shadow-logoShadow dark:shadow-darkBiggerShadow rounded-2xl bg-backgroundColor dark:bg-darkBackgroundColor2 cursor-pointer"
-						style="left: 0; transition: 1s"
-						onclick="changeActive(0)"
-					>
-						<h3
-							class="flex items-center text-primaryColor dark:text-darkPrimaryColor text-2xl font-medium mb-2"
-						>
-							<span
-								class="block w-[20px] h-[20px] rounded-full bg-primaryColor dark:bg-darkPrimaryColor mr-2"
-							></span>
-							Kanban
-						</h3>
-						<div class="img-wrapper w-full h-[257px]">
-							<img
-								class="rounded-2xl"
-								src="images/JOT-swiper-images/1.jpg"
-								alt="Kanban"
-							/>
+					<div class="grid grid-cols-5 gap-[24px]">
+
+						<div class="card h-[425px] shadow-newButtonShadow rounded-[15px] px-[35px] py-[30px] cursor-pointer col-start-1 col-end-3" onclick="123()">
+							<h3 class="font-semibold font-baseFont text-primaryColor text-[32px] mb-[30px]">Team managment</h3>
+							<img src="images/small/Team managment small.png" alt="Team managment" class="w-full">
 						</div>
-						<p class="text-sm font-normal mt-4">
-							A Kanban board visually organizes tasks into columns,
-							aiding teams in tracking and managing work progress
-							seamlessly. It organizes tasks into columns representing
-							different stages of the process, providing a clear overview
-							of work status and promoting efficient task prioritization.
-						</p>
-					</div>
-					<div
-						class="slider-card absolute slider-card--1 p-5 h-[490px] w-[435px] shadow-logoShadow dark:shadow-darkBiggerShadow rounded-2xl bg-backgroundColor dark:bg-darkBackgroundColor2 cursor-pointer"
-						style="left: 0; transition: 1s"
-						onclick="changeActive(1)"
-					>
-						<h3
-							class="flex items-center text-primaryColor dark:text-darkPrimaryColor text-2xl font-medium mb-2"
-						>
-							<span
-								class="block w-[20px] h-[20px] rounded-full bg-primaryColor dark:bg-darkPrimaryColor mr-2"
-							></span>
-							WBS
-						</h3>
-						<div class="img-wrapper w-full h-[257px]">
-							<img
-								class="rounded-2xl"
-								src="images/JOT-swiper-images/2.jpg"
-								alt="Kanban"
-							/>
+						<div class="card h-[425px] shadow-newButtonShadow rounded-[15px] px-[35px] py-[30px] cursor-pointer col-start-3 col-end-6" onclick="123()">
+							<h3 class="font-semibold font-baseFont text-primaryColor text-[32px] mb-[30px]">Kanban</h3>
+							<img src="images/small/Kanban small.png" alt="Kanban" class="w-full">
 						</div>
-						<p class="text-sm font-normal mt-4">
-							A work breakdown structure (WBS) is a hierarchical
-							decomposition of a project into smaller, manageable
-							components, allowing for a structured and organized
-							approach to project planning and execution. By breaking
-							down the project into discrete tasks or work packages, a
-							WBS helps teams define scope, allocate resources, and track
-							progress more effectively.
-						</p>
-					</div>
-					<div
-						class="slider-card absolute slider-card--2 p-5 h-[490px] w-[435px] shadow-logoShadow dark:shadow-darkBiggerShadow rounded-2xl bg-backgroundColor dark:bg-darkBackgroundColor2 cursor-pointer"
-						style="left: 0; transition: 1s"
-						onclick="changeActive(2)"
-					>
-						<h3
-							class="flex items-center text-primaryColor dark:text-darkPrimaryColor text-2xl font-medium mb-2"
-						>
-							<span
-								class="block w-[20px] h-[20px] rounded-full bg-primaryColor dark:bg-darkPrimaryColor mr-2"
-							></span>
-							Sprint
-						</h3>
-						<div class="img-wrapper w-full h-[257px]">
-							<img
-								class="rounded-2xl"
-								src="images/JOT-swiper-images/3.jpg"
-								alt="Kanban"
-							/>
+						<div class="card h-[425px] shadow-newButtonShadow rounded-[15px] px-[35px] py-[30px] cursor-pointer col-start-1 col-end-4" onclick="123()">
+							<h3 class="font-semibold font-baseFont text-primaryColor text-[32px] mb-[30px]">Daily reports</h3>
+							<img src="images/small/Daily reports small.png" alt="Daily reports" class="w-full">
 						</div>
-						<p class="text-sm font-normal mt-4">
-							A sprint is a defined, concentrated phase within agile
-							project management, where a team works on a specific set of
-							tasks and goals, usually lasting two to four weeks. By
-							embracing sprints, teams can iteratively advance their
-							projects, deliver incremental value, and obtain consistent
-							input, fostering adaptability and streamlined project
-							results.
-						</p>
-					</div>
-					<div
-						class="slider-card absolute slider-card--3 p-5 h-[490px] w-[435px] shadow-logoShadow dark:shadow-darkBiggerShadow rounded-2xl bg-backgroundColor dark:bg-darkBackgroundColor2 cursor-pointer"
-						style="left: 0; transition: 1s"
-						onclick="changeActive(3)"
-					>
-						<h3
-							class="flex items-center text-primaryColor dark:text-darkPrimaryColor text-2xl font-medium mb-2"
-						>
-							<span
-								class="block w-[20px] h-[20px] rounded-full bg-primaryColor dark:bg-darkPrimaryColor mr-2"
-							></span>
-							Gantt
-						</h3>
-						<div class="img-wrapper w-full h-[257px]">
-							<img
-								class="rounded-2xl"
-								src="images/JOT-swiper-images/4.jpg"
-								alt="Kanban"
-							/>
+						<div class="card h-[425px] shadow-newButtonShadow rounded-[15px] px-[35px] py-[30px] cursor-pointer col-start-4 col-end-6" onclick="123()">
+							<h3 class="font-semibold font-baseFont text-primaryColor text-[32px] mb-[30px]">Decision summary</h3>
+							<img src="images/small/Decision summary small.png" alt="Decision summary" class="w-full">
 						</div>
-						<p class="text-sm font-normal mt-4">
-							A Gantt diagram is a visual project management tool that
-							showcases tasks and their timelines on a horizontal bar
-							chart, aiding in planning, scheduling, and tracking project
-							progress. By depicting task dependencies and their
-							sequential order, Gantt diagrams offer a comprehensive
-							overview of project timelines and help teams coordinate
-							activities more efficiently.
-						</p>
-					</div>
-					<div
-						class="slider-card absolute slider-card--4 p-5 h-[490px] w-[435px] shadow-logoShadow dark:shadow-darkBiggerShadow rounded-2xl bg-backgroundColor dark:bg-darkBackgroundColor2 cursor-pointer"
-						style="left: 0; transition: 1s"
-						onclick="changeActive(4)"
-					>
-						<h3
-							class="flex items-center text-primaryColor dark:text-darkPrimaryColor text-2xl font-medium mb-2"
-						>
-							<span
-								class="block w-[20px] h-[20px] rounded-full bg-primaryColor dark:bg-darkPrimaryColor mr-2"
-							></span>
-							Daily reports
-						</h3>
-						<div class="img-wrapper w-full h-[257px]">
-							<img
-								class="rounded-2xl"
-								src="images/JOT-swiper-images/5.jpg"
-								alt="Kanban"
-							/>
+						
+
+						<div class="card min-h-[425px] shadow-newButtonShadow rounded-[15px] px-[35px] py-[30px] cursor-pointer col-start-1 col-end-3" onclick="123()">
+							<h3 class="font-semibold font-baseFont text-primaryColor text-[32px] mb-[30px]">WBS</h3>
+							<img src="images/small/WBS small.png" alt="WBS" class="w-full">
 						</div>
-						<p class="text-sm font-normal mt-4">
-							Daily reports are short summaries of a day's activities,
-							progress, and accomplishments, often used in business and
-							project management to keep customers informed about ongoing
-							work. These reports facilitate communication, highlight any
-							challenges or achievements, and provide a clear view of
-							daily operations to support informed decision-making..
-						</p>
-					</div>
-					<div
-						class="slider-card absolute slider-card--5 p-5 h-[490px] w-[435px] shadow-logoShadow dark:shadow-darkBiggerShadow rounded-2xl bg-backgroundColor dark:bg-darkBackgroundColor2 cursor-pointer"
-						style="left: 0; transition: 1s"
-						onclick="changeActive(5)"
-					>
-						<h3
-							class="flex items-center text-primaryColor dark:text-darkPrimaryColor text-2xl font-medium mb-2"
-						>
-							<span
-								class="block w-[20px] h-[20px] rounded-full bg-primaryColor dark:bg-darkPrimaryColor mr-2"
-							></span>
-							Decision summary
-						</h3>
-						<div class="img-wrapper w-full h-[257px]">
-							<img
-								class="rounded-2xl"
-								src="images/JOT-swiper-images/6.jpg"
-								alt="Kanban"
-							/>
+						<div class="card min-h-[425px] shadow-newButtonShadow rounded-[15px] px-[35px] py-[30px] cursor-pointer col-start-3 col-end-6" onclick="123()">
+							<h3 class="font-semibold font-baseFont text-primaryColor text-[32px] mb-[30px]">Dashboard</h3>
+							<img src="images/small/Dashboard small.png" alt="Dashboard" class="w-full">
 						</div>
-						<p class="text-sm font-normal mt-4">
-							A decision summary is a succinct overview that outlines the
-							key choices made during a decision-making process, along
-							with the rationale behind those choices. It serves as a
-							valuable reference document, capturing the essential
-							details of the decision and aiding in communication,
-							accountability, and future analysis
-						</p>
-					</div>
-					<div
-						class="slider-card absolute slider-card--6 p-5 h-[490px] w-[435px] shadow-logoShadow dark:shadow-darkBiggerShadow rounded-2xl bg-backgroundColor dark:bg-darkBackgroundColor2 cursor-pointer"
-						style="left: 0; transition: 1s"
-						onclick="changeActive(6)"
-					>
-						<h3
-							class="flex items-center text-primaryColor dark:text-darkPrimaryColor text-2xl font-medium mb-2"
-						>
-							<span
-								class="block w-[20px] h-[20px] rounded-full bg-primaryColor dark:bg-darkPrimaryColor mr-2"
-							></span>
-							Team managment
-						</h3>
-						<div class="img-wrapper w-full h-[257px]">
-							<img
-								class="rounded-2xl"
-								src="images/JOT-swiper-images/7.jpg"
-								alt="Kanban"
-							/>
+						<div class="card min-h-[425px] shadow-newButtonShadow rounded-[15px] px-[35px] py-[30px] cursor-pointer col-start-1 col-end-4" onclick="123()">
+							<h3 class="font-semibold font-baseFont text-primaryColor text-[32px] mb-[30px]">Sprints</h3>
+							<img src="images/small/Sprints small.png" alt="Sprints" class="w-full">
 						</div>
-						<p class="text-sm font-normal mt-4">
-							Our app facilitates seamless collaboration among teams by
-							providing a centralized platform for task assignment,
-							progress tracking, and communication. With customizable
-							team roles and permissions, it ensures efficient project
-							coordination and accountability.
-						</p>
-					</div>
-					<div
-						class="slider-card absolute slider-card--7 p-5 h-[490px] w-[435px] shadow-logoShadow dark:shadow-darkBiggerShadow rounded-2xl bg-backgroundColor dark:bg-darkBackgroundColor2 cursor-pointer"
-						style="left: 0; transition: 1s"
-						onclick="changeActive(7)"
-					>
-						<h3
-							class="flex items-center text-primaryColor dark:text-darkPrimaryColor text-2xl font-medium mb-2"
-						>
-							<span
-								class="block w-[20px] h-[20px] rounded-full bg-primaryColor dark:bg-darkPrimaryColor mr-2"
-							></span>
-							Project managment
-						</h3>
-						<div class="img-wrapper w-full h-[257px]">
-							<img
-								class="rounded-2xl"
-								src="images/JOT-swiper-images/8.jpg"
-								alt="Kanban"
-							/>
+						<div class="card min-h-[425px] shadow-newButtonShadow rounded-[15px] px-[35px] py-[30px] cursor-pointer col-start-4 col-end-6" onclick="123()">
+							<h3 class="font-semibold font-baseFont text-primaryColor text-[32px] mb-[30px]">Staff</h3>
+							<img src="images/small/Staff small.png" alt="Staff" class="w-full">
 						</div>
-						<p class="text-sm font-normal mt-4">
-							Projects serve as organized containers for managing tasks,
-							timelines, and resources. Users can create, plan, and
-							monitor their projects efficiently, ensuring that they stay
-							on track and meet their goals with ease.
-						</p>
-					</div>
-					<div
-						class="slider-card absolute slider-card--8 p-5 h-[490px] w-[435px] shadow-logoShadow dark:shadow-darkBiggerShadow rounded-2xl bg-backgroundColor dark:bg-darkBackgroundColor2 cursor-pointer"
-						style="left: 0; transition: 1s"
-						onclick="changeActive(8)"
-					>
-						<h3
-							class="flex items-center text-primaryColor dark:text-darkPrimaryColor text-2xl font-medium mb-2"
-						>
-							<span
-								class="block w-[20px] h-[20px] rounded-full bg-primaryColor dark:bg-darkPrimaryColor mr-2"
-							></span>
-							Dashboard
-						</h3>
-						<div class="img-wrapper w-full h-[257px]">
-							<img
-								class="rounded-2xl"
-								src="images/JOT-swiper-images/9.jpg"
-								alt="Kanban"
-							/>
-						</div>
-						<p class="text-sm font-normal mt-4">
-							The dashboard provides users with a comprehensive overview
-							of their project's key metrics, progress, and upcoming
-							deadlines, all in one centralized location. It empowers
-							users to make informed decisions and prioritize tasks,
-							enhancing their project management efficiency.
-						</p>
 					</div>
 				</div>
 
-				<!-- Small devices slider -->
-				<div class="swiper mySwiper mb-10 lg:hidden mx-4">
-					<div class="swiper-wrapper p-2">
-						<div
-							class="swiper-slide p-5 w-[435px] shadow-logoShadow dark:shadow-darkBiggerShadow bg-backgroundColor dark:bg-darkBackgroundColor2 rounded-2xl h-auto"
-							style="left: 0; transition: 1s"
-						>
-							<h3
-								class="flex items-center text-primaryColor dark:text-darkPrimaryColor text-2xl font-medium mb-2"
-							>
-								<span
-									class="block w-[20px] h-[20px] rounded-full bg-primaryColor dark:bg-darkPrimaryColor mr-2"
-								></span>
-								Kanban
-							</h3>
-							<div class="img-wrapper">
-								<img
-									class="rounded-2xl"
-									src="images/JOT-swiper-images/1.jpg"
-									alt="Kanban"
-								/>
-							</div>
-							<p class="text-md font-normal mt-4">
-								A Kanban board visually organizes tasks into columns,
-								aiding teams in tracking and managing work progress
-								seamlessly. It organizes tasks into columns representing
-								different stages of the process, providing a clear
-								overview of work status and promoting efficient task
-								prioritization.
-							</p>
-						</div>
-						<div
-							class="swiper-slide p-5 w-[435px] shadow-logoShadow dark:shadow-darkBiggerShadow bg-backgroundColor dark:bg-darkBackgroundColor2 rounded-2xl h-auto"
-							style="left: 0; transition: 1s"
-						>
-							<h3
-								class="flex items-center text-primaryColor dark:text-darkPrimaryColor text-2xl font-medium mb-2"
-							>
-								<span
-									class="block w-[20px] h-[20px] rounded-full bg-primaryColor dark:bg-darkPrimaryColor mr-2"
-								></span>
-								WBS
-							</h3>
-							<div class="img-wrapper">
-								<img
-									class="rounded-2xl"
-									src="images/JOT-swiper-images/2.jpg"
-									alt="Kanban"
-								/>
-							</div>
-							<p class="text-md font-normal mt-4">
-								A work breakdown structure (WBS) is a hierarchical
-								decomposition of a project into smaller, manageable
-								components, allowing for a structured and organized
-								approach to project planning and execution. By breaking
-								down the project into discrete tasks or work packages, a
-								WBS helps teams define scope, allocate resources, and
-								track progress more effectively.
-							</p>
-						</div>
-						<div
-							class="swiper-slide p-5 w-[435px] shadow-logoShadow dark:shadow-darkBiggerShadow bg-backgroundColor dark:bg-darkBackgroundColor2 rounded-2xl h-auto"
-							style="left: 0; transition: 1s"
-						>
-							<h3
-								class="flex items-center text-primaryColor dark:text-darkPrimaryColor text-2xl font-medium mb-2"
-							>
-								<span
-									class="block w-[20px] h-[20px] rounded-full bg-primaryColor dark:bg-darkPrimaryColor mr-2"
-								></span>
-								Sprint
-							</h3>
-							<div class="img-wrapper">
-								<img
-									class="rounded-2xl"
-									src="images/JOT-swiper-images/3.jpg"
-									alt="Kanban"
-								/>
-							</div>
-							<p class="text-md font-normal mt-4">
-								A sprint is a defined, concentrated phase within agile
-								project management, where a team works on a specific set
-								of tasks and goals, usually lasting two to four weeks.
-								By embracing sprints, teams can iteratively advance
-								their projects, deliver incremental value, and obtain
-								consistent input, fostering adaptability and streamlined
-								project results.
-							</p>
-						</div>
-						<div
-							class="swiper-slide p-5 w-[435px] shadow-logoShadow dark:shadow-darkBiggerShadow bg-backgroundColor dark:bg-darkBackgroundColor2 rounded-2xl h-auto"
-							style="left: 0; transition: 1s"
-						>
-							<h3
-								class="flex items-center text-primaryColor dark:text-darkPrimaryColor text-2xl font-medium mb-2"
-							>
-								<span
-									class="block w-[20px] h-[20px] rounded-full bg-primaryColor dark:bg-darkPrimaryColor mr-2"
-								></span>
-								Gantt
-							</h3>
-							<div class="img-wrapper">
-								<img
-									class="rounded-2xl"
-									src="images/JOT-swiper-images/4.jpg"
-									alt="Kanban"
-								/>
-							</div>
-							<p class="text-md font-normal mt-4">
-								A Gantt diagram is a visual project management tool that
-								showcases tasks and their timelines on a horizontal bar
-								chart, aiding in planning, scheduling, and tracking
-								project progress. By depicting task dependencies and
-								their sequential order, Gantt diagrams offer a
-								comprehensive overview of project timelines and help
-								teams coordinate activities more efficiently.
-							</p>
-						</div>
-						<div
-							class="swiper-slide p-5 w-[435px] shadow-logoShadow dark:shadow-darkBiggerShadow bg-backgroundColor dark:bg-darkBackgroundColor2 rounded-2xl h-auto"
-							style="left: 0; transition: 1s"
-						>
-							<h3
-								class="flex items-center text-primaryColor dark:text-darkPrimaryColor text-2xl font-medium mb-2"
-							>
-								<span
-									class="block w-[20px] h-[20px] rounded-full bg-primaryColor dark:bg-darkPrimaryColor mr-2"
-								></span>
-								Daily reports
-							</h3>
-							<div class="img-wrapper">
-								<img
-									class="rounded-2xl"
-									src="images/JOT-swiper-images/5.jpg"
-									alt="Kanban"
-								/>
-							</div>
-							<p class="text-md font-normal mt-4">
-								Daily reports are short summaries of a day's activities,
-								progress, and accomplishments, often used in business
-								and project management to keep customers informed about
-								ongoing work. These reports facilitate communication,
-								highlight any challenges or achievements, and provide a
-								clear view of daily operations to support informed
-								decision-making..
-							</p>
-						</div>
-						<div
-							class="swiper-slide p-5 w-[435px] shadow-logoShadow dark:shadow-darkBiggerShadow bg-backgroundColor dark:bg-darkBackgroundColor2 rounded-2xl h-auto"
-							style="left: 0; transition: 1s"
-						>
-							<h3
-								class="flex items-center text-primaryColor dark:text-darkPrimaryColor text-2xl font-medium mb-2"
-							>
-								<span
-									class="block w-[20px] h-[20px] rounded-full bg-primaryColor dark:bg-darkPrimaryColor mr-2"
-								></span>
-								Decision summary
-							</h3>
-							<div class="img-wrapper">
-								<img
-									class="rounded-2xl"
-									src="images/JOT-swiper-images/6.jpg"
-									alt="Kanban"
-								/>
-							</div>
-							<p class="text-md font-normal mt-4">
-								A decision summary is a succinct overview that outlines
-								the key choices made during a decision-making process,
-								along with the rationale behind those choices. It serves
-								as a valuable reference document, capturing the
-								essential details of the decision and aiding in
-								communication, accountability, and future analysis
-							</p>
-						</div>
-						<div
-							class="swiper-slide p-5 w-[435px] shadow-logoShadow dark:shadow-darkBiggerShadow bg-backgroundColor dark:bg-darkBackgroundColor2 rounded-2xl h-auto"
-							style="left: 0; transition: 1s"
-						>
-							<h3
-								class="flex items-center text-primaryColor dark:text-darkPrimaryColor text-2xl font-medium mb-2"
-							>
-								<span
-									class="block w-[20px] h-[20px] rounded-full bg-primaryColor dark:bg-darkPrimaryColor mr-2"
-								></span>
-								Team managment
-							</h3>
-							<div class="img-wrapper">
-								<img
-									class="rounded-2xl"
-									src="images/JOT-swiper-images/7.jpg"
-									alt="Kanban"
-								/>
-							</div>
-							<p class="text-md font-normal mt-4">
-								Our app facilitates seamless collaboration among teams
-								by providing a centralized platform for task assignment,
-								progress tracking, and communication. With customizable
-								team roles and permissions, it ensures efficient project
-								coordination and accountability.
-							</p>
-						</div>
-						<div
-							class="swiper-slide p-5 w-[435px] shadow-logoShadow dark:shadow-darkBiggerShadow bg-backgroundColor dark:bg-darkBackgroundColor2 rounded-2xl h-auto"
-							style="left: 0; transition: 1s"
-						>
-							<h3
-								class="flex items-center text-primaryColor dark:text-darkPrimaryColor text-2xl font-medium mb-2"
-							>
-								<span
-									class="block w-[20px] h-[20px] rounded-full bg-primaryColor dark:bg-darkPrimaryColor mr-2"
-								></span>
-								Project managment
-							</h3>
-							<div class="img-wrapper">
-								<img
-									class="rounded-2xl"
-									src="images/JOT-swiper-images/8.jpg"
-									alt="Kanban"
-								/>
-							</div>
-							<p class="text-md font-normal mt-4">
-								Projects serve as organized containers for managing
-								tasks, timelines, and resources. Users can create, plan,
-								and monitor their projects efficiently, ensuring that
-								they stay on track and meet their goals with ease.
-							</p>
-						</div>
-						<div
-							class="swiper-slide p-5 w-[435px] shadow-logoShadow dark:shadow-darkBiggerShadow bg-backgroundColor dark:bg-darkBackgroundColor2 rounded-2xl h-auto"
-							style="left: 0; transition: 1s"
-						>
-							<h3
-								class="flex items-center text-primaryColor dark:text-darkPrimaryColor text-2xl font-medium mb-2"
-							>
-								<span
-									class="block w-[20px] h-[20px] rounded-full bg-primaryColor dark:bg-darkPrimaryColor mr-2"
-								></span>
-								Dashboard
-							</h3>
-							<div class="img-wrapper">
-								<img
-									class="rounded-2xl"
-									src="images/JOT-swiper-images/9.jpg"
-									alt="Kanban"
-								/>
-							</div>
-							<p class="text-md font-normal mt-4">
-								The dashboard provides users with a comprehensive
-								overview of their project's key metrics, progress, and
-								upcoming deadlines, all in one centralized location. It
-								empowers users to make informed decisions and prioritize
-								tasks, enhancing their project management efficiency.
-							</p>
-						</div>
-					</div>
-					<div
-						class="swiper-button-next text-primaryColor dark:text-darkPrimaryColor"
-					></div>
-					<div
-						class="swiper-button-prev text-primaryColor dark:text-darkPrimaryColor"
-					></div>
-				</div>
-
-				<a
-					href="#"
-					class="block py-2 bg-gradient-to-b hover:bg-secondaryColor dark:hover:bg-darkSecondaryColor from-gradColorStart dark:from-darkGradColorStart to-gradColorEnd dark:to-darkGradColorEnd font-bold text-center text-white dark:hover:text-darkBackgroundColor2 rounded-2xl w-[250px] text-lg mx-auto transition duration-300 shadow-buttonShadow dark:shadow-darkPrimaryShadow hover:shadow-none dark:hover:shadow-none"
-					>Scheduling demo</a
+				<button 
+					class="jot-app-button mx-auto mt-[50px] w-[250px] h-[50px] shadow-newButtonShadow rounded-[15px] flex justify-center items-center font-baseFont font-semibold text-[22px]"
+					onclick="seeMoreJotAppOpen()"
 				>
+					See more
+				</button>
 			</article>
 			<!-- Our customers BLOCK -->
-			<article class="py-5 xs:mx-22 mx-4 mx-none">
+			<article class="mt-[150px] pb-5 xs:mx-[20px]">
 				<h2
-					class="text-primaryColor dark:text-darkPrimaryColor text-4xl font-bold text-center mb-12"
+					class="text-primaryColor dark:text-darkPrimaryColor text-4xl font-bold text-center mb-[30px]"
 				>
 					Our customers
 				</h2>
 
-				<!-- <div
-					class="flex flex-row flex-wrap sm:gap-10 gap-4 items-center justify-center"
-				>
-					<div
-						class="xs:w-[160px] xs:h-[160px] w-[80vw] h-[80vw] flex items-center justify-center dark:bg-darkBackgroundColor2 shadow-logoShadow dark:shadow-darkBiggerShadow rounded-2xl"
-					>
-						<img
-							src="images/JOT 1.png"
-							alt="logo"
-							class="w-[70%] bg-white rounded-2xl"
-						/>
-					</div>
-					<div
-						class="xs:w-[160px] xs:h-[160px] w-[80vw] h-[80vw] flex items-center justify-center dark:bg-darkBackgroundColor2 shadow-logoShadow dark:shadow-darkBiggerShadow rounded-2xl"
-					>
-						<img
-							src="images/JOT 1.png"
-							alt="logo"
-							class="w-[70%] bg-white rounded-2xl"
-						/>
-					</div>
-					<div
-						class="xs:w-[160px] xs:h-[160px] w-[80vw] h-[80vw] flex items-center justify-center dark:bg-darkBackgroundColor2 shadow-logoShadow dark:shadow-darkBiggerShadow rounded-2xl"
-					>
-						<img
-							src="images/JOT 1.png"
-							alt="logo"
-							class="w-[70%] bg-white rounded-2xl"
-						/>
-					</div>
-					<div
-						class="xs:w-[160px] xs:h-[160px] w-[80vw] h-[80vw] flex items-center justify-center dark:bg-darkBackgroundColor2 shadow-logoShadow dark:shadow-darkBiggerShadow rounded-2xl"
-					>
-						<img
-							src="images/JOT 1.png"
-							alt="logo"
-							class="w-[70%] bg-white rounded-2xl"
-						/>
-					</div>
-					<div
-						class="xs:w-[160px] xs:h-[160px] w-[80vw] h-[80vw] flex items-center justify-center dark:bg-darkBackgroundColor2 shadow-logoShadow dark:shadow-darkBiggerShadow rounded-2xl"
-					>
-						<img
-							src="images/JOT 1.png"
-							alt="logo"
-							class="w-[70%] bg-white rounded-2xl"
-						/>
-					</div>
-					<div
-						class="xs:w-[160px] xs:h-[160px] w-[80vw] h-[80vw] flex items-center justify-center dark:bg-darkBackgroundColor2 shadow-logoShadow dark:shadow-darkBiggerShadow rounded-2xl"
-					>
-						<img
-							src="images/JOT 1.png"
-							alt="logo"
-							class="w-[70%] bg-white rounded-2xl"
-						/>
-					</div>
-				</div> -->
+				<div class="our_customers">
+					<div class="grid grid-cols-2 gap-[24px]"></div>
+				</div>
 			</article>
 			<!-- Footer BLOCK -->
 			<footer

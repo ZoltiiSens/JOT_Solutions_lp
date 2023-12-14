@@ -96,6 +96,21 @@ function closeMobileSubMenu() {
 		subMenu.style.opacity = '0';
 	}
 }
+// Function opens more blocks in JOT APP block
+function seeMoreJotAppOpen() {
+	const wrapper = document.querySelector('.jot-app-wrapper');
+	const button = document.querySelector('.jot-app-button');
+	wrapper.style.height = '1800px';
+	button.onclick = seeLessJotAppOpen;
+	button.innerHTML = 'See less';
+}
+function seeLessJotAppOpen() {
+	const wrapper = document.querySelector('.jot-app-wrapper');
+	const button = document.querySelector('.jot-app-button');
+	wrapper.style.height = '900px';
+	button.onclick = seeMoreJotAppOpen;
+	button.innerHTML = 'See more';
+}
 
 // Swiper configuration
 var swiper = new Swiper('.mySwiper', {
@@ -297,7 +312,7 @@ class myOwnSwiper {
 let primaryColor, secondaryColor;
 
 const swiperTemp = new myOwnSwiper(4, 2, 'sliderTemp');
-const swiper2 = new myOwnSwiper(8, 2, 'sliderJotApp');
+// const swiper2 = new myOwnSwiper(8, 2, 'sliderJotApp');
 function changeActive(index) {
 	swiper2.changeActive(index);
 }
@@ -307,6 +322,12 @@ function swiper1_change(index) {
 function swiperTempChange(index) {
 	swiperTemp.changeActive(index);
 }
+
+
+
+
+
+
 
 function switchTheme() {
 	if (document.documentElement.classList.contains('dark')) {
