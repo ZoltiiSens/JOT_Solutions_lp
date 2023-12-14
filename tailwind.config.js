@@ -32,6 +32,9 @@ module.exports = {
 					'0 1px 3px 0 rgb(0 0 0 / 0.1), 6px 6px 4px -1px rgb(0 0 0 / 0.1), -5px -5px 4px -1px rgb(255 255 255)',
 				darkShadow:
 					'5px 5px 10px rgba(13, 13, 15, 0.75), -2px -2px 4px #5E6569, -3px -3px 6px #262E32',
+				newButtonShadow:
+					'4px 4px 8px 0px #C3C3C3, -4px -4px 8px 0px #FFFFFF',
+					
 			},
 			spacing: {
 				22: '90px',
