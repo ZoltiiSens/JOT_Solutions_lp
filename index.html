@@ -635,7 +635,7 @@
 						<div class="content flex flex-col justify-center">
 							<img src="images/benefits-swiper-images/Vector1.svg" alt="flexibility" class="vector h-[75px] mb-[28px]">
 								<h3
-									class="text-primaryColor dark:text-darkPrimaryColor text-[24px] text-center font-semibold px-[17px]"
+									class="font-baseFont text-primaryColor dark:text-darkPrimaryColor text-[24px] text-center font-semibold px-[17px]"
 								>
 									Flexibility and Scalability:
 								</h3>
@@ -652,7 +652,7 @@
 						<div class="content flex flex-col justify-center">
 							<img src="images/benefits-swiper-images/Vector2.svg" alt="flexibility" class="vector h-[75px] mb-[28px]">
 							<h3
-								class="text-primaryColor dark:text-darkPrimaryColor text-[24px] text-center font-semibold px-[17px]"
+								class="font-baseFont text-primaryColor dark:text-darkPrimaryColor text-[24px] text-center font-semibold px-[17px]"
 							>
 								Deadline and Budget Adherence:
 							</h3>
@@ -669,7 +669,7 @@
 						<div class="content flex flex-col justify-center">
 							<img src="images/benefits-swiper-images/Vector3.svg" alt="flexibility" class="vector h-[75px] mb-[45px]">
 							<h3
-								class="text-primaryColor dark:text-darkPrimaryColor text-[24px] text-center font-semibold px-[17px]"
+								class="font-baseFont text-primaryColor dark:text-darkPrimaryColor text-[24px] text-center font-semibold px-[17px]"
 							>
 								Increased Productivity:
 							</h3>
@@ -686,7 +686,7 @@
 						<div class="content flex flex-col justify-center">
 							<img src="images/benefits-swiper-images/Vector4.svg" alt="flexibility" class="vector h-[75px] mb-[28px]">
 							<h3
-								class="text-primaryColor dark:text-darkPrimaryColor text-[24px] text-center font-semibold px-[17px]"
+								class="font-baseFont text-primaryColor dark:text-darkPrimaryColor text-[24px] text-center font-semibold px-[17px]"
 							>
 								Enhanced Quality Results:
 							</h3>
@@ -703,7 +703,7 @@
 						<div class="content flex flex-col justify-center">
 							<img src="images/benefits-swiper-images/Vector5.svg" alt="flexibility" class="vector h-[75px] mb-[28px]">
 							<h3
-								class="text-primaryColor dark:text-darkPrimaryColor text-[24px] text-center font-semibold px-[17px]"
+								class="font-baseFont text-primaryColor dark:text-darkPrimaryColor text-[24px] text-center font-semibold px-[17px]"
 							>
 								Improved Communication:
 							</h3>
@@ -908,45 +908,207 @@
 				>
 					<div class="grid grid-cols-5 gap-[24px]">
 
-						<div class="card h-[425px] shadow-newButtonShadow rounded-[15px] px-[35px] py-[30px] cursor-pointer col-start-1 col-end-3" onclick="123()">
+						<div class="card h-[425px] shadow-newButtonShadow rounded-[15px] px-[35px] py-[30px] cursor-pointer col-start-1 col-end-3" onclick="jotAppOpenPopup(0)">
 							<h3 class="font-semibold font-baseFont text-primaryColor text-[32px] mb-[30px]">Team managment</h3>
 							<img src="images/small/Team managment small.png" alt="Team managment" class="w-full">
 						</div>
-						<div class="card h-[425px] shadow-newButtonShadow rounded-[15px] px-[35px] py-[30px] cursor-pointer col-start-3 col-end-6" onclick="123()">
+						<div class="card h-[425px] shadow-newButtonShadow rounded-[15px] px-[35px] py-[30px] cursor-pointer col-start-3 col-end-6" onclick="jotAppOpenPopup(1)">
 							<h3 class="font-semibold font-baseFont text-primaryColor text-[32px] mb-[30px]">Kanban</h3>
 							<img src="images/small/Kanban small.png" alt="Kanban" class="w-full">
 						</div>
-						<div class="card h-[425px] shadow-newButtonShadow rounded-[15px] px-[35px] py-[30px] cursor-pointer col-start-1 col-end-4" onclick="123()">
+						<div class="card h-[425px] shadow-newButtonShadow rounded-[15px] px-[35px] py-[30px] cursor-pointer col-start-1 col-end-4" onclick="jotAppOpenPopup(2)">
 							<h3 class="font-semibold font-baseFont text-primaryColor text-[32px] mb-[30px]">Daily reports</h3>
 							<img src="images/small/Daily reports small.png" alt="Daily reports" class="w-full">
 						</div>
-						<div class="card h-[425px] shadow-newButtonShadow rounded-[15px] px-[35px] py-[30px] cursor-pointer col-start-4 col-end-6" onclick="123()">
+						<div class="card h-[425px] shadow-newButtonShadow rounded-[15px] px-[35px] py-[30px] cursor-pointer col-start-4 col-end-6" onclick="jotAppOpenPopup(3)">
 							<h3 class="font-semibold font-baseFont text-primaryColor text-[32px] mb-[30px]">Decision summary</h3>
 							<img src="images/small/Decision summary small.png" alt="Decision summary" class="w-full">
 						</div>
 						
 
-						<div class="card min-h-[425px] shadow-newButtonShadow rounded-[15px] px-[35px] py-[30px] cursor-pointer col-start-1 col-end-3" onclick="123()">
+						<div class="card min-h-[425px] shadow-newButtonShadow rounded-[15px] px-[35px] py-[30px] cursor-pointer col-start-1 col-end-3" onclick="jotAppOpenPopup(4)">
 							<h3 class="font-semibold font-baseFont text-primaryColor text-[32px] mb-[30px]">WBS</h3>
 							<img src="images/small/WBS small.png" alt="WBS" class="w-full">
 						</div>
-						<div class="card min-h-[425px] shadow-newButtonShadow rounded-[15px] px-[35px] py-[30px] cursor-pointer col-start-3 col-end-6" onclick="123()">
+						<div class="card min-h-[425px] shadow-newButtonShadow rounded-[15px] px-[35px] py-[30px] cursor-pointer col-start-3 col-end-6" onclick="jotAppOpenPopup(5)">
 							<h3 class="font-semibold font-baseFont text-primaryColor text-[32px] mb-[30px]">Dashboard</h3>
 							<img src="images/small/Dashboard small.png" alt="Dashboard" class="w-full">
 						</div>
-						<div class="card min-h-[425px] shadow-newButtonShadow rounded-[15px] px-[35px] py-[30px] cursor-pointer col-start-1 col-end-4" onclick="123()">
+						<div class="card min-h-[425px] shadow-newButtonShadow rounded-[15px] px-[35px] py-[30px] cursor-pointer col-start-1 col-end-4" onclick="jotAppOpenPopup(6)">
 							<h3 class="font-semibold font-baseFont text-primaryColor text-[32px] mb-[30px]">Sprints</h3>
 							<img src="images/small/Sprints small.png" alt="Sprints" class="w-full">
 						</div>
-						<div class="card min-h-[425px] shadow-newButtonShadow rounded-[15px] px-[35px] py-[30px] cursor-pointer col-start-4 col-end-6" onclick="123()">
+						<div class="card min-h-[425px] shadow-newButtonShadow rounded-[15px] px-[35px] py-[30px] cursor-pointer col-start-4 col-end-6" onclick="jotAppOpenPopup(7)">
 							<h3 class="font-semibold font-baseFont text-primaryColor text-[32px] mb-[30px]">Staff</h3>
 							<img src="images/small/Staff small.png" alt="Staff" class="w-full">
 						</div>
 					</div>
 				</div>
+				
+				
+				<div class="jot-app-popup p-[56px] w-[1096px] h-[916px] shadow-newButtonShadow bg-[#ECF0F3] fixed top-1/2 left-1/2 z-[9999] rounded-[15px] transition-all duration-300"
+					id="jot-app-popup--0"
+					style="
+						transform: translateX(-50%) translateY(-50%);
+						pointer-events: none;
+						opacity: 0;
+					"
+				>
+					<div class="cross w-[50px] h-[50px] rounded-[15px] flex justify-center items-center cursor-pointer absolute top-[30px] right-[30px]"
+						style="
+							background: linear-gradient(180deg, #20D1ED 28.98%, #0881E9 100%);
+						"
+						onclick="jotAppClosePopup(0)"
+					>
+						<img src="images/cross.svg" alt="">
+					</div>
+					<h2 class="font-bold font-baseFont text-center text-[40px] text-primaryColor mb-[50px]">Team managment</h2>
+					<img src="images/big/Team managment big.png" alt="Team managment" class="rounded-[15px] w-full block mb-[50px]">
+					<p class="text-[20px] leading-[28px] text-justify font-normal">Our app facilitates seamless collaboration among teams by providing a centralized platform for task assignment, progress tracking, and communication. With customizable team roles and permissions, it ensures efficient project coordination and accountability.</p>
+				</div>
+				<div class="jot-app-popup p-[56px] w-[1096px] h-[916px] shadow-newButtonShadow bg-[#ECF0F3] fixed top-1/2 left-1/2 z-[9999] rounded-[15px] transition-all duration-300"
+					id="jot-app-popup--1"
+					style="
+						transform: translateX(-50%) translateY(-50%);
+						pointer-events: none;
+						opacity: 0;
+					"
+				>
+					<div class="cross w-[50px] h-[50px] rounded-[15px] flex justify-center items-center cursor-pointer absolute top-[30px] right-[30px]"
+						style="
+							background: linear-gradient(180deg, #20D1ED 28.98%, #0881E9 100%);
+						"
+						onclick="jotAppClosePopup(1)"
+					>
+						<img src="images/cross.svg" alt="">
+					</div>
+					<h2 class="font-bold font-baseFont text-center text-[40px] text-primaryColor mb-[50px]">Kanban</h2>
+					<img src="images/big/Kanban big.png" alt="Kanban" class="rounded-[15px] w-full block mb-[50px]">
+					<p class="text-[20px] leading-[28px] text-justify font-normal">A Kanban board is a visual project management tool that helps teams track and manage work in progress, enabling them to visualize tasks, optimize workflows, and enhance collaboration. It organizes tasks into columns representing different stages of the process, providing a clear overview of work status and promoting efficient task prioritization.</p>
+				</div>	
+				<div class="jot-app-popup p-[56px] w-[1096px] h-[916px] shadow-newButtonShadow bg-[#ECF0F3] fixed top-1/2 left-1/2 z-[9999] rounded-[15px] transition-all duration-300"
+					id="jot-app-popup--2"
+					style="
+						transform: translateX(-50%) translateY(-50%);
+						pointer-events: none;
+						opacity: 0;
+					"
+				>
+					<div class="cross w-[50px] h-[50px] rounded-[15px] flex justify-center items-center cursor-pointer absolute top-[30px] right-[30px]"
+						style="
+							background: linear-gradient(180deg, #20D1ED 28.98%, #0881E9 100%);
+						"
+						onclick="jotAppClosePopup(2)"
+					>
+						<img src="images/cross.svg" alt="">
+					</div>
+					<h2 class="font-bold font-baseFont text-center text-[40px] text-primaryColor mb-[50px]">Daily reports</h2>
+					<img src="images/big/Daily reports big.png" alt="Daily reports" class="rounded-[15px] w-full block mb-[50px]">
+					<p class="text-[20px] leading-[28px] text-justify font-normal">Daily reports are short summaries of a day's activities, progress, and accomplishments, often used in business and project management to keep customers informed about ongoing work. These reports facilitate communication, highlight any challenges or achievements, and provide a clear view of daily operations to support informed decision-making.</p>
+				</div>	
+				<div class="jot-app-popup p-[56px] w-[1096px] h-[916px] shadow-newButtonShadow bg-[#ECF0F3] fixed top-1/2 left-1/2 z-[9999] rounded-[15px] transition-all duration-300"
+					id="jot-app-popup--3"
+					style="
+						transform: translateX(-50%) translateY(-50%);
+						pointer-events: none;
+						opacity: 0;
+					"
+				>
+					<div class="cross w-[50px] h-[50px] rounded-[15px] flex justify-center items-center cursor-pointer absolute top-[30px] right-[30px]"
+						style="
+							background: linear-gradient(180deg, #20D1ED 28.98%, #0881E9 100%);
+						"
+						onclick="jotAppClosePopup(3)"
+					>
+						<img src="images/cross.svg" alt="">
+					</div>
+					<h2 class="font-bold font-baseFont text-center text-[40px] text-primaryColor mb-[50px]">Decision summary</h2>
+					<img src="images/big/Decision summary big.png" alt="Decision summary" class="rounded-[15px] w-full block mb-[50px]">
+					<p class="text-[20px] leading-[28px] text-justify font-normal">A decision summary is a succinct overview that outlines the key choices made during a decision-making process, along with the rationale behind those choices. It serves as a valuable reference document, capturing the essential details of the decision and aiding in communication, accountability, and future analysis</p>
+				</div>
+				<div class="jot-app-popup p-[56px] w-[1096px] h-[916px] shadow-newButtonShadow bg-[#ECF0F3] fixed top-1/2 left-1/2 z-[9999] rounded-[15px] transition-all duration-300"
+					id="jot-app-popup--4"
+					style="
+						transform: translateX(-50%) translateY(-50%);
+						pointer-events: none;
+						opacity: 0;
+					"
+				>
+					<div class="cross w-[50px] h-[50px] rounded-[15px] flex justify-center items-center cursor-pointer absolute top-[30px] right-[30px]"
+						style="
+							background: linear-gradient(180deg, #20D1ED 28.98%, #0881E9 100%);
+						"
+						onclick="jotAppClosePopup(4)"
+					>
+						<img src="images/cross.svg" alt="">
+					</div>
+					<h2 class="font-bold font-baseFont text-center text-[40px] text-primaryColor mb-[50px]">WBS</h2>
+					<img src="images/big/WBS big.png" alt="WBS" class="rounded-[15px] w-full block mb-[50px]">
+					<p class="text-[20px] leading-[28px] text-justify font-normal">A work breakdown structure (WBS) is a hierarchical decomposition of a project into smaller, manageable components, allowing for a structured and organized approach to project planning and execution. By breaking down the project into discrete tasks or work packages, a WBS helps teams define scope, allocate resources, and track progress more effectively.</p>
+				</div>
+				<div class="jot-app-popup p-[56px] w-[1096px] h-[916px] shadow-newButtonShadow bg-[#ECF0F3] fixed top-1/2 left-1/2 z-[9999] rounded-[15px] transition-all duration-300"
+					id="jot-app-popup--5"
+					style="
+						transform: translateX(-50%) translateY(-50%);
+						pointer-events: none;
+						opacity: 0;
+					"
+				>
+					<div class="cross w-[50px] h-[50px] rounded-[15px] flex justify-center items-center cursor-pointer absolute top-[30px] right-[30px]"
+						style="
+							background: linear-gradient(180deg, #20D1ED 28.98%, #0881E9 100%);
+						"
+						onclick="jotAppClosePopup(5)"
+					>
+						<img src="images/cross.svg" alt="">
+					</div>
+					<h2 class="font-bold font-baseFont text-center text-[40px] text-primaryColor mb-[50px]">Dashboard</h2>
+					<img src="images/big/Dashboard big.png" alt="Dashboard" class="rounded-[15px] w-full block mb-[50px]">
+					<p class="text-[20px] leading-[28px] text-justify font-normal">The dashboard provides users with a comprehensive overview of their project's key metrics, progress, and upcoming deadlines, all in one centralized location. It empowers users to make informed decisions and prioritize tasks, enhancing their project management efficiency.</p>
+				</div>
+				<div class="jot-app-popup p-[56px] w-[1096px] h-[916px] shadow-newButtonShadow bg-[#ECF0F3] fixed top-1/2 left-1/2 z-[9999] rounded-[15px] transition-all duration-300"
+					id="jot-app-popup--6"
+					style="
+						transform: translateX(-50%) translateY(-50%);
+						pointer-events: none;
+						opacity: 0;
+					"
+				>
+					<div class="cross w-[50px] h-[50px] rounded-[15px] flex justify-center items-center cursor-pointer absolute top-[30px] right-[30px]"
+						style="
+							background: linear-gradient(180deg, #20D1ED 28.98%, #0881E9 100%);
+						"
+						onclick="jotAppClosePopup(6)"
+					>
+						<img src="images/cross.svg" alt="">
+					</div>
+					<h2 class="font-bold font-baseFont text-center text-[40px] text-primaryColor mb-[50px]">Sprints</h2>
+					<img src="images/big/Sprints big.png" alt="Sprints" class="rounded-[15px] w-full block mb-[50px]">
+					<p class="text-[20px] leading-[28px] text-justify font-normal">A sprint is a defined, concentrated phase within agile project management, where a team works on a specific set of tasks and goals, usually lasting two to four weeks. By embracing sprints, teams can iteratively advance their projects, deliver incremental value, and obtain consistent input, fostering adaptability and streamlined project results.</p>
+				</div>
+				<div class="jot-app-popup p-[56px] w-[1096px] h-[916px] shadow-newButtonShadow bg-[#ECF0F3] fixed top-1/2 left-1/2 z-[9999] rounded-[15px] transition-all duration-300"
+					id="jot-app-popup--7"
+					style="
+						transform: translateX(-50%) translateY(-50%);
+						pointer-events: none;
+						opacity: 0;
+					"
+				>
+					<div class="cross w-[50px] h-[50px] rounded-[15px] flex justify-center items-center cursor-pointer absolute top-[30px] right-[30px]"
+						style="
+							background: linear-gradient(180deg, #20D1ED 28.98%, #0881E9 100%);
+						"
+						onclick="jotAppClosePopup(7)"
+					>
+						<img src="images/cross.svg" alt="">
+					</div>
+					<h2 class="font-bold font-baseFont text-center text-[40px] text-primaryColor mb-[50px]">Staff</h2>
+					<img src="images/big/Staff big.png" alt="Staff" class="rounded-[15px] w-full block mb-[50px]">
+					<p class="text-[20px] leading-[28px] text-justify font-normal">Here, you have the power to oversee and fine-tune your team's dynamics. Effortlessly edit workdays, adjust daily working hours, set default capacities, and gain insights into the team's latest activities. Your centralized control center for optimizing collaboration and productivity.</p>
+				</div>
 
 				<button 
-					class="jot-app-button mx-auto mt-[50px] w-[250px] h-[50px] shadow-newButtonShadow rounded-[15px] flex justify-center items-center font-baseFont font-semibold text-[22px]"
+					class="jot-app-button mx-auto mt-[50px] w-[250px] h-[50px] shadow-newButtonShadow rounded-[15px] flex justify-center items-center font-baseFont font-semibold text-[22px] hover:bg-primaryColor hover:text-white hover:shadow-none transition-all duration-300"
 					onclick="seeMoreJotAppOpen()"
 				>
 					See more
@@ -964,7 +1126,7 @@
 					<div class="grid grid-cols-2 gap-[24px]">
 						<div class="card h-[200px] shadow-newButtonShadow rounded-[15px] py-[18px] px-[24px] flex gap-[45px]">
 							<div>
-								<img src="images/Photo.jpg" alt="logo" class="">
+								<img src="images/company.jpeg" alt="logo" class="h-full rounded-[15px]">
 							</div>
 							<div class="flex-1">
 								<h4 class="text-primaryColor font-baseFont text-[20px] font-semibold">Company's name</h4>
@@ -973,7 +1135,7 @@
 						</div>
 						<div class="card h-[200px] shadow-newButtonShadow rounded-[15px] py-[18px] px-[24px] flex gap-[45px]">
 							<div>
-								<img src="images/Photo.jpg" alt="logo" class="">
+								<img src="images/company.jpeg" alt="logo" class="h-full rounded-[15px]">
 							</div>
 							<div class="flex-1">
 								<h4 class="text-primaryColor font-baseFont text-[20px] font-semibold">Company's name</h4>
@@ -982,7 +1144,7 @@
 						</div>
 						<div class="card h-[200px] shadow-newButtonShadow rounded-[15px] py-[18px] px-[24px] flex gap-[45px]">
 							<div>
-								<img src="images/Photo.jpg" alt="logo" class="">
+								<img src="images/company.jpeg" alt="logo" class="h-full rounded-[15px]">
 							</div>
 							<div class="flex-1">
 								<h4 class="text-primaryColor font-baseFont text-[20px] font-semibold">Company's name</h4>
@@ -991,7 +1153,7 @@
 						</div>
 						<div class="card h-[200px] shadow-newButtonShadow rounded-[15px] py-[18px] px-[24px] flex gap-[45px]">
 							<div>
-								<img src="images/Photo.jpg" alt="logo" class="">
+								<img src="images/company.jpeg" alt="logo" class="h-full rounded-[15px]">
 							</div>
 							<div class="flex-1">
 								<h4 class="text-primaryColor font-baseFont text-[20px] font-semibold">Company's name</h4>
@@ -1003,7 +1165,7 @@
 			</article>
 			<!-- Footer BLOCK -->
 			<footer
-				class="absolute font-baseFont font-medium bg-[#ECF0F3] left-0 right-0 xs:h-[120px] h-auto mt-[150px] flex xs:flex-row flex-col justify-between items-center dark:bg-darkBackgroundColor2 p-4 shadow-newButtonShadow dark:shadow-darkBiggerShadow rounded-t-[25px] rounded-r-[25px] mb-3 px-[60px] py-[31px]"
+				class="absolute font-baseFont font-medium bg-[#ECF0F3] left-0 right-0 xs:h-[120px] h-auto mt-[150px] flex xs:flex-row flex-col justify-between items-center dark:bg-darkBackgroundColor2 p-4 shadow-newButtonShadow dark:shadow-darkBiggerShadow rounded-t-[25px] mb-3 px-[60px] py-[31px]"
 			>
 				<img
 					src="images/Logo footer.svg"

@@ -111,6 +111,19 @@ function seeLessJotAppOpen() {
 	button.onclick = seeMoreJotAppOpen;
 	button.innerHTML = 'See more';
 }
+// Functions opens popups in JOT APP block
+function jotAppOpenPopup(index) {
+	const popup = document.getElementById(`jot-app-popup--${index}`);
+	popup.style.opacity = 1;
+	popup.style.pointerEvents = 'auto';
+}
+function jotAppClosePopup(index) {
+	const popup = document.getElementById(`jot-app-popup--${index}`);
+	popup.style.opacity = 0;
+	popup.style.pointerEvents = 'none';
+}
+
+
 
 // Swiper configuration
 var swiper = new Swiper('.mySwiper', {
