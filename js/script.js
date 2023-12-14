@@ -100,7 +100,7 @@ function closeMobileSubMenu() {
 function seeMoreJotAppOpen() {
 	const wrapper = document.querySelector('.jot-app-wrapper');
 	const button = document.querySelector('.jot-app-button');
-	wrapper.style.height = '1800px';
+	wrapper.style.height = '1850px';
 	button.onclick = seeLessJotAppOpen;
 	button.innerHTML = 'See less';
 }
