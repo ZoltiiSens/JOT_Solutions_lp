@@ -107,6 +107,48 @@
 			input:focus{
 				outline: none;
 			}
+			.swiper-container{
+				height: 600px;
+				padding-bottom: 150px;
+			}
+			.swiper-container * {
+				transition: .6s;
+			}
+			.swiper-wrapper{
+				align-items: center;
+				
+			}
+			.swiper-slide{
+				width: 870px;
+				height: 490px;
+				margin: 0 100px;
+			}
+			.swiper-button-next{
+				bottom: 5px;
+				top: auto;
+				right: calc(50% - 75px);
+				width: 50px;
+				height: 50px;
+				background-color: #ECF0F3;
+			}
+			.swiper-button-next::after{
+				font-size: 20px;
+			}
+			.swiper-button-prev{
+				bottom: 5px;
+				top: auto;
+				left: calc(50% - 75px);
+				width: 50px;
+				height: 50px;
+				background-color: #ECF0F3;
+			}
+			.swiper-button-prev::after{
+				font-size: 20px;
+			}
+			.swiper-slide-active, .swiper-slide-active *{
+				transform: scale(1.2);
+				transition: .3s;
+			}
 		</style>
 	</head>
 	<body
@@ -826,19 +868,32 @@
 				</div>
 			</article>
 			<!-- BENEFITS BLOCK -->
-			<article class="relative py-5 lg:mx-2 sm:mx-22 mx-4 mt-[150px] mx-none">
+			<article class="absolute py-5 pt-[40px] w-full left-0 mt-[150px] mx-none overflow-hidden">
 				<h2
-					class="md:mb-[50px] mb-4 text-primaryColor dark:text-darkPrimaryColor text-4xl font-bold text-center uppercase font-baseFont"
+					class="text-primaryColor mb-[90px] dark:text-darkPrimaryColor text-4xl font-bold text-center font-baseFont"
 				>
 					Related videos
 				</h2>
-				<div class="videos overflow-hidden">
-					<iframe class="w-full max-w-[1100px] min-h-[600px] h-full rounded-[15px] mx-auto" src="https://www.youtube.com/embed/o-YBDTqX_ZU?si=2cepc0UeevFpyYL2" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>	
+				<div class="videos swiper-container">
+					<div class="swiper-wrapper">
+						<div class="swiper-slide">
+							<iframe class="w-full h-full rounded-[15px]" src="https://www.youtube.com/embed/o-YBDTqX_ZU?si=2cepc0UeevFpyYL2" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>	
+						</div>
+						<div class="swiper-slide">
+							<iframe class="w-full h-full rounded-[15px]" src="https://www.youtube.com/embed/o-YBDTqX_ZU?si=2cepc0UeevFpyYL2" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>	
+						</div>
+						<div class="swiper-slide">
+							<iframe class="w-full h-full rounded-[15px]" src="https://www.youtube.com/embed/o-YBDTqX_ZU?si=2cepc0UeevFpyYL2" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>	
+						</div>
+					</div>
+					<div class="swiper-button-next bg-[#ECF0F3] w-[50px] h-[50px] rounded-[15px] shadow-newButtonShadow"></div>
+					<div class="swiper-button-prev bg-[#ECF0F3] w-[50px] h-[50px] rounded-[15px] shadow-newButtonShadow"></div>
 				</div>
 				
 			</article>
+			<div class="fixer h-[790px]"></div>
 			<!-- Our customers BLOCK -->
-			<article class="mt-[150px] pb-5 xs:mx-[20px]">
+			<article class="mt-[200px] pb-5 xs:mx-[20px]">
 				<h2
 					class="font-baseFont text-primaryColor dark:text-darkPrimaryColor text-4xl font-bold text-center mb-[30px]"
 				>
