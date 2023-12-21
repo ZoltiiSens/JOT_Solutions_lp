@@ -158,6 +158,17 @@ function goUp(){
 	window.scrollTo({top: 0, behavior: 'smooth'});
 }
 
+document.querySelectorAll('.swiper-slide').forEach((swiper_slide) => {
+	swiper_slide.querySelector('button').addEventListener('click', (butt) =>{
+		swiper_slide.querySelector('button').style.display = 'none';
+		const video = swiper_slide.querySelector('video');
+		video.play();
+		video.controls = true;
+	})
+	// video = swiper_slide.querySelector('video');
+	// console.log(video)
+});
+
 const swiper = new Swiper('.swiper-container', {
     slidesPerView: 'auto',
     // spaceBetween: 150,

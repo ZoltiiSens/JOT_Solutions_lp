@@ -129,10 +129,11 @@
 				right: calc(50% - 75px);
 				width: 50px;
 				height: 50px;
-				background-color: #ECF0F3;
+				background-color: #42C1EE;
 			}
 			.swiper-button-next::after{
 				font-size: 20px;
+				color: #fff;
 			}
 			.swiper-button-prev{
 				bottom: 5px;
@@ -140,14 +141,22 @@
 				left: calc(50% - 75px);
 				width: 50px;
 				height: 50px;
-				background-color: #ECF0F3;
+				background-color: #42C1EE;
 			}
 			.swiper-button-prev::after{
 				font-size: 20px;
+				color: #fff;
 			}
 			.swiper-slide-active, .swiper-slide-active *{
 				transform: scale(1.2);
 				transition: .3s;
+			}
+			.swiper-button-next.swiper-button-disabled, .swiper-button-prev.swiper-button-disabled{
+				opacity: 1;
+				background-color: #ECF0F3 !important;
+			}
+			.swiper-button-next.swiper-button-disabled::after, .swiper-button-prev.swiper-button-disabled::after{
+				color: #42C1EE;
 			}
 		</style>
 	</head>
@@ -184,7 +193,7 @@
 				</li>
 				<li class="flex items-center text-s transition duration-200">
 					<a
-						href="#"
+						href="contacts.html"
 						class="hover:text-primaryColor dark:hover:text-darkPrimaryColor transition duration-300 text-primaryColor font-bold"
 						>Contacts</a
 					>
@@ -579,8 +588,8 @@
 				style="
 					background-image: url(images/back-logo.png);
 					background-repeat: no-repeat;
-					background-position: right top;
-					background-size: auto 100%;
+					background-position: right bottom;
+					background-size: auto calc(100% - 64px);
 				">
 				<header class="md:mx-[60px] mx-4 py-5 flex flex-row items-center ">
 					<!-- <div
@@ -592,27 +601,20 @@
 						class="md: mt-[70px] mdlg:text-[64px] xs:text-5xl text-4xl font-normal text-black dark:text-darkSecondaryColor"
 					>
 						<span class="text-goldenColor dark:text-darkPrimaryColor font-semibold "
-							>Support</span
+							>Contact</span
 						>
-						Center
+						Us
 					</h2>
 				</header>
 				<article class="md:mx-[60px] mx-4 pb-[20px] max-w-[700px]">
 					<p
-						class="mt-[50px] md:mb-8 mb-2 md:text-[28px] text-1xl text-secondaryColor dark:text-darkSecondaryColor font-medium text-justify"
+						class="mt-[50px] md:mb-8 mb-2 md:text-[24px] text-1xl text-secondaryColor dark:text-darkSecondaryColor font-medium text-justify"
 					>
-					Whether you are experienced in team management or not, the JOT kit supports our methodology, contributes to the correct and efficient management of each project, meeting the company's goals and objectives and enabling full control and supervision from anywhere 24/7.
+						At JOT Solution, we take pride in being an international company, serving clients globally. Our commitment to excellence knows no borders, and we're dedicated to making communication as seamless as possible.
+						<br>
+						<br>
+						So you can choose any of the methods below to contact us.
 					</p>
-					<form class="max-w-[650px] relative flex">
-						<img src="images/search.svg" alt="" class="absolute left-[24px] top-[20px]">
-						<input type="text" name="search" id="search" placeholder="Search" class="flex-1 p-[20px] pl-[70px] rounded-l-[15px] shadow-newInnerShadow bg-transparent font-medium text-[18px]">
-						<button type="button" class="block px-[30px] py-[18.5px] rounded-r-[15px] font-baseFont text-white font-semibold shadow-newButtonShadow"
-							style="
-							background: linear-gradient(180deg, #20D1ED 28.98%, #0881E9 100%);"
-						>
-							Search
-						</button>
-					</form>
 				</article>
 			</article>
 			
@@ -620,348 +622,157 @@
 			<article 
 				class="relative py-5 mt-[150px] mx-[60px] mx-4 gap-x-[84px] mb-none"
 			>
-				<div class="grid grid-cols-2">
-					<div class="question-card p-[30px]">
-						<h2 class="flex items-center gap-[16px]">
-							<div class="flex rounded-full w-[54px] h-[54px] bg-primaryColor bg-opacity-10 flex justify-center items-center">
-								<img src="images/Icon.svg" alt="i" class="w-[22px] h-[22px]">
-							</div>
-							<span class="text-[32px] font-baseFont text-primaryColor font-bold">
-								User Support and Training
-							</span>
+				<div class="grid grid-cols-5 gap-x-[110px] gap-y-[70px]">
+					
+					<div class="contact-info col-span-2">
+						<h2 class="text-[40px] font-bold font-baseFont text-primaryColor mb-[20px]">Email</h2>
+						<p class="text-[24px] font-medium mb-[20px]">
+							Feel free to reach out to us via email. Our team is ready to respond promptly to any inquiries, providing comprehensive support
+						</p>
+						<div class="email flex flex-row gap-[17px]">
+							<img src="images/email.svg" alt="email" class="inline-block">
+							<p class="underline font-medium text-[24px]">
+								Info@jot-solutions.com
+							</p>
+						</div>
+
+					</div>
+
+					<form action="#" id="contact_form" class="col-span-3 row-span-3 h-full min-h-[888px] rounded-[15px] shadow-newButtonShadow  pt-[26px] px-[40px] pb-[55px]">
+						<h2 class="text-[48px] font-bold font-baseFont text-primaryColor mb-[50px]">
+							Get in touch with us using the form
 						</h2>
-						<div class="question active mt-[20px]">
-							<h3 class="question-h2 flex gap-[8px] items-center text-[24px] font-medium cursor-pointer">
-								<div class="w-[24px] h-[24px] flex justify-center items-center ">
-									<img src="images/arrow-down-right.svg" alt="" id="question-arrow-0" class="question-arrow transition-all duration-300"
-										style="transform: rotate(180deg);"
-									>
-								</div>
-								<span>
-									Is training available for users new to JOT?
-								</span>
-							</h3>
-							<div class="question-answer px-[44px] mt-[20px] text-[18px] text-justify" id="answer-0"
-								style="display: block;"
+						<input name="name" type="text" placeholder="Your name" class="font-medium text-[18px] px-[24px] py-[18px] rounded-[15px] bg-transparent shadow-newInnerShadow w-full mb-[50px]">
+						<input name="email" type="email" placeholder="Your name" class="font-medium text-[18px] px-[24px] py-[18px] rounded-[15px] bg-transparent shadow-newInnerShadow w-full mb-[50px]">
+						<textarea name="message" id="contact-form-message" placeholder="Write a message" class="placeholder:font-medium font-medium font-latoFont text-[18px] placeholder:text-secondaryColor px-[24px] py-[18px] rounded-[15px] bg-transparent shadow-newInnerShadow w-full mb-[50px] h-[330px] focus:outline-none"
+							style="resize: none;"
+						></textarea>
+						<button
+							type="submit"
+							href="#"
+							class="font-baseFont py-2 w-[250px] h-[50px] flex justify-center items-center block bg-gradient-to-b hover:bg-secondaryColor dark:hover:bg-darkSecondaryColor from-gradColorStart dark:from-darkGradColorStart to-gradColorEnd dark:to-darkGradColorEnd font-semibold text-center text-white dark:hover:text-darkBackgroundColor2 rounded-2xl text-[22px] shadow-newButtonShadow dark:shadow-darkPrimaryShadow hover:shadow-none dark:hover:shadow-none transition duration-300"
 							>
-								JOT provides comprehensive training resources for users, whether they are experienced project managers or new to the platform. Access tutorials and documentation to facilitate a smooth onboarding experience
-							</div>
-						</div>
-						<div class="question mt-[20px]">
-							<h3 class="question-h2 flex gap-[8px] items-center text-[24px] font-medium cursor-pointer">
-								<div class="w-[24px] h-[24px] flex justify-center items-center ">
-									<img src="images/arrow-down-right.svg" alt="" id="question-arrow-0" class="question-arrow transition-all duration-300"
-										style="transform: rotate(0deg);"
-									>
-								</div>
-								<span>
-									How can I reach JOT's customer support?
-								</span>
-							</h3>
-							<div class="question-answer px-[44px] mt-[20px] text-[18px] text-justify" id="answer-0"
-								style="display: none;"
-							>
-								JOT provides comprehensive training resources for users, whether they are experienced project managers or new to the platform. Access tutorials and documentation to facilitate a smooth onboarding experience
-							</div>
-						</div>
-						<div class="question mt-[20px]">
-							<h3 class="question-h2 flex gap-[8px] items-center text-[24px] font-medium cursor-pointer">
-								<div class="w-[24px] h-[24px] flex justify-center items-center ">
-									<img src="images/arrow-down-right.svg" alt="" id="question-arrow-0" class="question-arrow transition-all duration-300"
-										style="transform: rotate(0deg);"
-									>
-								</div>
-								<span>
-									Knowledge base
-								</span>
-							</h3>
-							<div class="question-answer px-[44px] mt-[20px] text-[18px] text-justify" id="answer-0"
-								style="display: none;"
-							>
-								JOT provides comprehensive training resources for users, whether they are experienced project managers or new to the platform. Access tutorials and documentation to facilitate a smooth onboarding experience
-							</div>
+							Send
+						</button>
+					</form>	
+
+					<div class="contact-info col-span-2">
+						<h2 class="text-[40px] font-bold font-baseFont text-primaryColor mb-[20px]">Phone</h2>
+						<p class="text-[24px] font-medium mb-[20px]">
+							For direct assistance or a more personal touch, you can contact us by phone
+						</p>
+						<div class="email flex flex-row gap-[17px]">
+							<img src="images/phone.svg" alt="email" class="inline-block">
+							<p class="font-medium text-[24px]">
+								+972 3-375-1288
+							</p>
 						</div>
 					</div>
-					<div class="question-card p-[30px]">
-						<h2 class="flex items-center gap-[16px]">
-							<div class="flex rounded-full w-[54px] h-[54px] bg-primaryColor bg-opacity-10 flex justify-center items-center">
-								<img src="images/secure_icon.svg" alt="i" class="w-[22px] h-[22px]">
-							</div>
-							<span class="text-[32px] font-baseFont text-primaryColor font-bold">
-								Security and privacy
-							</span>
-						</h2>
-						<div class="question mt-[20px]">
-							<h3 class="question-h2 flex gap-[8px] items-center text-[24px] font-medium cursor-pointer">
-								<div class="w-[24px] h-[24px] flex justify-center items-center ">
-									<img src="images/arrow-down-right.svg" alt="" id="question-arrow-0" class="question-arrow transition-all duration-300"
-										style="transform: rotate(0deg);"
-									>
-								</div>
-								<span>
-									Tips for avoiding common security issues
-								</span>
-							</h3>
-							<div class="question-answer px-[44px] mt-[20px] text-[18px] text-justify" id="answer-0"
-								style="display: none;"
-							>
-								JOT provides comprehensive training resources for users, whether they are experienced project managers or new to the platform. Access tutorials and documentation to facilitate a smooth onboarding experience
-							</div>
-						</div>
-						<div class="question mt-[20px]">
-							<h3 class="question-h2 flex gap-[8px] items-center text-[24px] font-medium cursor-pointer">
-								<div class="w-[24px] h-[24px] flex justify-center items-center ">
-									<img src="images/arrow-down-right.svg" alt="" id="question-arrow-0" class="question-arrow transition-all duration-300"
-										style="transform: rotate(0deg);"
-									>
-								</div>
-								<span>
-									How to protect sensitive information?
-								</span>
-							</h3>
-							<div class="question-answer px-[44px] mt-[20px] text-[18px] text-justify" id="answer-0"
-								style="display: none;"
-							>
-								JOT provides comprehensive training resources for users, whether they are experienced project managers or new to the platform. Access tutorials and documentation to facilitate a smooth onboarding experience
-							</div>
-						</div>
-						<div class="question mt-[20px]">
-							<h3 class="question-h2 flex gap-[8px] items-center text-[24px] font-medium cursor-pointer">
-								<div class="w-[24px] h-[24px] flex justify-center items-center ">
-									<img src="images/arrow-down-right.svg" alt="" id="question-arrow-0" class="question-arrow transition-all duration-300"
-										style="transform: rotate(0deg);"
-									>
-								</div>
-								<span>
-									Data backup and recovery procedures
-								</span>
-							</h3>
-							<div class="question-answer px-[44px] mt-[20px] text-[18px] text-justify" id="answer-0"
-								style="display: none;"
-							>
-								JOT provides comprehensive training resources for users, whether they are experienced project managers or new to the platform. Access tutorials and documentation to facilitate a smooth onboarding experience
-							</div>
+
+					<div class="contact-info col-span-2">
+						<h2 class="text-[40px] font-bold font-baseFont text-primaryColor mb-[20px]">Social Media</h2>
+						<p class="text-[24px] font-medium mb-[20px]">
+							Connect with us on our social media channels for the latest updates, tips, and announcements
+						</p>
+						<div class="social flex gap-[10px]">
+							<a href="#">
+								<img src="images/instagram.svg" alt="instagram" class="w-[24px]">
+							</a>
+							<a href="#">
+								<img src="images/facebook.svg" alt="facebook" class="w-[24px]">
+							</a>
+							<a href="#">
+								<img src="images/linkedin.svg" alt="linkedin" class="w-[24px]">
+							</a>
 						</div>
 					</div>
-					<div class="question-card p-[30px]">
-						<h2 class="flex items-center gap-[16px]">
-							<div class="flex rounded-full w-[54px] h-[54px] bg-primaryColor bg-opacity-10 flex justify-center items-center">
-								<img src="images/share_icon.svg" alt="i" class="w-[22px] h-[22px]">
-							</div>
-							<span class="text-[32px] font-baseFont text-primaryColor font-bold">
-								Customization and Integration
-							</span>
-						</h2>
-						<div class="question  mt-[20px]">
-							<h3 class="question-h2 flex gap-[8px] items-center text-[24px] font-medium cursor-pointer">
-								<div class="w-[24px] h-[24px] flex justify-center items-center ">
-									<img src="images/arrow-down-right.svg" alt="" id="question-arrow-0" class="question-arrow transition-all duration-300"
-										style="transform: rotate(0deg);"
-									>
-								</div>
-								<span>
-									Can I customize JOT to suit my team's specific needs?
-								</span>
-							</h3>
-							<div class="question-answer px-[44px] mt-[20px] text-[18px] text-justify" id="answer-0"
-								style="display: none;"
-							>
-								JOT provides comprehensive training resources for users, whether they are experienced project managers or new to the platform. Access tutorials and documentation to facilitate a smooth onboarding experience
-							</div>
-						</div>
-						<div class="question mt-[20px]">
-							<h3 class="question-h2 flex gap-[8px] items-center text-[24px] font-medium cursor-pointer">
-								<div class="w-[24px] h-[24px] flex justify-center items-center ">
-									<img src="images/arrow-down-right.svg" alt="" id="question-arrow-0" class="question-arrow transition-all duration-300"
-										style="transform: rotate(0deg);"
-									>
-								</div>
-								<span>
-									What tools can replace JOT APP?
-								</span>
-							</h3>
-							<div class="question-answer px-[44px] mt-[20px] text-[18px] text-justify" id="answer-0"
-								style="display: none;"
-							>
-								JOT provides comprehensive training resources for users, whether they are experienced project managers or new to the platform. Access tutorials and documentation to facilitate a smooth onboarding experience
-							</div>
-						</div>
-						<div class="question mt-[20px]">
-							<h3 class="question-h2 flex gap-[8px] items-center text-[24px] font-medium cursor-pointer">
-								<div class="w-[24px] h-[24px] flex justify-center items-center ">
-									<img src="images/arrow-down-right.svg" alt="" id="question-arrow-0" class="question-arrow transition-all duration-300"
-										style="transform: rotate(0deg);"
-									>
-								</div>
-								<span>
-									How does JOT handle user data?
-								</span>
-							</h3>
-							<div class="question-answer px-[44px] mt-[20px] text-[18px] text-justify" id="answer-0"
-								style="display: none;"
-							>
-								JOT provides comprehensive training resources for users, whether they are experienced project managers or new to the platform. Access tutorials and documentation to facilitate a smooth onboarding experience
-							</div>
-						</div>
-					</div>
-					<div class="question-card p-[30px]">
-						<h2 class="flex items-center gap-[16px]">
-							<div class="flex rounded-full w-[54px] h-[54px] bg-primaryColor bg-opacity-10 flex justify-center items-center">
-								<img src="images/dollar_icon.svg" alt="i" class="w-[22px] h-[22px]">
-							</div>
-							<span class="text-[32px] font-baseFont text-primaryColor font-bold">
-								Billing and Subscription
-							</span>
-						</h2>
-						<div class="question mt-[20px]">
-							<h3 class="question-h2 flex gap-[8px] items-center text-[24px] font-medium cursor-pointer">
-								<div class="w-[24px] h-[24px] flex justify-center items-center ">
-									<img src="images/arrow-down-right.svg" alt="" id="question-arrow-0" class="question-arrow transition-all duration-300"
-										style="transform: rotate(0deg);"
-									>
-								</div>
-								<span>
-									What pricing plans does JOT offer?
-								</span>
-							</h3>
-							<div class="question-answer px-[44px] mt-[20px] text-[18px] text-justify" id="answer-0"
-								style="display: none;"
-							>
-								JOT provides comprehensive training resources for users, whether they are experienced project managers or new to the platform. Access tutorials and documentation to facilitate a smooth onboarding experience
-							</div>
-						</div>
-						<div class="question mt-[20px]">
-							<h3 class="question-h2 flex gap-[8px] items-center text-[24px] font-medium cursor-pointer">
-								<div class="w-[24px] h-[24px] flex justify-center items-center ">
-									<img src="images/arrow-down-right.svg" alt="" id="question-arrow-0" class="question-arrow transition-all duration-300"
-										style="transform: rotate(0deg);"
-									>
-								</div>
-								<span>
-									Billing cycle and payment methods
-								</span>
-							</h3>
-							<div class="question-answer px-[44px] mt-[20px] text-[18px] text-justify" id="answer-0"
-								style="display: none;"
-							>
-								JOT provides comprehensive training resources for users, whether they are experienced project managers or new to the platform. Access tutorials and documentation to facilitate a smooth onboarding experience
-							</div>
-						</div>
-						<div class="question mt-[20px]">
-							<h3 class="question-h2 flex gap-[8px] items-center text-[24px] font-medium cursor-pointer">
-								<div class="w-[24px] h-[24px] flex justify-center items-center ">
-									<img src="images/arrow-down-right.svg" alt="" id="question-arrow-0" class="question-arrow transition-all duration-300"
-										style="transform: rotate(0deg);"
-									>
-								</div>
-								<span>
-									How can I upgrade or downgrade my subscription?
-								</span>
-							</h3>
-							<div class="question-answer px-[44px] mt-[20px] text-[18px] text-justify" id="answer-0"
-								style="display: none;"
-							>
-								JOT provides comprehensive training resources for users, whether they are experienced project managers or new to the platform. Access tutorials and documentation to facilitate a smooth onboarding experience
-							</div>
-						</div>
-					</div>
+					
 				</div>
 			</article>
-			<!-- BENEFITS BLOCK -->
-			<article class="absolute py-5 pt-[40px] w-full left-0 mt-[150px] mx-none overflow-hidden">
-				<h2
-					class="text-primaryColor mb-[90px] dark:text-darkPrimaryColor text-4xl font-bold text-center font-baseFont"
-				>
-					Related videos
-				</h2>
-				<div class="videos swiper-container">
-					<div class="swiper-wrapper">
-						<div class="swiper-slide">
-							<iframe class="w-full h-full rounded-[15px]" src="https://www.youtube.com/embed/o-YBDTqX_ZU?si=2cepc0UeevFpyYL2" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>	
-						</div>
-						<div class="swiper-slide">
-							<iframe class="w-full h-full rounded-[15px]" src="https://www.youtube.com/embed/o-YBDTqX_ZU?si=2cepc0UeevFpyYL2" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>	
-						</div>
-						<div class="swiper-slide">
-							<iframe class="w-full h-full rounded-[15px]" src="https://www.youtube.com/embed/o-YBDTqX_ZU?si=2cepc0UeevFpyYL2" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>	
-						</div>
-					</div>
-					<div class="swiper-button-next bg-[#ECF0F3] w-[50px] h-[50px] rounded-[15px] shadow-newButtonShadow"></div>
-					<div class="swiper-button-prev bg-[#ECF0F3] w-[50px] h-[50px] rounded-[15px] shadow-newButtonShadow"></div>
-				</div>
-				
-			</article>
-			<div class="fixer h-[790px]"></div>
-			<!-- Our customers BLOCK -->
-			<article class="mt-[200px] pb-5 xs:mx-[20px]">
-				<h2
-					class="font-baseFont text-primaryColor dark:text-darkPrimaryColor text-4xl font-bold text-center mb-[30px]"
-				>
-					DO YOU HAVE ANY QUESTIONS?
-				</h2>
-				<a
-					href="#"
-					class="font-baseFont py-2 mx-auto w-[250px] h-[50px] flex justify-center items-center block bg-gradient-to-b hover:bg-secondaryColor dark:hover:bg-darkSecondaryColor from-gradColorStart dark:from-darkGradColorStart to-gradColorEnd dark:to-darkGradColorEnd font-semibold text-center text-white dark:hover:text-darkBackgroundColor2 rounded-2xl text-[22px] shadow-newButtonShadow dark:shadow-darkPrimaryShadow hover:shadow-none dark:hover:shadow-none transition duration-300"
-					>
-					Contact us
-				</a>
-				
-			</article>
+			
 			<!-- Footer BLOCK -->
 			<footer
-				class="absolute font-baseFont font-medium bg-[#ECF0F3] left-0 right-0 xs:h-[120px] h-auto mt-[150px] flex xs:flex-row flex-col justify-between items-center dark:bg-darkBackgroundColor2 p-4 shadow-newButtonShadow dark:shadow-darkBiggerShadow rounded-t-[25px] mb-3 px-[60px] py-[31px]"
+				class="absolute font-medium bg-[#ECF0F3] left-0 right-0 mt-[150px] justify-between items-center dark:bg-darkBackgroundColor2 shadow-newButtonShadow dark:shadow-darkBiggerShadow rounded-t-[25px] mb-3 px-[60px]"
 			>
-				<img
-					src="images/Logo footer.svg"
-					alt="logo"
-					class=""
-				/>
-				<ul
-				class="h-full flex flex-row gap-[70px] xl:text-[18px] dark:text-darkSecondaryColor"
-				>
-					<li class="flex items-center transition duration-200">
-						<a
-							href="#"
-							class="hover:text-primaryColor dark:hover:text-darkPrimaryColor transition duration-300"
-							>About us</a
-						>
-					<li class="flex items-center text-s transition duration-200">
-						<a
-							href="#"
-							class="hover:text-primaryColor dark:hover:text-darkPrimaryColor transition duration-300"
-							>Support</a
-						>
-					</li>
-					<li class="flex items-center text-s transition duration-200">
-						<a
-							href="#"
-							class="hover:text-primaryColor dark:hover:text-darkPrimaryColor transition duration-300"
-							>Contacts</a
-						>
-					</li>
-				</ul>
-				<div class="social flex gap-[24px]">
-					<a href="#">
-						<img src="images/instagram.svg" alt="instagram">
-					</a>
-					<a href="#">
-						<img src="images/facebook.svg" alt="facebook">
-					</a>
-					<a href="#">
-						<img src="images/linkedin.svg" alt="linkedin">
-					</a>
-				</div>
-				<div class="contact">
-					<div class="phone flex gap-[17px]">
-						<img src="images/phone.svg" alt="phone" class="inline-block">
-						<p>+972 3-375-1288</p>
+				
+				<div class="content relative flex justify-between mx-auto w-full max-w-[1100px] py-[61px]">
+					<div class="leftside flex flex-col gap-[30px]">
+						<img
+							src="images/Logo footer.svg"
+							alt="logo"
+							class=""
+						/>
+						<div class="social flex gap-[10px]">
+							<a href="#">
+								<img src="images/instagram.svg" alt="instagram" class="w-[24px]">
+							</a>
+							<a href="#">
+								<img src="images/facebook.svg" alt="facebook" class="w-[24px]">
+							</a>
+							<a href="#">
+								<img src="images/linkedin.svg" alt="linkedin" class="w-[24px]">
+							</a>
+						</div>
 					</div>
-					<div class="email flex gap-[17px] mt-[20px]">
-						<img src="images/email.svg" alt="email" class="inline-block">
-						<p class="underline">Info@jot-solutions.com</p>
+					<div class="rightside flex gap-[100px]">
+						<div class="menu">
+							<h3 class="font-baseFont text-[20px] text-primaryColor font-bold mb-[20px]">Menu</h3>
+							<ul
+							class="flex flex-col gap-[10px] dark:text-darkSecondaryColor font-medium text-[14px]"
+							>
+								<li class="flex items-center transition duration-200">
+									<a
+										href="#"
+										class="hover:text-primaryColor dark:hover:text-darkPrimaryColor transition duration-300"
+										>About us</a
+									>
+								<li class="flex items-center text-s transition duration-200">
+									<a
+										href="#"
+										class="hover:text-primaryColor dark:hover:text-darkPrimaryColor transition duration-300"
+										>Support</a
+									>
+								</li>
+								<li class="flex items-center text-s transition duration-200">
+									<a
+										href="#"
+										class="hover:text-primaryColor dark:hover:text-darkPrimaryColor transition duration-300"
+										>Contacts</a
+									>
+								</li>
+							</ul>
+						</div>
+						<div class="contacts">
+							<h3 class="font-baseFont text-[20px] text-primaryColor font-bold mb-[20px]">Contacts</h3>
+							<ul class="contact flex flex-col gap-[10px]">
+								<li class="phone flex gap-[17px]">
+									<img src="images/phone.svg" alt="phone" class="inline-block">
+									<p>+441615540257</p>
+								</li>
+								<li class="phone flex gap-[17px]">
+									<img src="images/phone.svg" alt="phone" class="inline-block">
+									<p>+13235405866</p>
+								</li>
+								<li class="email flex gap-[17px]">
+									<img src="images/email.svg" alt="email" class="inline-block">
+									<p class="underline">Info@jot-solutions.com</p>
+								</li>
+							</ul>
+						</div>
+					</div>
+					<div class="absolute bottom-[30px] right-[-110px] goUp w-[43px] h-[43px] rounded-[15px] flex items-center justify-center cursor-pointer shadow-newButtonShadowSmallest"
+						style="background: linear-gradient(180deg, #20D1ED 28.98%, #0881E9 100%);
+						"
+						onclick="goUp()"
+					>
+						<img src="images/arrow-up.svg" alt="up">
 					</div>
 				</div>
 				
+				<hr class="border-primaryColor border-[1px]">
+				<p class="text-[12px] font-medium text-center p-[17px]">
+					Copyright ©2023 by J.O.T Solutions
+				</p>
 			</footer>
 		</div>
 		<!-- Swiper JS connection -->

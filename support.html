@@ -588,8 +588,8 @@
 				style="
 					background-image: url(images/back-logo.png);
 					background-repeat: no-repeat;
-					background-position: right top;
-					background-size: auto 100%;
+					background-position: right bottom;
+					background-size: auto calc(100% - 64px);
 				">
 				<header class="md:mx-[60px] mx-4 py-5 flex flex-row items-center ">
 					<!-- <div
@@ -608,7 +608,7 @@
 				</header>
 				<article class="md:mx-[60px] mx-4 pb-[20px] max-w-[700px]">
 					<p
-						class="mt-[50px] md:mb-8 mb-2 md:text-[28px] text-1xl text-secondaryColor dark:text-darkSecondaryColor font-medium text-justify"
+						class="mt-[50px] md:mb-8 mb-2 md:text-[24px] text-1xl text-secondaryColor dark:text-darkSecondaryColor font-medium text-justify"
 					>
 					Whether you are experienced in team management or not, the JOT kit supports our methodology, contributes to the correct and efficient management of each project, meeting the company's goals and objectives and enabling full control and supervision from anywhere 24/7.
 					</p>
@@ -885,15 +885,26 @@
 				</h2>
 				<div class="videos swiper-container">
 					<div class="swiper-wrapper">
-						<div class="swiper-slide">
-							<iframe class="w-full h-full rounded-[15px]" src="https://www.youtube.com/embed/o-YBDTqX_ZU?si=2cepc0UeevFpyYL2" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>	
-						</div>
-						<div class="swiper-slide">
+						<div class="swiper-slide relative">
 							<!-- <iframe class="w-full h-full rounded-[15px]" src="https://www.youtube.com/embed/o-YBDTqX_ZU?si=2cepc0UeevFpyYL2" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>	 -->
-							<video controls src="images/JOT PROJECT MANAGEMENT animation .mp4"  poster="images/video-bg.png" class="w-full h-full rounded-[15px]"></video>
+							<video src="images/JOT PROJECT MANAGEMENT animation .mp4"  poster="images/video-bg.png" class="w-full h-full rounded-[15px]"></video>
+							<button class="video_start_custom block text-[100px] absolute left-1/2 top-1/2 -translate-x-1/2 -translate-y-1/2 w-[110px] leading-[110px] h-[110px] bg-primaryColor text-white rounded-full flex items-center justify-center pl-[2px]" >
+								<img src="images/play.svg" alt="">
+							</button>
 						</div>
-						<div class="swiper-slide">
-							<iframe class="w-full h-full rounded-[15px]" src="https://www.youtube.com/embed/o-YBDTqX_ZU?si=2cepc0UeevFpyYL2" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>	
+						<div class="swiper-slide relative">
+							<!-- <iframe class="w-full h-full rounded-[15px]" src="https://www.youtube.com/embed/o-YBDTqX_ZU?si=2cepc0UeevFpyYL2" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>	 -->
+							<video src="images/JOT PROJECT MANAGEMENT animation .mp4"  poster="images/video-bg.png" class="w-full h-full rounded-[15px]"></video>
+							<button class="video_start_custom block text-[100px] absolute left-1/2 top-1/2 -translate-x-1/2 -translate-y-1/2 w-[110px] leading-[110px] h-[110px] bg-primaryColor text-white rounded-full flex items-center justify-center pl-[2px]" >
+								<img src="images/play.svg" alt="">
+							</button>
+						</div>
+						<div class="swiper-slide relative">
+							<!-- <iframe class="w-full h-full rounded-[15px]" src="https://www.youtube.com/embed/o-YBDTqX_ZU?si=2cepc0UeevFpyYL2" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>	 -->
+							<video src="images/JOT PROJECT MANAGEMENT animation .mp4"  poster="images/video-bg.png" class="w-full h-full rounded-[15px]"></video>
+							<button class="video_start_custom block text-[100px] absolute left-1/2 top-1/2 -translate-x-1/2 -translate-y-1/2 w-[110px] leading-[110px] h-[110px] bg-primaryColor text-white rounded-full flex items-center justify-center pl-[2px]" >
+								<img src="images/play.svg" alt="">
+							</button>
 						</div>
 					</div>
 					<div class="swiper-button-next w-[50px] h-[50px] rounded-[15px] shadow-newButtonShadow" onclick="pauseVideos()"></div>
