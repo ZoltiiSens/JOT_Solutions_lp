@@ -137,21 +137,6 @@ questions.forEach((question) => {
 		}
 	})
 });
-
-// 	question.addEventListener('click', () =>{
-// 		question.style.backgroundColor = 'red';
-// 		// if ( question.classList.contains('active')){
-// 		// 	question.classList.remove('active');
-// 		// 	question.querySelector('.question-answer').style.display = 'none';
-// 		// 	question.querySelector('.question-arrow').style.transform = 'rotate(180deg)';
-// 		// } else {
-// 		// 	question.classList.add('active');
-// 		// 	question.querySelector('.question-answer').style.display = 'block';
-// 		// 	question.querySelector('.question-arrow').style.transform = 'rotate(0deg)';
-		
-// 		// }
-// 	})
-
 function openAnswer(index){
 	const question = document.getElementById(`question-${index}`);
 	const answer = question.querySelector('.question-answer');
@@ -161,6 +146,16 @@ function openAnswer(index){
 	answer.style.display = 'block';
 	arrow.style.transform = 'rotate(180deg)';
 	questionH2.onclick = openAnswer(index)
+}
+// Function to pause videos on scroll
+function pauseVideos(){
+	document.querySelectorAll('video').forEach((video) => {
+		video.pause();
+	})
+}
+// function scrolls you up
+function goUp(){
+	window.scrollTo({top: 0, behavior: 'smooth'});
 }
 
 const swiper = new Swiper('.swiper-container', {

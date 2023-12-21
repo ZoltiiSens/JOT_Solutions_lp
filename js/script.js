@@ -162,7 +162,10 @@ function openAnswer(index){
 	arrow.style.transform = 'rotate(180deg)';
 	questionH2.onclick = openAnswer(index)
 }
-
+// function scrolls you up
+function goUp(){
+	window.scrollTo({top: 0, behavior: 'smooth'});
+}
 
 // Swiper configuration
 var swiper = new Swiper('.mySwiper', {

@@ -84,6 +84,9 @@
 								'4px 4px 8px 0px #C3C3C3, -4px -4px 8px 0px #FFFFFF',
 							newButtonShadowSmaller:
 								'3px 3px 6px 0px #C3C3C3, -3px -3px 6px 0px #FFFFFF',
+							newButtonShadowSmallest:
+								'2px 2px 4px 0px #D0EBFA, -2px -2px 4px 0px #FFFFFF, 1px 1px 2px 0px #C2CFD6',
+							
 						},
 						spacing: {
 							22: '90px',
@@ -98,6 +101,14 @@
 				plugins: [],
 			};
 		</script>
+		<style>
+			.seeMoreButton path{
+				transition: 0.3s;
+			}
+			.seeMoreButton:hover * {
+				stroke: #fff !important;
+			}
+		</style>
 		
 	</head>
 	<body
@@ -133,7 +144,7 @@
 				</li>
 				<li class="flex items-center text-s transition duration-200">
 					<a
-						href="#"
+						href="contacts.html"
 						class="hover:text-primaryColor dark:hover:text-darkPrimaryColor transition duration-300"
 						>Contacts</a
 					>
@@ -528,8 +539,8 @@
 				style="
 					background-image: url(images/back-logo.png);
 					background-repeat: no-repeat;
-					background-position: right top;
-					background-size: auto 100%;
+					background-position: right bottom;
+					background-size: auto calc(100% - 64px);
 				">
 				<header class="md:mx-[60px] mx-4 py-5 flex flex-row items-center ">
 					<!-- <div
@@ -621,7 +632,7 @@
 				<h2
 					class="md:mb-[170px] mb-4 text-primaryColor dark:text-darkPrimaryColor text-4xl font-bold text-center uppercase font-baseFont"
 				>
-					Benefits of using our program:
+					Benefits of using our program
 				</h2>
 				<div
 					class="slider group lg:flex hidden gap-4 lg:gap-none items-center w-full relative min-h-[250px]"
@@ -815,9 +826,14 @@
 					</p>
 					<a
 						href="#"
-						class="block sm:absolute sm:bottom-[50px] sm:right-[45px] mx-auto w-[250px] text-secondaryColor dark:text-darkSecondaryColor ml-auto des:mt-10 mt-2 py-2 text-lg font-semibold shadow-buttonShadow dark:shadow-darkShadow text-center rounded-2xl hover:shadow-none dark:hover:shadow-none transition duration-300 hover:bg-primaryColor dark:hover:bg-darkPrimaryColor hover:text-white dark:hover:text-darkBackgroundColor2"
+						class="seeMoreButton block h-[49px] flex items-center justify-center gap-[10px] sm:absolute sm:bottom-[50px] sm:right-[45px] mx-auto w-[250px] text-primaryColor dark:text-darkSecondaryColor ml-auto des:mt-10 mt-2 py-2 text-[22px] font-semibold font-baseFont shadow-buttonShadow dark:shadow-darkShadow text-center rounded-2xl hover:shadow-none dark:hover:shadow-none transition duration-300 hover:bg-primaryColor dark:hover:bg-darkPrimaryColor hover:text-white dark:hover:text-darkBackgroundColor2"
 					>
-						See more
+						<span>See more</span>
+						<span class="icon">
+							<svg width="12" height="13" viewBox="0 0 12 13" fill="none" xmlns="http://www.w3.org/2000/svg">
+								<path d="M1.05029 11.4493L10.2427 2.25691M2.46451 1.5498H9.94979C10.5021 1.5498 10.9498 1.99752 10.9498 2.5498V10.0351" stroke="#42C1EE" stroke-width="2" stroke-linecap="round"/>
+							</svg>
+						</span>
 					</a>
 					<!-- <a href="#" class="flex gap-[10px] justify-end absolute bottom-[50px] right-[45px] cursor-pointer font-semibold hover:font-bold">
 						<span class="font-baseFont text-[22px]">See more</span>
@@ -838,9 +854,14 @@
 					</p>
 					<a
 						href="#"
-						class="block sm:absolute sm:bottom-[50px] sm:right-[45px] mx-auto text-secondaryColor dark:text-darkSecondaryColor ml-auto des:mt-10 mt-2 w-[250px] py-2 text-lg font-semibold shadow-buttonShadow dark:shadow-darkShadow text-center rounded-2xl hover:shadow-none dark:hover:shadow-none transition duration-300 hover:bg-primaryColor dark:hover:bg-darkPrimaryColor hover:text-white dark:hover:text-darkBackgroundColor2"
+						class="seeMoreButton block h-[49px] flex items-center justify-center gap-[10px] sm:absolute sm:bottom-[50px] sm:right-[45px] mx-auto w-[250px] text-primaryColor dark:text-darkSecondaryColor ml-auto des:mt-10 mt-2 py-2 text-[22px] font-semibold font-baseFont shadow-buttonShadow dark:shadow-darkShadow text-center rounded-2xl hover:shadow-none dark:hover:shadow-none transition duration-300 hover:bg-primaryColor dark:hover:bg-darkPrimaryColor hover:text-white dark:hover:text-darkBackgroundColor2"
 					>
-						See more
+						<span>See more</span>
+						<span class="icon">
+							<svg width="12" height="13" viewBox="0 0 12 13" fill="none" xmlns="http://www.w3.org/2000/svg">
+								<path d="M1.05029 11.4493L10.2427 2.25691M2.46451 1.5498H9.94979C10.5021 1.5498 10.9498 1.99752 10.9498 2.5498V10.0351" stroke="#42C1EE" stroke-width="2" stroke-linecap="round"/>
+							</svg>
+						</span>
 					</a>
 					<!-- <a href="#" class="flex gap-[10px] justify-end absolute bottom-[50px] right-[45px] cursor-pointer font-semibold hover:font-bold">
 						<span class="font-baseFont text-[22px]">See more</span>
@@ -862,9 +883,14 @@
 					</p>
 					<a
 						href="#"
-						class="block sm:absolute sm:bottom-[50px] sm:right-[45px] mx-auto w-[250px] text-secondaryColor dark:text-darkSecondaryColor ml-auto des:mt-10 mt-2 max-w-[250px] py-2 text-lg font-semibold shadow-buttonShadow dark:shadow-darkShadow text-center rounded-2xl hover:shadow-none dark:hover:shadow-none transition duration-300 hover:bg-primaryColor dark:hover:bg-darkPrimaryColor hover:text-white dark:hover:text-darkBackgroundColor2"
+						class="seeMoreButton block h-[49px] flex items-center justify-center gap-[10px] sm:absolute sm:bottom-[50px] sm:right-[45px] mx-auto w-[250px] text-primaryColor dark:text-darkSecondaryColor ml-auto des:mt-10 mt-2 py-2 text-[22px] font-semibold font-baseFont shadow-buttonShadow dark:shadow-darkShadow text-center rounded-2xl hover:shadow-none dark:hover:shadow-none transition duration-300 hover:bg-primaryColor dark:hover:bg-darkPrimaryColor hover:text-white dark:hover:text-darkBackgroundColor2"
 					>
-						See more
+						<span>See more</span>
+						<span class="icon">
+							<svg width="12" height="13" viewBox="0 0 12 13" fill="none" xmlns="http://www.w3.org/2000/svg">
+								<path d="M1.05029 11.4493L10.2427 2.25691M2.46451 1.5498H9.94979C10.5021 1.5498 10.9498 1.99752 10.9498 2.5498V10.0351" stroke="#42C1EE" stroke-width="2" stroke-linecap="round"/>
+							</svg>
+						</span>
 					</a>
 					<!-- <a href="#" class="flex gap-[10px] justify-end absolute bottom-[50px] right-[45px] cursor-pointer font-semibold hover:font-bold">
 						<span class="font-baseFont text-[22px]">See more</span>
@@ -1108,11 +1134,17 @@
 				</div>
 
 				<button 
-					class="jot-app-button mx-auto mt-[50px] w-[250px] h-[50px] shadow-newButtonShadow rounded-[15px] flex justify-center items-center font-baseFont font-semibold text-[22px] hover:bg-primaryColor hover:text-white hover:shadow-none transition-all duration-300"
+					class="jot-app-button mx-auto mt-[50px] w-[250px] h-[50px] shadow-newButtonShadow rounded-[15px] flex justify-center items-center font-baseFont font-semibold text-[22px] text-primaryColor hover:bg-primaryColor hover:text-white hover:shadow-none transition-all duration-300"
 					onclick="seeMoreJotAppOpen()"
 				>
 					See more
 				</button>
+				<!-- <a
+						href="#"
+						class="seeMoreButton block h-[49px] flex items-center justify-center gap-[10px] sm:absolute sm:bottom-[50px] sm:right-[45px] mx-auto w-[250px] text-primaryColor dark:text-darkSecondaryColor ml-auto des:mt-10 mt-2 py-2 text-[22px] font-semibold font-baseFont shadow-buttonShadow dark:shadow-darkShadow text-center rounded-2xl hover:shadow-none dark:hover:shadow-none transition duration-300 hover:bg-primaryColor dark:hover:bg-darkPrimaryColor hover:text-white dark:hover:text-darkBackgroundColor2"
+					>
+						<span>See more</span>
+					</a> -->
 			</article>
 			<!-- Our customers BLOCK -->
 			<article class="mt-[150px] pb-5 xs:mx-[20px]">
@@ -1165,59 +1197,87 @@
 			</article>
 			<!-- Footer BLOCK -->
 			<footer
-				class="absolute font-baseFont font-medium bg-[#ECF0F3] left-0 right-0 xs:h-[120px] h-auto mt-[150px] flex xs:flex-row flex-col justify-between items-center dark:bg-darkBackgroundColor2 p-4 shadow-newButtonShadow dark:shadow-darkBiggerShadow rounded-t-[25px] mb-3 px-[60px] py-[31px]"
+				class="absolute font-medium bg-[#ECF0F3] left-0 right-0 mt-[150px] justify-between items-center dark:bg-darkBackgroundColor2 shadow-newButtonShadow dark:shadow-darkBiggerShadow rounded-t-[25px] mb-3 px-[60px]"
 			>
-				<img
-					src="images/Logo footer.svg"
-					alt="logo"
-					class=""
-				/>
-				<ul
-				class="h-full flex flex-row gap-[70px] xl:text-[18px] dark:text-darkSecondaryColor"
-				>
-					<li class="flex items-center transition duration-200">
-						<a
-							href="#"
-							class="hover:text-primaryColor dark:hover:text-darkPrimaryColor transition duration-300"
-							>About us</a
-						>
-					<li class="flex items-center text-s transition duration-200">
-						<a
-							href="#"
-							class="hover:text-primaryColor dark:hover:text-darkPrimaryColor transition duration-300"
-							>Support</a
-						>
-					</li>
-					<li class="flex items-center text-s transition duration-200">
-						<a
-							href="#"
-							class="hover:text-primaryColor dark:hover:text-darkPrimaryColor transition duration-300"
-							>Contacts</a
-						>
-					</li>
-				</ul>
-				<div class="social flex gap-[24px]">
-					<a href="#">
-						<img src="images/instagram.svg" alt="instagram">
-					</a>
-					<a href="#">
-						<img src="images/facebook.svg" alt="facebook">
-					</a>
-					<a href="#">
-						<img src="images/linkedin.svg" alt="linkedin">
-					</a>
-				</div>
-				<div class="contact">
-					<div class="phone flex gap-[17px]">
-						<img src="images/phone.svg" alt="phone" class="inline-block">
-						<p>+972 3-375-1288</p>
+				
+				<div class="content relative flex justify-between mx-auto w-full max-w-[1100px] py-[61px]">
+					<div class="leftside flex flex-col gap-[30px]">
+						<img
+							src="images/Logo footer.svg"
+							alt="logo"
+							class=""
+						/>
+						<div class="social flex gap-[10px]">
+							<a href="#">
+								<img src="images/instagram.svg" alt="instagram" class="w-[24px]">
+							</a>
+							<a href="#">
+								<img src="images/facebook.svg" alt="facebook" class="w-[24px]">
+							</a>
+							<a href="#">
+								<img src="images/linkedin.svg" alt="linkedin" class="w-[24px]">
+							</a>
+						</div>
 					</div>
-					<div class="email flex gap-[17px] mt-[20px]">
-						<img src="images/email.svg" alt="email" class="inline-block">
-						<p class="underline">Info@jot-solutions.com</p>
+					<div class="rightside flex gap-[100px]">
+						<div class="menu">
+							<h3 class="font-baseFont text-[20px] text-primaryColor font-bold mb-[20px]">Menu</h3>
+							<ul
+							class="flex flex-col gap-[10px] dark:text-darkSecondaryColor font-medium text-[14px]"
+							>
+								<li class="flex items-center transition duration-200">
+									<a
+										href="#"
+										class="hover:text-primaryColor dark:hover:text-darkPrimaryColor transition duration-300"
+										>About us</a
+									>
+								<li class="flex items-center text-s transition duration-200">
+									<a
+										href="#"
+										class="hover:text-primaryColor dark:hover:text-darkPrimaryColor transition duration-300"
+										>Support</a
+									>
+								</li>
+								<li class="flex items-center text-s transition duration-200">
+									<a
+										href="#"
+										class="hover:text-primaryColor dark:hover:text-darkPrimaryColor transition duration-300"
+										>Contacts</a
+									>
+								</li>
+							</ul>
+						</div>
+						<div class="contacts">
+							<h3 class="font-baseFont text-[20px] text-primaryColor font-bold mb-[20px]">Contacts</h3>
+							<ul class="contact flex flex-col gap-[10px]">
+								<li class="phone flex gap-[17px]">
+									<img src="images/phone.svg" alt="phone" class="inline-block">
+									<p>+441615540257</p>
+								</li>
+								<li class="phone flex gap-[17px]">
+									<img src="images/phone.svg" alt="phone" class="inline-block">
+									<p>+13235405866</p>
+								</li>
+								<li class="email flex gap-[17px]">
+									<img src="images/email.svg" alt="email" class="inline-block">
+									<p class="underline">Info@jot-solutions.com</p>
+								</li>
+							</ul>
+						</div>
+					</div>
+					<div class="absolute bottom-[30px] right-[-110px] goUp w-[43px] h-[43px] rounded-[15px] flex items-center justify-center cursor-pointer shadow-newButtonShadowSmallest"
+						style="background: linear-gradient(180deg, #20D1ED 28.98%, #0881E9 100%);
+						"
+						onclick="goUp()"
+					>
+						<img src="images/arrow-up.svg" alt="up">
 					</div>
 				</div>
 				
+				<hr class="border-primaryColor border-[1px]">
+				<p class="text-[12px] font-medium text-center p-[17px]">
+					Copyright ©2023 by J.O.T Solutions
+				</p>
 			</footer>
 		</div>
 		<!-- Swiper JS connection -->
