@@ -84,6 +84,8 @@
 								'4px 4px 8px 0px #C3C3C3, -4px -4px 8px 0px #FFFFFF',
 							newButtonShadowSmaller:
 								'3px 3px 6px 0px #C3C3C3, -3px -3px 6px 0px #FFFFFF',
+							newButtonShadowSmallest:
+								'2px 2px 4px 0px #D0EBFA, -2px -2px 4px 0px #FFFFFF, 1px 1px 2px 0px #C2CFD6',
 							newInnerShadow:
 								'4px 4px 8px 0px #C3C3C3 inset, -4px -4px 8px 0px #FFFFFF inset',
 						},
@@ -94,6 +96,7 @@
 							des: '1480px',
 							mdlg: '840px',
 							xs: '544px',
+							xxs: '400px'
 						},
 					},
 				},
@@ -157,6 +160,38 @@
 			}
 			.swiper-button-next.swiper-button-disabled::after, .swiper-button-prev.swiper-button-disabled::after{
 				color: #42C1EE;
+			}
+
+			.header-article {
+				background-image: url(images/back-logo.png);
+				background-repeat: no-repeat;
+				background-position: right top 55px;
+				background-size: 66% auto;
+			}
+			@media screen and (min-width: 544px) {
+				.header-article {
+					background-size: 60% auto;
+				}
+			}
+			@media screen and (min-width: 768px) {
+				.header-article {
+					background-position: right top 64px;
+					background-size: 50% auto;
+				}
+			}
+			@media screen and (min-width: 1024px) {
+				.header-article{
+					background-position: right bottom;
+					background-size: auto calc(100% - 64px);
+				}
+				.jot-app_info-block{
+					grid-template-columns: 1fr;
+				}
+			}
+			@media (min-width: 1280px) {
+				.jot-app_info-block{
+					grid-template-columns: 540px 1fr;
+				}
 			}
 		</style>
 	</head>
@@ -584,13 +619,7 @@
 			class="mx-auto min-h-screen des:w-max des:max-w-none xl:max-w-[1440px] lg:max-w-[1200px] w-full bg-backgroundColor dark:bg-darkBackgroundColor"
 		>
 			<!-- Header BLOCK-->
-			<article class="pt-[64px] mx-[-30px] px-[30px] pb-[20px]" 
-				style="
-					background-image: url(images/back-logo.png);
-					background-repeat: no-repeat;
-					background-position: right bottom;
-					background-size: auto calc(100% - 64px);
-				">
+			<article class="header-article md:pt-[64px] pt-[55px] pb-[20px]" >
 				<header class="md:mx-[60px] mx-4 py-5 flex flex-row items-center ">
 					<!-- <div
 						class="logo_circle mdlg:w-[167px] xs:w-[140px] w-[100px] mdlg:h-[167px] xs:h-[140px] h-[100px] flex items-center justify-center rounded-full shadow-logoShadow dark:shadow-darkShadow bg-backgroundColor"
@@ -887,21 +916,21 @@
 					<div class="swiper-wrapper">
 						<div class="swiper-slide relative">
 							<!-- <iframe class="w-full h-full rounded-[15px]" src="https://www.youtube.com/embed/o-YBDTqX_ZU?si=2cepc0UeevFpyYL2" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>	 -->
-							<video src="images/JOT PROJECT MANAGEMENT animation .mp4"  poster="images/video-bg.png" class="w-full h-full rounded-[15px]"></video>
+							<video src="images/JOT PROJECT MANAGEMENT animation .mp4"  poster="images/Frame 3705.png" class="w-full h-full rounded-[15px]"></video>
 							<button class="video_start_custom block text-[100px] absolute left-1/2 top-1/2 -translate-x-1/2 -translate-y-1/2 w-[110px] leading-[110px] h-[110px] bg-primaryColor text-white rounded-full flex items-center justify-center pl-[2px]" >
 								<img src="images/play.svg" alt="">
 							</button>
 						</div>
 						<div class="swiper-slide relative">
 							<!-- <iframe class="w-full h-full rounded-[15px]" src="https://www.youtube.com/embed/o-YBDTqX_ZU?si=2cepc0UeevFpyYL2" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>	 -->
-							<video src="images/JOT PROJECT MANAGEMENT animation .mp4"  poster="images/video-bg.png" class="w-full h-full rounded-[15px]"></video>
+							<video src="images/JOT PROJECT MANAGEMENT animation .mp4"  poster="images/Frame 3705.png" class="w-full h-full rounded-[15px]"></video>
 							<button class="video_start_custom block text-[100px] absolute left-1/2 top-1/2 -translate-x-1/2 -translate-y-1/2 w-[110px] leading-[110px] h-[110px] bg-primaryColor text-white rounded-full flex items-center justify-center pl-[2px]" >
 								<img src="images/play.svg" alt="">
 							</button>
 						</div>
 						<div class="swiper-slide relative">
 							<!-- <iframe class="w-full h-full rounded-[15px]" src="https://www.youtube.com/embed/o-YBDTqX_ZU?si=2cepc0UeevFpyYL2" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>	 -->
-							<video src="images/JOT PROJECT MANAGEMENT animation .mp4"  poster="images/video-bg.png" class="w-full h-full rounded-[15px]"></video>
+							<video src="images/JOT PROJECT MANAGEMENT animation .mp4"  poster="images/Frame 3705.png" class="w-full h-full rounded-[15px]"></video>
 							<button class="video_start_custom block text-[100px] absolute left-1/2 top-1/2 -translate-x-1/2 -translate-y-1/2 w-[110px] leading-[110px] h-[110px] bg-primaryColor text-white rounded-full flex items-center justify-center pl-[2px]" >
 								<img src="images/play.svg" alt="">
 							</button>
@@ -933,26 +962,17 @@
 				class="absolute font-medium bg-[#ECF0F3] left-0 right-0 mt-[150px] justify-between items-center dark:bg-darkBackgroundColor2 shadow-newButtonShadow dark:shadow-darkBiggerShadow rounded-t-[25px] mb-3 px-[60px]"
 			>
 				
-				<div class="content relative flex justify-between mx-auto w-full max-w-[1100px] py-[61px]">
-					<div class="leftside flex flex-col gap-[30px]">
-						<img
-							src="images/Logo footer.svg"
+				<div class="content relative flex sm:flex-row flex-col gap-[20px] justify-between mx-auto w-full max-w-[1100px] py-[61px]">
+					<div class="leftside flex flex-col justify-center gap-[30px]">
+						<div class="flex justify-center">
+							<img
+							src="images/Logo footer (1).svg"
 							alt="logo"
-							class=""
+							class="max-w-[285px]"
 						/>
-						<div class="social flex gap-[10px]">
-							<a href="#">
-								<img src="images/instagram.svg" alt="instagram" class="w-[24px]">
-							</a>
-							<a href="#">
-								<img src="images/facebook.svg" alt="facebook" class="w-[24px]">
-							</a>
-							<a href="#">
-								<img src="images/linkedin.svg" alt="linkedin" class="w-[24px]">
-							</a>
 						</div>
 					</div>
-					<div class="rightside flex gap-[100px]">
+					<div class="rightside flex xxs:flex-row flex-col mdlg:gap-x-[100px] sm:gap-x-[50px] gap-x-[100px] gap-y-[20px]">
 						<div class="menu">
 							<h3 class="font-baseFont text-[20px] text-primaryColor font-bold mb-[20px]">Menu</h3>
 							<ul
@@ -982,7 +1002,7 @@
 						</div>
 						<div class="contacts">
 							<h3 class="font-baseFont text-[20px] text-primaryColor font-bold mb-[20px]">Contacts</h3>
-							<ul class="contact flex flex-col gap-[10px]">
+							<ul class="contact flex flex-col gap-[10px] text-[14px]">
 								<li class="phone flex gap-[17px]">
 									<img src="images/phone.svg" alt="phone" class="inline-block">
 									<p>+441615540257</p>
@@ -996,17 +1016,28 @@
 									<p class="underline">Info@jot-solutions.com</p>
 								</li>
 							</ul>
+							<div class="social mt-[22px] flex gap-[10px]">
+								<a href="#">
+									<img src="images/instagram.svg" alt="instagram" class="w-[24px]">
+								</a>
+								<a href="#">
+									<img src="images/facebook.svg" alt="facebook" class="w-[24px]">
+								</a>
+								<a href="#">
+									<img src="images/linkedin.svg" alt="linkedin" class="w-[24px]">
+								</a>
+							</div>
 						</div>
 					</div>
-					<div class="absolute bottom-[30px] right-[-110px] goUp w-[43px] h-[43px] rounded-[15px] flex items-center justify-center cursor-pointer shadow-newButtonShadowSmallest"
+					
+				</div>
+				<div class="absolute xl:bottom-[100px] sm:bottom-[280px] bottom-[420px] 2xl:right-[180px] xl:right-[100px]  right-[20px] goUp w-[43px] h-[43px] rounded-[15px] flex items-center justify-center cursor-pointer shadow-newButtonShadowSmallest"
 						style="background: linear-gradient(180deg, #20D1ED 28.98%, #0881E9 100%);
 						"
 						onclick="goUp()"
 					>
 						<img src="images/arrow-up.svg" alt="up">
 					</div>
-				</div>
-				
 				<hr class="border-primaryColor border-[1px]">
 				<p class="text-[12px] font-medium text-center p-[17px]">
 					Copyright ©2023 by J.O.T Solutions

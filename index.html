@@ -86,7 +86,8 @@
 								'3px 3px 6px 0px #C3C3C3, -3px -3px 6px 0px #FFFFFF',
 							newButtonShadowSmallest:
 								'2px 2px 4px 0px #D0EBFA, -2px -2px 4px 0px #FFFFFF, 1px 1px 2px 0px #C2CFD6',
-							
+							newInnerShadow:
+								'4px 4px 8px 0px #C3C3C3 inset, -4px -4px 8px 0px #FFFFFF inset',
 						},
 						spacing: {
 							22: '90px',
@@ -95,6 +96,7 @@
 							des: '1480px',
 							mdlg: '840px',
 							xs: '544px',
+							xxs: '400px'
 						},
 					},
 				},
@@ -102,6 +104,39 @@
 			};
 		</script>
 		<style>
+			.header-article {
+				background-image: url(images/back-logo.png);
+				background-repeat: no-repeat;
+				background-position: right top 55px;
+				background-size: 66% auto;
+			}
+			@media screen and (min-width: 544px) {
+				.header-article {
+					background-size: 60% auto;
+				}
+			}
+			@media screen and (min-width: 768px) {
+				.header-article {
+					background-position: right top 64px;
+					background-size: 50% auto;
+				}
+			}
+			@media screen and (min-width: 1024px) {
+				.header-article{
+					background-position: right bottom;
+					background-size: auto calc(100% - 64px);
+				}
+				.jot-app_info-block{
+					grid-template-columns: 1fr;
+				}
+			}
+			@media (min-width: 1280px) {
+				.jot-app_info-block{
+					grid-template-columns: 540px 1fr;
+				}
+			}
+			
+			
 			.seeMoreButton path{
 				transition: 0.3s;
 			}
@@ -176,7 +211,7 @@
 		</nav>
 		<!-- Hamburger menu -->
 		<div
-			class="burger-menu fixed top-6 right-6 z-50 md:hidden flex items-center justify-center h-[70px] w-[70px] cursor-pointer transition duration-500 rounded-[12px] border-[2px] border-primaryColor dark:border-darkPrimaryColor"
+			class="burger-menu fixed top-6 right-6 z-50 md:hidden flexXXX hidden items-center justify-center h-[70px] w-[70px] cursor-pointer transition duration-500 rounded-[12px] border-[2px] border-primaryColor dark:border-darkPrimaryColor"
 			style="background-color: #eef1f899"
 			onclick="openMenu()"
 		>
@@ -535,21 +570,15 @@
 			class="mx-auto min-h-screen des:w-max des:max-w-none xl:max-w-[1440px] lg:max-w-[1200px] w-full bg-backgroundColor dark:bg-darkBackgroundColor"
 		>
 			<!-- Header BLOCK-->
-			<article class="pt-[64px] mx-[-30px] px-[30px] pb-[20px]" 
-				style="
-					background-image: url(images/back-logo.png);
-					background-repeat: no-repeat;
-					background-position: right bottom;
-					background-size: auto calc(100% - 64px);
-				">
-				<header class="md:mx-[60px] mx-4 py-5 flex flex-row items-center ">
+			<article class="header-article md:pt-[64px] pt-[55px] pb-[20px]" >
+				<header class="md:mx-[60px] mx-[16px] md:py-5 flex flex-row items-center ">
 					<!-- <div
 						class="logo_circle mdlg:w-[167px] xs:w-[140px] w-[100px] mdlg:h-[167px] xs:h-[140px] h-[100px] flex items-center justify-center rounded-full shadow-logoShadow dark:shadow-darkShadow bg-backgroundColor"
 					>
 						<img src="images/logo.svg" alt="logo" class="w-3/4" />
 					</div> -->
 					<h2
-						class="md: mt-[70px] mdlg:text-[64px] xs:text-5xl text-4xl font-normal text-black dark:text-darkSecondaryColor"
+						class="md:mt-[70px] mt-[20px] mdlg:text-[64px] xxs:text-5xl text-4xl font-normal text-black dark:text-darkSecondaryColor"
 					>
 						<span class="text-goldenColor dark:text-darkPrimaryColor font-semibold "
 							>J.O.T</span
@@ -559,30 +588,30 @@
 				</header>
 				<article class="md:mx-[60px] mx-4 pb-[20px] max-w-[700px]">
 					<h2
-						class="mt-[40px] text-primaryColor dark:text-darkPrimaryColor md:text-[40px] xs:text-3xl text-2xl font-bold font-baseFont"
+						class="md:mt-[40px] mt-[30px] text-primaryColor dark:text-darkPrimaryColor xs:text-[40px] xxs:text-[35px] text-[24px] font-bold font-baseFont"
 					>
 						Corporate Strategy Management
 					</h2>
 					<p
-						class="mt-[50px] md:mb-8 mb-2 md:text-[28px] text-1xl text-secondaryColor dark:text-darkSecondaryColor font-medium text-justify"
+						class="xs:mt-[50px] mt-[15px] md:mb-8 mb-2 xs:text-[28px] xxs:text-[20px] text-[16px] text-secondaryColor dark:text-darkSecondaryColor font-medium text-justify"
 					>
 						JOT (Just On Time) is a boutique firm for strategy and project
 						management that combines various management solutions for
 						companies under one roof.
 					</p>
 					<div
-						class="auth-group flex md:flex-row flex-col lg:justify-start justify-center items-center flex-1 md:gap-[20px] gap-3 text-base"
+						class="auth-group mt-[30px] flex md:flex-row flex-col justify-start xs:items-center flex-1 md:gap-[20px] gap-3 text-base"
 					>
 						<a
 							href="#"
-							class="font-baseFont py-2 w-[250px] h-[50px] flex justify-center items-center block bg-gradient-to-b hover:bg-secondaryColor dark:hover:bg-darkSecondaryColor from-gradColorStart dark:from-darkGradColorStart to-gradColorEnd dark:to-darkGradColorEnd font-semibold text-center text-white dark:hover:text-darkBackgroundColor2 rounded-2xl text-[22px] shadow-newButtonShadow dark:shadow-darkPrimaryShadow hover:shadow-none dark:hover:shadow-none transition duration-300"
+							class="font-baseFont py-2 xxs:w-[250px] w-[220px] xxs:h-[50px] h-[40px] flex justify-center items-center block bg-gradient-to-b hover:bg-secondaryColor dark:hover:bg-darkSecondaryColor from-gradColorStart dark:from-darkGradColorStart to-gradColorEnd dark:to-darkGradColorEnd font-semibold text-center text-white dark:hover:text-darkBackgroundColor2 rounded-2xl xs:text-[22px] text-[18px] shadow-newButtonShadow dark:shadow-darkPrimaryShadow hover:shadow-none dark:hover:shadow-none transition duration-300"
 							style="background: linear-gradient(180deg, #20D1ED 28.98%, #0881E9 100%);"
 						>
 							Log in
 						</a>
 						<a
 							href="#"
-							class="py-2 min-w-[250px] h-[49px] flex justify-center items-center text-primaryColor dark:text-darkPrimaryColor rounded-[15px] shadow-newButtonShadow dark:shadow-darkShadow text-center hover:bg-primaryColor dark:hover:bg-darkPrimaryColor hover:text-backgroundColor dark:hover:text-darkBackgroundColor hover:shadow-none dark:hover:shadow-none font-semibold text-[22px] transition duration-300 font-baseFont"
+							class="py-2 xxs:w-[250px] w-[220px] xxs:h-[50px] h-[40px] flex justify-center items-center text-primaryColor dark:text-darkPrimaryColor rounded-[15px] shadow-newButtonShadow dark:shadow-darkShadow text-center hover:bg-primaryColor dark:hover:bg-darkPrimaryColor hover:text-backgroundColor dark:hover:text-darkBackgroundColor hover:shadow-none dark:hover:shadow-none font-semibold xs:text-[22px] text-[18px] transition duration-300 font-baseFont"
 						>
 							Sign up
 						</a>
@@ -592,28 +621,26 @@
 			
 			<!-- JOT APP info BLOCK -->
 			<article 
-				class="relative grid py-5 mt-[150px] mx-[60px] mx-4 gap-x-[84px] mb-none"
-				style="grid-template-columns: 540px 1fr;"
+				class="jot-app_info-block relative grid py-5 md:mt-[150px] mt-[20px] md:mx-[60px] mx-4 xl:gap-x-[84px] gap-x-[40px] mb-none"
 			>
 				<div 
-					class="img-wrapper w-[536px] h-[419px] rounded-[15px] p-[20px] shadow-newButtonShadow"
-					style="grid-row: 1 / 5;"
+					class="justify-self-center xl:mt-0 mt-[20px] md:mb-0 mb-[20px] img-wrapper xl:row-start-1 md:row-start-5 row-start-1 xl:row-end-5 md:row-end-6 row-end-2 md:w-[536px] md:h-[419px] rounded-[15px] p-[20px] shadow-newButtonShadow"
 				>
 					<img src="images/about_jot_app.png" alt="teams" class="rounded-[15px]">
 				</div>
 				<h2
-					class="mb-[50px] text-primaryColor dark:text-darkPrimaryColor md:text-[40px] xs:text-3xl text-2xl font-bold font-baseFont"
+					class="mb-[50px] xl:w-auto w-full text-primaryColor dark:text-darkPrimaryColor md:text-[40px] xs:text-[40px] xxs:text-[35px] text-[24px] font-bold font-baseFont"
 				>
 					ABOUT JOT APP
 				</h2>
 				<p
-					class="text-secondaryColor dark:text-darkSecondaryColor md:text-2xl text-1xl font-medium text-justify"
+					class="text-secondaryColor dark:text-darkSecondaryColor xs:text-2xl xxs:text-[20px] text-[16px] font-medium text-justify"
 				>
 					JOT is a project management platform that allows you to focus on
 					your real purpose and work, saving you time and energy.
 				</p>
 				<p
-					class="my-5 text-secondaryColor dark:text-darkSecondaryColor md:text-2xl text-1xl font-medium text-justify"
+					class="my-5 text-secondaryColor dark:text-darkSecondaryColor xs:text-2xl xxs:text-[20px] text-[16px] font-medium text-justify"
 				>
 					Whether you are experienced in team management or not, the JOT
 					kit supports our methodology, contributes to the correct and
@@ -623,12 +650,12 @@
 				</p>
 				<a
 					href="contacts.html"
-					class="font-baseFont py-2 w-[250px] h-[50px] flex justify-center items-center block bg-gradient-to-b hover:bg-secondaryColor dark:hover:bg-darkSecondaryColor from-gradColorStart dark:from-darkGradColorStart to-gradColorEnd dark:to-darkGradColorEnd font-semibold text-center text-white dark:hover:text-darkBackgroundColor2 rounded-2xl text-[22px] shadow-newButtonShadow dark:shadow-darkPrimaryShadow hover:shadow-none dark:hover:shadow-none transition duration-300"
+					class="font-baseFont py-2 xxs:w-[250px] w-[220px] xxs:h-[50px] h-[40px] flex justify-center items-center block bg-gradient-to-b hover:bg-secondaryColor dark:hover:bg-darkSecondaryColor from-gradColorStart dark:from-darkGradColorStart to-gradColorEnd dark:to-darkGradColorEnd font-semibold text-center text-white dark:hover:text-darkBackgroundColor2 rounded-2xl text-[22px] shadow-newButtonShadow dark:shadow-darkPrimaryShadow hover:shadow-none dark:hover:shadow-none transition duration-300"
 					>Scheduling demo</a
 				>
 			</article>
 			<!-- BENEFITS BLOCK -->
-			<article class="relative py-5 lg:mx-2 sm:mx-22 mx-4 mt-[150px] mx-none">
+			<article class="relative py-5 lg:mx-2 md:mx-22 mx-4 md:mt-[150px] mt-[40px] mx-none">
 				<h2
 					class="md:mb-[170px] mb-4 text-primaryColor dark:text-darkPrimaryColor text-4xl font-bold text-center uppercase font-baseFont"
 				>
@@ -803,15 +830,15 @@
 					See more
 				</a> -->
 			</article>
-			<article class="relative lg:mx-[60px] sm:mx-22 mx-4 mt-[200px] mb-[100px] mx-none">
-				<p class="font-medium text-[24px] leading-[33.6px]">We will help you organize the construction process more clearly, agreed by all parties, so that you can, within the agreed time frame, get the result you expect and pay for. By organizing the workflow and communications in our service, you will be able to plan, control, monitor everything that is being done at the construction site. We strive to make construction customers satisfied with the results of the contractors' work.</p>
+			<article class="relative lg:mx-[60px] md:mx-22 mx-4 md:mt-[200px] mt-[40px] mb-[100px] mx-none">
+				<p class="font-medium xs:text-[24px] text-[20px] leading-[33.6px]">We will help you organize the construction process more clearly, agreed by all parties, so that you can, within the agreed time frame, get the result you expect and pay for. By organizing the workflow and communications in our service, you will be able to plan, control, monitor everything that is being done at the construction site. We strive to make construction customers satisfied with the results of the contractors' work.</p>
 			</article>
 			<!-- Info cards BLOCK -->
 			<article
-				class="py-5 sm:mx-[60px] mx-4 grid grid-cols-2 gap-[24px] flex-wrap items-center justify-center text-secondaryColor dark:text-darkSecondaryColor"
+				class="py-5 mdlg:mx-[60px] xs:mx-[100px] mx-4 grid mdlg:grid-cols-2 grid-cols-1 gap-[24px] flex-wrap items-center justify-center text-secondaryColor dark:text-darkSecondaryColor"
 			>
 				<div
-					class="relative des:h-[370px] sm:h-[270px] h-auto w-full rounded-xl dark:bg-darkBackgroundColor2 shadow-newButtonShadow dark:shadow-darkShadow hover:shadow-newButtonShadowSmaller dark:hover:shadow-darkBiggerShadow transition duration-200 p-[45px]"
+					class="relative lg:h-[370px] h-full w-full rounded-xl dark:bg-darkBackgroundColor2 shadow-newButtonShadow dark:shadow-darkShadow hover:shadow-newButtonShadowSmaller dark:hover:shadow-darkBiggerShadow transition duration-200 xxs:p-[45px] p-[20px]"
 				>
 					<h3
 						class="text-primaryColor dark:text-darkPrimaryColor des:text-[40px] text-3xl font-bold des:mt-2 font-baseFont"
@@ -826,7 +853,7 @@
 					</p>
 					<a
 						href="#"
-						class="seeMoreButton block h-[49px] flex items-center justify-center gap-[10px] sm:absolute sm:bottom-[50px] sm:right-[45px] mx-auto w-[250px] text-primaryColor dark:text-darkSecondaryColor ml-auto des:mt-10 mt-2 py-2 text-[22px] font-semibold font-baseFont shadow-buttonShadow dark:shadow-darkShadow text-center rounded-2xl hover:shadow-none dark:hover:shadow-none transition duration-300 hover:bg-primaryColor dark:hover:bg-darkPrimaryColor hover:text-white dark:hover:text-darkBackgroundColor2"
+						class="seeMoreButton block h-[49px] flex items-center justify-center gap-[10px] lg:absolute lg:bottom-[50px] lg:right-[45px] mx-auto w-[250px] text-primaryColor dark:text-darkSecondaryColor ml-auto mt-10 py-2 text-[22px] font-semibold font-baseFont shadow-buttonShadow dark:shadow-darkShadow text-center rounded-2xl hover:shadow-none dark:hover:shadow-none transition duration-300 hover:bg-primaryColor dark:hover:bg-darkPrimaryColor hover:text-white dark:hover:text-darkBackgroundColor2"
 					>
 						<span>See more</span>
 						<span class="icon">
@@ -841,7 +868,7 @@
 					</a> -->
 				</div>
 				<div
-					class="relative des:h-[370px] sm:h-[270px] h-auto w-auto rounded-xl dark:bg-darkBackgroundColor2 shadow-newButtonShadow dark:shadow-darkShadow hover:shadow-newButtonShadowSmaller dark:hover:shadow-darkBiggerShadow transition duration-200 p-[45px]"
+					class="relative lg:h-[370px] h-full w-auto rounded-xl dark:bg-darkBackgroundColor2 shadow-newButtonShadow dark:shadow-darkShadow hover:shadow-newButtonShadowSmaller dark:hover:shadow-darkBiggerShadow transition duration-200 xxs:p-[45px] p-[20px]"
 				>
 					<h3
 						class="text-primaryColor dark:text-darkPrimaryColor des:text-[40px] text-3xl font-bold des:mt-2 font-baseFont leading-[52px]"
@@ -854,7 +881,7 @@
 					</p>
 					<a
 						href="#"
-						class="seeMoreButton block h-[49px] flex items-center justify-center gap-[10px] sm:absolute sm:bottom-[50px] sm:right-[45px] mx-auto w-[250px] text-primaryColor dark:text-darkSecondaryColor ml-auto des:mt-10 mt-2 py-2 text-[22px] font-semibold font-baseFont shadow-buttonShadow dark:shadow-darkShadow text-center rounded-2xl hover:shadow-none dark:hover:shadow-none transition duration-300 hover:bg-primaryColor dark:hover:bg-darkPrimaryColor hover:text-white dark:hover:text-darkBackgroundColor2"
+						class="seeMoreButton block h-[49px] flex items-center justify-center gap-[10px] lg:absolute lg:bottom-[50px] lg:right-[45px] mx-auto w-[250px] text-primaryColor dark:text-darkSecondaryColor ml-auto mt-10 py-2 text-[22px] font-semibold font-baseFont shadow-buttonShadow dark:shadow-darkShadow text-center rounded-2xl hover:shadow-none dark:hover:shadow-none transition duration-300 hover:bg-primaryColor dark:hover:bg-darkPrimaryColor hover:text-white dark:hover:text-darkBackgroundColor2"
 					>
 						<span>See more</span>
 						<span class="icon">
@@ -869,7 +896,7 @@
 					</a> -->
 				</div>
 				<div
-					class="relative des:h-[370px] sm:h-[270px] h-auto w-auto rounded-xl dark:bg-darkBackgroundColor2 shadow-newButtonShadow dark:shadow-darkShadow hover:shadow-newButtonShadowSmaller dark:hover:shadow-darkBiggerShadow transition duration-200 p-[45px]"
+					class="relative lg:h-[370px] h-full w-auto rounded-xl dark:bg-darkBackgroundColor2 shadow-newButtonShadow dark:shadow-darkShadow hover:shadow-newButtonShadowSmaller dark:hover:shadow-darkBiggerShadow transition duration-200 xxs:p-[45px] p-[20px]"
 				>
 					<h3
 						class="text-primaryColor dark:text-darkPrimaryColor des:text-[40px] text-3xl font-bold des:mt-2 font-baseFont"
@@ -883,7 +910,7 @@
 					</p>
 					<a
 						href="#"
-						class="seeMoreButton block h-[49px] flex items-center justify-center gap-[10px] sm:absolute sm:bottom-[50px] sm:right-[45px] mx-auto w-[250px] text-primaryColor dark:text-darkSecondaryColor ml-auto des:mt-10 mt-2 py-2 text-[22px] font-semibold font-baseFont shadow-buttonShadow dark:shadow-darkShadow text-center rounded-2xl hover:shadow-none dark:hover:shadow-none transition duration-300 hover:bg-primaryColor dark:hover:bg-darkPrimaryColor hover:text-white dark:hover:text-darkBackgroundColor2"
+						class="seeMoreButton block h-[49px] flex items-center justify-center gap-[10px] lg:absolute lg:bottom-[50px] lg:right-[45px] mx-auto w-[250px] text-primaryColor dark:text-darkSecondaryColor ml-auto mt-10 py-2 text-[22px] font-semibold font-baseFont shadow-buttonShadow dark:shadow-darkShadow text-center rounded-2xl hover:shadow-none dark:hover:shadow-none transition duration-300 hover:bg-primaryColor dark:hover:bg-darkPrimaryColor hover:text-white dark:hover:text-darkBackgroundColor2"
 					>
 						<span>See more</span>
 						<span class="icon">
@@ -898,7 +925,7 @@
 					</a> -->
 				</div>
 				<div
-					class="relative des:h-[370px] sm:h-[270px] h-auto w-auto rounded-xl dark:bg-darkBackgroundColor2 shadow-newButtonShadow dark:shadow-darkShadow p-[45px] hover:newButtonShadowSmaller-logoShadow dark:hover:shadow-darkBiggerShadow transition duration-200"
+					class="relative lg:h-[370px] h-full w-auto rounded-xl dark:bg-darkBackgroundColor2 shadow-newButtonShadow dark:shadow-darkShadow xxs:p-[45px] p-[20px] hover:newButtonShadowSmaller-logoShadow dark:hover:shadow-darkBiggerShadow transition duration-200"
 				>
 					<h3
 						class="text-primaryColor dark:text-darkPrimaryColor des:text-[40px] text-3xl font-bold des:mt-2 font-baseFont"
@@ -911,7 +938,7 @@
 					</p>
 					<a
 						href="contacts.html"
-						class="font-baseFont block sm:absolute sm:bottom-[50px] sm:right-[45px] mx-auto py-2 mt-10 ml-auto bg-gradient-to-b hover:bg-secondaryColor dark:hover:bg-darkSecondaryColor from-gradColorStart dark:from-darkGradColorStart to-gradColorEnd dark:to-darkGradColorEnd font-semibold text-center text-white dark:text-white dark:hover:text-darkBackgroundColor2 rounded-2xl w-[250px] text-[22px] transition duration-300 shadow-newButtonShadow dark:shadow-darkPrimaryShadow hover:shadow-none dark:hover:shadow-none"
+						class="font-baseFont block lg:absolute lg:bottom-[50px] lg:right-[45px] mx-auto py-2 mt-10 ml-auto bg-gradient-to-b hover:bg-secondaryColor dark:hover:bg-darkSecondaryColor from-gradColorStart dark:from-darkGradColorStart to-gradColorEnd dark:to-darkGradColorEnd font-semibold text-center text-white dark:text-white dark:hover:text-darkBackgroundColor2 rounded-2xl w-[250px] text-[22px] transition duration-300 shadow-newButtonShadow dark:shadow-darkPrimaryShadow hover:shadow-none dark:hover:shadow-none"
 					>
 						Contact us
 					</a>
@@ -932,39 +959,39 @@
 					"
 					onclick="() => {document.querySelector('.jot-app-wrapper').style.height = auto}"
 				>
-					<div class="grid grid-cols-5 gap-[24px]">
+					<div class="grid grid-cols-10 gap-[24px]">
 
-						<div class="card h-[425px] shadow-newButtonShadow rounded-[15px] px-[35px] py-[30px] cursor-pointer col-start-1 col-end-3" onclick="jotAppOpenPopup(0)">
+						<div class="card h-[425px] shadow-newButtonShadow rounded-[15px] px-[35px] py-[30px] cursor-pointer col-start-1 col-end-5" onclick="jotAppOpenPopup(0)">
 							<h3 class="font-semibold font-baseFont text-primaryColor text-[32px] mb-[30px]">Team managment</h3>
 							<img src="images/small/Team managment small.png" alt="Team managment" class="w-full">
 						</div>
-						<div class="card h-[425px] shadow-newButtonShadow rounded-[15px] px-[35px] py-[30px] cursor-pointer col-start-3 col-end-6" onclick="jotAppOpenPopup(1)">
+						<div class="card h-[425px] shadow-newButtonShadow rounded-[15px] px-[35px] py-[30px] cursor-pointer col-start-5 col-end-11" onclick="jotAppOpenPopup(1)">
 							<h3 class="font-semibold font-baseFont text-primaryColor text-[32px] mb-[30px]">Kanban</h3>
 							<img src="images/small/Kanban small.png" alt="Kanban" class="w-full">
 						</div>
-						<div class="card h-[425px] shadow-newButtonShadow rounded-[15px] px-[35px] py-[30px] cursor-pointer col-start-1 col-end-4" onclick="jotAppOpenPopup(2)">
+						<div class="card h-[425px] shadow-newButtonShadow rounded-[15px] px-[35px] py-[30px] cursor-pointer col-start-1 col-end-7" onclick="jotAppOpenPopup(2)">
 							<h3 class="font-semibold font-baseFont text-primaryColor text-[32px] mb-[30px]">Daily reports</h3>
 							<img src="images/small/Daily reports small.png" alt="Daily reports" class="w-full">
 						</div>
-						<div class="card h-[425px] shadow-newButtonShadow rounded-[15px] px-[35px] py-[30px] cursor-pointer col-start-4 col-end-6" onclick="jotAppOpenPopup(3)">
+						<div class="card h-[425px] shadow-newButtonShadow rounded-[15px] px-[35px] py-[30px] cursor-pointer col-start-7 col-end-11" onclick="jotAppOpenPopup(3)">
 							<h3 class="font-semibold font-baseFont text-primaryColor text-[32px] mb-[30px]">Decision summary</h3>
 							<img src="images/small/Decision summary small.png" alt="Decision summary" class="w-full">
 						</div>
 						
 
-						<div class="card min-h-[425px] shadow-newButtonShadow rounded-[15px] px-[35px] py-[30px] cursor-pointer col-start-1 col-end-3" onclick="jotAppOpenPopup(4)">
+						<div class="card min-h-[425px] shadow-newButtonShadow rounded-[15px] px-[35px] py-[30px] cursor-pointer col-start-1 col-end-5" onclick="jotAppOpenPopup(4)">
 							<h3 class="font-semibold font-baseFont text-primaryColor text-[32px] mb-[30px]">WBS</h3>
 							<img src="images/small/WBS small.png" alt="WBS" class="w-full">
 						</div>
-						<div class="card min-h-[425px] shadow-newButtonShadow rounded-[15px] px-[35px] py-[30px] cursor-pointer col-start-3 col-end-6" onclick="jotAppOpenPopup(5)">
+						<div class="card min-h-[425px] shadow-newButtonShadow rounded-[15px] px-[35px] py-[30px] cursor-pointer col-start-5 col-end-11" onclick="jotAppOpenPopup(5)">
 							<h3 class="font-semibold font-baseFont text-primaryColor text-[32px] mb-[30px]">Dashboard</h3>
 							<img src="images/small/Dashboard small.png" alt="Dashboard" class="w-full">
 						</div>
-						<div class="card min-h-[425px] shadow-newButtonShadow rounded-[15px] px-[35px] py-[30px] cursor-pointer col-start-1 col-end-4" onclick="jotAppOpenPopup(6)">
+						<div class="card min-h-[425px] shadow-newButtonShadow rounded-[15px] px-[35px] py-[30px] cursor-pointer col-start-1 col-end-7" onclick="jotAppOpenPopup(6)">
 							<h3 class="font-semibold font-baseFont text-primaryColor text-[32px] mb-[30px]">Sprints</h3>
 							<img src="images/small/Sprints small.png" alt="Sprints" class="w-full">
 						</div>
-						<div class="card min-h-[425px] shadow-newButtonShadow rounded-[15px] px-[35px] py-[30px] cursor-pointer col-start-4 col-end-6" onclick="jotAppOpenPopup(7)">
+						<div class="card min-h-[425px] shadow-newButtonShadow rounded-[15px] px-[35px] py-[30px] cursor-pointer col-start-7 col-end-11" onclick="jotAppOpenPopup(7)">
 							<h3 class="font-semibold font-baseFont text-primaryColor text-[32px] mb-[30px]">Staff</h3>
 							<img src="images/small/Staff small.png" alt="Staff" class="w-full">
 						</div>
@@ -992,6 +1019,7 @@
 					<img src="images/big/Team managment big.png" alt="Team managment" class="rounded-[15px] w-full block mb-[50px]">
 					<p class="text-[20px] leading-[28px] text-justify font-normal">Our app facilitates seamless collaboration among teams by providing a centralized platform for task assignment, progress tracking, and communication. With customizable team roles and permissions, it ensures efficient project coordination and accountability.</p>
 				</div>
+
 				<div class="jot-app-popup p-[56px] w-[1096px] h-[916px] shadow-newButtonShadow bg-[#ECF0F3] fixed top-1/2 left-1/2 z-[9999] rounded-[15px] transition-all duration-300"
 					id="jot-app-popup--1"
 					style="
@@ -1012,6 +1040,7 @@
 					<img src="images/big/Kanban big.png" alt="Kanban" class="rounded-[15px] w-full block mb-[50px]">
 					<p class="text-[20px] leading-[28px] text-justify font-normal">A Kanban board is a visual project management tool that helps teams track and manage work in progress, enabling them to visualize tasks, optimize workflows, and enhance collaboration. It organizes tasks into columns representing different stages of the process, providing a clear overview of work status and promoting efficient task prioritization.</p>
 				</div>	
+
 				<div class="jot-app-popup p-[56px] w-[1096px] h-[916px] shadow-newButtonShadow bg-[#ECF0F3] fixed top-1/2 left-1/2 z-[9999] rounded-[15px] transition-all duration-300"
 					id="jot-app-popup--2"
 					style="
@@ -1032,6 +1061,7 @@
 					<img src="images/big/Daily reports big.png" alt="Daily reports" class="rounded-[15px] w-full block mb-[50px]">
 					<p class="text-[20px] leading-[28px] text-justify font-normal">Daily reports are short summaries of a day's activities, progress, and accomplishments, often used in business and project management to keep customers informed about ongoing work. These reports facilitate communication, highlight any challenges or achievements, and provide a clear view of daily operations to support informed decision-making.</p>
 				</div>	
+
 				<div class="jot-app-popup p-[56px] w-[1096px] h-[916px] shadow-newButtonShadow bg-[#ECF0F3] fixed top-1/2 left-1/2 z-[9999] rounded-[15px] transition-all duration-300"
 					id="jot-app-popup--3"
 					style="
@@ -1052,6 +1082,7 @@
 					<img src="images/big/Decision summary big.png" alt="Decision summary" class="rounded-[15px] w-full block mb-[50px]">
 					<p class="text-[20px] leading-[28px] text-justify font-normal">A decision summary is a succinct overview that outlines the key choices made during a decision-making process, along with the rationale behind those choices. It serves as a valuable reference document, capturing the essential details of the decision and aiding in communication, accountability, and future analysis</p>
 				</div>
+
 				<div class="jot-app-popup p-[56px] w-[1096px] h-[916px] shadow-newButtonShadow bg-[#ECF0F3] fixed top-1/2 left-1/2 z-[9999] rounded-[15px] transition-all duration-300"
 					id="jot-app-popup--4"
 					style="
@@ -1072,6 +1103,7 @@
 					<img src="images/big/WBS big.png" alt="WBS" class="rounded-[15px] w-full block mb-[50px]">
 					<p class="text-[20px] leading-[28px] text-justify font-normal">A work breakdown structure (WBS) is a hierarchical decomposition of a project into smaller, manageable components, allowing for a structured and organized approach to project planning and execution. By breaking down the project into discrete tasks or work packages, a WBS helps teams define scope, allocate resources, and track progress more effectively.</p>
 				</div>
+
 				<div class="jot-app-popup p-[56px] w-[1096px] h-[916px] shadow-newButtonShadow bg-[#ECF0F3] fixed top-1/2 left-1/2 z-[9999] rounded-[15px] transition-all duration-300"
 					id="jot-app-popup--5"
 					style="
@@ -1092,6 +1124,7 @@
 					<img src="images/big/Dashboard big.png" alt="Dashboard" class="rounded-[15px] w-full block mb-[50px]">
 					<p class="text-[20px] leading-[28px] text-justify font-normal">The dashboard provides users with a comprehensive overview of their project's key metrics, progress, and upcoming deadlines, all in one centralized location. It empowers users to make informed decisions and prioritize tasks, enhancing their project management efficiency.</p>
 				</div>
+
 				<div class="jot-app-popup p-[56px] w-[1096px] h-[916px] shadow-newButtonShadow bg-[#ECF0F3] fixed top-1/2 left-1/2 z-[9999] rounded-[15px] transition-all duration-300"
 					id="jot-app-popup--6"
 					style="
@@ -1112,6 +1145,7 @@
 					<img src="images/big/Sprints big.png" alt="Sprints" class="rounded-[15px] w-full block mb-[50px]">
 					<p class="text-[20px] leading-[28px] text-justify font-normal">A sprint is a defined, concentrated phase within agile project management, where a team works on a specific set of tasks and goals, usually lasting two to four weeks. By embracing sprints, teams can iteratively advance their projects, deliver incremental value, and obtain consistent input, fostering adaptability and streamlined project results.</p>
 				</div>
+
 				<div class="jot-app-popup p-[56px] w-[1096px] h-[916px] shadow-newButtonShadow bg-[#ECF0F3] fixed top-1/2 left-1/2 z-[9999] rounded-[15px] transition-all duration-300"
 					id="jot-app-popup--7"
 					style="
@@ -1147,7 +1181,7 @@
 					</a> -->
 			</article>
 			<!-- Our customers BLOCK -->
-			<article class="mt-[150px] pb-5 xs:mx-[20px]">
+			<article class="mt-[150px] pb-5 xs:mx-[20px] mx-4">
 				<h2
 					class="font-baseFont text-primaryColor dark:text-darkPrimaryColor text-4xl font-bold text-center mb-[30px]"
 				>
@@ -1155,37 +1189,37 @@
 				</h2>
 
 				<div class="our_customers">
-					<div class="grid grid-cols-2 gap-[24px]">
-						<div class="card h-[200px] shadow-newButtonShadow rounded-[15px] py-[18px] px-[24px] flex gap-[45px]">
-							<div>
-								<img src="images/company.jpeg" alt="logo" class="h-full rounded-[15px]">
+					<div class="grid sm:grid-cols-2 gap-[24px]">
+						<div class="card h-full shadow-newButtonShadow rounded-[15px] py-[18px] px-[24px] flex lg:flex-row flex-col items-center gap-[45px]">
+							<div class="w-[165px]">
+								<img src="images/company.jpeg" alt="logo" class="w-full rounded-[15px]">
 							</div>
 							<div class="flex-1">
 								<h4 class="text-primaryColor font-baseFont text-[20px] font-semibold">Company's name</h4>
 								<p class="mt-[20px] font-normal">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Neque excepturi inventore quaerat accusantium. Dolorem cum repudiandae ex veniam expedita laboriosam dolores quaerat. Porro quod eaque quidem ad nemo odit obcaecati.</p>
 							</div>
 						</div>
-						<div class="card h-[200px] shadow-newButtonShadow rounded-[15px] py-[18px] px-[24px] flex gap-[45px]">
-							<div>
-								<img src="images/company.jpeg" alt="logo" class="h-full rounded-[15px]">
+						<div class="card h-full  shadow-newButtonShadow rounded-[15px] py-[18px] px-[24px] flex lg:flex-row flex-col items-center gap-[45px]">
+							<div class="w-[165px]">
+								<img src="images/company.jpeg" alt="logo" class="w-full rounded-[15px]">
 							</div>
 							<div class="flex-1">
 								<h4 class="text-primaryColor font-baseFont text-[20px] font-semibold">Company's name</h4>
 								<p class="mt-[20px] font-normal">Lorem ipsum dolor sit amet consectetur adipisicing elit. Et officia architecto dignissimos officiis, dolorem provident molestias tempore. In aspernatur suscipit, dicta quis tempore odio maxime.</p>
 							</div>
 						</div>
-						<div class="card h-[200px] shadow-newButtonShadow rounded-[15px] py-[18px] px-[24px] flex gap-[45px]">
-							<div>
-								<img src="images/company.jpeg" alt="logo" class="h-full rounded-[15px]">
+						<div class="card h-full shadow-newButtonShadow rounded-[15px] py-[18px] px-[24px] flex lg:flex-row flex-col items-center gap-[45px]">
+							<div class="w-[165px]">
+								<img src="images/company.jpeg" alt="logo" class="w-full rounded-[15px]">
 							</div>
 							<div class="flex-1">
 								<h4 class="text-primaryColor font-baseFont text-[20px] font-semibold">Company's name</h4>
 								<p class="mt-[20px] font-normal">Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptatem, atque maxime ea modi qui omnis.</p>
 							</div>
 						</div>
-						<div class="card h-[200px] shadow-newButtonShadow rounded-[15px] py-[18px] px-[24px] flex gap-[45px]">
-							<div>
-								<img src="images/company.jpeg" alt="logo" class="h-full rounded-[15px]">
+						<div class="card h-full shadow-newButtonShadow rounded-[15px] py-[18px] px-[24px] flex lg:flex-row flex-col items-center gap-[45px]">
+							<div class="w-[165px]">
+								<img src="images/company.jpeg" alt="logo" class="w-full rounded-[15px]">
 							</div>
 							<div class="flex-1">
 								<h4 class="text-primaryColor font-baseFont text-[20px] font-semibold">Company's name</h4>
@@ -1200,26 +1234,17 @@
 				class="absolute font-medium bg-[#ECF0F3] left-0 right-0 mt-[150px] justify-between items-center dark:bg-darkBackgroundColor2 shadow-newButtonShadow dark:shadow-darkBiggerShadow rounded-t-[25px] mb-3 px-[60px]"
 			>
 				
-				<div class="content relative flex justify-between mx-auto w-full max-w-[1100px] py-[61px]">
-					<div class="leftside flex flex-col gap-[30px]">
-						<img
-							src="images/Logo footer.svg"
+				<div class="content relative flex sm:flex-row flex-col gap-[20px] justify-between mx-auto w-full max-w-[1100px] py-[61px]">
+					<div class="leftside flex flex-col justify-center gap-[30px]">
+						<div class="flex justify-center">
+							<img
+							src="images/Logo footer (1).svg"
 							alt="logo"
-							class=""
+							class="max-w-[285px]"
 						/>
-						<div class="social flex gap-[10px]">
-							<a href="#">
-								<img src="images/instagram.svg" alt="instagram" class="w-[24px]">
-							</a>
-							<a href="#">
-								<img src="images/facebook.svg" alt="facebook" class="w-[24px]">
-							</a>
-							<a href="#">
-								<img src="images/linkedin.svg" alt="linkedin" class="w-[24px]">
-							</a>
 						</div>
 					</div>
-					<div class="rightside flex gap-[100px]">
+					<div class="rightside flex xxs:flex-row flex-col mdlg:gap-x-[100px] sm:gap-x-[50px] gap-x-[100px] gap-y-[20px]">
 						<div class="menu">
 							<h3 class="font-baseFont text-[20px] text-primaryColor font-bold mb-[20px]">Menu</h3>
 							<ul
@@ -1249,7 +1274,7 @@
 						</div>
 						<div class="contacts">
 							<h3 class="font-baseFont text-[20px] text-primaryColor font-bold mb-[20px]">Contacts</h3>
-							<ul class="contact flex flex-col gap-[10px]">
+							<ul class="contact flex flex-col gap-[10px] text-[14px]">
 								<li class="phone flex gap-[17px]">
 									<img src="images/phone.svg" alt="phone" class="inline-block">
 									<p>+441615540257</p>
@@ -1263,17 +1288,28 @@
 									<p class="underline">Info@jot-solutions.com</p>
 								</li>
 							</ul>
+							<div class="social mt-[22px] flex gap-[10px]">
+								<a href="#">
+									<img src="images/instagram.svg" alt="instagram" class="w-[24px]">
+								</a>
+								<a href="#">
+									<img src="images/facebook.svg" alt="facebook" class="w-[24px]">
+								</a>
+								<a href="#">
+									<img src="images/linkedin.svg" alt="linkedin" class="w-[24px]">
+								</a>
+							</div>
 						</div>
 					</div>
-					<div class="absolute bottom-[30px] right-[-110px] goUp w-[43px] h-[43px] rounded-[15px] flex items-center justify-center cursor-pointer shadow-newButtonShadowSmallest"
+					
+				</div>
+				<div class="absolute xl:bottom-[100px] sm:bottom-[280px] bottom-[420px] 2xl:right-[180px] xl:right-[100px]  right-[20px] goUp w-[43px] h-[43px] rounded-[15px] flex items-center justify-center cursor-pointer shadow-newButtonShadowSmallest"
 						style="background: linear-gradient(180deg, #20D1ED 28.98%, #0881E9 100%);
 						"
 						onclick="goUp()"
 					>
 						<img src="images/arrow-up.svg" alt="up">
 					</div>
-				</div>
-				
 				<hr class="border-primaryColor border-[1px]">
 				<p class="text-[12px] font-medium text-center p-[17px]">
 					Copyright ©2023 by J.O.T Solutions
