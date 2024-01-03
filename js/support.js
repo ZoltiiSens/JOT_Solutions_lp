@@ -181,36 +181,44 @@ const swiper = new Swiper('.swiper-container', {
         nextEl: '.swiper-button-next',
         prevEl: '.swiper-button-prev',
     },
+	breakpoints: {
+		0: {
+			slidesPerView: 1,
+		},
+		640: {
+			slidesPerView: 2,
+		},
+	},
 });
 
 
 
 
 
-function switchTheme() {
-	if (document.documentElement.classList.contains('dark')) {
-		document.documentElement.classList.remove('dark');
-		console.log('switched to light');
-		secondaryColor = '#3F5477';
-		primaryColor = '#42C1EE';
-	} else {
-		console.log('switched to dark');
-		document.documentElement.classList.add('dark');
-		primaryColor = '#D37101';
-		secondaryColor = '#F9F9F9';
-	}
-}
+// function switchTheme() {
+// 	if (document.documentElement.classList.contains('dark')) {
+// 		document.documentElement.classList.remove('dark');
+// 		console.log('switched to light');
+// 		secondaryColor = '#3F5477';
+// 		primaryColor = '#42C1EE';
+// 	} else {
+// 		console.log('switched to dark');
+// 		document.documentElement.classList.add('dark');
+// 		primaryColor = '#D37101';
+// 		secondaryColor = '#F9F9F9';
+// 	}
+// }
 
-if (
-	localStorage.getItem('color-theme') === 'dark' ||
-	(!('color-theme' in localStorage) &&
-		window.matchMedia('(prefers-color-scheme: dark)').matches)
-) {
-	document.documentElement.classList.add('dark');
-	primaryColor = '#D37101';
-	secondaryColor = '#F9F9F9';
-} else {
-	document.documentElement.classList.remove('dark');
-	secondaryColor = '#3F5477';
-	primaryColor = '#42C1EE';
-}
+// if (
+// 	localStorage.getItem('color-theme') === 'dark' ||
+// 	(!('color-theme' in localStorage) &&
+// 		window.matchMedia('(prefers-color-scheme: dark)').matches)
+// ) {
+// 	document.documentElement.classList.add('dark');
+// 	primaryColor = '#D37101';
+// 	secondaryColor = '#F9F9F9';
+// } else {
+// 	document.documentElement.classList.remove('dark');
+// 	secondaryColor = '#3F5477';
+// 	primaryColor = '#42C1EE';
+// }
