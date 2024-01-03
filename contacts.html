@@ -193,360 +193,45 @@
 				</a>
 			</div>
 		</nav>
-		<!-- Hamburger menu -->
-		<div
-			class="burger-menu fixed top-6 right-6 z-50 md:hidden flex items-center justify-center h-[70px] w-[70px] cursor-pointer transition duration-500 rounded-[12px] border-[2px] border-primaryColor dark:border-darkPrimaryColor"
-			style="background-color: #eef1f899"
+		<!-- Mobile Navigation bar BLOCK -->
+		<nav class="fixed py-[10px] px-[16px] xxs:h-[75px] h-[55px] w-full md:hidden flex justify-center rounded-b-[20px] z-[9998]"
+		style="backdrop-filter: saturate(100%) blur(5px)"
+		>
+		<div class="burger-menu absolute top-1/2 -translate-y-1/2 left-[16px] bg-backgroundColor xxs:w-[45px] w-[35px] xxs:h-[45px] h-[35px] flex items-center justify-center rounded-[10px] shadow-newButtonShadowSmallest z-[9999]"
 			onclick="openMenu()"
 		>
-			<span
-				class="absolute block w-[40px] h-[4px] rounded-full"
-				style="
-					transform: translateY(-10px);
-					background-color: #42c1ee;
-					transition: 0.5s;
-				"
-			></span>
-			<span
-				class="absolute block w-[40px] h-[4px] bg-primaryColor dark:bg-darkPrimaryColor rounded-full"
-				style="background-color: #42c1ee; transition: 0.5s"
-			></span>
-			<span
-				class="absolute block w-[40px] h-[4px] bg-primaryColor dark:bg-darkPrimaryColor rounded-full"
-				style="
-					transform: translateY(10px);
-					background-color: #42c1ee;
-					transition: 0.5s;
-				"
-			></span>
+			<img src="images/burger.svg" alt="" class="xxs:w-[25px]">
 		</div>
+
+		<div class="logo flex items-center z-[9993]">
+			<img src="images/mobile header logo.svg" alt="" class="xxs:w-[75px]">
+		</div>
+
+		</nav>
 		<!-- Mobile navigation bar BLOCK -->
 		<div
-			class="mobileMenu fixed top-0 left-0 right-0 bottom-0 z-40 bg-gradient-to-b from-[#20D1ED] dark:from-darkPrimaryColor to-[#0881E9] dark:to-darkGradColorStart dark:bg-darkBackgroundColor2 transition duration-500"
-			style="opacity: 0; pointer-events: none"
+		class="mobileMenu fixed top-0 left-0 right-0 bottom-0 pt-[100px] z-[9997] bg-backgroundColor transition flex flex-col items-center duration-500"
+		style="opacity: 0; pointer-events: none"
 		>
-			<ul
-				class="flex flex-col gap-10 xs:m-20 m-16 mb-10 text-white dark:text-darkBackgroundColor2 xs:text-4xl text-3xl"
-			>
-				<li class="transition duration-200">
-					<a href="#">About us</a>
-				</li>
-				<li class="transition duration-200">
-					<a href="#" onclick="openMobileSubMenu(0)">
-						Solutions
-						<i
-							class="fa-solid fa-chevron-down text-3xl transition duration-200"
-							style="transform: rotate(-90deg)"
-						></i>
-					</a>
-				</li>
-				<li class="transition duration-200">
-					<a href="#" onclick="openMobileSubMenu(1)">
-						Cases
-						<i
-							class="fa-solid fa-chevron-down text-3xl transition duration-200"
-							style="transform: rotate(-90deg)"
-						></i>
-					</a>
-				</li>
-				<li class="transition duration-200">
-					<a href="#" onclick="openMobileSubMenu(2)">
-						Sfieres
-						<i
-							class="fa-solid fa-chevron-down text-3xl transition duration-200"
-							style="transform: rotate(-90deg)"
-						></i>
-					</a>
-				</li>
-				<li class="transition duration-200">
-					<a href="#">Support</a>
-				</li>
-				<li class="transition duration-200">
-					<a href="#">Contacts</a>
-				</li>
-				<li
-					class="cursor-pointer transition duration-200"
-					onclick="switchTheme()"
-				>
-					<span class="text-darkBackgroundColor dark:text-white font-bold">
-						<i class="fa-solid fa-moon"></i>
-						Switch theme
-					</span>
-				</li>
+			<ul class="mb-[50px] flex flex-col gap-y-[30px] text-[18px] font-medium font-baseFont">
+				<li><a href="index.html">About us</a></li>
+				<li><a href="support.html">Support</a></li>
+				<li><a href="contacts.html" class="font-bold text-primaryColor">Contacts</a></li>
 			</ul>
-			<img src="images/JOT 1.png" alt="logo" class="ml-20 w-[150px]" />
-			<!-- Solutions subMenu -->
-			<div
-				class="mobile-subMenu mobile-subMenu--0 absolute top-0 z-42 xs:p-20 p-16 w-full h-full bg-gradient-to-b from-[#20D1ED] dark:from-darkPrimaryColor to-[#0881E9] dark:to-darkGradColorStart opacity-100 text-white text-4xl font-semibold transition duration-500"
-				style="right: -100%; overflow-y: scroll; transition: 0.5s"
-			>
-				<h2 class="mb-10">Solutions</h2>
-				<div class="mb-5">
-					<h4
-						class="mb-2 text-2xl text-secondaryColor dark:text-darkBackgroundColor2"
-					>
-						<i class="fa-solid fa-people-arrows text-[30px]"></i>
-						Solution 1
-					</h4>
-					<p class="text-sm font-light">
-						Lorem ipsum dolor sit amet consectetur, adipisicing elit.
-						Porro tenetur facere saepe sint nam omnis illo, deserunt
-						praesentium eius non id, reprehenderit debitis, excepturi
-						nemo!
-					</p>
-				</div>
-				<div class="mb-5">
-					<h4
-						class="mb-2 text-2xl text-secondaryColor dark:text-darkBackgroundColor2"
-					>
-						<i class="fa-solid fa-people-arrows text-[30px]"></i>
-						Solution 2
-					</h4>
-					<p class="text-sm font-light">
-						Lorem ipsum dolor sit amet consectetur, adipisicing elit.
-						Porro tenetur facere saepe sint nam omnis illo, deserunt
-						praesentium eius non id, reprehenderit debitis, excepturi
-						nemo!
-					</p>
-				</div>
-				<div class="mb-5">
-					<h4
-						class="mb-2 text-2xl text-secondaryColor dark:text-darkBackgroundColor2"
-					>
-						<i class="fa-solid fa-people-arrows text-[30px]"></i>
-						Solution 3
-					</h4>
-					<p class="text-sm font-light">
-						Lorem ipsum dolor sit amet consectetur, adipisicing elit.
-						Porro tenetur facere saepe sint nam omnis illo, deserunt
-						praesentium eius non id, reprehenderit debitis, excepturi
-						nemo!
-					</p>
-				</div>
-				<div class="mb-5">
-					<h4
-						class="mb-2 text-2xl text-secondaryColor dark:text-darkBackgroundColor2"
-					>
-						<i class="fa-solid fa-people-arrows text-[30px]"></i>
-						Solution 4
-					</h4>
-					<p class="text-sm font-light">
-						Lorem ipsum dolor sit amet consectetur, adipisicing elit.
-						Porro tenetur facere saepe sint nam omnis illo, deserunt
-						praesentium eius non id, reprehenderit debitis, excepturi
-						nemo!
-					</p>
-				</div>
-				<div class="mb-5">
-					<h4
-						class="mb-2 text-2xl text-secondaryColor dark:text-darkBackgroundColor2"
-					>
-						<i class="fa-solid fa-people-arrows text-[30px]"></i>
-						Solution 5
-					</h4>
-					<p class="text-sm font-light">
-						Lorem ipsum dolor sit amet consectetur, adipisicing elit.
-						Porro tenetur facere saepe sint nam omnis illo, deserunt
-						praesentium eius non id, reprehenderit debitis, excepturi
-						nemo!
-					</p>
-				</div>
-				<div class="mb-5">
-					<h4
-						class="mb-2 text-2xl text-secondaryColor dark:text-darkBackgroundColor2"
-					>
-						<i class="fa-solid fa-people-arrows text-[30px]"></i>
-						Solution 6
-					</h4>
-					<p class="text-sm font-light">
-						Lorem ipsum dolor sit amet consectetur, adipisicing elit.
-						Porro tenetur facere saepe sint nam omnis illo, deserunt
-						praesentium eius non id, reprehenderit debitis, excepturi
-						nemo!
-					</p>
-				</div>
-				<div class="mb-5">
-					<h4
-						class="mb-2 text-2xl text-secondaryColor dark:text-darkBackgroundColor2"
-					>
-						<i class="fa-solid fa-people-arrows text-[30px]"></i>
-						Solution 7
-					</h4>
-					<p class="text-sm font-light">
-						Lorem ipsum dolor sit amet consectetur, adipisicing elit.
-						Porro tenetur facere saepe sint nam omnis illo, deserunt
-						praesentium eius non id, reprehenderit debitis, excepturi
-						nemo!
-					</p>
-				</div>
-			</div>
-			<!-- Cases subMenu -->
-			<div
-				class="mobile-subMenu mobile-subMenu--1 absolute top-0 z-42 xs:p-20 p-16 w-full h-full bg-gradient-to-b from-[#20D1ED] dark:from-darkPrimaryColor to-[#0881E9] dark:to-darkGradColorStart opacity-100 text-white text-4xl font-semibold transition duration-500"
-				style="right: -100%; overflow-y: scroll; transition: 0.5s"
-			>
-				<h2 class="mb-10">Cases</h2>
-				<div class="mb-5">
-					<h4
-						class="mb-2 text-2xl text-secondaryColor dark:text-darkBackgroundColor2"
-					>
-						<i class="fa-solid fa-people-arrows text-[30px]"></i>
-						Case 1
-					</h4>
-					<p class="text-sm font-light">
-						Lorem ipsum dolor sit amet consectetur, adipisicing elit.
-						Porro tenetur facere saepe sint nam omnis illo, deserunt
-						praesentium eius non id, reprehenderit debitis, excepturi
-						nemo!
-					</p>
-				</div>
-				<div class="mb-5">
-					<h4
-						class="mb-2 text-2xl text-secondaryColor dark:text-darkBackgroundColor2"
-					>
-						<i class="fa-solid fa-people-arrows text-[30px]"></i>
-						Case 2
-					</h4>
-					<p class="text-sm font-light">
-						Lorem ipsum dolor sit amet consectetur, adipisicing elit.
-						Porro tenetur facere saepe sint nam omnis illo, deserunt
-						praesentium eius non id, reprehenderit debitis, excepturi
-						nemo!
-					</p>
-				</div>
-				<div class="mb-5">
-					<h4
-						class="mb-2 text-2xl text-secondaryColor dark:text-darkBackgroundColor2"
-					>
-						<i class="fa-solid fa-people-arrows text-[30px]"></i>
-						Case 3
-					</h4>
-					<p class="text-sm font-light">
-						Lorem ipsum dolor sit amet consectetur, adipisicing elit.
-						Porro tenetur facere saepe sint nam omnis illo, deserunt
-						praesentium eius non id, reprehenderit debitis, excepturi
-						nemo!
-					</p>
-				</div>
-				<div class="mb-5">
-					<h4
-						class="mb-2 text-2xl text-secondaryColor dark:text-darkBackgroundColor2"
-					>
-						<i class="fa-solid fa-people-arrows text-[30px]"></i>
-						Case 4
-					</h4>
-					<p class="text-sm font-light">
-						Lorem ipsum dolor sit amet consectetur, adipisicing elit.
-						Porro tenetur facere saepe sint nam omnis illo, deserunt
-						praesentium eius non id, reprehenderit debitis, excepturi
-						nemo!
-					</p>
-				</div>
-				<div class="mb-5">
-					<h4
-						class="mb-2 text-2xl text-secondaryColor dark:text-darkBackgroundColor2"
-					>
-						<i class="fa-solid fa-people-arrows text-[30px]"></i>
-						Case 5
-					</h4>
-					<p class="text-sm font-light">
-						Lorem ipsum dolor sit amet consectetur, adipisicing elit.
-						Porro tenetur facere saepe sint nam omnis illo, deserunt
-						praesentium eius non id, reprehenderit debitis, excepturi
-						nemo!
-					</p>
-				</div>
-				<div class="mb-5">
-					<h4
-						class="mb-2 text-2xl text-secondaryColor dark:text-darkBackgroundColor2"
-					>
-						<i class="fa-solid fa-people-arrows text-[30px]"></i>
-						Case 6
-					</h4>
-					<p class="text-sm font-light">
-						Lorem ipsum dolor sit amet consectetur, adipisicing elit.
-						Porro tenetur facere saepe sint nam omnis illo, deserunt
-						praesentium eius non id, reprehenderit debitis, excepturi
-						nemo!
-					</p>
-				</div>
-			</div>
-			<!-- Sfieres subMenu -->
-			<div
-				class="mobile-subMenu mobile-subMenu--2 absolute top-0 z-42 xs:p-20 p-16 w-full h-full bg-gradient-to-b from-[#20D1ED] dark:from-darkPrimaryColor to-[#0881E9] dark:to-darkGradColorStart opacity-100 text-white text-4xl font-semibold transition duration-500"
-				style="right: -100%; overflow-y: scroll; transition: 0.5s"
-			>
-				<h2 class="mb-10">Sfieres</h2>
-				<div class="mb-5">
-					<h4
-						class="mb-2 text-2xl text-secondaryColor dark:text-darkBackgroundColor2"
-					>
-						<i class="fa-solid fa-people-arrows text-[30px]"></i>
-						Sfiere 1
-					</h4>
-					<p class="text-sm font-light">
-						Lorem ipsum dolor sit amet consectetur, adipisicing elit.
-						Porro tenetur facere saepe sint nam omnis illo, deserunt
-						praesentium eius non id, reprehenderit debitis, excepturi
-						nemo!
-					</p>
-				</div>
-				<div class="mb-5">
-					<h4
-						class="mb-2 text-2xl text-secondaryColor dark:text-darkBackgroundColor2"
-					>
-						<i class="fa-solid fa-people-arrows text-[30px]"></i>
-						Sfiere 2
-					</h4>
-					<p class="text-sm font-light">
-						Lorem ipsum dolor sit amet consectetur, adipisicing elit.
-						Porro tenetur facere saepe sint nam omnis illo, deserunt
-						praesentium eius non id, reprehenderit debitis, excepturi
-						nemo!
-					</p>
-				</div>
-				<div class="mb-5">
-					<h4
-						class="mb-2 text-2xl text-secondaryColor dark:text-darkBackgroundColor2"
-					>
-						<i class="fa-solid fa-people-arrows text-[30px]"></i>
-						Sfiere 3
-					</h4>
-					<p class="text-sm font-light">
-						Lorem ipsum dolor sit amet consectetur, adipisicing elit.
-						Porro tenetur facere saepe sint nam omnis illo, deserunt
-						praesentium eius non id, reprehenderit debitis, excepturi
-						nemo!
-					</p>
-				</div>
-				<div class="mb-5">
-					<h4
-						class="mb-2 text-2xl text-secondaryColor dark:text-darkBackgroundColor2"
-					>
-						<i class="fa-solid fa-people-arrows text-[30px]"></i>
-						Sfiere 4
-					</h4>
-					<p class="text-sm font-light">
-						Lorem ipsum dolor sit amet consectetur, adipisicing elit.
-						Porro tenetur facere saepe sint nam omnis illo, deserunt
-						praesentium eius non id, reprehenderit debitis, excepturi
-						nemo!
-					</p>
-				</div>
-				<div class="mb-5">
-					<h4
-						class="mb-2 text-2xl text-secondaryColor dark:text-darkBackgroundColor2"
-					>
-						<i class="fa-solid fa-people-arrows text-[30px]"></i>
-						Sfiere 5
-					</h4>
-					<p class="text-sm font-light">
-						Lorem ipsum dolor sit amet consectetur, adipisicing elit.
-						Porro tenetur facere saepe sint nam omnis illo, deserunt
-						praesentium eius non id, reprehenderit debitis, excepturi
-						nemo!
-					</p>
-				</div>
+			<div>
+				<a
+					href="#"
+					class="mb-[15px] font-baseFont py-2 w-[130px] h-[35px] flex justify-center items-center block bg-gradient-to-b hover:bg-secondaryColor dark:hover:bg-darkSecondaryColor from-gradColorStart dark:from-darkGradColorStart to-gradColorEnd dark:to-darkGradColorEnd font-semibold text-center text-white dark:hover:text-darkBackgroundColor2 rounded-2xl text-[18px] shadow-newButtonShadow dark:shadow-darkPrimaryShadow hover:shadow-none dark:hover:shadow-none transition duration-300"
+					style="background: linear-gradient(180deg, #20D1ED 28.98%, #0881E9 100%);"
+				>
+					Log in
+				</a>
+				<a
+					href="#"
+					class="py-2 w-[130px] h-[35px] flex justify-center items-center text-primaryColor dark:text-darkPrimaryColor rounded-[15px] shadow-newButtonShadow dark:shadow-darkShadow text-center hover:bg-primaryColor dark:hover:bg-darkPrimaryColor hover:text-backgroundColor dark:hover:text-darkBackgroundColor hover:shadow-none dark:hover:shadow-none font-semibold text-[18px] transition duration-300 font-baseFont"
+				>
+					Sign up
+				</a>
 			</div>
 		</div>
 		<!-- MAIN CONTENT -->
@@ -576,34 +261,6 @@
 					</p>
 				</article>
 			</article>
-			<!-- <article class="pt-[64px] mx-[-30px] px-[30px] pb-[20px]" 
-				style="
-					background-image: url(images/back-logo.png);
-					background-repeat: no-repeat;
-					background-position: right bottom;
-					background-size: auto calc(100% - 64px);
-				">
-				<header class="md:mx-[60px] mx-4 py-5 flex flex-row items-center ">
-					<h2
-						class="md: mt-[70px] mdlg:text-[64px] xs:text-5xl text-4xl font-normal text-black dark:text-darkSecondaryColor"
-					>
-						<span class="text-goldenColor dark:text-darkPrimaryColor font-semibold "
-							>Contact</span
-						>
-						Us
-					</h2>
-				</header>
-				<article class="md:mx-[60px] mx-4 pb-[20px] max-w-[700px]">
-					<p
-						class="mt-[50px] md:mb-8 mb-2 md:text-[24px] text-1xl text-secondaryColor dark:text-darkSecondaryColor font-medium text-justify"
-					>
-						At JOT Solution, we take pride in being an international company, serving clients globally. Our commitment to excellence knows no borders, and we're dedicated to making communication as seamless as possible.
-						<br>
-						<br>
-						So you can choose any of the methods below to contact us.
-					</p>
-				</article>
-			</article> -->
 			
 			<!-- JOT APP info BLOCK -->
 			<article 

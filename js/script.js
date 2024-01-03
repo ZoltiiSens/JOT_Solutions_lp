@@ -3,15 +3,16 @@
 // Function opens navbar menu on small screens
 function openMenu() {
 	const burger = document.querySelector('.burger-menu');
-	for (let child of burger.children) {
-		child.style.backgroundColor = 'white';
-	}
+	// for (let child of burger.children) {
+	// 	child.style.backgroundColor = 'white';
+	// }
 	burger.onclick = closeMenu;
-	burger.style.border = '0px solid rgba(255,255,255,0)';
-	burger.style.backgroundColor = '#FFFFFF00';
-	burger.children[0].style.transform = 'translateY(0) rotate(45deg)';
-	burger.children[1].style.transform = 'rotate(45deg)';
-	burger.children[2].style.transform = 'translateY(0) rotate(-45deg)';
+	// burger.style.border = '0px solid rgba(255,255,255,0)';
+	// burger.style.backgroundColor = '#FFFFFF00';
+	// burger.children[0].style.transform = 'translateY(0) rotate(45deg)';
+	// burger.children[1].style.transform = 'rotate(45deg)';
+	// burger.children[2].style.transform = 'translateY(0) rotate(-45deg)';
+	burger.querySelector('img').src = 'images/burger active.svg';
 	const mobileMenu = document.querySelector('.mobileMenu');
 	mobileMenu.style.opacity = 1;
 	mobileMenu.style.transform = 'translateY(0)';
@@ -20,18 +21,19 @@ function openMenu() {
 // Function closes navbar menu on small screens
 function closeMenu() {
 	const burger = document.querySelector('.burger-menu');
-	for (let child of burger.children) {
-		child.style.backgroundColor = '#42C1EE';
-	}
+	// for (let child of burger.children) {
+	// 	child.style.backgroundColor = '#42C1EE';
+	// }
 	burger.onclick = openMenu;
-	burger.style.border = `2px solid ${primaryColor}`;
-	burger.style.backgroundColor = '#EEF1F899';
-	burger.children[0].style.transform = 'translateY(-10px) rotate(0)';
-	burger.children[0].style.backgroundColor = `${primaryColor}`;
-	burger.children[1].style.transform = 'rotate(0)';
-	burger.children[1].style.backgroundColor = `${primaryColor}`;
-	burger.children[2].style.transform = 'translateY(10px) rotate(0)';
-	burger.children[2].style.backgroundColor = `${primaryColor}`;
+	// burger.style.border = `2px solid ${primaryColor}`;
+	// burger.style.backgroundColor = '#EEF1F899';
+	// burger.children[0].style.transform = 'translateY(-10px) rotate(0)';
+	// burger.children[0].style.backgroundColor = `${primaryColor}`;
+	// burger.children[1].style.transform = 'rotate(0)';
+	// burger.children[1].style.backgroundColor = `${primaryColor}`;
+	// burger.children[2].style.transform = 'translateY(10px) rotate(0)';
+	// burger.children[2].style.backgroundColor = `${primaryColor}`;
+	burger.querySelector('img').src = 'images/burger.svg';
 	const mobileMenu = document.querySelector('.mobileMenu');
 	mobileMenu.style.opacity = 0;
 	mobileMenu.style.transform = 'translateY(-100px)';
