@@ -37,72 +37,7 @@
 		<!-- <link rel="stylesheet" href="css/style.css" /> -->
 
 		<script src="https://cdn.tailwindcss.com"></script>
-		<script>
-			tailwind.config = {
-				content: ['./*.html'],
-				darkMode: 'class',
-				theme: {
-					fontFamily: {
-						baseFont: ['Chakra Petch', 'sans-serif'],
-						latoFont: ['Lato', 'sans-serif'],
-					},
-					extend: {
-						colors: {
-							primaryColor: '#42C1EE',
-							darkPrimaryColor: '#D37101',
-							darkPrimaryColorLighter: '#D37101',
-							secondaryColor: '#3F5477',
-							darkSecondaryColor: '#F9F9F9',
-							backgroundColor: '#EEF1F8',
-							darkBackgroundColor: '#1E1E1E',
-							darkBackgroundColor2: '#2C2F33',
-							darkBackgroundColor2Opacity: '#2C2F33FA',
-							gradColorStart: 'rgba(32, 209, 237, 0.8)',
-							gradColorEnd: 'rgba(8, 129, 233, 0.8)',
-							darkGradColorStart: 'rgba(211, 113, 1, 1)',
-							darkGradColorEnd: 'rgba(191, 93, 1, 1)',
-							darkGradColorEnd: 'rgba(191, 93, 1, 1)',
-							goldenColor: '#D09F20',
-						},
-						width: {
-							max: '1440px',
-						},
-						boxShadow: {
-							buttonSmallShadow:
-								'0 1px 3px 0 rgb(0 0 0 / 0.1), 3px 3px 2px -1px rgb(0 0 0 / 0.1), -2px -2px 2px -1px rgb(255 255 255)',
-							buttonShadow:
-								'0 1px 3px 0 rgb(0 0 0 / 0.1), 5px 5px 2px -1px rgb(0 0 0 / 0.1), -3px -3px 2px -1px rgb(255 255 255)',
-							logoShadow:
-								'0 1px 3px 0 rgb(0 0 0 / 0.1), 6px 6px 4px -1px rgb(0 0 0 / 0.1), -5px -5px 4px -1px rgb(255 255 255)',
-							darkShadow:
-								'5px 5px 10px rgba(13, 13, 15, 0.75), -2px -2px 4px #5E6569, -3px -3px 6px #262E32',
-							darkBiggerShadow:
-								'7px 7px 10px rgba(13, 13, 15, 0.75), -4px -4px 4px #5E6569, -5px -5px 6px #262E32',
-							darkPrimaryShadow:
-								'-3px -3px 3px rgba(231, 133, 21, 1), 3px 3px 6px #000000',
-							newButtonShadow:
-								'4px 4px 8px 0px #C3C3C3, -4px -4px 8px 0px #FFFFFF',
-							newButtonShadowSmaller:
-								'3px 3px 6px 0px #C3C3C3, -3px -3px 6px 0px #FFFFFF',
-							newButtonShadowSmallest:
-								'2px 2px 4px 0px #D0EBFA, -2px -2px 4px 0px #FFFFFF, 1px 1px 2px 0px #C2CFD6',
-							newInnerShadow:
-								'4px 4px 8px 0px #C3C3C3 inset, -4px -4px 8px 0px #FFFFFF inset',
-						},
-						spacing: {
-							22: '90px',
-						},
-						screens: {
-							des: '1480px',
-							mdlg: '840px',
-							xs: '544px',
-							xxs: '400px'
-						},
-					},
-				},
-				plugins: [],
-			};
-		</script>
+		<script src="tailwind.config.js"></script>
 		<style>
 			.header-article {
 				background-image: url(images/back-logo.png);
@@ -957,43 +892,50 @@
 							height: 900px; 
 							overflow: hidden;
 					"
-					onclick="() => {document.querySelector('.jot-app-wrapper').style.height = auto}"
 				>
-					<div class="grid grid-cols-10 gap-[24px]">
+					<div class="lg:grid flex flex-col lg:grid-cols-10 gap-[24px] ">
 
-						<div class="card h-[425px] shadow-newButtonShadow rounded-[15px] px-[35px] py-[30px] cursor-pointer col-start-1 col-end-5" onclick="jotAppOpenPopup(0)">
+						<div class="card lg:h-[425px] lg:w-full h-[225px] w-[288px] lg:w-auto shadow-newButtonShadow rounded-[15px] px-[35px] py-[30px] cursor-pointer lg:col-start-1 xl:col-end-5 lg:col-end-6 " onclick="jotAppOpenPopup(0)">
 							<h3 class="font-semibold font-baseFont text-primaryColor text-[32px] mb-[30px]">Team managment</h3>
-							<img src="images/small/Team managment small.png" alt="Team managment" class="w-full">
+							<img src="images/small/Team managment small.png" alt="Team managment" class="w-full xl:block hidden">
+							<img src="images/big/Team managment big.png" alt="Kanban" class="w-full xl:hidden block">
 						</div>
-						<div class="card h-[425px] shadow-newButtonShadow rounded-[15px] px-[35px] py-[30px] cursor-pointer col-start-5 col-end-11" onclick="jotAppOpenPopup(1)">
+						<div class="card h-[425px] shadow-newButtonShadow rounded-[15px] px-[35px] py-[30px] cursor-pointer xl:col-start-5 lg:col-start-6 lg:col-end-11" onclick="jotAppOpenPopup(1)">
 							<h3 class="font-semibold font-baseFont text-primaryColor text-[32px] mb-[30px]">Kanban</h3>
-							<img src="images/small/Kanban small.png" alt="Kanban" class="w-full">
+							<img src="images/small/Kanban small.png" alt="Kanban" class="w-full xl:block hidden">
+							<img src="images/big/Kanban big.png" alt="Kanban" class="w-full xl:hidden block">
 						</div>
-						<div class="card h-[425px] shadow-newButtonShadow rounded-[15px] px-[35px] py-[30px] cursor-pointer col-start-1 col-end-7" onclick="jotAppOpenPopup(2)">
+						<div class="card h-[425px] shadow-newButtonShadow rounded-[15px] px-[35px] py-[30px] cursor-pointer lg:col-start-1 xl:col-end-7 lg:col-end-6" onclick="jotAppOpenPopup(2)">
 							<h3 class="font-semibold font-baseFont text-primaryColor text-[32px] mb-[30px]">Daily reports</h3>
-							<img src="images/small/Daily reports small.png" alt="Daily reports" class="w-full">
+							<img src="images/small/Daily reports small.png" alt="Daily reports" class="w-full xl:block hidden">
+							<img src="images/big/Daily reports big.png" alt="Kanban" class="w-full xl:hidden block">
 						</div>
-						<div class="card h-[425px] shadow-newButtonShadow rounded-[15px] px-[35px] py-[30px] cursor-pointer col-start-7 col-end-11" onclick="jotAppOpenPopup(3)">
+						<div class="card h-[425px] shadow-newButtonShadow rounded-[15px] px-[35px] py-[30px] cursor-pointer xl:col-start-7 lg:col-start-6 lg:col-end-11" onclick="jotAppOpenPopup(3)">
 							<h3 class="font-semibold font-baseFont text-primaryColor text-[32px] mb-[30px]">Decision summary</h3>
-							<img src="images/small/Decision summary small.png" alt="Decision summary" class="w-full">
+							<img src="images/small/Decision summary small.png" alt="Decision summary" class="w-full xl:block hidden">
+							<img src="images/big/Decision summary big.png" alt="Kanban" class="w-full xl:hidden block">
 						</div>
 						
 
-						<div class="card min-h-[425px] shadow-newButtonShadow rounded-[15px] px-[35px] py-[30px] cursor-pointer col-start-1 col-end-5" onclick="jotAppOpenPopup(4)">
+						<div class="card min-h-[425px] shadow-newButtonShadow rounded-[15px] px-[35px] py-[30px] cursor-pointer col-start-1 xl:col-end-5 col-end-6" onclick="jotAppOpenPopup(4)">
 							<h3 class="font-semibold font-baseFont text-primaryColor text-[32px] mb-[30px]">WBS</h3>
-							<img src="images/small/WBS small.png" alt="WBS" class="w-full">
+							<img src="images/small/WBS small.png" alt="WBS" class="w-full xl:block hidden">
+							<img src="images/big/WBS big.png" alt="Kanban" class="w-full xl:hidden block">
 						</div>
-						<div class="card min-h-[425px] shadow-newButtonShadow rounded-[15px] px-[35px] py-[30px] cursor-pointer col-start-5 col-end-11" onclick="jotAppOpenPopup(5)">
+						<div class="card min-h-[425px] shadow-newButtonShadow rounded-[15px] px-[35px] py-[30px] cursor-pointer xl:col-start-5 col-start-6 col-end-11" onclick="jotAppOpenPopup(5)">
 							<h3 class="font-semibold font-baseFont text-primaryColor text-[32px] mb-[30px]">Dashboard</h3>
-							<img src="images/small/Dashboard small.png" alt="Dashboard" class="w-full">
+							<img src="images/small/Dashboard small.png" alt="Dashboard" class="w-full xl:block hidden">
+							<img src="images/big/Dashboard big.png" alt="Kanban" class="w-full xl:hidden block">
 						</div>
-						<div class="card min-h-[425px] shadow-newButtonShadow rounded-[15px] px-[35px] py-[30px] cursor-pointer col-start-1 col-end-7" onclick="jotAppOpenPopup(6)">
+						<div class="card min-h-[425px] shadow-newButtonShadow rounded-[15px] px-[35px] py-[30px] cursor-pointer col-start-1 xl:col-end-7 col-end-6" onclick="jotAppOpenPopup(6)">
 							<h3 class="font-semibold font-baseFont text-primaryColor text-[32px] mb-[30px]">Sprints</h3>
-							<img src="images/small/Sprints small.png" alt="Sprints" class="w-full">
+							<img src="images/small/Sprints small.png" alt="Sprints" class="w-full xl:block hidden">
+							<img src="images/big/Sprints big.png" alt="Kanban" class="w-full xl:hidden block">
 						</div>
-						<div class="card min-h-[425px] shadow-newButtonShadow rounded-[15px] px-[35px] py-[30px] cursor-pointer col-start-7 col-end-11" onclick="jotAppOpenPopup(7)">
+						<div class="card min-h-[425px] shadow-newButtonShadow rounded-[15px] px-[35px] py-[30px] cursor-pointer xl:col-start-7 col-start-6 col-end-11" onclick="jotAppOpenPopup(7)">
 							<h3 class="font-semibold font-baseFont text-primaryColor text-[32px] mb-[30px]">Staff</h3>
-							<img src="images/small/Staff small.png" alt="Staff" class="w-full">
+							<img src="images/small/Staff small.png" alt="Staff" class="w-full xl:block hidden">
+							<img src="images/big/Staff big.png" alt="Kanban" class="w-full xl:hidden block">
 						</div>
 					</div>
 				</div>

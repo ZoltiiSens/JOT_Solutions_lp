@@ -97,6 +97,16 @@ function closeMobileSubMenu() {
 	}
 }
 // Function opens more blocks in JOT APP block
+let jotAppClosedHeight, jotAppOpenedHeight;
+ if (document.documentElement.clientWidth > 1024){
+	jotAppClosedHeight = '900px';
+	jotAppOpenedHeight = '1850px';
+}
+else {
+	jotAppClosedHeight = '705px';
+	jotAppOpenedHeight = '1905px';
+}
+document.querySelector('.jot-app-wrapper').style.height = jotAppClosedHeight;
 function seeMoreJotAppOpen() {
 	const wrapper = document.querySelector('.jot-app-wrapper');
 	const button = document.querySelector('.jot-app-button');
