@@ -37,72 +37,7 @@
 		<!-- <link rel="stylesheet" href="css/style.css" /> -->
 
 		<script src="https://cdn.tailwindcss.com"></script>
-		<script>
-			tailwind.config = {
-				content: ['./*.html'],
-				darkMode: 'class',
-				theme: {
-					fontFamily: {
-						baseFont: ['Chakra Petch', 'sans-serif'],
-						latoFont: ['Lato', 'sans-serif'],
-					},
-					extend: {
-						colors: {
-							primaryColor: '#42C1EE',
-							darkPrimaryColor: '#D37101',
-							darkPrimaryColorLighter: '#D37101',
-							secondaryColor: '#3F5477',
-							darkSecondaryColor: '#F9F9F9',
-							backgroundColor: '#EEF1F8',
-							darkBackgroundColor: '#1E1E1E',
-							darkBackgroundColor2: '#2C2F33',
-							darkBackgroundColor2Opacity: '#2C2F33FA',
-							gradColorStart: 'rgba(32, 209, 237, 0.8)',
-							gradColorEnd: 'rgba(8, 129, 233, 0.8)',
-							darkGradColorStart: 'rgba(211, 113, 1, 1)',
-							darkGradColorEnd: 'rgba(191, 93, 1, 1)',
-							darkGradColorEnd: 'rgba(191, 93, 1, 1)',
-							goldenColor: '#D09F20',
-						},
-						width: {
-							max: '1440px',
-						},
-						boxShadow: {
-							buttonSmallShadow:
-								'0 1px 3px 0 rgb(0 0 0 / 0.1), 3px 3px 2px -1px rgb(0 0 0 / 0.1), -2px -2px 2px -1px rgb(255 255 255)',
-							buttonShadow:
-								'0 1px 3px 0 rgb(0 0 0 / 0.1), 5px 5px 2px -1px rgb(0 0 0 / 0.1), -3px -3px 2px -1px rgb(255 255 255)',
-							logoShadow:
-								'0 1px 3px 0 rgb(0 0 0 / 0.1), 6px 6px 4px -1px rgb(0 0 0 / 0.1), -5px -5px 4px -1px rgb(255 255 255)',
-							darkShadow:
-								'5px 5px 10px rgba(13, 13, 15, 0.75), -2px -2px 4px #5E6569, -3px -3px 6px #262E32',
-							darkBiggerShadow:
-								'7px 7px 10px rgba(13, 13, 15, 0.75), -4px -4px 4px #5E6569, -5px -5px 6px #262E32',
-							darkPrimaryShadow:
-								'-3px -3px 3px rgba(231, 133, 21, 1), 3px 3px 6px #000000',
-							newButtonShadow:
-								'4px 4px 8px 0px #C3C3C3, -4px -4px 8px 0px #FFFFFF',
-							newButtonShadowSmaller:
-								'3px 3px 6px 0px #C3C3C3, -3px -3px 6px 0px #FFFFFF',
-							newButtonShadowSmallest:
-								'2px 2px 4px 0px #D0EBFA, -2px -2px 4px 0px #FFFFFF, 1px 1px 2px 0px #C2CFD6',
-							newInnerShadow:
-								'4px 4px 8px 0px #C3C3C3 inset, -4px -4px 8px 0px #FFFFFF inset',
-						},
-						spacing: {
-							22: '90px',
-						},
-						screens: {
-							des: '1480px',
-							mdlg: '840px',
-							xs: '544px',
-							xxs: '400px'
-						},
-					},
-				},
-				plugins: [],
-			};
-		</script>
+		<script src="tailwind.config.js"></script>
 		<style>
 			input::placeholder{
 				color: #3F5477 !important;
@@ -619,7 +554,29 @@
 			class="mx-auto min-h-screen des:w-max des:max-w-none xl:max-w-[1440px] lg:max-w-[1200px] w-full bg-backgroundColor dark:bg-darkBackgroundColor"
 		>
 			<!-- Header BLOCK-->
-			<article class="pt-[64px] mx-[-30px] px-[30px] pb-[20px]" 
+			<article class="header-article md:pt-[64px] pt-[55px] pb-[20px]" >
+				<header class="md:mx-[60px] mx-[16px] md:py-5 flex flex-row items-center ">
+					<h2
+						class="md:mt-[70px] mt-[20px] mdlg:text-[64px] xxs:text-5xl text-4xl font-normal text-black dark:text-darkSecondaryColor"
+					>
+						<span class="text-goldenColor dark:text-darkPrimaryColor font-semibold "
+							>Contact</span
+						>
+						Us
+					</h2>
+				</header>
+				<article class="md:mx-[60px] mx-4 pb-[20px] max-w-[700px]">
+					<p
+						class="xs:mt-[50px] mt-[15px] md:mb-8 mb-2 xs:text-[28px] xxs:text-[20px] text-[16px] text-secondaryColor dark:text-darkSecondaryColor font-medium text-justify"
+					>
+						At JOT Solution, we take pride in being an international company, serving clients globally. Our commitment to excellence knows no borders, and we're dedicated to making communication as seamless as possible.
+						<br>
+						<br>
+						So you can choose any of the methods below to contact us.
+					</p>
+				</article>
+			</article>
+			<!-- <article class="pt-[64px] mx-[-30px] px-[30px] pb-[20px]" 
 				style="
 					background-image: url(images/back-logo.png);
 					background-repeat: no-repeat;
@@ -627,11 +584,6 @@
 					background-size: auto calc(100% - 64px);
 				">
 				<header class="md:mx-[60px] mx-4 py-5 flex flex-row items-center ">
-					<!-- <div
-						class="logo_circle mdlg:w-[167px] xs:w-[140px] w-[100px] mdlg:h-[167px] xs:h-[140px] h-[100px] flex items-center justify-center rounded-full shadow-logoShadow dark:shadow-darkShadow bg-backgroundColor"
-					>
-						<img src="images/logo.svg" alt="logo" class="w-3/4" />
-					</div> -->
 					<h2
 						class="md: mt-[70px] mdlg:text-[64px] xs:text-5xl text-4xl font-normal text-black dark:text-darkSecondaryColor"
 					>
@@ -651,62 +603,44 @@
 						So you can choose any of the methods below to contact us.
 					</p>
 				</article>
-			</article>
+			</article> -->
 			
 			<!-- JOT APP info BLOCK -->
 			<article 
-				class="relative py-5 mt-[150px] mx-[60px] mx-4 gap-x-[84px] mb-none"
+				class="relative py-5 lg:mt-[150px] mt-[60px] md:mx-[60px] mx-4 gap-x-[84px] mb-none"
 			>
-				<div class="grid grid-cols-5 gap-x-[110px] gap-y-[70px]">
+				<div class="xl:grid xl:grid-cols-5 xl:gap-x-[110px] flex flex-wrap lg:flex-row flex-col lg:gap-y-[70px] gap-y-[40px]">
 					
-					<div class="contact-info col-span-2">
-						<h2 class="text-[40px] font-bold font-baseFont text-primaryColor mb-[20px]">Email</h2>
-						<p class="text-[24px] font-medium mb-[20px]">
+					<div class="contact-info xl:col-span-2 flex-[33%] lg:px-[20px]">
+						<h2 class="xxs:text-[40px] text-3xl font-bold font-baseFont text-primaryColor mb-[20px]">Email</h2>
+						<p class="xs:text-[24px] xxs:text-[20px] text-[16px] font-medium mb-[20px]">
 							Feel free to reach out to us via email. Our team is ready to respond promptly to any inquiries, providing comprehensive support
 						</p>
 						<div class="email flex flex-row gap-[17px]">
 							<img src="images/mail_iconColor.svg" alt="email" class="inline-block">
-							<p class="underline font-medium text-[24px]">
+							<p class="underline font-medium xs:text-[24px] xxs:text-[20px] text-[16px]">
 								Info@jot-solutions.com
 							</p>
 						</div>
 
 					</div>
 
-					<form action="#" id="contact_form" class="col-span-3 row-span-3 h-full min-h-[888px] rounded-[15px] shadow-newButtonShadow  pt-[26px] px-[40px] pb-[55px]">
-						<h2 class="text-[48px] font-bold font-baseFont text-primaryColor mb-[50px]">
-							Get in touch with us using the form
-						</h2>
-						<input name="name" type="text" placeholder="Your name" class="font-medium text-[18px] px-[24px] py-[18px] rounded-[15px] bg-transparent shadow-newInnerShadow w-full mb-[50px]">
-						<input name="email" type="email" placeholder="Your name" class="font-medium text-[18px] px-[24px] py-[18px] rounded-[15px] bg-transparent shadow-newInnerShadow w-full mb-[50px]">
-						<textarea name="message" id="contact-form-message" placeholder="Write a message" class="placeholder:font-medium font-medium font-latoFont text-[18px] placeholder:text-secondaryColor px-[24px] py-[18px] rounded-[15px] bg-transparent shadow-newInnerShadow w-full mb-[50px] h-[330px] focus:outline-none"
-							style="resize: none;"
-						></textarea>
-						<button
-							type="submit"
-							href="#"
-							class="font-baseFont py-2 w-[250px] h-[50px] flex justify-center items-center block bg-gradient-to-b hover:bg-secondaryColor dark:hover:bg-darkSecondaryColor from-gradColorStart dark:from-darkGradColorStart to-gradColorEnd dark:to-darkGradColorEnd font-semibold text-center text-white dark:hover:text-darkBackgroundColor2 rounded-2xl text-[22px] shadow-newButtonShadow dark:shadow-darkPrimaryShadow hover:shadow-none dark:hover:shadow-none transition duration-300"
-							>
-							Send
-						</button>
-					</form>	
-
-					<div class="contact-info col-span-2">
-						<h2 class="text-[40px] font-bold font-baseFont text-primaryColor mb-[20px]">Phone</h2>
-						<p class="text-[24px] font-medium mb-[20px]">
+					<div class="contact-info xl:col-span-2 xl:row-start-2 flex-[33%] lg:px-[20px]">
+						<h2 class="xxs:text-[40px] text-3xl font-bold font-baseFont text-primaryColor mb-[20px]">Phone</h2>
+						<p class="xs:text-[24px] xxs:text-[20px] text-[16px] font-medium mb-[20px]">
 							For direct assistance or a more personal touch, you can contact us by phone
 						</p>
 						<div class="email flex flex-row gap-[17px]">
 							<img src="images/phone_iconColor.svg" alt="email" class="inline-block">
-							<p class="font-medium text-[24px]">
+							<p class="font-medium xs:text-[24px] xxs:text-[20px] text-[16px]">
 								+972 3-375-1288
 							</p>
 						</div>
 					</div>
 
-					<div class="contact-info col-span-2">
-						<h2 class="text-[40px] font-bold font-baseFont text-primaryColor mb-[20px]">Social Media</h2>
-						<p class="text-[24px] font-medium mb-[20px]">
+					<div class="contact-info xl:col-span-2 xl:row-start-3 flex-[33%] lg:px-[20px]">
+						<h2 class="xxs:text-[40px] text-3xl font-bold font-baseFont text-primaryColor mb-[20px]">Social Media</h2>
+						<p class="xs:text-[24px] xxs:text-[20px] text-[16px] font-medium mb-[20px]">
 							Connect with us on our social media channels for the latest updates, tips, and announcements
 						</p>
 						<div class="social flex gap-[10px]">
@@ -722,6 +656,24 @@
 						</div>
 					</div>
 					
+					<form action="#" id="contact_form" class="lg:mt-0 mt-[40px] col-span-3 row-span-3 h-full min-h-[888px] rounded-[15px] shadow-newButtonShadow  xxs:pt-[26px] pt-4 xxs:px-[40px] px-4 pb-[55px] flex-1">
+						<h2 class="md:text-[48px] xxs:text-[38px] text-[2em] font-bold font-baseFont text-primaryColor xxs:mb-[50px] mb-[20px]">
+							Get in touch with us using the form
+						</h2>
+						<input name="name" type="text" placeholder="Your name" class="font-medium text-[18px] xxs:px-[24px] px-[18px] xxs:py-[18px] py-[14px] rounded-[15px] bg-transparent shadow-newInnerShadow w-full mb-[50px]">
+						<input name="email" type="email" placeholder="Your name" class="font-medium text-[18px] px-[24px] py-[18px] rounded-[15px] bg-transparent shadow-newInnerShadow w-full mb-[50px]">
+						<textarea name="message" id="contact-form-message" placeholder="Write a message" class="placeholder:font-medium font-medium font-latoFont text-[18px] placeholder:text-secondaryColor px-[24px] py-[18px] rounded-[15px] bg-transparent shadow-newInnerShadow w-full mb-[50px] h-[330px] focus:outline-none"
+							style="resize: none;"
+						></textarea>
+						<button
+							type="submit"
+							href="#"
+							class="md:mx-0 mx-auto font-baseFont py-2 w-[250px] h-[50px] flex justify-center items-center block bg-gradient-to-b hover:bg-secondaryColor dark:hover:bg-darkSecondaryColor from-gradColorStart dark:from-darkGradColorStart to-gradColorEnd dark:to-darkGradColorEnd font-semibold text-center text-white dark:hover:text-darkBackgroundColor2 rounded-2xl text-[22px] shadow-newButtonShadow dark:shadow-darkPrimaryShadow hover:shadow-none dark:hover:shadow-none transition duration-300"
+							>
+							Send
+						</button>
+					</form>	
+
 				</div>
 			</article>
 			
